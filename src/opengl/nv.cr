@@ -1,0 +1,8 @@
+@[Link("gl")]
+lib LibGL
+  NORMAL_MAP = 34065
+
+  REFLECTION_MAP = 34066
+
+  TEXTURE_FILTER_CONTROL = 34048
+end
