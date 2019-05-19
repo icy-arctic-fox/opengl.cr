@@ -1,0 +1,10 @@
+@[Link("gl")]
+lib LibGL
+  enum DrawElementsType : ::Int32
+    UnsignedByte = 0x1401
+
+    UnsignedShort = 0x1403
+
+    UnsignedInt = 0x1405
+  end
+end
