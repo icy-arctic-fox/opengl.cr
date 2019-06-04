@@ -444,7 +444,7 @@ lib LibGL
   fun get_vertex_attrib_pointer_v = glGetVertexAttribPointerv(
     index : UInt,
     pname : Enum,
-    pointer : ::Pointer(Void)
+    pointer : ::Pointer(Pointer(Void))
   ) : ::Void
 
   fun hint = glHint(
@@ -540,7 +540,7 @@ lib LibGL
   fun shader_source = glShaderSource(
     shader : UInt,
     count : SizeI,
-    string : ::Pointer(Char),
+    string : ::Pointer(::Pointer(Char)),
     length : ::Pointer(Int)
   ) : ::Void
 
@@ -938,7 +938,7 @@ lib LibGL
   fun get_buffer_pointer_v = glGetBufferPointerv(
     target : BufferTargetARB,
     pname : Enum,
-    params : ::Pointer(Void)
+    params : ::Pointer(Pointer(Void))
   ) : ::Void
 
   fun draw_buffers = glDrawBuffers(
@@ -1077,7 +1077,7 @@ lib LibGL
   fun transform_feedback_varyings = glTransformFeedbackVaryings(
     program : UInt,
     count : SizeI,
-    varyings : ::Pointer(Char),
+    varyings : ::Pointer(::Pointer(Char)),
     bufferMode : Enum
   ) : ::Void
 
@@ -1239,7 +1239,7 @@ lib LibGL
   fun get_uniform_indices = glGetUniformIndices(
     program : UInt,
     uniformCount : SizeI,
-    uniformNames : ::Pointer(Char),
+    uniformNames : ::Pointer(::Pointer(Char)),
     uniformIndices : ::Pointer(UInt)
   ) : ::Void
 
@@ -1573,7 +1573,7 @@ lib LibGL
   fun create_shader_programv = glCreateShaderProgramv(
     type : ShaderType,
     count : SizeI,
-    strings : ::Pointer(Char)
+    strings : ::Pointer(::Pointer(Char))
   ) : UInt
 
   fun bind_program_pipeline = glBindProgramPipeline(
