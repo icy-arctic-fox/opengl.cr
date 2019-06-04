@@ -1609,7 +1609,7 @@ lib LibGL
 
   fun get_pointer_v = glGetPointerv(
     pname : GetPointervPName,
-    params : ::Pointer(Void)
+    params : ::Pointer(Pointer(Void))
   ) : ::Void
 
   fun polygon_offset = glPolygonOffset(
@@ -2135,7 +2135,7 @@ lib LibGL
     mode : PrimitiveType,
     count : ::Pointer(SizeI),
     type : DrawElementsType,
-    indices : ::Pointer(Void),
+    indices : ::Pointer(Pointer(Void)),
     drawcount : SizeI
   ) : ::Void
 
@@ -2454,7 +2454,7 @@ lib LibGL
   fun get_buffer_pointer_v = glGetBufferPointerv(
     target : BufferTargetARB,
     pname : Enum,
-    params : ::Pointer(Void)
+    params : ::Pointer(Pointer(Void))
   ) : ::Void
 
   fun blend_equation_separate = glBlendEquationSeparate(
@@ -2631,7 +2631,7 @@ lib LibGL
   fun get_vertex_attrib_pointer_v = glGetVertexAttribPointerv(
     index : UInt,
     pname : Enum,
-    pointer : ::Pointer(Void)
+    pointer : ::Pointer(Pointer(Void))
   ) : ::Void
 
   fun is_program = glIsProgram(
@@ -2649,7 +2649,7 @@ lib LibGL
   fun shader_source = glShaderSource(
     shader : UInt,
     count : SizeI,
-    string : ::Pointer(Char),
+    string : ::Pointer(::Pointer(Char)),
     length : ::Pointer(Int)
   ) : ::Void
 
