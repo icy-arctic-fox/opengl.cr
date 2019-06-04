@@ -444,7 +444,7 @@ lib LibGL
   fun get_vertex_attrib_pointer_v = glGetVertexAttribPointerv(
     index : UInt,
     pname : Enum,
-    pointer : ::Pointer(Void)
+    pointer : ::Pointer(Pointer(Void))
   ) : ::Void
 
   fun hint = glHint(
@@ -540,7 +540,7 @@ lib LibGL
   fun shader_source = glShaderSource(
     shader : UInt,
     count : SizeI,
-    string : ::Pointer(Char),
+    string : ::Pointer(::Pointer(Char)),
     length : ::Pointer(Int)
   ) : ::Void
 
