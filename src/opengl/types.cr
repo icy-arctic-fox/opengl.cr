@@ -23,7 +23,7 @@ lib LibGL
 
   alias UInt = ::UInt32
 
-  alias Char = ::Int8
+  alias Char = ::UInt8
 
   alias Float = KhronosFloat
 
