@@ -27,7 +27,7 @@ lib LibGL
 
   alias IntPtr = KhronosIntPtr
 
-  alias Char = ::Int8
+  alias Char = ::UInt8
 
   alias Short = KhronosInt16
 
