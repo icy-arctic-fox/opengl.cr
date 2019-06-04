@@ -1609,7 +1609,7 @@ lib LibGL
 
   fun get_pointer_v = glGetPointerv(
     pname : GetPointervPName,
-    params : ::Pointer(Void)
+    params : ::Pointer(Pointer(Void))
   ) : ::Void
 
   fun polygon_offset = glPolygonOffset(
