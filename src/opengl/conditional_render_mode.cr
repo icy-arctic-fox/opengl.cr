@@ -1,6 +1,6 @@
 @[Link("gl")]
 lib LibGL
-  enum TypeEnum : ::UInt32
+  enum ConditionalRenderMode : ::UInt32
     QueryWait = 0x8e13
 
     QueryNoWait = 0x8e14
