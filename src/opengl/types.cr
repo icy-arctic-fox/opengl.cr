@@ -22,7 +22,7 @@ lib LibGL
 
   alias SizeI = ::Int32
 
-  alias Char = ::Int8
+  alias Char = ::UInt8
 
   alias UByte = KhronosUInt8
 end
