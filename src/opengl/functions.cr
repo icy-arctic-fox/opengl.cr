@@ -1234,7 +1234,7 @@ lib LibGL
   ) : ::Void
 
   fun get_integer_i_v = glGetIntegeri_v(
-    target : TypeEnum,
+    target : Enum,
     index : UInt,
     data : ::Pointer(Int)
   ) : ::Void
@@ -1298,7 +1298,7 @@ lib LibGL
 
   fun begin_conditional_render = glBeginConditionalRender(
     id : UInt,
-    mode : TypeEnum
+    mode : ConditionalRenderMode
   ) : ::Void
 
   fun end_conditional_render = glEndConditionalRender : ::Void
@@ -1875,7 +1875,7 @@ lib LibGL
   ) : ::Void
 
   fun get_integer_64i_v = glGetInteger64i_v(
-    target : TypeEnum,
+    target : Enum,
     index : UInt,
     data : ::Pointer(Int64)
   ) : ::Void
@@ -2956,13 +2956,13 @@ lib LibGL
   ) : ::Void
 
   fun get_float_i_v = glGetFloati_v(
-    target : TypeEnum,
+    target : Enum,
     index : UInt,
     data : ::Pointer(Float)
   ) : ::Void
 
   fun get_double_i_v = glGetDoublei_v(
-    target : TypeEnum,
+    target : Enum,
     index : UInt,
     data : ::Pointer(Double)
   ) : ::Void
