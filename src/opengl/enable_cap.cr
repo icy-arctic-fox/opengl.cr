@@ -141,6 +141,22 @@ lib LibGL
 
     SampleCoverage = 0x80a0
 
+    ClipDistance0 = 0x3000
+
+    ClipDistance1 = 0x3001
+
+    ClipDistance2 = 0x3002
+
+    ClipDistance3 = 0x3003
+
+    ClipDistance4 = 0x3004
+
+    ClipDistance5 = 0x3005
+
+    ClipDistance6 = 0x3006
+
+    ClipDistance7 = 0x3007
+
     RasterizerDiscard = 0x8c89
 
     FramebufferSrGB = 0x8db9
