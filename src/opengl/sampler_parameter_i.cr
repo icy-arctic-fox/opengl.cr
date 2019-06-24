@@ -1,6 +1,6 @@
 @[Link("gl")]
 lib LibGL
-  enum SamplerParameterName : ::UInt32
+  enum SamplerParameterI : ::UInt32
     TextureMagFilter = 0x2800
 
     TextureMinFilter = 0x2801
@@ -11,14 +11,8 @@ lib LibGL
 
     TextureWrapR = 0x8072
 
-    TextureMinLod = 0x813a
-
-    TextureMaxLod = 0x813b
-
     TextureCompareMode = 0x884c
 
     TextureCompareFunc = 0x884d
-
-    TextureBorderColor = 0x1004
   end
 end
