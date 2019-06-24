@@ -229,7 +229,7 @@ lib LibGL
 
   fun get_buffer_parameter_iv = glGetBufferParameteriv(
     target : BufferTargetARB,
-    pname : Enum,
+    pname : BufferPNameARB,
     params : ::Pointer(Int)
   ) : ::Void
 
@@ -413,12 +413,12 @@ lib LibGL
   ) : ::Void
 
   fun point_parameterx = glPointParameterx(
-    pname : Enum,
+    pname : PointParameterNameARB,
     param : Fixed
   ) : ::Void
 
   fun point_parameterxv = glPointParameterxv(
-    pname : Enum,
+    pname : PointParameterNameARB,
     params : ::Pointer(Fixed)
   ) : ::Void
 
