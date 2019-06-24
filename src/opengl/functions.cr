@@ -304,7 +304,7 @@ lib LibGL
     bufSize : SizeI,
     length : ::Pointer(SizeI),
     size : ::Pointer(Int),
-    type : ::Pointer(AttributeType),
+    type : ::Pointer(UniformType),
     name : ::Pointer(Char)
   ) : ::Void
 
@@ -327,7 +327,7 @@ lib LibGL
 
   fun get_buffer_parameter_iv = glGetBufferParameteriv(
     target : BufferTargetARB,
-    pname : Enum,
+    pname : BufferPNameARB,
     params : ::Pointer(Int)
   ) : ::Void
 
@@ -431,19 +431,19 @@ lib LibGL
 
   fun get_vertex_attrib_fv = glGetVertexAttribfv(
     index : UInt,
-    pname : Enum,
+    pname : VertexAttribPropertyARB,
     params : ::Pointer(Float)
   ) : ::Void
 
   fun get_vertex_attrib_iv = glGetVertexAttribiv(
     index : UInt,
-    pname : Enum,
+    pname : VertexAttribPropertyARB,
     params : ::Pointer(Int)
   ) : ::Void
 
   fun get_vertex_attrib_pointer_v = glGetVertexAttribPointerv(
     index : UInt,
-    pname : Enum,
+    pname : VertexAttribPointerPropertyARB,
     pointer : ::Pointer(Pointer(Void))
   ) : ::Void
 

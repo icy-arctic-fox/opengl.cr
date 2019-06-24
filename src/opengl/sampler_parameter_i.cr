@@ -1,6 +1,6 @@
 @[Link("gl")]
 lib LibGL
-  enum SamplerParameterName : ::Int32
+  enum SamplerParameterI : ::Int32
     TextureMagFilter = 0x2800
 
     TextureMinFilter = 0x2801

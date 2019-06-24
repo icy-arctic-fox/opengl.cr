@@ -1,6 +1,12 @@
 @[Link("gl")]
 lib LibGL
-  enum AttributeType : ::UInt32
+  enum UniformType : ::UInt32
+    Int = 0x1404
+
+    UnsignedInt = 0x1405
+
+    Float = 0x1406
+
     FloatVec2 = 0x8b50
 
     FloatVec3 = 0x8b51
@@ -26,5 +32,9 @@ lib LibGL
     FloatMat3 = 0x8b5b
 
     FloatMat4 = 0x8b5c
+
+    Sampler2D = 0x8b5e
+
+    SamplerCube = 0x8b60
   end
 end
