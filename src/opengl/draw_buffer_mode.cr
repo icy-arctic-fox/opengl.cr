@@ -7,6 +7,8 @@ lib LibGL
 
     FrontAndBack = 0x408
 
+    ColorAttachment0 = 0x8ce0
+
     None = 0x0
   end
 end
