@@ -27,18 +27,6 @@ lib LibGL
 
     FloatMat4 = 0x8b5c
 
-    Sampler1D = 0x8b5d
-
-    Sampler2D = 0x8b5e
-
-    Sampler3D = 0x8b5f
-
-    SamplerCube = 0x8b60
-
-    Sampler1DShadow = 0x8b61
-
-    Sampler2DShadow = 0x8b62
-
     FloatMat2x3 = 0x8b65
 
     FloatMat2x4 = 0x8b66
@@ -50,9 +38,5 @@ lib LibGL
     FloatMat4x2 = 0x8b69
 
     FloatMat4x3 = 0x8b6a
-
-    Sampler2DRect = 0x8b63
-
-    Sampler2DRectShadow = 0x8b64
   end
 end
