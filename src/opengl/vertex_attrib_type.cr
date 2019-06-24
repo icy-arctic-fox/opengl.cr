@@ -1,6 +1,6 @@
 @[Link("gl")]
 lib LibGL
-  enum VertexAttribType : ::Int32
+  enum VertexAttribType : ::UInt32
     Byte = 0x1400
 
     UnsignedByte = 0x1401

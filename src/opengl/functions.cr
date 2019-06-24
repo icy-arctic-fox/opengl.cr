@@ -304,7 +304,7 @@ lib LibGL
     bufSize : SizeI,
     length : ::Pointer(SizeI),
     size : ::Pointer(Int),
-    type : ::Pointer(AttributeType),
+    type : ::Pointer(UniformType),
     name : ::Pointer(Char)
   ) : ::Void
 
@@ -327,7 +327,7 @@ lib LibGL
 
   fun get_buffer_parameter_iv = glGetBufferParameteriv(
     target : BufferTargetARB,
-    pname : Enum,
+    pname : BufferPNameARB,
     params : ::Pointer(Int)
   ) : ::Void
 
@@ -431,19 +431,19 @@ lib LibGL
 
   fun get_vertex_attrib_fv = glGetVertexAttribfv(
     index : UInt,
-    pname : Enum,
+    pname : VertexAttribPropertyARB,
     params : ::Pointer(Float)
   ) : ::Void
 
   fun get_vertex_attrib_iv = glGetVertexAttribiv(
     index : UInt,
-    pname : Enum,
+    pname : VertexAttribPropertyARB,
     params : ::Pointer(Int)
   ) : ::Void
 
   fun get_vertex_attrib_pointer_v = glGetVertexAttribPointerv(
     index : UInt,
-    pname : Enum,
+    pname : VertexAttribPointerPropertyARB,
     pointer : ::Pointer(Pointer(Void))
   ) : ::Void
 
@@ -937,13 +937,13 @@ lib LibGL
 
   fun get_buffer_pointer_v = glGetBufferPointerv(
     target : BufferTargetARB,
-    pname : Enum,
+    pname : BufferPointerNameARB,
     params : ::Pointer(Pointer(Void))
   ) : ::Void
 
   fun draw_buffers = glDrawBuffers(
     n : SizeI,
-    bufs : ::Pointer(Enum)
+    bufs : ::Pointer(DrawBufferMode)
   ) : ::Void
 
   fun uniform_matrix_2x3_fv = glUniformMatrix2x3fv(
@@ -1078,7 +1078,7 @@ lib LibGL
     program : UInt,
     count : SizeI,
     varyings : ::Pointer(::Pointer(Char)),
-    bufferMode : Enum
+    bufferMode : TransformFeedbackBufferMode
   ) : ::Void
 
   fun get_transform_feedback_varying = glGetTransformFeedbackVarying(
@@ -1087,7 +1087,7 @@ lib LibGL
     bufSize : SizeI,
     length : ::Pointer(SizeI),
     size : ::Pointer(SizeI),
-    type : ::Pointer(Enum),
+    type : ::Pointer(SLTypeToken),
     name : ::Pointer(Char)
   ) : ::Void
 
@@ -1338,7 +1338,7 @@ lib LibGL
 
   fun get_buffer_parameteri_64v = glGetBufferParameteri64v(
     target : BufferTargetARB,
-    pname : Enum,
+    pname : BufferPNameARB,
     params : ::Pointer(Int64)
   ) : ::Void
 
@@ -1363,37 +1363,37 @@ lib LibGL
 
   fun sampler_parameter_i = glSamplerParameteri(
     sampler : UInt,
-    pname : SamplerParameterName,
+    pname : SamplerParameterI,
     param : Int
   ) : ::Void
 
   fun sampler_parameter_iv = glSamplerParameteriv(
     sampler : UInt,
-    pname : SamplerParameterName,
+    pname : SamplerParameterI,
     param : ::Pointer(Int)
   ) : ::Void
 
   fun sampler_parameter_f = glSamplerParameterf(
     sampler : UInt,
-    pname : SamplerParameterName,
+    pname : SamplerParameterF,
     param : Float
   ) : ::Void
 
   fun sampler_parameter_fv = glSamplerParameterfv(
     sampler : UInt,
-    pname : SamplerParameterName,
+    pname : SamplerParameterF,
     param : ::Pointer(Float)
   ) : ::Void
 
   fun get_sampler_parameter_iv = glGetSamplerParameteriv(
     sampler : UInt,
-    pname : SamplerParameterName,
+    pname : SamplerParameterI,
     params : ::Pointer(Int)
   ) : ::Void
 
   fun get_sampler_parameter_fv = glGetSamplerParameterfv(
     sampler : UInt,
-    pname : SamplerParameterName,
+    pname : SamplerParameterF,
     params : ::Pointer(Float)
   ) : ::Void
 
@@ -1449,11 +1449,11 @@ lib LibGL
   fun invalidate_framebuffer = glInvalidateFramebuffer(
     target : FramebufferTarget,
     numAttachments : SizeI,
-    attachments : ::Pointer(Enum)
+    attachments : ::Pointer(FramebufferAttachment)
   ) : ::Void
 
   fun invalidate_sub_framebuffer = glInvalidateSubFramebuffer(
-    target : Enum,
+    target : FramebufferTarget,
     numAttachments : SizeI,
     attachments : ::Pointer(FramebufferAttachment),
     x : Int,
@@ -1925,7 +1925,7 @@ lib LibGL
   fun vertex_attrib_format = glVertexAttribFormat(
     attribindex : UInt,
     size : Int,
-    type : Enum,
+    type : VertexAttribType,
     normalized : Boolean,
     relativeoffset : UInt
   ) : ::Void
@@ -1933,7 +1933,7 @@ lib LibGL
   fun vertex_attrib_i_format = glVertexAttribIFormat(
     attribindex : UInt,
     size : Int,
-    type : Enum,
+    type : VertexAttribIType,
     relativeoffset : UInt
   ) : ::Void
 
