@@ -510,22 +510,22 @@ lib LibGL
   ) : ::Void
 
   fun point_parameter_f = glPointParameterf(
-    pname : Enum,
+    pname : PointParameterNameARB,
     param : Float
   ) : ::Void
 
   fun point_parameter_fv = glPointParameterfv(
-    pname : Enum,
+    pname : PointParameterNameARB,
     params : ::Pointer(Float)
   ) : ::Void
 
   fun point_parameter_i = glPointParameteri(
-    pname : Enum,
+    pname : PointParameterNameARB,
     param : Int
   ) : ::Void
 
   fun point_parameter_iv = glPointParameteriv(
-    pname : Enum,
+    pname : PointParameterNameARB,
     params : ::Pointer(Int)
   ) : ::Void
 
@@ -632,13 +632,13 @@ lib LibGL
 
   fun get_buffer_parameter_iv = glGetBufferParameteriv(
     target : BufferTargetARB,
-    pname : Enum,
+    pname : BufferPNameARB,
     params : ::Pointer(Int)
   ) : ::Void
 
   fun get_buffer_pointer_v = glGetBufferPointerv(
     target : BufferTargetARB,
-    pname : Enum,
+    pname : BufferPointerNameARB,
     params : ::Pointer(Pointer(Void))
   ) : ::Void
 
@@ -649,7 +649,7 @@ lib LibGL
 
   fun draw_buffers = glDrawBuffers(
     n : SizeI,
-    bufs : ::Pointer(Enum)
+    bufs : ::Pointer(DrawBufferMode)
   ) : ::Void
 
   fun stencil_op_separate = glStencilOpSeparate(
@@ -729,7 +729,7 @@ lib LibGL
     bufSize : SizeI,
     length : ::Pointer(SizeI),
     size : ::Pointer(Int),
-    type : ::Pointer(AttributeType),
+    type : ::Pointer(UniformType),
     name : ::Pointer(Char)
   ) : ::Void
 
@@ -797,25 +797,25 @@ lib LibGL
 
   fun get_vertex_attrib_dv = glGetVertexAttribdv(
     index : UInt,
-    pname : Enum,
+    pname : VertexAttribPropertyARB,
     params : ::Pointer(Double)
   ) : ::Void
 
   fun get_vertex_attrib_fv = glGetVertexAttribfv(
     index : UInt,
-    pname : Enum,
+    pname : VertexAttribPropertyARB,
     params : ::Pointer(Float)
   ) : ::Void
 
   fun get_vertex_attrib_iv = glGetVertexAttribiv(
     index : UInt,
-    pname : Enum,
+    pname : VertexAttribPropertyARB,
     params : ::Pointer(Int)
   ) : ::Void
 
   fun get_vertex_attrib_pointer_v = glGetVertexAttribPointerv(
     index : UInt,
-    pname : Enum,
+    pname : VertexAttribPointerPropertyARB,
     pointer : ::Pointer(Pointer(Void))
   ) : ::Void
 
@@ -1278,7 +1278,7 @@ lib LibGL
     program : UInt,
     count : SizeI,
     varyings : ::Pointer(::Pointer(Char)),
-    bufferMode : Enum
+    bufferMode : TransformFeedbackBufferMode
   ) : ::Void
 
   fun get_transform_feedback_varying = glGetTransformFeedbackVarying(
@@ -1287,13 +1287,13 @@ lib LibGL
     bufSize : SizeI,
     length : ::Pointer(SizeI),
     size : ::Pointer(SizeI),
-    type : ::Pointer(Enum),
+    type : ::Pointer(SLTypeToken),
     name : ::Pointer(Char)
   ) : ::Void
 
   fun clamp_color = glClampColor(
-    target : Enum,
-    clamp : Enum
+    target : ClampColorTargetARB,
+    clamp : ClampColorModeARB
   ) : ::Void
 
   fun begin_conditional_render = glBeginConditionalRender(
@@ -1882,7 +1882,7 @@ lib LibGL
 
   fun get_buffer_parameteri_64v = glGetBufferParameteri64v(
     target : BufferTargetARB,
-    pname : Enum,
+    pname : BufferPNameARB,
     params : ::Pointer(Int64)
   ) : ::Void
 
@@ -1913,7 +1913,7 @@ lib LibGL
   ) : ::Void
 
   fun get_multisample_fv = glGetMultisamplefv(
-    pname : Enum,
+    pname : GetMultisamplePNameNV,
     index : UInt,
     val : ::Pointer(Float)
   ) : ::Void
@@ -1956,61 +1956,61 @@ lib LibGL
 
   fun sampler_parameter_i = glSamplerParameteri(
     sampler : UInt,
-    pname : SamplerParameterName,
+    pname : SamplerParameterI,
     param : Int
   ) : ::Void
 
   fun sampler_parameter_iv = glSamplerParameteriv(
     sampler : UInt,
-    pname : SamplerParameterName,
+    pname : SamplerParameterI,
     param : ::Pointer(Int)
   ) : ::Void
 
   fun sampler_parameter_f = glSamplerParameterf(
     sampler : UInt,
-    pname : SamplerParameterName,
+    pname : SamplerParameterF,
     param : Float
   ) : ::Void
 
   fun sampler_parameter_fv = glSamplerParameterfv(
     sampler : UInt,
-    pname : SamplerParameterName,
+    pname : SamplerParameterF,
     param : ::Pointer(Float)
   ) : ::Void
 
   fun sampler_parameter_iiv = glSamplerParameterIiv(
     sampler : UInt,
-    pname : SamplerParameterName,
+    pname : SamplerParameterI,
     param : ::Pointer(Int)
   ) : ::Void
 
   fun sampler_parameter_i_uiv = glSamplerParameterIuiv(
     sampler : UInt,
-    pname : SamplerParameterName,
+    pname : SamplerParameterI,
     param : ::Pointer(UInt)
   ) : ::Void
 
   fun get_sampler_parameter_iv = glGetSamplerParameteriv(
     sampler : UInt,
-    pname : SamplerParameterName,
+    pname : SamplerParameterI,
     params : ::Pointer(Int)
   ) : ::Void
 
   fun get_sampler_parameter_iiv = glGetSamplerParameterIiv(
     sampler : UInt,
-    pname : SamplerParameterName,
+    pname : SamplerParameterI,
     params : ::Pointer(Int)
   ) : ::Void
 
   fun get_sampler_parameter_fv = glGetSamplerParameterfv(
     sampler : UInt,
-    pname : SamplerParameterName,
+    pname : SamplerParameterF,
     params : ::Pointer(Float)
   ) : ::Void
 
   fun get_sampler_parameter_i_uiv = glGetSamplerParameterIuiv(
     sampler : UInt,
-    pname : SamplerParameterName,
+    pname : SamplerParameterI,
     params : ::Pointer(UInt)
   ) : ::Void
 
@@ -2364,7 +2364,7 @@ lib LibGL
   ) : ::Void
 
   fun get_query_indexed_iv = glGetQueryIndexediv(
-    target : Enum,
+    target : QueryTarget,
     index : UInt,
     pname : QueryParameterName,
     params : ::Pointer(Int)
