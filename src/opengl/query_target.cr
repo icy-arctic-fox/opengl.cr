@@ -12,5 +12,13 @@ lib LibGL
     TimeElapsed = 0x88bf
 
     AnySamplesPassedConservative = 0x8d6a
+
+    VerticesSubmitted = 0x82ee
+
+    PrimitivesSubmitted = 0x82ef
+
+    VertexShaderInvocations = 0x82f0
+
+    TransformFeedbackOverflow = 0x82ec
   end
 end
