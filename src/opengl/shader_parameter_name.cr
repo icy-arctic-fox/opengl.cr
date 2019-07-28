@@ -1,4 +1,8 @@
-@[Link("gl")]
+{% if flag?(:darwin) %}
+  @[Link(framework: "OpenGL")]
+{% else %}
+  @[Link("gl")]
+{% end %}
 lib LibGL
   enum ShaderParameterName : ::UInt32
     ShaderType = 0x8b4f
