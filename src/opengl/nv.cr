@@ -1,4 +1,8 @@
-@[Link("gl")]
+{% if flag?(:darwin) %}
+  @[Link(framework: "OpenGL")]
+{% else %}
+  @[Link("gl")]
+{% end %}
 lib LibGL
   UNSIGNED_INT_5_9_9_9_REV = 35902
 

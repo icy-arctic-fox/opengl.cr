@@ -1,4 +1,8 @@
-@[Link("gl")]
+{% if flag?(:darwin) %}
+  @[Link(framework: "OpenGL")]
+{% else %}
+  @[Link("gl")]
+{% end %}
 lib LibGL
   enum StencilOp : ::UInt32
     Zero = 0x0
