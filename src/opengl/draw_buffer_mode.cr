@@ -40,5 +40,37 @@ lib LibGL
     ColorAttachment14 = 0x8cee
 
     ColorAttachment15 = 0x8cef
+
+    ColorAttachment16 = 0x8cf0
+
+    ColorAttachment17 = 0x8cf1
+
+    ColorAttachment18 = 0x8cf2
+
+    ColorAttachment19 = 0x8cf3
+
+    ColorAttachment20 = 0x8cf4
+
+    ColorAttachment21 = 0x8cf5
+
+    ColorAttachment22 = 0x8cf6
+
+    ColorAttachment23 = 0x8cf7
+
+    ColorAttachment24 = 0x8cf8
+
+    ColorAttachment25 = 0x8cf9
+
+    ColorAttachment26 = 0x8cfa
+
+    ColorAttachment27 = 0x8cfb
+
+    ColorAttachment28 = 0x8cfc
+
+    ColorAttachment29 = 0x8cfd
+
+    ColorAttachment30 = 0x8cfe
+
+    ColorAttachment31 = 0x8cff
   end
 end
