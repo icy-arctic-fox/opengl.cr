@@ -1,4 +1,8 @@
-@[Link("gl")]
+{% if flag?(:darwin) %}
+  @[Link(framework: "OpenGL")]
+{% else %}
+  @[Link("gl")]
+{% end %}
 lib LibGL
   enum FramebufferAttachmentParameterName : ::UInt32
     FramebufferAttachmentColorEncoding = 0x8210
