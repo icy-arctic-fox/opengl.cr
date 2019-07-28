@@ -1,4 +1,8 @@
-@[Link("gl")]
+{% if flag?(:darwin) %}
+  @[Link(framework: "OpenGL")]
+{% else %}
+  @[Link("gl")]
+{% end %}
 lib LibGL
   enum PrimitiveType : ::UInt32
     Points = 0x0

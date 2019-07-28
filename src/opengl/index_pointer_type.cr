@@ -1,4 +1,8 @@
-@[Link("gl")]
+{% if flag?(:darwin) %}
+  @[Link(framework: "OpenGL")]
+{% else %}
+  @[Link("gl")]
+{% end %}
 lib LibGL
   enum IndexPointerType : ::UInt32
     Short = 0x1402
