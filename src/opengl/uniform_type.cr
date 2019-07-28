@@ -81,6 +81,14 @@ lib LibGL
 
     UnsignedIntSamplerBuffer = 0x8dd8
 
+    SamplerCubeMapArray = 0x900c
+
+    SamplerCubeMapArrayShadow = 0x900d
+
+    IntSamplerCubeMapArray = 0x900e
+
+    UnsignedIntSamplerCubeMapArray = 0x900f
+
     Sampler2DMultisampleArray = 0x910b
 
     IntSampler2DMultisampleArray = 0x910c

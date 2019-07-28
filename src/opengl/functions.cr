@@ -1951,13 +1951,13 @@ lib LibGL
 
   fun copy_image_sub_data = glCopyImageSubData(
     srcName : UInt,
-    srcTarget : CopyBufferSubDataTarget,
+    srcTarget : CopyImageSubDataTarget,
     srcLevel : Int,
     srcX : Int,
     srcY : Int,
     srcZ : Int,
     dstName : UInt,
-    dstTarget : CopyBufferSubDataTarget,
+    dstTarget : CopyImageSubDataTarget,
     dstLevel : Int,
     dstX : Int,
     dstY : Int,
