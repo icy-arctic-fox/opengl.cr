@@ -113,10 +113,36 @@ lib LibGL
 
     UnsignedIntSampler2DMultisampleArray = 0x910d
 
+    SamplerCubeMapArray = 0x900c
+
+    SamplerCubeMapArrayShadow = 0x900d
+
+    IntSamplerCubeMapArray = 0x900e
+
+    UnsignedIntSamplerCubeMapArray = 0x900f
+
     DoubleVec2 = 0x8ffc
 
     DoubleVec3 = 0x8ffd
 
     DoubleVec4 = 0x8ffe
+
+    DoubleMat2 = 0x8f46
+
+    DoubleMat3 = 0x8f47
+
+    DoubleMat4 = 0x8f48
+
+    DoubleMat2x3 = 0x8f49
+
+    DoubleMat2x4 = 0x8f4a
+
+    DoubleMat3x2 = 0x8f4b
+
+    DoubleMat3x4 = 0x8f4c
+
+    DoubleMat4x2 = 0x8f4d
+
+    DoubleMat4x3 = 0x8f4e
   end
 end
