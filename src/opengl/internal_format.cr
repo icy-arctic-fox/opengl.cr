@@ -99,6 +99,8 @@ lib LibGL
 
     RGBA32F = 0x8814
 
+    RGB32F = 0x8815
+
     RGBA16F = 0x881a
 
     RGB16F = 0x881b
