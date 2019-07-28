@@ -1,4 +1,8 @@
-@[Link("gl")]
+{% if flag?(:darwin) %}
+  @[Link(framework: "OpenGL")]
+{% else %}
+  @[Link("gl")]
+{% end %}
 lib LibGL
   # Not an API enum. API definition macro for ES 1.0/1.1 headers
   VERSION_ES_CL_1_0 = 1
