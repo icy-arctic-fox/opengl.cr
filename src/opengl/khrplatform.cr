@@ -21,28 +21,28 @@ lib LibGL
   alias KhronosUInt64 = ::UInt64
 
   {% if flag?(:x86_64) %}
-alias KhronosIntPtr = ::Int32
-{% else %}
-alias KhronosIntPtr = ::Int64
-{% end %}
+    alias KhronosIntPtr = ::Int32
+  {% else %}
+    alias KhronosIntPtr = ::Int64
+  {% end %}
 
   {% if flag?(:x86_64) %}
-alias KhronosUIntPtr = ::UInt32
-{% else %}
-alias KhronosUIntPtr = ::UInt64
-{% end %}
+    alias KhronosUIntPtr = ::UInt32
+  {% else %}
+    alias KhronosUIntPtr = ::UInt64
+  {% end %}
 
   {% if flag?(:x86_64) %}
-alias KhronosSSize = ::Int32
-{% else %}
-alias KhronosSSize = ::Int64
-{% end %}
+    alias KhronosSSize = ::Int32
+  {% else %}
+    alias KhronosSSize = ::Int64
+  {% end %}
 
   {% if flag?(:x86_64) %}
-alias KhronosUSize = ::UInt32
-{% else %}
-alias KhronosUSize = ::UInt64
-{% end %}
+    alias KhronosUSize = ::UInt32
+  {% else %}
+    alias KhronosUSize = ::UInt64
+  {% end %}
 
   alias KhronosFloat = ::Float32
 
