@@ -7,6 +7,8 @@ lib LibGL
   # Was PixelInternalFormat
 
   enum InternalFormat : ::UInt32
+    StencilIndex = 0x1901
+
     DepthComponent = 0x1902
 
     Red = 0x1903
