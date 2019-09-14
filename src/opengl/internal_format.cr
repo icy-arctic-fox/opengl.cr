@@ -19,6 +19,8 @@ lib LibGL
 
     DepthComponent16 = 0x81a5
 
+    StencilIndex8 = 0x8d48
+
     Red = 0x1903
 
     RGB8 = 0x8051
@@ -144,5 +146,63 @@ lib LibGL
     CompressedRGBA8Etc2Eac = 0x9278
 
     CompressedSrGB8Alpha8Etc2Eac = 0x9279
+
+    StencilIndex = 0x1901
+
+    CompressedRGBAAstc4x4 = 0x93b0
+
+    CompressedRGBAAstc5x4 = 0x93b1
+
+    CompressedRGBAAstc5x5 = 0x93b2
+
+    CompressedRGBAAstc6x5 = 0x93b3
+
+    CompressedRGBAAstc6x6 = 0x93b4
+
+    CompressedRGBAAstc8x5 = 0x93b5
+
+    CompressedRGBAAstc8x6 = 0x93b6
+
+    CompressedRGBAAstc8x8 = 0x93b7
+
+    CompressedRGBAAstc10x5 = 0x93b8
+
+    CompressedRGBAAstc10x6 = 0x93b9
+
+    CompressedRGBAAstc10x8 = 0x93ba
+
+    CompressedRGBAAstc10x10 = 0x93bb
+
+    CompressedRGBAAstc12x10 = 0x93bc
+
+    CompressedRGBAAstc12x12 = 0x93bd
+
+    CompressedSrGB8Alpha8Astc4x4 = 0x93d0
+
+    CompressedSrGB8Alpha8Astc5x4 = 0x93d1
+
+    CompressedSrGB8Alpha8Astc5x5 = 0x93d2
+
+    CompressedSrGB8Alpha8Astc6x5 = 0x93d3
+
+    CompressedSrGB8Alpha8Astc6x6 = 0x93d4
+
+    CompressedSrGB8Alpha8Astc8x5 = 0x93d5
+
+    CompressedSrGB8Alpha8Astc8x6 = 0x93d6
+
+    CompressedSrGB8Alpha8Astc8x8 = 0x93d7
+
+    CompressedSrGB8Alpha8Astc10x5 = 0x93d8
+
+    CompressedSrGB8Alpha8Astc10x6 = 0x93d9
+
+    CompressedSrGB8Alpha8Astc10x8 = 0x93da
+
+    CompressedSrGB8Alpha8Astc10x10 = 0x93db
+
+    CompressedSrGB8Alpha8Astc12x10 = 0x93dc
+
+    CompressedSrGB8Alpha8Astc12x12 = 0x93dd
   end
 end
