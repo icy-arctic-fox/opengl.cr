@@ -19,6 +19,8 @@ lib LibGL
 
     DepthComponent16 = 0x81a5
 
+    StencilIndex8 = 0x8d48
+
     Red = 0x1903
 
     RGB8 = 0x8051
@@ -144,5 +146,7 @@ lib LibGL
     CompressedRGBA8Etc2Eac = 0x9278
 
     CompressedSrGB8Alpha8Etc2Eac = 0x9279
+
+    StencilIndex = 0x1901
   end
 end
