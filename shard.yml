@@ -2,7 +2,7 @@
 name: opengl
 version: 2.1.0
 description: Open Graphics Library (OpenGL) bindings for the Crystal language.
-crystal: 0.31.0
+crystal: 0.31.1
 libraries:
   gl: 2.1
 license: MIT
