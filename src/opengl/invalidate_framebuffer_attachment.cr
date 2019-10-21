@@ -4,12 +4,16 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  enum FramebufferAttachment : ::UInt32
+  enum InvalidateFramebufferAttachment : ::UInt32
     ColorAttachment0 = 0x8ce0
 
     DepthAttachment = 0x8d00
 
-    StencilAttachment = 0x8d20
+    Color = 0x1800
+
+    Depth = 0x1801
+
+    Stencil = 0x1802
 
     DepthStencilAttachment = 0x821a
 

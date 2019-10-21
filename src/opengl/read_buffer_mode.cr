@@ -11,6 +11,8 @@ lib LibGL
 
     ColorAttachment0 = 0x8ce0
 
+    None = 0x0
+
     ColorAttachment1 = 0x8ce1
 
     ColorAttachment2 = 0x8ce2
