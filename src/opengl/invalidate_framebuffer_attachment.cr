@@ -4,13 +4,9 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  enum ReadBufferMode : ::Int32
-    Front = 0x404
-
-    Back = 0x405
-
+  enum InvalidateFramebufferAttachment : ::Int32
     ColorAttachment0 = 0x8ce0
 
-    None = 0x0
+    DepthAttachment = 0x8d00
   end
 end
