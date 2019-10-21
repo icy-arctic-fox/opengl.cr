@@ -1453,13 +1453,13 @@ lib LibGL
   fun invalidate_framebuffer = glInvalidateFramebuffer(
     target : FramebufferTarget,
     numAttachments : SizeI,
-    attachments : ::Pointer(FramebufferAttachment)
+    attachments : ::Pointer(InvalidateFramebufferAttachment)
   ) : ::Void
 
   fun invalidate_sub_framebuffer = glInvalidateSubFramebuffer(
     target : FramebufferTarget,
     numAttachments : SizeI,
-    attachments : ::Pointer(FramebufferAttachment),
+    attachments : ::Pointer(InvalidateFramebufferAttachment),
     x : Int,
     y : Int,
     width : SizeI,
