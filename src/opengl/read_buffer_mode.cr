@@ -5,6 +5,8 @@
 {% end %}
 lib LibGL
   enum ReadBufferMode : ::UInt32
+    None = 0x0
+
     FrontLeft = 0x400
 
     FrontRight = 0x401
