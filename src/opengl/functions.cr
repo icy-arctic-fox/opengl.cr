@@ -1329,7 +1329,7 @@ lib LibGL
   fun get_sync_iv = glGetSynciv(
     sync : Sync,
     pname : SyncParameterName,
-    bufSize : SizeI,
+    count : SizeI,
     length : ::Pointer(SizeI),
     values : ::Pointer(Int)
   ) : ::Void
@@ -1487,7 +1487,7 @@ lib LibGL
     target : TextureTarget,
     internalformat : InternalFormat,
     pname : InternalFormatPName,
-    bufSize : SizeI,
+    count : SizeI,
     params : ::Pointer(Int)
   ) : ::Void
 end
