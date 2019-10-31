@@ -1873,7 +1873,7 @@ lib LibGL
   fun get_sync_iv = glGetSynciv(
     sync : Sync,
     pname : SyncParameterName,
-    bufSize : SizeI,
+    count : SizeI,
     length : ::Pointer(SizeI),
     values : ::Pointer(Int)
   ) : ::Void
@@ -2279,7 +2279,7 @@ lib LibGL
     program : UInt,
     shadertype : ShaderType,
     index : UInt,
-    bufsize : SizeI,
+    bufSize : SizeI,
     length : ::Pointer(SizeI),
     name : ::Pointer(Char)
   ) : ::Void
@@ -2288,7 +2288,7 @@ lib LibGL
     program : UInt,
     shadertype : ShaderType,
     index : UInt,
-    bufsize : SizeI,
+    bufSize : SizeI,
     length : ::Pointer(SizeI),
     name : ::Pointer(Char)
   ) : ::Void
@@ -3002,7 +3002,7 @@ lib LibGL
     target : TextureTarget,
     internalformat : InternalFormat,
     pname : InternalFormatPName,
-    bufSize : SizeI,
+    count : SizeI,
     params : ::Pointer(Int)
   ) : ::Void
 
@@ -3126,7 +3126,7 @@ lib LibGL
     target : TextureTarget,
     internalformat : InternalFormat,
     pname : InternalFormatPName,
-    bufSize : SizeI,
+    count : SizeI,
     params : ::Pointer(Int64)
   ) : ::Void
 
@@ -3215,7 +3215,7 @@ lib LibGL
     index : UInt,
     propCount : SizeI,
     props : ::Pointer(ProgramResourceProperty),
-    bufSize : SizeI,
+    count : SizeI,
     length : ::Pointer(SizeI),
     params : ::Pointer(Int)
   ) : ::Void
