@@ -50,5 +50,17 @@ lib LibGL
     Sampler1DShadow = 0x8b61
 
     Sampler2DShadow = 0x8b62
+
+    FloatMat2x3 = 0x8b65
+
+    FloatMat2x4 = 0x8b66
+
+    FloatMat3x2 = 0x8b67
+
+    FloatMat3x4 = 0x8b68
+
+    FloatMat4x2 = 0x8b69
+
+    FloatMat4x3 = 0x8b6a
   end
 end
