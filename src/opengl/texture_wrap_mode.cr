@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum TextureWrapMode : ::Int32
     LinearMipmapLinear = 0x2703
 
