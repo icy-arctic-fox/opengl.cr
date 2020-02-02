@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum TransformFeedbackPName : ::Int32
     TransformFeedbackBufferStart = 0x8c84
 
