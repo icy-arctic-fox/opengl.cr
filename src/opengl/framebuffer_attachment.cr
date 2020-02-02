@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum FramebufferAttachment : ::UInt32
     DepthStencilAttachment = 0x821a
 
