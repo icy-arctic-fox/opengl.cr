@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum GetPixelMap : ::Int32
     PixelMapIToI = 0xc70
 

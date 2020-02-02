@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum BlendEquationModeEXT : ::UInt32
     FuncAdd = 0x8006
 
