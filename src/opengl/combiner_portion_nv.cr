@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum CombinerPortionNV : ::Int32
     Alpha = 0x1906
 
