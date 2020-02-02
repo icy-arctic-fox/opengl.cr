@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum SamplerParameterI : ::UInt32
     TextureMagFilter = 0x2800
 

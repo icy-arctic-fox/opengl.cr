@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum RenderbufferParameterName : ::UInt32
     RenderbufferSamples = 0x8cab
 

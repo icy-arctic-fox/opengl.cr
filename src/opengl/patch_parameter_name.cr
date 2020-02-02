@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum PatchParameterName : ::UInt32
     PatchVertices = 0x8e72
 
