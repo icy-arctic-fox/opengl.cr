@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum BlitFramebufferFilter : ::Int32
     Nearest = 0x2600
 
