@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum AtomicCounterBufferPName : ::UInt32
     AtomicCounterBufferBinding = 0x92c1
 

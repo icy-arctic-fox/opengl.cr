@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum InvalidateFramebufferAttachment : ::UInt32
     Color = 0x1800
 

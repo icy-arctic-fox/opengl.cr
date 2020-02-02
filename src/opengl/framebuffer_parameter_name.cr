@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum FramebufferParameterName : ::UInt32
     FramebufferDefaultWidth = 0x9310
 
