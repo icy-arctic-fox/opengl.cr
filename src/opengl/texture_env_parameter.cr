@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum TextureEnvParameter : ::UInt32
     TextureEnvMode = 0x2200
 
