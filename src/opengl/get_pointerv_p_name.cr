@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum GetPointervPName : ::UInt32
     DebugCallbackFunction = 0x8244
 
