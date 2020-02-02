@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum CopyImageSubDataTarget : ::UInt32
     Texture2D = 0xde1
 

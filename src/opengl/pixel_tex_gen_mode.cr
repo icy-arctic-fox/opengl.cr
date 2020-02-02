@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum PixelTexGenMode : ::Int32
     RGB = 0x1907
 

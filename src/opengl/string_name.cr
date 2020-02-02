@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum StringName : ::UInt32
     ShadingLanguageVersion = 0x8b8c
 

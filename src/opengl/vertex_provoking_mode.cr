@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum VertexProvokingMode : ::Int32
     FirstVertexConvention = 0x8e4d
 

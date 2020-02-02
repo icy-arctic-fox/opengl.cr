@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum QueryTarget : ::UInt32
     TransformFeedbackPrimitivesWritten = 0x8c88
 

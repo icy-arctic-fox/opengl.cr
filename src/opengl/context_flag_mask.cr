@@ -4,6 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
   @[Flags]
   enum ContextFlagMask : ::Int32
     ContextFlagDebug = 0x2
