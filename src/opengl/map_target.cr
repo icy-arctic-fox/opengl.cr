@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum MapTarget : ::UInt32
     Map1Color4 = 0xd90
 
