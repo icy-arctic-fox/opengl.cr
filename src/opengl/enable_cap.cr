@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum EnableCap : ::UInt32
     LineSmooth = 0xb20
 

@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum PixelStoreParameter : ::UInt32
     UnpackSwapBytes = 0xcf0
 
