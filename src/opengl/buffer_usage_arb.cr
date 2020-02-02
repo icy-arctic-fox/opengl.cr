@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum BufferUsageARB : ::UInt32
     StreamDraw = 0x88e0
 

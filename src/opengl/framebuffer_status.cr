@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum FramebufferStatus : ::Int32
     FramebufferComplete = 0x8cd5
 
