@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum TexCoordPointerType : ::UInt32
     Short = 0x1402
 

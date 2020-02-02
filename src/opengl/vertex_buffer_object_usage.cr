@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum VertexBufferObjectUsage : ::Int32
     StaticDraw = 0x88e4
 

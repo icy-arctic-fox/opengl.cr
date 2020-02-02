@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum ColorMaterialParameter : ::Int32
     Ambient = 0x1200
 
