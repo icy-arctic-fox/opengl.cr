@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum FramebufferTarget : ::UInt32
     ReadFramebuffer = 0x8ca8
 

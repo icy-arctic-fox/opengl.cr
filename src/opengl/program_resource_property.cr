@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum ProgramResourceProperty : ::UInt32
     NumCompatibleSubroutines = 0x8e4a
 
