@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum NormalPointerType : ::UInt32
     Byte = 0x1400
 

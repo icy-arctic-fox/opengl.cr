@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum PixelTransferParameter : ::UInt32
     MapColor = 0xd10
 
