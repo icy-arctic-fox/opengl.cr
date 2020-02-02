@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum UniformBlockPName : ::UInt32
     UniformBlockBinding = 0x8a3f
 

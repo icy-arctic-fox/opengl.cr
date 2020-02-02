@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum ProgramResourceProperty : ::Int32
     Uniform = 0x92e1
 

@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum BufferAccessARB : ::Int32
     ReadOnly = 0x88b8
 
