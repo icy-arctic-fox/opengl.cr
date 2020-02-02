@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum GetTextureParameter : ::UInt32
     TextureWidth = 0x1000
 

@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum BufferTargetARB : ::UInt32
     ArrayBuffer = 0x8892
 
