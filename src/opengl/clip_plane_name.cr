@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum ClipPlaneName : ::Int32
     ClipDistance0 = 0x3000
 

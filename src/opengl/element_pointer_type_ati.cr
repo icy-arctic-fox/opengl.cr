@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum ElementPointerTypeATI : ::Int32
     UnsignedByte = 0x1401
 
