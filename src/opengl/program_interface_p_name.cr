@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum ProgramInterfacePName : ::UInt32
     ActiveResources = 0x92f5
 

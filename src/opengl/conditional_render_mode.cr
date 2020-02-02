@@ -4,6 +4,8 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
+  # Deprecated, use the group attributes instead.
+
   enum ConditionalRenderMode : ::UInt32
     QueryWait = 0x8e13
 
