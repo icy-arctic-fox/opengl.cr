@@ -4,7 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # OpenGL 4.6 Table 7.3: OpenGL Shading Language type tokens
+  # Mostly OpenGL 1.0/1.1 enum assignments. Unused ranges should generally remain unused.
 
   enum SLTypeToken : ::Int32
     Float = 0x1406

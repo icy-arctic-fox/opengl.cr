@@ -4,7 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Was PixelInternalFormat
+  # Mostly OpenGL 1.0/1.1 enum assignments. Unused ranges should generally remain unused.
 
   enum InternalFormat : ::Int32
     RGB = 0x1907

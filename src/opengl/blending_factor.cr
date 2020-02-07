@@ -4,7 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
+  # Tokens whose numeric value is intrinsically meaningful
 
   enum BlendingFactor : ::UInt32
     Zero = 0x0
