@@ -4,7 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
+  # Framebuffer object specification + headroom
 
   enum FramebufferTarget : ::UInt32
     Framebuffer = 0x8d40
