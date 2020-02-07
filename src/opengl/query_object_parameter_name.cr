@@ -4,8 +4,6 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
-
   enum QueryObjectParameterName : ::UInt32
     QueryResult = 0x8866
 
