@@ -4,8 +4,6 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
-
   enum SubroutineParameterName : ::UInt32
     UniformSize = 0x8a38
 
