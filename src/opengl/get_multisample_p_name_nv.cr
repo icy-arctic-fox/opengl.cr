@@ -4,7 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
+  # For Michael Gold 2006/08/07
 
   enum GetMultisamplePNameNV : ::Int32
     SamplePosition = 0x8e50

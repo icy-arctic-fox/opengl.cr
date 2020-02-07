@@ -4,7 +4,6 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
   @[Flags]
   enum MemoryBarrierMask : ::Int32
     VertexAttribArrayBarrier = 0x1

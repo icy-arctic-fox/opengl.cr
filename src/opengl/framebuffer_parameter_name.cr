@@ -4,7 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
+  # Khronos bug 7658
 
   enum FramebufferParameterName : ::Int32
     FramebufferDefaultWidth = 0x9310
