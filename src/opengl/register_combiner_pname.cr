@@ -4,9 +4,9 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  enum SubroutineParameterName : ::Int32
-    UniformSize = 0x8a38
+  enum RegisterCombinerPName : ::Int32
+    Src1Alpha = 0x8589
 
-    UniformNameLength = 0x8a39
+    Source1Alpha = 0x8589
   end
 end
