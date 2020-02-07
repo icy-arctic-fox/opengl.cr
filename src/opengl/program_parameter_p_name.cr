@@ -4,7 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
+  # Range released by MS on 2002/9/16
 
   enum ProgramParameterPName : ::UInt32
     ProgramBinaryRetrievableHint = 0x8257

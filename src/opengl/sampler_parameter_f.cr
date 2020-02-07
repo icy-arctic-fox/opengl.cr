@@ -4,8 +4,6 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
-
   enum SamplerParameterF : ::UInt32
     TextureMinLod = 0x813a
 
