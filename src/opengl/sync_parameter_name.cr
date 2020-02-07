@@ -4,8 +4,6 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
-
   enum SyncParameterName : ::UInt32
     ObjectType = 0x9112
 
