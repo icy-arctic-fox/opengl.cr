@@ -4,8 +4,9 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  @[Flags]
-  enum SyncObjectMask : ::UInt32
-    SyncFlushCommands = 0x1
+  enum RegisterCombinerPName : ::Int32
+    Src1Alpha = 0x8589
+
+    Source1Alpha = 0x8589
   end
 end

@@ -4,7 +4,6 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
   @[Flags]
   enum ContextProfileMask : ::Int32
     ContextCoreProfile = 0x1
