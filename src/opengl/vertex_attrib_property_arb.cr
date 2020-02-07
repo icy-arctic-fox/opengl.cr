@@ -4,8 +4,6 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
-
   enum VertexAttribPropertyARB : ::UInt32
     CurrentVertexAttrib = 0x8626
 

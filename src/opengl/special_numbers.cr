@@ -6,13 +6,17 @@
 lib LibGL
   # Tokens whose numeric value is intrinsically meaningful
 
-  enum GraphicsResetStatus : ::Int32
+  enum SpecialNumbers : ::Int32
+    False = 0x0
+
+    True = 0x1
+
+    Zero = 0x0
+
+    One = 0x1
+
     NoError = 0x0
 
-    GuiltyContextReset = 0x8253
-
-    InnocentContextReset = 0x8254
-
-    UnknownContextReset = 0x8255
+    None = 0x0
   end
 end

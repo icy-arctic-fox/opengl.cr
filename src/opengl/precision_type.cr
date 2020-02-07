@@ -4,8 +4,6 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
-
   enum PrecisionType : ::Int32
     LowFloat = 0x8df0
 
