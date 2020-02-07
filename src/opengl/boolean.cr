@@ -4,7 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
+  # Tokens whose numeric value is intrinsically meaningful
 
   enum Boolean : ::UInt8
     False = 0x0
