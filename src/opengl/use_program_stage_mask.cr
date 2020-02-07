@@ -4,7 +4,6 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
   @[Flags]
   enum UseProgramStageMask : ::UInt32
     VertexShader = 0x1

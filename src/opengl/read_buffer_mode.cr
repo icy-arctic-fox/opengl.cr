@@ -4,7 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
+  # Tokens whose numeric value is intrinsically meaningful
 
   enum ReadBufferMode : ::UInt32
     None = 0x0

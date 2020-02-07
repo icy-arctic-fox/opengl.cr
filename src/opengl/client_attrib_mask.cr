@@ -4,7 +4,6 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
   @[Flags]
   enum ClientAttribMask : ::UInt32
     ClientPixelStore = 0x1
