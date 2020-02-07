@@ -6,11 +6,17 @@
 lib LibGL
   # Tokens whose numeric value is intrinsically meaningful
 
-  enum ClampColorModeARB : ::UInt32
+  enum SpecialNumbers : ::Int32
     False = 0x0
 
     True = 0x1
 
-    FixedOnly = 0x891d
+    Zero = 0x0
+
+    One = 0x1
+
+    None = 0x0
+
+    NoError = 0x0
   end
 end
