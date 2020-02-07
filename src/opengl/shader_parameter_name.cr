@@ -4,8 +4,6 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
-
   enum ShaderParameterName : ::UInt32
     ShaderType = 0x8b4f
 
