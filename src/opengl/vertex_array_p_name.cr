@@ -4,8 +4,6 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
-
   enum VertexArrayPName : ::UInt32
     VertexAttribArrayEnabled = 0x8622
 

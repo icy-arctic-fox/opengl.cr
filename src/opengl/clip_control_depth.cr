@@ -4,7 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
+  # Khronos bug 7658
 
   enum ClipControlDepth : ::Int32
     NegativeOneToOne = 0x935e

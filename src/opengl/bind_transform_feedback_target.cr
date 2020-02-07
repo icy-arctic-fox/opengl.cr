@@ -4,7 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
+  # For Michael Gold 2006/08/07
 
   enum BindTransformFeedbackTarget : ::UInt32
     TransformFeedback = 0x8e22

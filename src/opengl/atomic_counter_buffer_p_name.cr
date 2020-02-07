@@ -4,7 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
+  # Khronos bug 7658
 
   enum AtomicCounterBufferPName : ::UInt32
     AtomicCounterBufferBinding = 0x92c1
