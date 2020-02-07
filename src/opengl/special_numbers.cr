@@ -6,11 +6,17 @@
 lib LibGL
   # Tokens whose numeric value is intrinsically meaningful
 
-  enum PathGenMode : ::Int32
+  enum SpecialNumbers : ::Int32
+    False = 0x0
+
+    True = 0x1
+
+    Zero = 0x0
+
+    One = 0x1
+
     None = 0x0
 
-    EyeLinear = 0x2400
-
-    ObjectLinear = 0x2401
+    NoError = 0x0
   end
 end
