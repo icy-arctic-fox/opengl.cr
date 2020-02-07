@@ -4,7 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
+  # Khronos bug 7658
 
   enum ProgramInterfacePName : ::Int32
     ActiveResources = 0x92f5
