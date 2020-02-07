@@ -4,8 +4,6 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
-
   enum TextureUnit : ::UInt32
     Texture0 = 0x84c0
 

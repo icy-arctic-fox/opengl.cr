@@ -4,7 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # See glTransformFeedbackVaryings()
+  # For Pat Brown
 
   enum TransformFeedbackBufferMode : ::UInt32
     InterleavedAttribs = 0x8c8c

@@ -4,8 +4,6 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
-
   enum FramebufferAttachmentParameterName : ::UInt32
     FramebufferAttachmentColorEncoding = 0x8210
 
