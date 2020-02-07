@@ -26,7 +26,7 @@ lib LibGL
   ) : ::Void
 
   fun polygon_mode = glPolygonMode(
-    face : MaterialFace,
+    face : Enum,
     mode : PolygonMode
   ) : ::Void
 
@@ -1009,7 +1009,7 @@ lib LibGL
   ) : ::Void
 
   fun color_material = glColorMaterial(
-    face : MaterialFace,
+    face : Enum,
     mode : ColorMaterialParameter
   ) : ::Void
 
@@ -1083,25 +1083,25 @@ lib LibGL
   ) : ::Void
 
   fun material_f = glMaterialf(
-    face : MaterialFace,
+    face : Enum,
     pname : MaterialParameter,
     param : Float
   ) : ::Void
 
   fun material_fv = glMaterialfv(
-    face : MaterialFace,
+    face : Enum,
     pname : MaterialParameter,
     params : ::Pointer(Float)
   ) : ::Void
 
   fun material_i = glMateriali(
-    face : MaterialFace,
+    face : Enum,
     pname : MaterialParameter,
     param : Int
   ) : ::Void
 
   fun material_iv = glMaterialiv(
-    face : MaterialFace,
+    face : Enum,
     pname : MaterialParameter,
     params : ::Pointer(Int)
   ) : ::Void
@@ -1452,13 +1452,13 @@ lib LibGL
   ) : ::Void
 
   fun get_material_fv = glGetMaterialfv(
-    face : MaterialFace,
+    face : Enum,
     pname : MaterialParameter,
     params : ::Pointer(Float)
   ) : ::Void
 
   fun get_material_iv = glGetMaterialiv(
-    face : MaterialFace,
+    face : Enum,
     pname : MaterialParameter,
     params : ::Pointer(Int)
   ) : ::Void

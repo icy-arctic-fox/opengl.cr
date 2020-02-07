@@ -4,7 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
+  # Mostly OpenGL 1.0/1.1 enum assignments. Unused ranges should generally remain unused.
 
   enum SecondaryColorPointerTypeIBM : ::Int32
     Short = 0x1402
