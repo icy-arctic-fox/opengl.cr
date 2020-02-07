@@ -4,7 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
+  # For Pat Brown 2005/10/13
 
   enum ProgramStagePName : ::UInt32
     ActiveSubroutines = 0x8de5
