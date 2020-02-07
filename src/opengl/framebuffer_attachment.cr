@@ -4,11 +4,9 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
+  # Framebuffer object specification + headroom
 
   enum FramebufferAttachment : ::UInt32
-    DepthStencilAttachment = 0x821a
-
     ColorAttachment0 = 0x8ce0
 
     ColorAttachment1 = 0x8ce1
@@ -72,8 +70,6 @@ lib LibGL
     ColorAttachment30 = 0x8cfe
 
     ColorAttachment31 = 0x8cff
-
-    DepthAttachment = 0x8d00
 
     StencilAttachment = 0x8d20
   end
