@@ -4,7 +4,6 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
   @[Flags]
   enum BufferStorageMask : ::Int32
     MapRead = 0x1

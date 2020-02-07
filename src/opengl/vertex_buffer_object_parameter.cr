@@ -4,8 +4,6 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
-
   enum VertexBufferObjectParameter : ::Int32
     BufferSize = 0x8764
 
