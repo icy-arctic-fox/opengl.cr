@@ -4,7 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Deprecated, use the group attributes instead.
+  # Mostly OpenGL 1.0/1.1 enum assignments. Unused ranges should generally remain unused.
 
   enum GetTextureParameter : ::UInt32
     TextureWidth = 0x1000
