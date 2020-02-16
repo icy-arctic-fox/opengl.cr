@@ -47,5 +47,5 @@ lib LibGL
 
   alias Int64 = KhronosInt64
 
-  alias DebugProc = ::Proc(::Void, Enum, Enum, UInt, Enum, SizeI, ::Pointer(Char), ::Pointer(Void))
+  alias DebugProc = ::Proc(Enum, Enum, UInt, Enum, SizeI, ::Pointer(Char), ::Pointer(Void), ::Void)
 end
