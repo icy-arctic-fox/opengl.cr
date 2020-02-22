@@ -1563,7 +1563,7 @@ lib LibGL
     name : ::Pointer(Char)
   ) : Int
 
-  fun use_program_stage_s = glUseProgramStages(
+  fun use_program_stages = glUseProgramStages(
     pipeline : UInt,
     stages : UseProgramStageMask,
     program : UInt
@@ -1574,7 +1574,7 @@ lib LibGL
     program : UInt
   ) : ::Void
 
-  fun create_shader_programv = glCreateShaderProgramv(
+  fun create_shader_program_v = glCreateShaderProgramv(
     type : ShaderType,
     count : SizeI,
     strings : ::Pointer(::Pointer(Char))
@@ -1584,12 +1584,12 @@ lib LibGL
     pipeline : UInt
   ) : ::Void
 
-  fun delete_program_pipeline_s = glDeleteProgramPipelines(
+  fun delete_program_pipelines = glDeleteProgramPipelines(
     n : SizeI,
     pipelines : ::Pointer(UInt)
   ) : ::Void
 
-  fun gen_program_pipeline_s = glGenProgramPipelines(
+  fun gen_program_pipelines = glGenProgramPipelines(
     n : SizeI,
     pipelines : ::Pointer(UInt)
   ) : ::Void
