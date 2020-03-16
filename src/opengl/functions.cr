@@ -271,7 +271,7 @@ lib LibGL
   ) : ::Void
 
   fun get_materialxv = glGetMaterialxv(
-    face : Enum,
+    face : MaterialFace,
     pname : MaterialParameter,
     params : ::Pointer(Fixed)
   ) : ::Void
@@ -363,13 +363,13 @@ lib LibGL
   ) : ::Void
 
   fun materialx = glMaterialx(
-    face : Enum,
+    face : MaterialFace,
     pname : MaterialParameter,
     param : Fixed
   ) : ::Void
 
   fun materialxv = glMaterialxv(
-    face : Enum,
+    face : MaterialFace,
     pname : MaterialParameter,
     param : ::Pointer(Fixed)
   ) : ::Void
