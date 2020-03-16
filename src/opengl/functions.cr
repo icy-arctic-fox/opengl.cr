@@ -26,7 +26,7 @@ lib LibGL
   ) : ::Void
 
   fun polygon_mode = glPolygonMode(
-    face : Enum,
+    face : MaterialFace,
     mode : PolygonMode
   ) : ::Void
 
