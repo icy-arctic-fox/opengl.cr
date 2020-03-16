@@ -45,5 +45,5 @@ lib LibGL
 
   alias Half = KhronosUInt16
 
-  alias DebugProc = ::Proc(Enum, Enum, UInt, Enum, SizeI, ::Pointer(Char), ::Pointer(Void), ::Void)
+  alias DebugProc = (Enum, Enum, UInt, Enum, SizeI, ::Pointer(Char), ::Pointer(Void) -> ::Void)
 end
