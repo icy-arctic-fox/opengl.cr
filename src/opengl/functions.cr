@@ -1315,7 +1315,7 @@ lib LibGL
     pointer : ::Pointer(Void)
   ) : ::Void
 
-  fun get_vertex_attrib_iiv = glGetVertexAttribIiv(
+  fun get_vertex_attrib_i_iv = glGetVertexAttribIiv(
     index : UInt,
     pname : VertexAttribEnum,
     params : ::Pointer(Int)
@@ -1506,7 +1506,7 @@ lib LibGL
     value : ::Pointer(UInt)
   ) : ::Void
 
-  fun tex_parameter_iiv = glTexParameterIiv(
+  fun tex_parameter_i_iv = glTexParameterIiv(
     target : TextureTarget,
     pname : TextureParameterName,
     params : ::Pointer(Int)
@@ -1518,7 +1518,7 @@ lib LibGL
     params : ::Pointer(UInt)
   ) : ::Void
 
-  fun get_tex_parameter_iiv = glGetTexParameterIiv(
+  fun get_tex_parameter_i_iv = glGetTexParameterIiv(
     target : TextureTarget,
     pname : GetTextureParameter,
     params : ::Pointer(Int)
@@ -1884,7 +1884,7 @@ lib LibGL
     data : ::Pointer(Int64)
   ) : ::Void
 
-  fun get_buffer_parameteri_64v = glGetBufferParameteri64v(
+  fun get_buffer_parameter_i64v = glGetBufferParameteri64v(
     target : BufferTargetARB,
     pname : BufferPNameARB,
     params : ::Pointer(Int64)
@@ -1982,7 +1982,7 @@ lib LibGL
     param : ::Pointer(Float)
   ) : ::Void
 
-  fun sampler_parameter_iiv = glSamplerParameterIiv(
+  fun sampler_parameter_i_iv = glSamplerParameterIiv(
     sampler : UInt,
     pname : SamplerParameterI,
     param : ::Pointer(Int)
@@ -2000,7 +2000,7 @@ lib LibGL
     params : ::Pointer(Int)
   ) : ::Void
 
-  fun get_sampler_parameter_iiv = glGetSamplerParameterIiv(
+  fun get_sampler_parameter_i_iv = glGetSamplerParameterIiv(
     sampler : UInt,
     pname : SamplerParameterI,
     params : ::Pointer(Int)
@@ -2023,13 +2023,13 @@ lib LibGL
     target : QueryCounterTarget
   ) : ::Void
 
-  fun get_query_objecti_64v = glGetQueryObjecti64v(
+  fun get_query_object_i64v = glGetQueryObjecti64v(
     id : UInt,
     pname : QueryObjectParameterName,
     params : ::Pointer(Int64)
   ) : ::Void
 
-  fun get_query_objectui_64v = glGetQueryObjectui64v(
+  fun get_query_objectu_i64v = glGetQueryObjectui64v(
     id : UInt,
     pname : QueryObjectParameterName,
     params : ::Pointer(UInt64)
@@ -3122,7 +3122,7 @@ lib LibGL
     params : ::Pointer(Int)
   ) : ::Void
 
-  fun get_internalformati_64v = glGetInternalformati64v(
+  fun get_internalformat_i64v = glGetInternalformati64v(
     target : TextureTarget,
     internalformat : InternalFormat,
     pname : InternalFormatPName,
@@ -3499,7 +3499,7 @@ lib LibGL
     param : ::Pointer(Int)
   ) : ::Void
 
-  fun get_transform_feedbacki_64_v = glGetTransformFeedbacki64_v(
+  fun get_transform_feedback_i64_v = glGetTransformFeedbacki64_v(
     xfb : UInt,
     pname : TransformFeedbackPName,
     index : UInt,
@@ -3586,7 +3586,7 @@ lib LibGL
     params : ::Pointer(Int)
   ) : ::Void
 
-  fun get_named_buffer_parameteri_64v = glGetNamedBufferParameteri64v(
+  fun get_named_buffer_parameter_i64v = glGetNamedBufferParameteri64v(
     buffer : UInt,
     pname : VertexBufferObjectParameter,
     params : ::Pointer(Int64)
@@ -3943,7 +3943,7 @@ lib LibGL
     param : Int
   ) : ::Void
 
-  fun texture_parameter_iiv = glTextureParameterIiv(
+  fun texture_parameter_i_iv = glTextureParameterIiv(
     texture : UInt,
     pname : TextureParameterName,
     params : ::Pointer(Int)
@@ -4006,7 +4006,7 @@ lib LibGL
     params : ::Pointer(Float)
   ) : ::Void
 
-  fun get_texture_parameter_iiv = glGetTextureParameterIiv(
+  fun get_texture_parameter_i_iv = glGetTextureParameterIiv(
     texture : UInt,
     pname : GetTextureParameter,
     params : ::Pointer(Int)
@@ -4134,7 +4134,7 @@ lib LibGL
     ids : ::Pointer(UInt)
   ) : ::Void
 
-  fun get_query_buffer_objecti_64v = glGetQueryBufferObjecti64v(
+  fun get_query_buffer_object_i64v = glGetQueryBufferObjecti64v(
     id : UInt,
     buffer : UInt,
     pname : QueryObjectParameterName,
@@ -4148,7 +4148,7 @@ lib LibGL
     offset : IntPtr
   ) : ::Void
 
-  fun get_query_buffer_objectui_64v = glGetQueryBufferObjectui64v(
+  fun get_query_buffer_objectu_i64v = glGetQueryBufferObjectui64v(
     id : UInt,
     buffer : UInt,
     pname : QueryObjectParameterName,
