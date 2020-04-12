@@ -1315,7 +1315,7 @@ lib LibGL
     pointer : ::Pointer(Void)
   ) : ::Void
 
-  fun get_vertex_attrib_iiv = glGetVertexAttribIiv(
+  fun get_vertex_attrib_i_iv = glGetVertexAttribIiv(
     index : UInt,
     pname : VertexAttribEnum,
     params : ::Pointer(Int)
@@ -1506,7 +1506,7 @@ lib LibGL
     value : ::Pointer(UInt)
   ) : ::Void
 
-  fun tex_parameter_iiv = glTexParameterIiv(
+  fun tex_parameter_i_iv = glTexParameterIiv(
     target : TextureTarget,
     pname : TextureParameterName,
     params : ::Pointer(Int)
@@ -1518,7 +1518,7 @@ lib LibGL
     params : ::Pointer(UInt)
   ) : ::Void
 
-  fun get_tex_parameter_iiv = glGetTexParameterIiv(
+  fun get_tex_parameter_i_iv = glGetTexParameterIiv(
     target : TextureTarget,
     pname : GetTextureParameter,
     params : ::Pointer(Int)
@@ -1884,7 +1884,7 @@ lib LibGL
     data : ::Pointer(Int64)
   ) : ::Void
 
-  fun get_buffer_parameteri_64v = glGetBufferParameteri64v(
+  fun get_buffer_parameter_i64v = glGetBufferParameteri64v(
     target : BufferTargetARB,
     pname : BufferPNameARB,
     params : ::Pointer(Int64)
