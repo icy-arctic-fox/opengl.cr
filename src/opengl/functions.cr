@@ -1103,7 +1103,7 @@ lib LibGL
     pointer : ::Pointer(Void)
   ) : ::Void
 
-  fun get_vertex_attrib_iiv = glGetVertexAttribIiv(
+  fun get_vertex_attrib_i_iv = glGetVertexAttribIiv(
     index : UInt,
     pname : VertexAttribEnum,
     params : ::Pointer(Int)
@@ -1340,7 +1340,7 @@ lib LibGL
     data : ::Pointer(Int64)
   ) : ::Void
 
-  fun get_buffer_parameteri_64v = glGetBufferParameteri64v(
+  fun get_buffer_parameter_i64v = glGetBufferParameteri64v(
     target : BufferTargetARB,
     pname : BufferPNameARB,
     params : ::Pointer(Int64)
