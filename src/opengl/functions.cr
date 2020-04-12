@@ -3130,7 +3130,7 @@ lib LibGL
     pointer : ::Pointer(Void)
   ) : ::Void
 
-  fun get_vertex_attrib_iiv = glGetVertexAttribIiv(
+  fun get_vertex_attrib_i_iv = glGetVertexAttribIiv(
     index : UInt,
     pname : VertexAttribEnum,
     params : ::Pointer(Int)
@@ -3321,7 +3321,7 @@ lib LibGL
     value : ::Pointer(UInt)
   ) : ::Void
 
-  fun tex_parameter_iiv = glTexParameterIiv(
+  fun tex_parameter_i_iv = glTexParameterIiv(
     target : TextureTarget,
     pname : TextureParameterName,
     params : ::Pointer(Int)
@@ -3333,7 +3333,7 @@ lib LibGL
     params : ::Pointer(UInt)
   ) : ::Void
 
-  fun get_tex_parameter_iiv = glGetTexParameterIiv(
+  fun get_tex_parameter_i_iv = glGetTexParameterIiv(
     target : TextureTarget,
     pname : GetTextureParameter,
     params : ::Pointer(Int)
