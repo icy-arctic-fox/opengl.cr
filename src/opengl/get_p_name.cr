@@ -339,6 +339,8 @@ lib LibGL
 
     MaxFragmentInputComponents = 0x9125
 
+    ContextProfileMask = 0x9126
+
     ProvokingVertex = 0x8e4f
 
     MaxServerWaitTimeout = 0x9111

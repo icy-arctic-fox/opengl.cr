@@ -12,5 +12,7 @@ lib LibGL
     TextureMinLod = 0x813a
 
     TextureMaxLod = 0x813b
+
+    TextureLodBias = 0x8501
   end
 end
