@@ -6,7 +6,7 @@
 lib LibGL
   # Mostly OpenGL 1.0/1.1 enum assignments. Unused ranges should generally remain unused.
 
-  enum VertexAttribIType : ::Int32
+  enum VertexAttribIType : ::UInt32
     Byte = 0x1400
 
     UnsignedByte = 0x1401
