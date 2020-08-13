@@ -71,6 +71,8 @@ lib LibGL
 
     ColorAttachment31 = 0x8cff
 
+    DepthAttachment = 0x8d00
+
     StencilAttachment = 0x8d20
   end
 end
