@@ -4,7 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  enum VertexBufferObjectParameter : ::UInt32
+  enum VertexBufferObjectParameter : ::Int32
     BufferSize = 0x8764
 
     BufferUsage = 0x8765

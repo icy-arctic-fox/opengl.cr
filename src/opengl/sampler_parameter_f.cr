@@ -13,6 +13,8 @@ lib LibGL
 
     TextureMaxLod = 0x813b
 
+    TextureLodBias = 0x8501
+
     TextureMaxAnisotropy = 0x84fe
   end
 end
