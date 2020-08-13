@@ -1091,14 +1091,14 @@ lib LibGL
     bufSize : SizeI,
     length : ::Pointer(SizeI),
     size : ::Pointer(SizeI),
-    type : ::Pointer(SLTypeToken),
+    type : ::Pointer(AttributeType),
     name : ::Pointer(Char)
   ) : ::Void
 
   fun vertex_attrib_i_pointer = glVertexAttribIPointer(
     index : UInt,
     size : Int,
-    type : VertexAttribPointerType,
+    type : VertexAttribIType,
     stride : SizeI,
     pointer : ::Pointer(Void)
   ) : ::Void
