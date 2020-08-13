@@ -29,6 +29,8 @@ lib LibGL
 
     Texture2DMultisample = 0x9100
 
+    TextureBuffer = 0x8c2a
+
     TextureCubeMapArray = 0x9009
 
     Texture2DMultisampleArray = 0x9102

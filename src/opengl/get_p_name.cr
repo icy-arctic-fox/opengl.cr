@@ -381,6 +381,10 @@ lib LibGL
 
     ContextFlags = 0x821e
 
+    MaxTessControlUniformBlocks = 0x8e89
+
+    MaxTessEvaluationUniformBlocks = 0x8e8a
+
     MaxTessControlAtomicCounters = 0x92d3
 
     MaxTessEvaluationAtomicCounters = 0x92d4
