@@ -1291,7 +1291,7 @@ lib LibGL
     bufSize : SizeI,
     length : ::Pointer(SizeI),
     size : ::Pointer(SizeI),
-    type : ::Pointer(SLTypeToken),
+    type : ::Pointer(AttributeType),
     name : ::Pointer(Char)
   ) : ::Void
 
@@ -1310,7 +1310,7 @@ lib LibGL
   fun vertex_attrib_i_pointer = glVertexAttribIPointer(
     index : UInt,
     size : Int,
-    type : VertexAttribPointerType,
+    type : VertexAttribIType,
     stride : SizeI,
     pointer : ::Pointer(Void)
   ) : ::Void
@@ -2898,7 +2898,7 @@ lib LibGL
   fun vertex_attrib_l_pointer = glVertexAttribLPointer(
     index : UInt,
     size : Int,
-    type : VertexAttribPointerType,
+    type : VertexAttribLType,
     stride : SizeI,
     pointer : ::Pointer(Void)
   ) : ::Void
@@ -3582,19 +3582,19 @@ lib LibGL
 
   fun get_named_buffer_parameter_iv = glGetNamedBufferParameteriv(
     buffer : UInt,
-    pname : VertexBufferObjectParameter,
+    pname : BufferPNameARB,
     params : ::Pointer(Int)
   ) : ::Void
 
   fun get_named_buffer_parameter_i64v = glGetNamedBufferParameteri64v(
     buffer : UInt,
-    pname : VertexBufferObjectParameter,
+    pname : BufferPNameARB,
     params : ::Pointer(Int64)
   ) : ::Void
 
   fun get_named_buffer_pointer_v = glGetNamedBufferPointerv(
     buffer : UInt,
-    pname : VertexBufferObjectParameter,
+    pname : BufferPointerNameARB,
     params : ::Pointer(Pointer(Void))
   ) : ::Void
 
