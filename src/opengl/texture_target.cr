@@ -43,6 +43,8 @@ lib LibGL
 
     ProxyTexture2DArray = 0x8c1b
 
+    TextureBuffer = 0x8c2a
+
     TextureRectangle = 0x84f5
 
     ProxyTextureRectangle = 0x84f7
