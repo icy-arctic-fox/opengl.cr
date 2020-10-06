@@ -3053,7 +3053,7 @@ lib LibGL
   ) : ::Void
 
   fun get_integer_i_v = glGetIntegeri_v(
-    target : Enum,
+    target : GetPName,
     index : UInt,
     data : ::Pointer(Int)
   ) : ::Void
@@ -3657,7 +3657,7 @@ lib LibGL
 
   fun fence_sync = glFenceSync(
     condition : SyncCondition,
-    flags : Bitfield
+    flags : SyncBehaviorFlagS
   ) : Sync
 
   fun is_sync = glIsSync(
@@ -3676,7 +3676,7 @@ lib LibGL
 
   fun wait_sync = glWaitSync(
     sync : Sync,
-    flags : Bitfield,
+    flags : SyncBehaviorFlagS,
     timeout : UInt64
   ) : ::Void
 
@@ -3694,7 +3694,7 @@ lib LibGL
   ) : ::Void
 
   fun get_integer_64i_v = glGetInteger64i_v(
-    target : Enum,
+    target : GetPName,
     index : UInt,
     data : ::Pointer(Int64)
   ) : ::Void
