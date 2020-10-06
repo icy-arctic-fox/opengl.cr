@@ -1238,7 +1238,7 @@ lib LibGL
   ) : ::Void
 
   fun get_integer_i_v = glGetIntegeri_v(
-    target : Enum,
+    target : GetPName,
     index : UInt,
     data : ::Pointer(Int)
   ) : ::Void
@@ -1842,7 +1842,7 @@ lib LibGL
 
   fun fence_sync = glFenceSync(
     condition : SyncCondition,
-    flags : Bitfield
+    flags : SyncBehaviorFlagS
   ) : Sync
 
   fun is_sync = glIsSync(
@@ -1861,7 +1861,7 @@ lib LibGL
 
   fun wait_sync = glWaitSync(
     sync : Sync,
-    flags : Bitfield,
+    flags : SyncBehaviorFlagS,
     timeout : UInt64
   ) : ::Void
 
@@ -1879,7 +1879,7 @@ lib LibGL
   ) : ::Void
 
   fun get_integer_64i_v = glGetInteger64i_v(
-    target : Enum,
+    target : GetPName,
     index : UInt,
     data : ::Pointer(Int64)
   ) : ::Void
@@ -2379,7 +2379,7 @@ lib LibGL
   fun shader_binary = glShaderBinary(
     count : SizeI,
     shaders : ::Pointer(UInt),
-    binaryformat : Enum,
+    binaryFormat : Enum,
     binary : ::Pointer(Void),
     length : SizeI
   ) : ::Void
@@ -2960,13 +2960,13 @@ lib LibGL
   ) : ::Void
 
   fun get_float_i_v = glGetFloati_v(
-    target : Enum,
+    target : GetPName,
     index : UInt,
     data : ::Pointer(Float)
   ) : ::Void
 
   fun get_double_i_v = glGetDoublei_v(
-    target : Enum,
+    target : GetPName,
     index : UInt,
     data : ::Pointer(Double)
   ) : ::Void
