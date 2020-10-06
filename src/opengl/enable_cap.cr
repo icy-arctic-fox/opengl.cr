@@ -186,5 +186,11 @@ lib LibGL
     DebugOutputSynchronous = 0x8242
 
     DebugOutput = 0x92e0
+
+    ColorTable = 0x80d0
+
+    PostConvolutionColorTable = 0x80d1
+
+    PostColorMatrixColorTable = 0x80d2
   end
 end
