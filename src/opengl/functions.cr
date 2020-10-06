@@ -3053,7 +3053,7 @@ lib LibGL
   ) : ::Void
 
   fun get_integer_i_v = glGetIntegeri_v(
-    target : Enum,
+    target : GetPName,
     index : UInt,
     data : ::Pointer(Int)
   ) : ::Void
