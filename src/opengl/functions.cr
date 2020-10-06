@@ -536,7 +536,7 @@ lib LibGL
   fun shader_binary = glShaderBinary(
     count : SizeI,
     shaders : ::Pointer(UInt),
-    binaryformat : Enum,
+    binaryFormat : Enum,
     binary : ::Pointer(Void),
     length : SizeI
   ) : ::Void
