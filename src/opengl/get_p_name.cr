@@ -719,6 +719,8 @@ lib LibGL
 
     ShaderCompiler = 0x8dfa
 
+    ShaderBinaryFormats = 0x8df8
+
     NumShaderBinaryFormats = 0x8df9
 
     MaxVertexUniformVectors = 0x8dfb
