@@ -6,7 +6,7 @@
 lib LibGL
   # Tokens whose numeric value is intrinsically meaningful
 
-  enum SyncBehaviorFlags : ::UInt32
+  enum SyncBehaviorFlagS : ::UInt32
     None = 0x0
   end
 end

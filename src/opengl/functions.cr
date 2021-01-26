@@ -1842,7 +1842,7 @@ lib LibGL
 
   fun fence_sync = glFenceSync(
     condition : SyncCondition,
-    flags : SyncBehaviorFlags
+    flags : SyncBehaviorFlagS
   ) : Sync
 
   fun is_sync = glIsSync(
@@ -1861,7 +1861,7 @@ lib LibGL
 
   fun wait_sync = glWaitSync(
     sync : Sync,
-    flags : SyncBehaviorFlags,
+    flags : SyncBehaviorFlagS,
     timeout : UInt64
   ) : ::Void
 
