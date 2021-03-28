@@ -1469,7 +1469,7 @@ lib LibGL
   fun tex_storage_2d = glTexStorage2D(
     target : TextureTarget,
     levels : SizeI,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     width : SizeI,
     height : SizeI
   ) : ::Void
@@ -1477,7 +1477,7 @@ lib LibGL
   fun tex_storage_3d = glTexStorage3D(
     target : TextureTarget,
     levels : SizeI,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     width : SizeI,
     height : SizeI,
     depth : SizeI
@@ -1888,7 +1888,7 @@ lib LibGL
   fun tex_storage_2d_multisample = glTexStorage2DMultisample(
     target : TextureTarget,
     samples : SizeI,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     width : SizeI,
     height : SizeI,
     fixedsamplelocations : Boolean

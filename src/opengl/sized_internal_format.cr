@@ -4,15 +4,9 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  # Mostly OpenGL 1.0/1.1 enum assignments. Unused ranges should generally remain unused.
+  # The primary GL enumerant space begins here. All modern enum allocations are in this range. These enums are mostly assigned the default class since it's a great deal of not very useful work to be more specific
 
-  enum InternalFormat : ::UInt32
-    DepthComponent = 0x1902
-
-    RGB = 0x1907
-
-    RGBA = 0x1908
-
+  enum SizedInternalFormat : ::UInt32
     RGBA4 = 0x8056
 
     RGB5A1 = 0x8057
@@ -21,8 +15,6 @@ lib LibGL
 
     StencilIndex8 = 0x8d48
 
-    Red = 0x1903
-
     RGB8 = 0x8051
 
     RGBA8 = 0x8058
@@ -30,8 +22,6 @@ lib LibGL
     RGB10A2 = 0x8059
 
     DepthComponent24 = 0x81a6
-
-    SrGB = 0x8c40
 
     SrGB8 = 0x8c41
 
@@ -77,11 +67,7 @@ lib LibGL
 
     Depth32FStencil8 = 0x8cad
 
-    DepthStencil = 0x84f9
-
     Depth24Stencil8 = 0x88f0
-
-    Rg = 0x8227
 
     R8 = 0x8229
 
@@ -148,7 +134,5 @@ lib LibGL
     CompressedRGBA8Etc2Eac = 0x9278
 
     CompressedSrGB8Alpha8Etc2Eac = 0x9279
-
-    StencilIndex = 0x1901
   end
 end
