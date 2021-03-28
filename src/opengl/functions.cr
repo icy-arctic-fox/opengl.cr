@@ -1735,7 +1735,7 @@ lib LibGL
 
   fun tex_buffer = glTexBuffer(
     target : TextureTarget,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     buffer : UInt
   ) : ::Void
 
@@ -3030,14 +3030,14 @@ lib LibGL
   fun tex_storage_1d = glTexStorage1D(
     target : TextureTarget,
     levels : SizeI,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     width : SizeI
   ) : ::Void
 
   fun tex_storage_2d = glTexStorage2D(
     target : TextureTarget,
     levels : SizeI,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     width : SizeI,
     height : SizeI
   ) : ::Void
@@ -3045,7 +3045,7 @@ lib LibGL
   fun tex_storage_3d = glTexStorage3D(
     target : TextureTarget,
     levels : SizeI,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     width : SizeI,
     height : SizeI,
     depth : SizeI
@@ -3066,7 +3066,7 @@ lib LibGL
 
   fun clear_buffer_data = glClearBufferData(
     target : BufferStorageTarget,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     format : PixelFormat,
     type : PixelType,
     data : ::Pointer(Void)
@@ -3074,7 +3074,7 @@ lib LibGL
 
   fun clear_buffer_sub_data = glClearBufferSubData(
     target : BufferTargetARB,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     offset : IntPtr,
     size : SizeIPtr,
     format : PixelFormat,
@@ -3240,7 +3240,7 @@ lib LibGL
 
   fun tex_buffer_range = glTexBufferRange(
     target : TextureTarget,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     buffer : UInt,
     offset : IntPtr,
     size : SizeIPtr
@@ -3249,7 +3249,7 @@ lib LibGL
   fun tex_storage_2d_multisample = glTexStorage2DMultisample(
     target : TextureTarget,
     samples : SizeI,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     width : SizeI,
     height : SizeI,
     fixedsamplelocations : Boolean
@@ -3258,7 +3258,7 @@ lib LibGL
   fun tex_storage_3d_multisample = glTexStorage3DMultisample(
     target : TextureTarget,
     samples : SizeI,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     width : SizeI,
     height : SizeI,
     depth : SizeI,
@@ -3269,7 +3269,7 @@ lib LibGL
     texture : UInt,
     target : TextureTarget,
     origtexture : UInt,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     minlevel : UInt,
     numlevels : UInt,
     minlayer : UInt,
@@ -3542,7 +3542,7 @@ lib LibGL
 
   fun clear_named_buffer_data = glClearNamedBufferData(
     buffer : UInt,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     format : PixelFormat,
     type : PixelType,
     data : ::Pointer(Void)
@@ -3550,7 +3550,7 @@ lib LibGL
 
   fun clear_named_buffer_sub_data = glClearNamedBufferSubData(
     buffer : UInt,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     offset : IntPtr,
     size : SizeIPtr,
     format : PixelFormat,
@@ -3766,13 +3766,13 @@ lib LibGL
 
   fun texture_buffer = glTextureBuffer(
     texture : UInt,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     buffer : UInt
   ) : ::Void
 
   fun texture_buffer_range = glTextureBufferRange(
     texture : UInt,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     buffer : UInt,
     offset : IntPtr,
     size : SizeIPtr
@@ -3781,14 +3781,14 @@ lib LibGL
   fun texture_storage_1d = glTextureStorage1D(
     texture : UInt,
     levels : SizeI,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     width : SizeI
   ) : ::Void
 
   fun texture_storage_2d = glTextureStorage2D(
     texture : UInt,
     levels : SizeI,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     width : SizeI,
     height : SizeI
   ) : ::Void
@@ -3796,7 +3796,7 @@ lib LibGL
   fun texture_storage_3d = glTextureStorage3D(
     texture : UInt,
     levels : SizeI,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     width : SizeI,
     height : SizeI,
     depth : SizeI
@@ -3805,7 +3805,7 @@ lib LibGL
   fun texture_storage_2d_multisample = glTextureStorage2DMultisample(
     texture : UInt,
     samples : SizeI,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     width : SizeI,
     height : SizeI,
     fixedsamplelocations : Boolean
@@ -3814,7 +3814,7 @@ lib LibGL
   fun texture_storage_3d_multisample = glTextureStorage3DMultisample(
     texture : UInt,
     samples : SizeI,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     width : SizeI,
     height : SizeI,
     depth : SizeI,
