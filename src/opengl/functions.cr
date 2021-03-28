@@ -409,7 +409,7 @@ lib LibGL
   fun tex_storage_2d = glTexStorage2D(
     target : TextureTarget,
     levels : SizeI,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     width : SizeI,
     height : SizeI
   ) : ::Void
