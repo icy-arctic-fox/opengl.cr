@@ -3550,7 +3550,7 @@ lib LibGL
 
   fun tex_buffer = glTexBuffer(
     target : TextureTarget,
-    internalformat : InternalFormat,
+    internalformat : SizedInternalFormat,
     buffer : UInt
   ) : ::Void
 
