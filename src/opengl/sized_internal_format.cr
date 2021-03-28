@@ -6,17 +6,7 @@
 lib LibGL
   # Mostly OpenGL 1.0/1.1 enum assignments. Unused ranges should generally remain unused.
 
-  enum InternalFormat : ::UInt32
-    StencilIndex = 0x1901
-
-    DepthComponent = 0x1902
-
-    Red = 0x1903
-
-    RGB = 0x1907
-
-    RGBA = 0x1908
-
+  enum SizedInternalFormat : ::Int32
     R3G3B2 = 0x2a10
 
     RGB4 = 0x804f
@@ -73,8 +63,6 @@ lib LibGL
 
     Luminance16Alpha16 = 0x8048
 
-    Intensity = 0x8049
-
     Intensity4 = 0x804a
 
     Intensity8 = 0x804b
@@ -83,26 +71,14 @@ lib LibGL
 
     Intensity16 = 0x804d
 
-    CompressedRGB = 0x84ed
-
-    CompressedRGBA = 0x84ee
-
     DepthComponent16 = 0x81a5
 
     DepthComponent24 = 0x81a6
 
     DepthComponent32 = 0x81a7
 
-    SrGB = 0x8c40
-
     SrGB8 = 0x8c41
 
-    SrGBAlpha = 0x8c42
-
     SrGB8Alpha8 = 0x8c43
-
-    CompressedSrGB = 0x8c48
-
-    CompressedSrGBAlpha = 0x8c49
   end
 end
