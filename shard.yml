@@ -2,7 +2,7 @@
 name: opengl
 version: 4.4.0
 description: Open Graphics Library (OpenGL) bindings for the Crystal language.
-crystal: 0.36.1
+crystal: 1.0.0
 libraries:
   gl: 4.4
 license: MIT
