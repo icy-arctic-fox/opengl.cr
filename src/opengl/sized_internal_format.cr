@@ -41,9 +41,9 @@ lib LibGL
 
     DepthComponent32 = 0x81a7
 
-    SrGB8 = 0x8c41
+    SRGB8 = 0x8c41
 
-    SrGB8Alpha8 = 0x8c43
+    SRGB8Alpha8 = 0x8c43
 
     RGBA32F = 0x8814
 
