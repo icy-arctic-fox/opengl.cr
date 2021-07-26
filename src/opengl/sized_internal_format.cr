@@ -23,9 +23,9 @@ lib LibGL
 
     DepthComponent24 = 0x81a6
 
-    SrGB8 = 0x8c41
+    SRGB8 = 0x8c41
 
-    SrGB8Alpha8 = 0x8c43
+    SRGB8Alpha8 = 0x8c43
 
     RGBA32F = 0x8814
 
@@ -125,15 +125,15 @@ lib LibGL
 
     CompressedRGB8Etc2 = 0x9274
 
-    CompressedSrGB8Etc2 = 0x9275
+    CompressedSRGB8Etc2 = 0x9275
 
     CompressedRGB8PunchthroughAlpha1Etc2 = 0x9276
 
-    CompressedSrGB8PunchthroughAlpha1Etc2 = 0x9277
+    CompressedSRGB8PunchthroughAlpha1Etc2 = 0x9277
 
     CompressedRGBA8Etc2Eac = 0x9278
 
-    CompressedSrGB8Alpha8Etc2Eac = 0x9279
+    CompressedSRGB8Alpha8Etc2Eac = 0x9279
 
     CompressedRGBAAstc4x4 = 0x93b0
 
@@ -163,32 +163,32 @@ lib LibGL
 
     CompressedRGBAAstc12x12 = 0x93bd
 
-    CompressedSrGB8Alpha8Astc4x4 = 0x93d0
+    CompressedSRGB8Alpha8Astc4x4 = 0x93d0
 
-    CompressedSrGB8Alpha8Astc5x4 = 0x93d1
+    CompressedSRGB8Alpha8Astc5x4 = 0x93d1
 
-    CompressedSrGB8Alpha8Astc5x5 = 0x93d2
+    CompressedSRGB8Alpha8Astc5x5 = 0x93d2
 
-    CompressedSrGB8Alpha8Astc6x5 = 0x93d3
+    CompressedSRGB8Alpha8Astc6x5 = 0x93d3
 
-    CompressedSrGB8Alpha8Astc6x6 = 0x93d4
+    CompressedSRGB8Alpha8Astc6x6 = 0x93d4
 
-    CompressedSrGB8Alpha8Astc8x5 = 0x93d5
+    CompressedSRGB8Alpha8Astc8x5 = 0x93d5
 
-    CompressedSrGB8Alpha8Astc8x6 = 0x93d6
+    CompressedSRGB8Alpha8Astc8x6 = 0x93d6
 
-    CompressedSrGB8Alpha8Astc8x8 = 0x93d7
+    CompressedSRGB8Alpha8Astc8x8 = 0x93d7
 
-    CompressedSrGB8Alpha8Astc10x5 = 0x93d8
+    CompressedSRGB8Alpha8Astc10x5 = 0x93d8
 
-    CompressedSrGB8Alpha8Astc10x6 = 0x93d9
+    CompressedSRGB8Alpha8Astc10x6 = 0x93d9
 
-    CompressedSrGB8Alpha8Astc10x8 = 0x93da
+    CompressedSRGB8Alpha8Astc10x8 = 0x93da
 
-    CompressedSrGB8Alpha8Astc10x10 = 0x93db
+    CompressedSRGB8Alpha8Astc10x10 = 0x93db
 
-    CompressedSrGB8Alpha8Astc12x10 = 0x93dc
+    CompressedSRGB8Alpha8Astc12x10 = 0x93dc
 
-    CompressedSrGB8Alpha8Astc12x12 = 0x93dd
+    CompressedSRGB8Alpha8Astc12x12 = 0x93dd
   end
 end
