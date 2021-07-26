@@ -41,9 +41,9 @@ lib LibGL
 
     DepthComponent32 = 0x81a7
 
-    SrGB8 = 0x8c41
+    SRGB8 = 0x8c41
 
-    SrGB8Alpha8 = 0x8c43
+    SRGB8Alpha8 = 0x8c43
 
     RGBA32F = 0x8814
 
@@ -163,7 +163,7 @@ lib LibGL
 
     CompressedRGBABptcUnorm = 0x8e8c
 
-    CompressedSrGBAlphaBptcUnorm = 0x8e8d
+    CompressedSRGBAlphaBptcUnorm = 0x8e8d
 
     CompressedRGBBptcSignedFloat = 0x8e8e
 
@@ -171,15 +171,15 @@ lib LibGL
 
     CompressedRGB8Etc2 = 0x9274
 
-    CompressedSrGB8Etc2 = 0x9275
+    CompressedSRGB8Etc2 = 0x9275
 
     CompressedRGB8PunchthroughAlpha1Etc2 = 0x9276
 
-    CompressedSrGB8PunchthroughAlpha1Etc2 = 0x9277
+    CompressedSRGB8PunchthroughAlpha1Etc2 = 0x9277
 
     CompressedRGBA8Etc2Eac = 0x9278
 
-    CompressedSrGB8Alpha8Etc2Eac = 0x9279
+    CompressedSRGB8Alpha8Etc2Eac = 0x9279
 
     CompressedR11Eac = 0x9270
 
