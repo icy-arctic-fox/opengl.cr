@@ -87,9 +87,9 @@ lib LibGL
 
     ColorEncoding = 0x8296
 
-    SrGBRead = 0x8297
+    SRGBRead = 0x8297
 
-    SrGBWrite = 0x8298
+    SRGBWrite = 0x8298
 
     Filter = 0x829a
 
