@@ -31,11 +31,11 @@ lib LibGL
 
     DepthComponent24 = 0x81a6
 
-    SrGB = 0x8c40
+    SRGB = 0x8c40
 
-    SrGB8 = 0x8c41
+    SRGB8 = 0x8c41
 
-    SrGB8Alpha8 = 0x8c43
+    SRGB8Alpha8 = 0x8c43
 
     RGBA32F = 0x8814
 
@@ -139,15 +139,15 @@ lib LibGL
 
     CompressedRGB8Etc2 = 0x9274
 
-    CompressedSrGB8Etc2 = 0x9275
+    CompressedSRGB8Etc2 = 0x9275
 
     CompressedRGB8PunchthroughAlpha1Etc2 = 0x9276
 
-    CompressedSrGB8PunchthroughAlpha1Etc2 = 0x9277
+    CompressedSRGB8PunchthroughAlpha1Etc2 = 0x9277
 
     CompressedRGBA8Etc2Eac = 0x9278
 
-    CompressedSrGB8Alpha8Etc2Eac = 0x9279
+    CompressedSRGB8Alpha8Etc2Eac = 0x9279
 
     StencilIndex = 0x1901
   end
