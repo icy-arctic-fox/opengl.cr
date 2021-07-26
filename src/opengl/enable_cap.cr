@@ -165,6 +165,6 @@ lib LibGL
 
     RasterizerDiscard = 0x8c89
 
-    FramebufferSrGB = 0x8db9
+    FramebufferSRGB = 0x8db9
   end
 end
