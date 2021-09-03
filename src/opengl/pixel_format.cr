@@ -27,9 +27,9 @@ lib LibGL
 
     RGBA = 0x1908
 
-    Bgr = 0x80e0
+    BGR = 0x80e0
 
-    Bgra = 0x80e1
+    BGRA = 0x80e1
 
     RedInteger = 0x8d94
 
@@ -41,14 +41,14 @@ lib LibGL
 
     RGBAInteger = 0x8d99
 
-    BgrInteger = 0x8d9a
+    BGRInteger = 0x8d9a
 
-    BgraInteger = 0x8d9b
+    BGRAInteger = 0x8d9b
 
     DepthStencil = 0x84f9
 
-    Rg = 0x8227
+    RG = 0x8227
 
-    RgInteger = 0x8228
+    RGInteger = 0x8228
   end
 end

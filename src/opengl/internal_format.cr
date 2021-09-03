@@ -69,7 +69,7 @@ lib LibGL
 
     CompressedRed = 0x8225
 
-    CompressedRg = 0x8226
+    CompressedRG = 0x8226
 
     RGBA32F = 0x8814
 
@@ -79,21 +79,21 @@ lib LibGL
 
     RGB16F = 0x881b
 
-    R11FG11fB10f = 0x8c3a
+    R11FG11FB10F = 0x8c3a
 
     RGB9E5 = 0x8c3d
 
-    RGBA32Ui = 0x8d70
+    RGBA32UI = 0x8d70
 
-    RGB32Ui = 0x8d71
+    RGB32UI = 0x8d71
 
-    RGBA16Ui = 0x8d76
+    RGBA16UI = 0x8d76
 
-    RGB16Ui = 0x8d77
+    RGB16UI = 0x8d77
 
-    RGBA8Ui = 0x8d7c
+    RGBA8UI = 0x8d7c
 
-    RGB8Ui = 0x8d7d
+    RGB8UI = 0x8d7d
 
     RGBA32I = 0x8d82
 
@@ -123,70 +123,70 @@ lib LibGL
 
     StencilIndex16 = 0x8d49
 
-    CompressedRedRgtc1 = 0x8dbb
+    CompressedRedRGTC1 = 0x8dbb
 
-    CompressedSignedRedRgtc1 = 0x8dbc
+    CompressedSignedRedRGTC1 = 0x8dbc
 
-    CompressedRgRgtc2 = 0x8dbd
+    CompressedRGRGTC2 = 0x8dbd
 
-    CompressedSignedRgRgtc2 = 0x8dbe
+    CompressedSignedRGRGTC2 = 0x8dbe
 
-    Rg = 0x8227
+    RG = 0x8227
 
     R8 = 0x8229
 
     R16 = 0x822a
 
-    Rg8 = 0x822b
+    RG8 = 0x822b
 
-    Rg16 = 0x822c
+    RG16 = 0x822c
 
     R16F = 0x822d
 
     R32F = 0x822e
 
-    Rg16F = 0x822f
+    RG16F = 0x822f
 
-    Rg32F = 0x8230
+    RG32F = 0x8230
 
     R8I = 0x8231
 
-    R8Ui = 0x8232
+    R8UI = 0x8232
 
     R16I = 0x8233
 
-    R16Ui = 0x8234
+    R16UI = 0x8234
 
     R32I = 0x8235
 
-    R32Ui = 0x8236
+    R32UI = 0x8236
 
-    Rg8I = 0x8237
+    RG8I = 0x8237
 
-    Rg8Ui = 0x8238
+    RG8UI = 0x8238
 
-    Rg16I = 0x8239
+    RG16I = 0x8239
 
-    Rg16Ui = 0x823a
+    RG16UI = 0x823a
 
-    Rg32I = 0x823b
+    RG32I = 0x823b
 
-    Rg32Ui = 0x823c
+    RG32UI = 0x823c
 
-    R8Snorm = 0x8f94
+    R8SNorm = 0x8f94
 
-    Rg8Snorm = 0x8f95
+    RG8SNorm = 0x8f95
 
-    RGB8Snorm = 0x8f96
+    RGB8SNorm = 0x8f96
 
-    RGBA8Snorm = 0x8f97
+    RGBA8SNorm = 0x8f97
 
-    R16Snorm = 0x8f98
+    R16SNorm = 0x8f98
 
-    Rg16Snorm = 0x8f99
+    RG16SNorm = 0x8f99
 
-    RGB16Snorm = 0x8f9a
+    RGB16SNorm = 0x8f9a
 
-    RGBA16Snorm = 0x8f9b
+    RGBA16SNorm = 0x8f9b
   end
 end
