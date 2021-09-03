@@ -6,7 +6,7 @@
 lib LibGL
   # Mostly OpenGL 1.0/1.1 enum assignments. Unused ranges should generally remain unused.
 
-  enum SLTypeToken : ::Int32
+  enum GLSLTypeToken : ::Int32
     Int = 0x1404
 
     UnsignedInt = 0x1405
