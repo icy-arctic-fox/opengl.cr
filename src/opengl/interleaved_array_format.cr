@@ -11,28 +11,28 @@ lib LibGL
 
     V3F = 0x2a21
 
-    C4UbV2f = 0x2a22
+    C4UbV2F = 0x2a22
 
-    C4UbV3f = 0x2a23
+    C4UbV3F = 0x2a23
 
-    C3FV3f = 0x2a24
+    C3FV3F = 0x2a24
 
-    N3FV3f = 0x2a25
+    N3FV3F = 0x2a25
 
-    C4FN3fV3f = 0x2a26
+    C4FN3FV3F = 0x2a26
 
-    T2FV3f = 0x2a27
+    T2FV3F = 0x2a27
 
-    T4FV4f = 0x2a28
+    T4FV4F = 0x2a28
 
-    T2FC4ubV3f = 0x2a29
+    T2FC4UbV3F = 0x2a29
 
-    T2FC3fV3f = 0x2a2a
+    T2FC3FV3F = 0x2a2a
 
-    T2FN3fV3f = 0x2a2b
+    T2FN3FV3F = 0x2a2b
 
-    T2FC4fN3fV3f = 0x2a2c
+    T2FC4FN3FV3F = 0x2a2c
 
-    T4FC4fN3fV4f = 0x2a2d
+    T4FC4FN3FV4F = 0x2a2d
   end
 end
