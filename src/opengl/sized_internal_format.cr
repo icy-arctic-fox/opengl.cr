@@ -11,6 +11,8 @@ lib LibGL
 
     RGB5A1 = 0x8057
 
+    RGB565 = 0x8d62
+
     DepthComponent16 = 0x81a5
 
     StencilIndex8 = 0x8d48
@@ -35,21 +37,21 @@ lib LibGL
 
     RGB16F = 0x881b
 
-    R11FG11fB10f = 0x8c3a
+    R11FG11FB10F = 0x8c3a
 
     RGB9E5 = 0x8c3d
 
-    RGBA32Ui = 0x8d70
+    RGBA32UI = 0x8d70
 
-    RGB32Ui = 0x8d71
+    RGB32UI = 0x8d71
 
-    RGBA16Ui = 0x8d76
+    RGBA16UI = 0x8d76
 
-    RGB16Ui = 0x8d77
+    RGB16UI = 0x8d77
 
-    RGBA8Ui = 0x8d7c
+    RGBA8UI = 0x8d7c
 
-    RGB8Ui = 0x8d7d
+    RGB8UI = 0x8d7d
 
     RGBA32I = 0x8d82
 
@@ -71,57 +73,57 @@ lib LibGL
 
     R8 = 0x8229
 
-    Rg8 = 0x822b
+    RG8 = 0x822b
 
     R16F = 0x822d
 
     R32F = 0x822e
 
-    Rg16F = 0x822f
+    RG16F = 0x822f
 
-    Rg32F = 0x8230
+    RG32F = 0x8230
 
     R8I = 0x8231
 
-    R8Ui = 0x8232
+    R8UI = 0x8232
 
     R16I = 0x8233
 
-    R16Ui = 0x8234
+    R16UI = 0x8234
 
     R32I = 0x8235
 
-    R32Ui = 0x8236
+    R32UI = 0x8236
 
-    Rg8I = 0x8237
+    RG8I = 0x8237
 
-    Rg8Ui = 0x8238
+    RG8UI = 0x8238
 
-    Rg16I = 0x8239
+    RG16I = 0x8239
 
-    Rg16Ui = 0x823a
+    RG16UI = 0x823a
 
-    Rg32I = 0x823b
+    RG32I = 0x823b
 
-    Rg32Ui = 0x823c
+    RG32UI = 0x823c
 
-    R8Snorm = 0x8f94
+    R8SNorm = 0x8f94
 
-    Rg8Snorm = 0x8f95
+    RG8SNorm = 0x8f95
 
-    RGB8Snorm = 0x8f96
+    RGB8SNorm = 0x8f96
 
-    RGBA8Snorm = 0x8f97
+    RGBA8SNorm = 0x8f97
 
-    RGB10A2ui = 0x906f
+    RGB10A2UI = 0x906f
 
-    CompressedR11Eac = 0x9270
+    CompressedR11EAC = 0x9270
 
-    CompressedSignedR11Eac = 0x9271
+    CompressedSignedR11EAC = 0x9271
 
-    CompressedRg11Eac = 0x9272
+    CompressedRG11EAC = 0x9272
 
-    CompressedSignedRg11Eac = 0x9273
+    CompressedSignedRG11EAC = 0x9273
 
     CompressedRGB8Etc2 = 0x9274
 
@@ -131,8 +133,8 @@ lib LibGL
 
     CompressedSRGB8PunchthroughAlpha1Etc2 = 0x9277
 
-    CompressedRGBA8Etc2Eac = 0x9278
+    CompressedRGBA8Etc2EAC = 0x9278
 
-    CompressedSRGB8Alpha8Etc2Eac = 0x9279
+    CompressedSRGB8Alpha8Etc2EAC = 0x9279
   end
 end

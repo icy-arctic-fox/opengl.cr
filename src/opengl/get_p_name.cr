@@ -199,7 +199,7 @@ lib LibGL
 
     MaxElementsIndices = 0x80e9
 
-    MaxTextureLodBias = 0x84fd
+    MaxTextureLODBias = 0x84fd
 
     MaxDrawBuffers = 0x8824
 
