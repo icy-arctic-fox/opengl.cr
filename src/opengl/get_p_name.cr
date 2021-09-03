@@ -545,7 +545,7 @@ lib LibGL
 
     PointFadeThresholdSize = 0x8128
 
-    MaxTextureLodBias = 0x84fd
+    MaxTextureLODBias = 0x84fd
 
     BlendColor = 0x8005
 
