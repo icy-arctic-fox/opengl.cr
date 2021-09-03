@@ -458,7 +458,7 @@ lib LibGL
     width : SizeI,
     height : SizeI,
     depth : SizeI,
-    format : PixelFormat,
+    format : InternalFormat,
     imageSize : SizeI,
     data : ::Pointer(Void)
   ) : ::Void
@@ -470,7 +470,7 @@ lib LibGL
     yoffset : Int,
     width : SizeI,
     height : SizeI,
-    format : PixelFormat,
+    format : InternalFormat,
     imageSize : SizeI,
     data : ::Pointer(Void)
   ) : ::Void
@@ -480,7 +480,7 @@ lib LibGL
     level : Int,
     xoffset : Int,
     width : SizeI,
-    format : PixelFormat,
+    format : InternalFormat,
     imageSize : SizeI,
     data : ::Pointer(Void)
   ) : ::Void
@@ -946,21 +946,21 @@ lib LibGL
     value : ::Pointer(Int)
   ) : ::Void
 
-  fun uniform_matrix_2fv = glUniformMatrix2fv(
+  fun uniform_matrix2_fv = glUniformMatrix2fv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
     value : ::Pointer(Float)
   ) : ::Void
 
-  fun uniform_matrix_3fv = glUniformMatrix3fv(
+  fun uniform_matrix3_fv = glUniformMatrix3fv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
     value : ::Pointer(Float)
   ) : ::Void
 
-  fun uniform_matrix_4fv = glUniformMatrix4fv(
+  fun uniform_matrix4_fv = glUniformMatrix4fv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
@@ -1181,42 +1181,42 @@ lib LibGL
     pointer : ::Pointer(Void)
   ) : ::Void
 
-  fun uniform_matrix_2x3_fv = glUniformMatrix2x3fv(
+  fun uniform_matrix2x3_fv = glUniformMatrix2x3fv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
     value : ::Pointer(Float)
   ) : ::Void
 
-  fun uniform_matrix_3x2_fv = glUniformMatrix3x2fv(
+  fun uniform_matrix3x2_fv = glUniformMatrix3x2fv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
     value : ::Pointer(Float)
   ) : ::Void
 
-  fun uniform_matrix_2x4_fv = glUniformMatrix2x4fv(
+  fun uniform_matrix2x4_fv = glUniformMatrix2x4fv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
     value : ::Pointer(Float)
   ) : ::Void
 
-  fun uniform_matrix_4x2_fv = glUniformMatrix4x2fv(
+  fun uniform_matrix4x2_fv = glUniformMatrix4x2fv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
     value : ::Pointer(Float)
   ) : ::Void
 
-  fun uniform_matrix_3x4_fv = glUniformMatrix3x4fv(
+  fun uniform_matrix3x4_fv = glUniformMatrix3x4fv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
     value : ::Pointer(Float)
   ) : ::Void
 
-  fun uniform_matrix_4x3_fv = glUniformMatrix4x3fv(
+  fun uniform_matrix4x3_fv = glUniformMatrix4x3fv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
@@ -1530,7 +1530,7 @@ lib LibGL
     params : ::Pointer(UInt)
   ) : ::Void
 
-  fun clear_buffer_fiv = glClearBufferiv(
+  fun clear_buffer_iv = glClearBufferiv(
     buffer : Buffer,
     drawbuffer : Int,
     value : ::Pointer(Int)
@@ -1548,7 +1548,7 @@ lib LibGL
     value : ::Pointer(Float)
   ) : ::Void
 
-  fun clear_bufferf_i = glClearBufferfi(
+  fun clear_buffer_fi = glClearBufferfi(
     buffer : Buffer,
     drawbuffer : Int,
     depth : Float,
@@ -2029,7 +2029,7 @@ lib LibGL
     params : ::Pointer(Int64)
   ) : ::Void
 
-  fun get_query_objectu_i64v = glGetQueryObjectui64v(
+  fun get_query_object_ui64v = glGetQueryObjectui64v(
     id : UInt,
     pname : QueryObjectParameterName,
     params : ::Pointer(UInt64)
@@ -2186,63 +2186,63 @@ lib LibGL
     value : ::Pointer(Double)
   ) : ::Void
 
-  fun uniform_matrix_2dv = glUniformMatrix2dv(
+  fun uniform_matrix2_dv = glUniformMatrix2dv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
     value : ::Pointer(Double)
   ) : ::Void
 
-  fun uniform_matrix_3dv = glUniformMatrix3dv(
+  fun uniform_matrix3_dv = glUniformMatrix3dv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
     value : ::Pointer(Double)
   ) : ::Void
 
-  fun uniform_matrix_4dv = glUniformMatrix4dv(
+  fun uniform_matrix4_dv = glUniformMatrix4dv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
     value : ::Pointer(Double)
   ) : ::Void
 
-  fun uniform_matrix_2x3_dv = glUniformMatrix2x3dv(
+  fun uniform_matrix2x3_dv = glUniformMatrix2x3dv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
     value : ::Pointer(Double)
   ) : ::Void
 
-  fun uniform_matrix_2x4_dv = glUniformMatrix2x4dv(
+  fun uniform_matrix2x4_dv = glUniformMatrix2x4dv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
     value : ::Pointer(Double)
   ) : ::Void
 
-  fun uniform_matrix_3x2_dv = glUniformMatrix3x2dv(
+  fun uniform_matrix3x2_dv = glUniformMatrix3x2dv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
     value : ::Pointer(Double)
   ) : ::Void
 
-  fun uniform_matrix_3x4_dv = glUniformMatrix3x4dv(
+  fun uniform_matrix3x4_dv = glUniformMatrix3x4dv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
     value : ::Pointer(Double)
   ) : ::Void
 
-  fun uniform_matrix_4x2_dv = glUniformMatrix4x2dv(
+  fun uniform_matrix4x2_dv = glUniformMatrix4x2dv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
     value : ::Pointer(Double)
   ) : ::Void
 
-  fun uniform_matrix_4x3_dv = glUniformMatrix4x3dv(
+  fun uniform_matrix4x3_dv = glUniformMatrix4x3dv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
