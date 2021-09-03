@@ -2928,7 +2928,7 @@ lib LibGL
     v : ::Pointer(Float)
   ) : ::Void
 
-  fun scissor_arrayv = glScissorArrayv(
+  fun scissor_array_v = glScissorArrayv(
     first : UInt,
     count : SizeI,
     v : ::Pointer(Int)
