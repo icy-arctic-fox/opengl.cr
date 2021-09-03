@@ -23,6 +23,8 @@ lib LibGL
 
     TextureCubeMapNegativeZ = 0x851a
 
+    Renderbuffer = 0x8d41
+
     Texture3D = 0x806f
 
     Texture2DArray = 0x8c1a

@@ -33,9 +33,9 @@ lib LibGL
 
     DepthStencil = 0x84f9
 
-    Rg = 0x8227
+    RG = 0x8227
 
-    RgInteger = 0x8228
+    RGInteger = 0x8228
 
     Green = 0x1904
 
