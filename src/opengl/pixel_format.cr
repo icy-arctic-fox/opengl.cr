@@ -33,8 +33,8 @@ lib LibGL
 
     LuminanceAlpha = 0x190a
 
-    Bgr = 0x80e0
+    BGR = 0x80e0
 
-    Bgra = 0x80e1
+    BGRA = 0x80e1
   end
 end
