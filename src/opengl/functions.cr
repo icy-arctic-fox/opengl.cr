@@ -53,7 +53,7 @@ lib LibGL
     alpha : Fixed
   ) : ::Void
 
-  fun clear_depthx = glClearDepthx(
+  fun clear_depth_x = glClearDepthx(
     depth : Fixed
   ) : ::Void
 
@@ -70,14 +70,14 @@ lib LibGL
     equation : ::Pointer(Fixed)
   ) : ::Void
 
-  fun color4ub = glColor4ub(
+  fun color_4ub = glColor4ub(
     red : UByte,
     green : UByte,
     blue : UByte,
     alpha : UByte
   ) : ::Void
 
-  fun color4x = glColor4x(
+  fun color_4x = glColor4x(
     red : Fixed,
     green : Fixed,
     blue : Fixed,
@@ -203,12 +203,12 @@ lib LibGL
 
   fun flush = glFlush : ::Void
 
-  fun fogx = glFogx(
+  fun fog_x = glFogx(
     pname : FogPName,
     param : Fixed
   ) : ::Void
 
-  fun fogxv = glFogxv(
+  fun fog_xv = glFogxv(
     pname : FogPName,
     param : ::Pointer(Fixed)
   ) : ::Void
@@ -237,7 +237,7 @@ lib LibGL
     params : ::Pointer(Int)
   ) : ::Void
 
-  fun get_clip_planex = glGetClipPlanex(
+  fun get_clip_plane_x = glGetClipPlanex(
     plane : ClipPlaneName,
     equation : ::Pointer(Fixed)
   ) : ::Void
@@ -254,7 +254,7 @@ lib LibGL
 
   fun get_error = glGetError : Enum
 
-  fun get_fixe_dv = glGetFixedv(
+  fun get_fixedv = glGetFixedv(
     pname : GetPName,
     params : ::Pointer(Fixed)
   ) : ::Void
@@ -264,13 +264,13 @@ lib LibGL
     data : ::Pointer(Int)
   ) : ::Void
 
-  fun get_lightxv = glGetLightxv(
+  fun get_light_xv = glGetLightxv(
     light : LightName,
     pname : LightParameter,
     params : ::Pointer(Fixed)
   ) : ::Void
 
-  fun get_materialxv = glGetMaterialxv(
+  fun get_material_xv = glGetMaterialxv(
     face : MaterialFace,
     pname : MaterialParameter,
     params : ::Pointer(Fixed)
@@ -291,7 +291,7 @@ lib LibGL
     params : ::Pointer(Int)
   ) : ::Void
 
-  fun get_tex_envxv = glGetTexEnvxv(
+  fun get_tex_env_xv = glGetTexEnvxv(
     target : TextureEnvTarget,
     pname : TextureEnvParameter,
     params : ::Pointer(Fixed)
@@ -303,7 +303,7 @@ lib LibGL
     params : ::Pointer(Int)
   ) : ::Void
 
-  fun get_tex_parameterxv = glGetTexParameterxv(
+  fun get_tex_parameter_xv = glGetTexParameterxv(
     target : TextureTarget,
     pname : GetTextureParameter,
     params : ::Pointer(Fixed)
@@ -326,23 +326,23 @@ lib LibGL
     texture : UInt
   ) : Boolean
 
-  fun light_modelx = glLightModelx(
+  fun light_model_x = glLightModelx(
     pname : LightModelParameter,
     param : Fixed
   ) : ::Void
 
-  fun light_modelxv = glLightModelxv(
+  fun light_model_xv = glLightModelxv(
     pname : LightModelParameter,
     param : ::Pointer(Fixed)
   ) : ::Void
 
-  fun lightx = glLightx(
+  fun light_x = glLightx(
     light : LightName,
     pname : LightParameter,
     param : Fixed
   ) : ::Void
 
-  fun lightxv = glLightxv(
+  fun light_xv = glLightxv(
     light : LightName,
     pname : LightParameter,
     params : ::Pointer(Fixed)
@@ -354,7 +354,7 @@ lib LibGL
 
   fun load_identity = glLoadIdentity : ::Void
 
-  fun load_matrixx = glLoadMatrixx(
+  fun load_matrix_x = glLoadMatrixx(
     m : ::Pointer(Fixed)
   ) : ::Void
 
@@ -362,13 +362,13 @@ lib LibGL
     opcode : LogicOp
   ) : ::Void
 
-  fun materialx = glMaterialx(
+  fun material_x = glMaterialx(
     face : MaterialFace,
     pname : MaterialParameter,
     param : Fixed
   ) : ::Void
 
-  fun materialxv = glMaterialxv(
+  fun material_xv = glMaterialxv(
     face : MaterialFace,
     pname : MaterialParameter,
     param : ::Pointer(Fixed)
@@ -378,11 +378,11 @@ lib LibGL
     mode : MatrixMode
   ) : ::Void
 
-  fun mult_matrixx = glMultMatrixx(
+  fun mult_matrix_x = glMultMatrixx(
     m : ::Pointer(Fixed)
   ) : ::Void
 
-  fun multi_tex_coord4x = glMultiTexCoord4x(
+  fun multi_tex_coord_4x = glMultiTexCoord4x(
     texture : TextureUnit,
     s : Fixed,
     t : Fixed,
@@ -390,7 +390,7 @@ lib LibGL
     q : Fixed
   ) : ::Void
 
-  fun normal3x = glNormal3x(
+  fun normal_3x = glNormal3x(
     nx : Fixed,
     ny : Fixed,
     nz : Fixed
@@ -416,12 +416,12 @@ lib LibGL
     param : Int
   ) : ::Void
 
-  fun point_parameterx = glPointParameterx(
+  fun point_parameter_x = glPointParameterx(
     pname : PointParameterNameARB,
     param : Fixed
   ) : ::Void
 
-  fun point_parameterxv = glPointParameterxv(
+  fun point_parameter_xv = glPointParameterxv(
     pname : PointParameterNameARB,
     params : ::Pointer(Fixed)
   ) : ::Void
@@ -449,7 +449,7 @@ lib LibGL
     pixels : ::Pointer(Void)
   ) : ::Void
 
-  fun rotatex = glRotatex(
+  fun rotate_x = glRotatex(
     angle : Fixed,
     x : Fixed,
     y : Fixed,
@@ -466,7 +466,7 @@ lib LibGL
     invert : Boolean
   ) : ::Void
 
-  fun scalex = glScalex(
+  fun scale_x = glScalex(
     x : Fixed,
     y : Fixed,
     z : Fixed
@@ -506,25 +506,25 @@ lib LibGL
     pointer : ::Pointer(Void)
   ) : ::Void
 
-  fun tex_envi = glTexEnvi(
+  fun tex_env_i = glTexEnvi(
     target : TextureEnvTarget,
     pname : TextureEnvParameter,
     param : Int
   ) : ::Void
 
-  fun tex_envx = glTexEnvx(
+  fun tex_env_x = glTexEnvx(
     target : TextureEnvTarget,
     pname : TextureEnvParameter,
     param : Fixed
   ) : ::Void
 
-  fun tex_enviv = glTexEnviv(
+  fun tex_env_iv = glTexEnviv(
     target : TextureEnvTarget,
     pname : TextureEnvParameter,
     params : ::Pointer(Int)
   ) : ::Void
 
-  fun tex_envxv = glTexEnvxv(
+  fun tex_env_xv = glTexEnvxv(
     target : TextureEnvTarget,
     pname : TextureEnvParameter,
     params : ::Pointer(Fixed)
@@ -548,7 +548,7 @@ lib LibGL
     param : Int
   ) : ::Void
 
-  fun tex_parameterx = glTexParameterx(
+  fun tex_parameter_x = glTexParameterx(
     target : TextureTarget,
     pname : GetTextureParameter,
     param : Fixed
@@ -560,7 +560,7 @@ lib LibGL
     params : ::Pointer(Int)
   ) : ::Void
 
-  fun tex_parameterxv = glTexParameterxv(
+  fun tex_parameter_xv = glTexParameterxv(
     target : TextureTarget,
     pname : GetTextureParameter,
     params : ::Pointer(Fixed)
@@ -578,7 +578,7 @@ lib LibGL
     pixels : ::Pointer(Void)
   ) : ::Void
 
-  fun translatex = glTranslatex(
+  fun translate_x = glTranslatex(
     x : Fixed,
     y : Fixed,
     z : Fixed
