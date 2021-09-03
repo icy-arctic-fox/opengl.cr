@@ -7,7 +7,7 @@ lib LibGL
   enum SizedInternalFormat : ::UInt32
     R8 = 0x8229
 
-    Rg8 = 0x822b
+    RG8 = 0x822b
 
     RGB8 = 0x8051
 
@@ -16,6 +16,8 @@ lib LibGL
     RGBA4 = 0x8056
 
     RGB5A1 = 0x8057
+
+    RGB565 = 0x8d62
 
     DepthComponent16 = 0x81a5
 

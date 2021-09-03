@@ -13,7 +13,7 @@ lib LibGL
 
     Red = 0x1903
 
-    Rg = 0x8227
+    RG = 0x8227
 
     RGB = 0x1907
 
