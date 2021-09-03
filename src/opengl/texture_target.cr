@@ -42,5 +42,7 @@ lib LibGL
     Texture2DArray = 0x8c1a
 
     ProxyTexture2DArray = 0x8c1b
+
+    Renderbuffer = 0x8d41
   end
 end
