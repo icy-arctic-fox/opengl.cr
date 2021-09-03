@@ -303,171 +303,171 @@ lib LibGL
     bitmap : ::Pointer(UByte)
   ) : ::Void
 
-  fun color3b = glColor3b(
+  fun color_3b = glColor3b(
     red : Byte,
     green : Byte,
     blue : Byte
   ) : ::Void
 
-  fun color3bv = glColor3bv(
+  fun color_3bv = glColor3bv(
     v : ::Pointer(Byte)
   ) : ::Void
 
-  fun color3d = glColor3d(
+  fun color_3d = glColor3d(
     red : Double,
     green : Double,
     blue : Double
   ) : ::Void
 
-  fun color3dv = glColor3dv(
+  fun color_3dv = glColor3dv(
     v : ::Pointer(Double)
   ) : ::Void
 
-  fun color3f = glColor3f(
+  fun color_3f = glColor3f(
     red : Float,
     green : Float,
     blue : Float
   ) : ::Void
 
-  fun color3fv = glColor3fv(
+  fun color_3fv = glColor3fv(
     v : ::Pointer(Float)
   ) : ::Void
 
-  fun color3i = glColor3i(
+  fun color_3i = glColor3i(
     red : Int,
     green : Int,
     blue : Int
   ) : ::Void
 
-  fun color3iv = glColor3iv(
+  fun color_3iv = glColor3iv(
     v : ::Pointer(Int)
   ) : ::Void
 
-  fun color3s = glColor3s(
+  fun color_3s = glColor3s(
     red : Short,
     green : Short,
     blue : Short
   ) : ::Void
 
-  fun color3sv = glColor3sv(
+  fun color_3sv = glColor3sv(
     v : ::Pointer(Short)
   ) : ::Void
 
-  fun color3ub = glColor3ub(
+  fun color_3ub = glColor3ub(
     red : UByte,
     green : UByte,
     blue : UByte
   ) : ::Void
 
-  fun color3ubv = glColor3ubv(
+  fun color_3ubv = glColor3ubv(
     v : ::Pointer(UByte)
   ) : ::Void
 
-  fun color3ui = glColor3ui(
+  fun color_3ui = glColor3ui(
     red : UInt,
     green : UInt,
     blue : UInt
   ) : ::Void
 
-  fun color3uiv = glColor3uiv(
+  fun color_3uiv = glColor3uiv(
     v : ::Pointer(UInt)
   ) : ::Void
 
-  fun color3us = glColor3us(
+  fun color_3us = glColor3us(
     red : UShort,
     green : UShort,
     blue : UShort
   ) : ::Void
 
-  fun color3usv = glColor3usv(
+  fun color_3usv = glColor3usv(
     v : ::Pointer(UShort)
   ) : ::Void
 
-  fun color4b = glColor4b(
+  fun color_4b = glColor4b(
     red : Byte,
     green : Byte,
     blue : Byte,
     alpha : Byte
   ) : ::Void
 
-  fun color4bv = glColor4bv(
+  fun color_4bv = glColor4bv(
     v : ::Pointer(Byte)
   ) : ::Void
 
-  fun color4d = glColor4d(
+  fun color_4d = glColor4d(
     red : Double,
     green : Double,
     blue : Double,
     alpha : Double
   ) : ::Void
 
-  fun color4dv = glColor4dv(
+  fun color_4dv = glColor4dv(
     v : ::Pointer(Double)
   ) : ::Void
 
-  fun color4f = glColor4f(
+  fun color_4f = glColor4f(
     red : Float,
     green : Float,
     blue : Float,
     alpha : Float
   ) : ::Void
 
-  fun color4fv = glColor4fv(
+  fun color_4fv = glColor4fv(
     v : ::Pointer(Float)
   ) : ::Void
 
-  fun color4i = glColor4i(
+  fun color_4i = glColor4i(
     red : Int,
     green : Int,
     blue : Int,
     alpha : Int
   ) : ::Void
 
-  fun color4iv = glColor4iv(
+  fun color_4iv = glColor4iv(
     v : ::Pointer(Int)
   ) : ::Void
 
-  fun color4s = glColor4s(
+  fun color_4s = glColor4s(
     red : Short,
     green : Short,
     blue : Short,
     alpha : Short
   ) : ::Void
 
-  fun color4sv = glColor4sv(
+  fun color_4sv = glColor4sv(
     v : ::Pointer(Short)
   ) : ::Void
 
-  fun color4ub = glColor4ub(
+  fun color_4ub = glColor4ub(
     red : UByte,
     green : UByte,
     blue : UByte,
     alpha : UByte
   ) : ::Void
 
-  fun color4ubv = glColor4ubv(
+  fun color_4ubv = glColor4ubv(
     v : ::Pointer(UByte)
   ) : ::Void
 
-  fun color4ui = glColor4ui(
+  fun color_4ui = glColor4ui(
     red : UInt,
     green : UInt,
     blue : UInt,
     alpha : UInt
   ) : ::Void
 
-  fun color4uiv = glColor4uiv(
+  fun color_4uiv = glColor4uiv(
     v : ::Pointer(UInt)
   ) : ::Void
 
-  fun color4us = glColor4us(
+  fun color_4us = glColor4us(
     red : UShort,
     green : UShort,
     blue : UShort,
     alpha : UShort
   ) : ::Void
 
-  fun color4usv = glColor4usv(
+  fun color_4usv = glColor4usv(
     v : ::Pointer(UShort)
   ) : ::Void
 
@@ -475,531 +475,531 @@ lib LibGL
     flag : Boolean
   ) : ::Void
 
-  fun edge_flagv = glEdgeFlagv(
+  fun edge_flag_v = glEdgeFlagv(
     flag : ::Pointer(Boolean)
   ) : ::Void
 
   fun end = glEnd : ::Void
 
-  fun indexd = glIndexd(
+  fun index_d = glIndexd(
     c : Double
   ) : ::Void
 
-  fun indexdv = glIndexdv(
+  fun index_dv = glIndexdv(
     c : ::Pointer(Double)
   ) : ::Void
 
-  fun indexf = glIndexf(
+  fun index_f = glIndexf(
     c : Float
   ) : ::Void
 
-  fun indexfv = glIndexfv(
+  fun index_fv = glIndexfv(
     c : ::Pointer(Float)
   ) : ::Void
 
-  fun indexi = glIndexi(
+  fun index_i = glIndexi(
     c : Int
   ) : ::Void
 
-  fun indexiv = glIndexiv(
+  fun index_iv = glIndexiv(
     c : ::Pointer(Int)
   ) : ::Void
 
-  fun indexs = glIndexs(
+  fun index_s = glIndexs(
     c : Short
   ) : ::Void
 
-  fun indexsv = glIndexsv(
+  fun index_sv = glIndexsv(
     c : ::Pointer(Short)
   ) : ::Void
 
-  fun normal3b = glNormal3b(
+  fun normal_3b = glNormal3b(
     nx : Byte,
     ny : Byte,
     nz : Byte
   ) : ::Void
 
-  fun normal3bv = glNormal3bv(
+  fun normal_3bv = glNormal3bv(
     v : ::Pointer(Byte)
   ) : ::Void
 
-  fun normal3d = glNormal3d(
+  fun normal_3d = glNormal3d(
     nx : Double,
     ny : Double,
     nz : Double
   ) : ::Void
 
-  fun normal3dv = glNormal3dv(
+  fun normal_3dv = glNormal3dv(
     v : ::Pointer(Double)
   ) : ::Void
 
-  fun normal3f = glNormal3f(
+  fun normal_3f = glNormal3f(
     nx : Float,
     ny : Float,
     nz : Float
   ) : ::Void
 
-  fun normal3fv = glNormal3fv(
+  fun normal_3fv = glNormal3fv(
     v : ::Pointer(Float)
   ) : ::Void
 
-  fun normal3i = glNormal3i(
+  fun normal_3i = glNormal3i(
     nx : Int,
     ny : Int,
     nz : Int
   ) : ::Void
 
-  fun normal3iv = glNormal3iv(
+  fun normal_3iv = glNormal3iv(
     v : ::Pointer(Int)
   ) : ::Void
 
-  fun normal3s = glNormal3s(
+  fun normal_3s = glNormal3s(
     nx : Short,
     ny : Short,
     nz : Short
   ) : ::Void
 
-  fun normal3sv = glNormal3sv(
+  fun normal_3sv = glNormal3sv(
     v : ::Pointer(Short)
   ) : ::Void
 
-  fun raster_pos2d = glRasterPos2d(
+  fun raster_pos_2d = glRasterPos2d(
     x : Double,
     y : Double
   ) : ::Void
 
-  fun raster_pos2dv = glRasterPos2dv(
+  fun raster_pos_2dv = glRasterPos2dv(
     v : ::Pointer(Double)
   ) : ::Void
 
-  fun raster_pos2f = glRasterPos2f(
+  fun raster_pos_2f = glRasterPos2f(
     x : Float,
     y : Float
   ) : ::Void
 
-  fun raster_pos2fv = glRasterPos2fv(
+  fun raster_pos_2fv = glRasterPos2fv(
     v : ::Pointer(Float)
   ) : ::Void
 
-  fun raster_pos2i = glRasterPos2i(
+  fun raster_pos_2i = glRasterPos2i(
     x : Int,
     y : Int
   ) : ::Void
 
-  fun raster_pos2iv = glRasterPos2iv(
+  fun raster_pos_2iv = glRasterPos2iv(
     v : ::Pointer(Int)
   ) : ::Void
 
-  fun raster_pos2s = glRasterPos2s(
+  fun raster_pos_2s = glRasterPos2s(
     x : Short,
     y : Short
   ) : ::Void
 
-  fun raster_pos2sv = glRasterPos2sv(
+  fun raster_pos_2sv = glRasterPos2sv(
     v : ::Pointer(Short)
   ) : ::Void
 
-  fun raster_pos3d = glRasterPos3d(
+  fun raster_pos_3d = glRasterPos3d(
     x : Double,
     y : Double,
     z : Double
   ) : ::Void
 
-  fun raster_pos3dv = glRasterPos3dv(
+  fun raster_pos_3dv = glRasterPos3dv(
     v : ::Pointer(Double)
   ) : ::Void
 
-  fun raster_pos3f = glRasterPos3f(
+  fun raster_pos_3f = glRasterPos3f(
     x : Float,
     y : Float,
     z : Float
   ) : ::Void
 
-  fun raster_pos3fv = glRasterPos3fv(
+  fun raster_pos_3fv = glRasterPos3fv(
     v : ::Pointer(Float)
   ) : ::Void
 
-  fun raster_pos3i = glRasterPos3i(
+  fun raster_pos_3i = glRasterPos3i(
     x : Int,
     y : Int,
     z : Int
   ) : ::Void
 
-  fun raster_pos3iv = glRasterPos3iv(
+  fun raster_pos_3iv = glRasterPos3iv(
     v : ::Pointer(Int)
   ) : ::Void
 
-  fun raster_pos3s = glRasterPos3s(
+  fun raster_pos_3s = glRasterPos3s(
     x : Short,
     y : Short,
     z : Short
   ) : ::Void
 
-  fun raster_pos3sv = glRasterPos3sv(
+  fun raster_pos_3sv = glRasterPos3sv(
     v : ::Pointer(Short)
   ) : ::Void
 
-  fun raster_pos4d = glRasterPos4d(
+  fun raster_pos_4d = glRasterPos4d(
     x : Double,
     y : Double,
     z : Double,
     w : Double
   ) : ::Void
 
-  fun raster_pos4dv = glRasterPos4dv(
+  fun raster_pos_4dv = glRasterPos4dv(
     v : ::Pointer(Double)
   ) : ::Void
 
-  fun raster_pos4f = glRasterPos4f(
+  fun raster_pos_4f = glRasterPos4f(
     x : Float,
     y : Float,
     z : Float,
     w : Float
   ) : ::Void
 
-  fun raster_pos4fv = glRasterPos4fv(
+  fun raster_pos_4fv = glRasterPos4fv(
     v : ::Pointer(Float)
   ) : ::Void
 
-  fun raster_pos4i = glRasterPos4i(
+  fun raster_pos_4i = glRasterPos4i(
     x : Int,
     y : Int,
     z : Int,
     w : Int
   ) : ::Void
 
-  fun raster_pos4iv = glRasterPos4iv(
+  fun raster_pos_4iv = glRasterPos4iv(
     v : ::Pointer(Int)
   ) : ::Void
 
-  fun raster_pos4s = glRasterPos4s(
+  fun raster_pos_4s = glRasterPos4s(
     x : Short,
     y : Short,
     z : Short,
     w : Short
   ) : ::Void
 
-  fun raster_pos4sv = glRasterPos4sv(
+  fun raster_pos_4sv = glRasterPos4sv(
     v : ::Pointer(Short)
   ) : ::Void
 
-  fun rectd = glRectd(
+  fun rect_d = glRectd(
     x1 : Double,
     y1 : Double,
     x2 : Double,
     y2 : Double
   ) : ::Void
 
-  fun rectdv = glRectdv(
+  fun rect_dv = glRectdv(
     v1 : ::Pointer(Double),
     v2 : ::Pointer(Double)
   ) : ::Void
 
-  fun rectf = glRectf(
+  fun rect_f = glRectf(
     x1 : Float,
     y1 : Float,
     x2 : Float,
     y2 : Float
   ) : ::Void
 
-  fun rectfv = glRectfv(
+  fun rect_fv = glRectfv(
     v1 : ::Pointer(Float),
     v2 : ::Pointer(Float)
   ) : ::Void
 
-  fun recti = glRecti(
+  fun rect_i = glRecti(
     x1 : Int,
     y1 : Int,
     x2 : Int,
     y2 : Int
   ) : ::Void
 
-  fun rectiv = glRectiv(
+  fun rect_iv = glRectiv(
     v1 : ::Pointer(Int),
     v2 : ::Pointer(Int)
   ) : ::Void
 
-  fun rects = glRects(
+  fun rect_s = glRects(
     x1 : Short,
     y1 : Short,
     x2 : Short,
     y2 : Short
   ) : ::Void
 
-  fun rectsv = glRectsv(
+  fun rect_sv = glRectsv(
     v1 : ::Pointer(Short),
     v2 : ::Pointer(Short)
   ) : ::Void
 
-  fun tex_coord1d = glTexCoord1d(
+  fun tex_coord_1d = glTexCoord1d(
     s : Double
   ) : ::Void
 
-  fun tex_coord1dv = glTexCoord1dv(
+  fun tex_coord_1dv = glTexCoord1dv(
     v : ::Pointer(Double)
   ) : ::Void
 
-  fun tex_coord1f = glTexCoord1f(
+  fun tex_coord_1f = glTexCoord1f(
     s : Float
   ) : ::Void
 
-  fun tex_coord1fv = glTexCoord1fv(
+  fun tex_coord_1fv = glTexCoord1fv(
     v : ::Pointer(Float)
   ) : ::Void
 
-  fun tex_coord1i = glTexCoord1i(
+  fun tex_coord_1i = glTexCoord1i(
     s : Int
   ) : ::Void
 
-  fun tex_coord1iv = glTexCoord1iv(
+  fun tex_coord_1iv = glTexCoord1iv(
     v : ::Pointer(Int)
   ) : ::Void
 
-  fun tex_coord1s = glTexCoord1s(
+  fun tex_coord_1s = glTexCoord1s(
     s : Short
   ) : ::Void
 
-  fun tex_coord1sv = glTexCoord1sv(
+  fun tex_coord_1sv = glTexCoord1sv(
     v : ::Pointer(Short)
   ) : ::Void
 
-  fun tex_coord2d = glTexCoord2d(
+  fun tex_coord_2d = glTexCoord2d(
     s : Double,
     t : Double
   ) : ::Void
 
-  fun tex_coord2dv = glTexCoord2dv(
+  fun tex_coord_2dv = glTexCoord2dv(
     v : ::Pointer(Double)
   ) : ::Void
 
-  fun tex_coord2f = glTexCoord2f(
+  fun tex_coord_2f = glTexCoord2f(
     s : Float,
     t : Float
   ) : ::Void
 
-  fun tex_coord2fv = glTexCoord2fv(
+  fun tex_coord_2fv = glTexCoord2fv(
     v : ::Pointer(Float)
   ) : ::Void
 
-  fun tex_coord2i = glTexCoord2i(
+  fun tex_coord_2i = glTexCoord2i(
     s : Int,
     t : Int
   ) : ::Void
 
-  fun tex_coord2iv = glTexCoord2iv(
+  fun tex_coord_2iv = glTexCoord2iv(
     v : ::Pointer(Int)
   ) : ::Void
 
-  fun tex_coord2s = glTexCoord2s(
+  fun tex_coord_2s = glTexCoord2s(
     s : Short,
     t : Short
   ) : ::Void
 
-  fun tex_coord2sv = glTexCoord2sv(
+  fun tex_coord_2sv = glTexCoord2sv(
     v : ::Pointer(Short)
   ) : ::Void
 
-  fun tex_coord3d = glTexCoord3d(
+  fun tex_coord_3d = glTexCoord3d(
     s : Double,
     t : Double,
     r : Double
   ) : ::Void
 
-  fun tex_coord3dv = glTexCoord3dv(
+  fun tex_coord_3dv = glTexCoord3dv(
     v : ::Pointer(Double)
   ) : ::Void
 
-  fun tex_coord3f = glTexCoord3f(
+  fun tex_coord_3f = glTexCoord3f(
     s : Float,
     t : Float,
     r : Float
   ) : ::Void
 
-  fun tex_coord3fv = glTexCoord3fv(
+  fun tex_coord_3fv = glTexCoord3fv(
     v : ::Pointer(Float)
   ) : ::Void
 
-  fun tex_coord3i = glTexCoord3i(
+  fun tex_coord_3i = glTexCoord3i(
     s : Int,
     t : Int,
     r : Int
   ) : ::Void
 
-  fun tex_coord3iv = glTexCoord3iv(
+  fun tex_coord_3iv = glTexCoord3iv(
     v : ::Pointer(Int)
   ) : ::Void
 
-  fun tex_coord3s = glTexCoord3s(
+  fun tex_coord_3s = glTexCoord3s(
     s : Short,
     t : Short,
     r : Short
   ) : ::Void
 
-  fun tex_coord3sv = glTexCoord3sv(
+  fun tex_coord_3sv = glTexCoord3sv(
     v : ::Pointer(Short)
   ) : ::Void
 
-  fun tex_coord4d = glTexCoord4d(
+  fun tex_coord_4d = glTexCoord4d(
     s : Double,
     t : Double,
     r : Double,
     q : Double
   ) : ::Void
 
-  fun tex_coord4dv = glTexCoord4dv(
+  fun tex_coord_4dv = glTexCoord4dv(
     v : ::Pointer(Double)
   ) : ::Void
 
-  fun tex_coord4f = glTexCoord4f(
+  fun tex_coord_4f = glTexCoord4f(
     s : Float,
     t : Float,
     r : Float,
     q : Float
   ) : ::Void
 
-  fun tex_coord4fv = glTexCoord4fv(
+  fun tex_coord_4fv = glTexCoord4fv(
     v : ::Pointer(Float)
   ) : ::Void
 
-  fun tex_coord4i = glTexCoord4i(
+  fun tex_coord_4i = glTexCoord4i(
     s : Int,
     t : Int,
     r : Int,
     q : Int
   ) : ::Void
 
-  fun tex_coord4iv = glTexCoord4iv(
+  fun tex_coord_4iv = glTexCoord4iv(
     v : ::Pointer(Int)
   ) : ::Void
 
-  fun tex_coord4s = glTexCoord4s(
+  fun tex_coord_4s = glTexCoord4s(
     s : Short,
     t : Short,
     r : Short,
     q : Short
   ) : ::Void
 
-  fun tex_coord4sv = glTexCoord4sv(
+  fun tex_coord_4sv = glTexCoord4sv(
     v : ::Pointer(Short)
   ) : ::Void
 
-  fun vertex2d = glVertex2d(
+  fun vertex_2d = glVertex2d(
     x : Double,
     y : Double
   ) : ::Void
 
-  fun vertex2dv = glVertex2dv(
+  fun vertex_2dv = glVertex2dv(
     v : ::Pointer(Double)
   ) : ::Void
 
-  fun vertex2f = glVertex2f(
+  fun vertex_2f = glVertex2f(
     x : Float,
     y : Float
   ) : ::Void
 
-  fun vertex2fv = glVertex2fv(
+  fun vertex_2fv = glVertex2fv(
     v : ::Pointer(Float)
   ) : ::Void
 
-  fun vertex2i = glVertex2i(
+  fun vertex_2i = glVertex2i(
     x : Int,
     y : Int
   ) : ::Void
 
-  fun vertex2iv = glVertex2iv(
+  fun vertex_2iv = glVertex2iv(
     v : ::Pointer(Int)
   ) : ::Void
 
-  fun vertex2s = glVertex2s(
+  fun vertex_2s = glVertex2s(
     x : Short,
     y : Short
   ) : ::Void
 
-  fun vertex2sv = glVertex2sv(
+  fun vertex_2sv = glVertex2sv(
     v : ::Pointer(Short)
   ) : ::Void
 
-  fun vertex3d = glVertex3d(
+  fun vertex_3d = glVertex3d(
     x : Double,
     y : Double,
     z : Double
   ) : ::Void
 
-  fun vertex3dv = glVertex3dv(
+  fun vertex_3dv = glVertex3dv(
     v : ::Pointer(Double)
   ) : ::Void
 
-  fun vertex3f = glVertex3f(
+  fun vertex_3f = glVertex3f(
     x : Float,
     y : Float,
     z : Float
   ) : ::Void
 
-  fun vertex3fv = glVertex3fv(
+  fun vertex_3fv = glVertex3fv(
     v : ::Pointer(Float)
   ) : ::Void
 
-  fun vertex3i = glVertex3i(
+  fun vertex_3i = glVertex3i(
     x : Int,
     y : Int,
     z : Int
   ) : ::Void
 
-  fun vertex3iv = glVertex3iv(
+  fun vertex_3iv = glVertex3iv(
     v : ::Pointer(Int)
   ) : ::Void
 
-  fun vertex3s = glVertex3s(
+  fun vertex_3s = glVertex3s(
     x : Short,
     y : Short,
     z : Short
   ) : ::Void
 
-  fun vertex3sv = glVertex3sv(
+  fun vertex_3sv = glVertex3sv(
     v : ::Pointer(Short)
   ) : ::Void
 
-  fun vertex4d = glVertex4d(
+  fun vertex_4d = glVertex4d(
     x : Double,
     y : Double,
     z : Double,
     w : Double
   ) : ::Void
 
-  fun vertex4dv = glVertex4dv(
+  fun vertex_4dv = glVertex4dv(
     v : ::Pointer(Double)
   ) : ::Void
 
-  fun vertex4f = glVertex4f(
+  fun vertex_4f = glVertex4f(
     x : Float,
     y : Float,
     z : Float,
     w : Float
   ) : ::Void
 
-  fun vertex4fv = glVertex4fv(
+  fun vertex_4fv = glVertex4fv(
     v : ::Pointer(Float)
   ) : ::Void
 
-  fun vertex4i = glVertex4i(
+  fun vertex_4i = glVertex4i(
     x : Int,
     y : Int,
     z : Int,
     w : Int
   ) : ::Void
 
-  fun vertex4iv = glVertex4iv(
+  fun vertex_4iv = glVertex4iv(
     v : ::Pointer(Int)
   ) : ::Void
 
-  fun vertex4s = glVertex4s(
+  fun vertex_4s = glVertex4s(
     x : Short,
     y : Short,
     z : Short,
     w : Short
   ) : ::Void
 
-  fun vertex4sv = glVertex4sv(
+  fun vertex_4sv = glVertex4sv(
     v : ::Pointer(Short)
   ) : ::Void
 
@@ -1013,66 +1013,66 @@ lib LibGL
     mode : ColorMaterialParameter
   ) : ::Void
 
-  fun fogf = glFogf(
+  fun fog_f = glFogf(
     pname : FogParameter,
     param : Float
   ) : ::Void
 
-  fun fogfv = glFogfv(
+  fun fog_fv = glFogfv(
     pname : FogParameter,
     params : ::Pointer(Float)
   ) : ::Void
 
-  fun fogi = glFogi(
+  fun fog_i = glFogi(
     pname : FogParameter,
     param : Int
   ) : ::Void
 
-  fun fogiv = glFogiv(
+  fun fog_iv = glFogiv(
     pname : FogParameter,
     params : ::Pointer(Int)
   ) : ::Void
 
-  fun lightf = glLightf(
+  fun light_f = glLightf(
     light : LightName,
     pname : LightParameter,
     param : Float
   ) : ::Void
 
-  fun lightfv = glLightfv(
+  fun light_fv = glLightfv(
     light : LightName,
     pname : LightParameter,
     params : ::Pointer(Float)
   ) : ::Void
 
-  fun lighti = glLighti(
+  fun light_i = glLighti(
     light : LightName,
     pname : LightParameter,
     param : Int
   ) : ::Void
 
-  fun lightiv = glLightiv(
+  fun light_iv = glLightiv(
     light : LightName,
     pname : LightParameter,
     params : ::Pointer(Int)
   ) : ::Void
 
-  fun light_modelf = glLightModelf(
+  fun light_model_f = glLightModelf(
     pname : LightModelParameter,
     param : Float
   ) : ::Void
 
-  fun light_modelfv = glLightModelfv(
+  fun light_model_fv = glLightModelfv(
     pname : LightModelParameter,
     params : ::Pointer(Float)
   ) : ::Void
 
-  fun light_modeli = glLightModeli(
+  fun light_model_i = glLightModeli(
     pname : LightModelParameter,
     param : Int
   ) : ::Void
 
-  fun light_modeliv = glLightModeliv(
+  fun light_model_iv = glLightModeliv(
     pname : LightModelParameter,
     params : ::Pointer(Int)
   ) : ::Void
@@ -1082,25 +1082,25 @@ lib LibGL
     pattern : UShort
   ) : ::Void
 
-  fun materialf = glMaterialf(
+  fun material_f = glMaterialf(
     face : MaterialFace,
     pname : MaterialParameter,
     param : Float
   ) : ::Void
 
-  fun materialfv = glMaterialfv(
+  fun material_fv = glMaterialfv(
     face : MaterialFace,
     pname : MaterialParameter,
     params : ::Pointer(Float)
   ) : ::Void
 
-  fun materiali = glMateriali(
+  fun material_i = glMateriali(
     face : MaterialFace,
     pname : MaterialParameter,
     param : Int
   ) : ::Void
 
-  fun materialiv = glMaterialiv(
+  fun material_iv = glMaterialiv(
     face : MaterialFace,
     pname : MaterialParameter,
     params : ::Pointer(Int)
@@ -1114,61 +1114,61 @@ lib LibGL
     mode : ShadingModel
   ) : ::Void
 
-  fun tex_envf = glTexEnvf(
+  fun tex_env_f = glTexEnvf(
     target : TextureEnvTarget,
     pname : TextureEnvParameter,
     param : Float
   ) : ::Void
 
-  fun tex_envfv = glTexEnvfv(
+  fun tex_env_fv = glTexEnvfv(
     target : TextureEnvTarget,
     pname : TextureEnvParameter,
     params : ::Pointer(Float)
   ) : ::Void
 
-  fun tex_envi = glTexEnvi(
+  fun tex_env_i = glTexEnvi(
     target : TextureEnvTarget,
     pname : TextureEnvParameter,
     param : Int
   ) : ::Void
 
-  fun tex_enviv = glTexEnviv(
+  fun tex_env_iv = glTexEnviv(
     target : TextureEnvTarget,
     pname : TextureEnvParameter,
     params : ::Pointer(Int)
   ) : ::Void
 
-  fun tex_gend = glTexGend(
+  fun tex_gen_d = glTexGend(
     coord : TextureCoordName,
     pname : TextureGenParameter,
     param : Double
   ) : ::Void
 
-  fun tex_gendv = glTexGendv(
+  fun tex_gen_dv = glTexGendv(
     coord : TextureCoordName,
     pname : TextureGenParameter,
     params : ::Pointer(Double)
   ) : ::Void
 
-  fun tex_genf = glTexGenf(
+  fun tex_gen_f = glTexGenf(
     coord : TextureCoordName,
     pname : TextureGenParameter,
     param : Float
   ) : ::Void
 
-  fun tex_genfv = glTexGenfv(
+  fun tex_gen_fv = glTexGenfv(
     coord : TextureCoordName,
     pname : TextureGenParameter,
     params : ::Pointer(Float)
   ) : ::Void
 
-  fun tex_geni = glTexGeni(
+  fun tex_gen_i = glTexGeni(
     coord : TextureCoordName,
     pname : TextureGenParameter,
     param : Int
   ) : ::Void
 
-  fun tex_geniv = glTexGeniv(
+  fun tex_gen_iv = glTexGeniv(
     coord : TextureCoordName,
     pname : TextureGenParameter,
     params : ::Pointer(Int)
@@ -1231,7 +1231,7 @@ lib LibGL
     mask : AttribMask
   ) : ::Void
 
-  fun map1d = glMap1d(
+  fun map_1d = glMap1d(
     target : MapTarget,
     u1 : Double,
     u2 : Double,
@@ -1240,7 +1240,7 @@ lib LibGL
     points : ::Pointer(Double)
   ) : ::Void
 
-  fun map1f = glMap1f(
+  fun map_1f = glMap1f(
     target : MapTarget,
     u1 : Float,
     u2 : Float,
@@ -1249,7 +1249,7 @@ lib LibGL
     points : ::Pointer(Float)
   ) : ::Void
 
-  fun map2d = glMap2d(
+  fun map_2d = glMap2d(
     target : MapTarget,
     u1 : Double,
     u2 : Double,
@@ -1262,7 +1262,7 @@ lib LibGL
     points : ::Pointer(Double)
   ) : ::Void
 
-  fun map2f = glMap2f(
+  fun map_2f = glMap2f(
     target : MapTarget,
     u1 : Float,
     u2 : Float,
@@ -1275,19 +1275,19 @@ lib LibGL
     points : ::Pointer(Float)
   ) : ::Void
 
-  fun map_grid1d = glMapGrid1d(
+  fun map_grid_1d = glMapGrid1d(
     un : Int,
     u1 : Double,
     u2 : Double
   ) : ::Void
 
-  fun map_grid1f = glMapGrid1f(
+  fun map_grid_1f = glMapGrid1f(
     un : Int,
     u1 : Float,
     u2 : Float
   ) : ::Void
 
-  fun map_grid2d = glMapGrid2d(
+  fun map_grid_2d = glMapGrid2d(
     un : Int,
     u1 : Double,
     u2 : Double,
@@ -1296,7 +1296,7 @@ lib LibGL
     v2 : Double
   ) : ::Void
 
-  fun map_grid2f = glMapGrid2f(
+  fun map_grid_2f = glMapGrid2f(
     un : Int,
     u1 : Float,
     u2 : Float,
@@ -1305,37 +1305,37 @@ lib LibGL
     v2 : Float
   ) : ::Void
 
-  fun eval_coord1d = glEvalCoord1d(
+  fun eval_coord_1d = glEvalCoord1d(
     u : Double
   ) : ::Void
 
-  fun eval_coord1dv = glEvalCoord1dv(
+  fun eval_coord_1dv = glEvalCoord1dv(
     u : ::Pointer(Double)
   ) : ::Void
 
-  fun eval_coord1f = glEvalCoord1f(
+  fun eval_coord_1f = glEvalCoord1f(
     u : Float
   ) : ::Void
 
-  fun eval_coord1fv = glEvalCoord1fv(
+  fun eval_coord_1fv = glEvalCoord1fv(
     u : ::Pointer(Float)
   ) : ::Void
 
-  fun eval_coord2d = glEvalCoord2d(
+  fun eval_coord_2d = glEvalCoord2d(
     u : Double,
     v : Double
   ) : ::Void
 
-  fun eval_coord2dv = glEvalCoord2dv(
+  fun eval_coord_2dv = glEvalCoord2dv(
     u : ::Pointer(Double)
   ) : ::Void
 
-  fun eval_coord2f = glEvalCoord2f(
+  fun eval_coord_2f = glEvalCoord2f(
     u : Float,
     v : Float
   ) : ::Void
 
-  fun eval_coord2fv = glEvalCoord2fv(
+  fun eval_coord_2fv = glEvalCoord2fv(
     u : ::Pointer(Float)
   ) : ::Void
 
@@ -1372,29 +1372,29 @@ lib LibGL
     yfactor : Float
   ) : ::Void
 
-  fun pixel_transferf = glPixelTransferf(
+  fun pixel_transfer_f = glPixelTransferf(
     pname : PixelTransferParameter,
     param : Float
   ) : ::Void
 
-  fun pixel_transferi = glPixelTransferi(
+  fun pixel_transfer_i = glPixelTransferi(
     pname : PixelTransferParameter,
     param : Int
   ) : ::Void
 
-  fun pixel_mapfv = glPixelMapfv(
+  fun pixel_map_fv = glPixelMapfv(
     map : PixelMap,
     mapsize : SizeI,
     values : ::Pointer(Float)
   ) : ::Void
 
-  fun pixel_mapuiv = glPixelMapuiv(
+  fun pixel_map_uiv = glPixelMapuiv(
     map : PixelMap,
     mapsize : SizeI,
     values : ::Pointer(UInt)
   ) : ::Void
 
-  fun pixel_mapusv = glPixelMapusv(
+  fun pixel_map_usv = glPixelMapusv(
     map : PixelMap,
     mapsize : SizeI,
     values : ::Pointer(UShort)
@@ -1527,11 +1527,11 @@ lib LibGL
 
   fun load_identity = glLoadIdentity : ::Void
 
-  fun load_matrixf = glLoadMatrixf(
+  fun load_matrix_f = glLoadMatrixf(
     m : ::Pointer(Float)
   ) : ::Void
 
-  fun load_matrixd = glLoadMatrixd(
+  fun load_matrix_d = glLoadMatrixd(
     m : ::Pointer(Double)
   ) : ::Void
 
@@ -1539,11 +1539,11 @@ lib LibGL
     mode : MatrixMode
   ) : ::Void
 
-  fun mult_matrixf = glMultMatrixf(
+  fun mult_matrix_f = glMultMatrixf(
     m : ::Pointer(Float)
   ) : ::Void
 
-  fun mult_matrixd = glMultMatrixd(
+  fun mult_matrix_d = glMultMatrixd(
     m : ::Pointer(Double)
   ) : ::Void
 
@@ -1560,39 +1560,39 @@ lib LibGL
 
   fun push_matrix = glPushMatrix : ::Void
 
-  fun rotated = glRotated(
+  fun rotate_d = glRotated(
     angle : Double,
     x : Double,
     y : Double,
     z : Double
   ) : ::Void
 
-  fun rotatef = glRotatef(
+  fun rotate_f = glRotatef(
     angle : Float,
     x : Float,
     y : Float,
     z : Float
   ) : ::Void
 
-  fun scaled = glScaled(
+  fun scale_d = glScaled(
     x : Double,
     y : Double,
     z : Double
   ) : ::Void
 
-  fun scalef = glScalef(
+  fun scale_f = glScalef(
     x : Float,
     y : Float,
     z : Float
   ) : ::Void
 
-  fun translated = glTranslated(
+  fun translate_d = glTranslated(
     x : Double,
     y : Double,
     z : Double
   ) : ::Void
 
-  fun translatef = glTranslatef(
+  fun translate_f = glTranslatef(
     x : Float,
     y : Float,
     z : Float
@@ -1771,11 +1771,11 @@ lib LibGL
     priorities : ::Pointer(Float)
   ) : ::Void
 
-  fun indexub = glIndexub(
+  fun index_ub = glIndexub(
     c : UByte
   ) : ::Void
 
-  fun indexubv = glIndexubv(
+  fun index_ubv = glIndexubv(
     c : ::Pointer(UByte)
   ) : ::Void
 
@@ -1921,139 +1921,139 @@ lib LibGL
     texture : TextureUnit
   ) : ::Void
 
-  fun multi_tex_coord1d = glMultiTexCoord1d(
+  fun multi_tex_coord_1d = glMultiTexCoord1d(
     target : TextureUnit,
     s : Double
   ) : ::Void
 
-  fun multi_tex_coord1dv = glMultiTexCoord1dv(
+  fun multi_tex_coord_1dv = glMultiTexCoord1dv(
     target : TextureUnit,
     v : ::Pointer(Double)
   ) : ::Void
 
-  fun multi_tex_coord1f = glMultiTexCoord1f(
+  fun multi_tex_coord_1f = glMultiTexCoord1f(
     target : TextureUnit,
     s : Float
   ) : ::Void
 
-  fun multi_tex_coord1fv = glMultiTexCoord1fv(
+  fun multi_tex_coord_1fv = glMultiTexCoord1fv(
     target : TextureUnit,
     v : ::Pointer(Float)
   ) : ::Void
 
-  fun multi_tex_coord1i = glMultiTexCoord1i(
+  fun multi_tex_coord_1i = glMultiTexCoord1i(
     target : TextureUnit,
     s : Int
   ) : ::Void
 
-  fun multi_tex_coord1iv = glMultiTexCoord1iv(
+  fun multi_tex_coord_1iv = glMultiTexCoord1iv(
     target : TextureUnit,
     v : ::Pointer(Int)
   ) : ::Void
 
-  fun multi_tex_coord1s = glMultiTexCoord1s(
+  fun multi_tex_coord_1s = glMultiTexCoord1s(
     target : TextureUnit,
     s : Short
   ) : ::Void
 
-  fun multi_tex_coord1sv = glMultiTexCoord1sv(
+  fun multi_tex_coord_1sv = glMultiTexCoord1sv(
     target : TextureUnit,
     v : ::Pointer(Short)
   ) : ::Void
 
-  fun multi_tex_coord2d = glMultiTexCoord2d(
+  fun multi_tex_coord_2d = glMultiTexCoord2d(
     target : TextureUnit,
     s : Double,
     t : Double
   ) : ::Void
 
-  fun multi_tex_coord2dv = glMultiTexCoord2dv(
+  fun multi_tex_coord_2dv = glMultiTexCoord2dv(
     target : TextureUnit,
     v : ::Pointer(Double)
   ) : ::Void
 
-  fun multi_tex_coord2f = glMultiTexCoord2f(
+  fun multi_tex_coord_2f = glMultiTexCoord2f(
     target : TextureUnit,
     s : Float,
     t : Float
   ) : ::Void
 
-  fun multi_tex_coord2fv = glMultiTexCoord2fv(
+  fun multi_tex_coord_2fv = glMultiTexCoord2fv(
     target : TextureUnit,
     v : ::Pointer(Float)
   ) : ::Void
 
-  fun multi_tex_coord2i = glMultiTexCoord2i(
+  fun multi_tex_coord_2i = glMultiTexCoord2i(
     target : TextureUnit,
     s : Int,
     t : Int
   ) : ::Void
 
-  fun multi_tex_coord2iv = glMultiTexCoord2iv(
+  fun multi_tex_coord_2iv = glMultiTexCoord2iv(
     target : TextureUnit,
     v : ::Pointer(Int)
   ) : ::Void
 
-  fun multi_tex_coord2s = glMultiTexCoord2s(
+  fun multi_tex_coord_2s = glMultiTexCoord2s(
     target : TextureUnit,
     s : Short,
     t : Short
   ) : ::Void
 
-  fun multi_tex_coord2sv = glMultiTexCoord2sv(
+  fun multi_tex_coord_2sv = glMultiTexCoord2sv(
     target : TextureUnit,
     v : ::Pointer(Short)
   ) : ::Void
 
-  fun multi_tex_coord3d = glMultiTexCoord3d(
+  fun multi_tex_coord_3d = glMultiTexCoord3d(
     target : TextureUnit,
     s : Double,
     t : Double,
     r : Double
   ) : ::Void
 
-  fun multi_tex_coord3dv = glMultiTexCoord3dv(
+  fun multi_tex_coord_3dv = glMultiTexCoord3dv(
     target : TextureUnit,
     v : ::Pointer(Double)
   ) : ::Void
 
-  fun multi_tex_coord3f = glMultiTexCoord3f(
+  fun multi_tex_coord_3f = glMultiTexCoord3f(
     target : TextureUnit,
     s : Float,
     t : Float,
     r : Float
   ) : ::Void
 
-  fun multi_tex_coord3fv = glMultiTexCoord3fv(
+  fun multi_tex_coord_3fv = glMultiTexCoord3fv(
     target : TextureUnit,
     v : ::Pointer(Float)
   ) : ::Void
 
-  fun multi_tex_coord3i = glMultiTexCoord3i(
+  fun multi_tex_coord_3i = glMultiTexCoord3i(
     target : TextureUnit,
     s : Int,
     t : Int,
     r : Int
   ) : ::Void
 
-  fun multi_tex_coord3iv = glMultiTexCoord3iv(
+  fun multi_tex_coord_3iv = glMultiTexCoord3iv(
     target : TextureUnit,
     v : ::Pointer(Int)
   ) : ::Void
 
-  fun multi_tex_coord3s = glMultiTexCoord3s(
+  fun multi_tex_coord_3s = glMultiTexCoord3s(
     target : TextureUnit,
     s : Short,
     t : Short,
     r : Short
   ) : ::Void
 
-  fun multi_tex_coord3sv = glMultiTexCoord3sv(
+  fun multi_tex_coord_3sv = glMultiTexCoord3sv(
     target : TextureUnit,
     v : ::Pointer(Short)
   ) : ::Void
 
-  fun multi_tex_coord4d = glMultiTexCoord4d(
+  fun multi_tex_coord_4d = glMultiTexCoord4d(
     target : TextureUnit,
     s : Double,
     t : Double,
@@ -2061,12 +2061,12 @@ lib LibGL
     q : Double
   ) : ::Void
 
-  fun multi_tex_coord4dv = glMultiTexCoord4dv(
+  fun multi_tex_coord_4dv = glMultiTexCoord4dv(
     target : TextureUnit,
     v : ::Pointer(Double)
   ) : ::Void
 
-  fun multi_tex_coord4f = glMultiTexCoord4f(
+  fun multi_tex_coord_4f = glMultiTexCoord4f(
     target : TextureUnit,
     s : Float,
     t : Float,
@@ -2074,12 +2074,12 @@ lib LibGL
     q : Float
   ) : ::Void
 
-  fun multi_tex_coord4fv = glMultiTexCoord4fv(
+  fun multi_tex_coord_4fv = glMultiTexCoord4fv(
     target : TextureUnit,
     v : ::Pointer(Float)
   ) : ::Void
 
-  fun multi_tex_coord4i = glMultiTexCoord4i(
+  fun multi_tex_coord_4i = glMultiTexCoord4i(
     target : TextureUnit,
     s : Int,
     t : Int,
@@ -2087,12 +2087,12 @@ lib LibGL
     q : Int
   ) : ::Void
 
-  fun multi_tex_coord4iv = glMultiTexCoord4iv(
+  fun multi_tex_coord_4iv = glMultiTexCoord4iv(
     target : TextureUnit,
     v : ::Pointer(Int)
   ) : ::Void
 
-  fun multi_tex_coord4s = glMultiTexCoord4s(
+  fun multi_tex_coord_4s = glMultiTexCoord4s(
     target : TextureUnit,
     s : Short,
     t : Short,
@@ -2100,24 +2100,24 @@ lib LibGL
     q : Short
   ) : ::Void
 
-  fun multi_tex_coord4sv = glMultiTexCoord4sv(
+  fun multi_tex_coord_4sv = glMultiTexCoord4sv(
     target : TextureUnit,
     v : ::Pointer(Short)
   ) : ::Void
 
-  fun load_transpose_matrixf = glLoadTransposeMatrixf(
+  fun load_transpose_matrix_f = glLoadTransposeMatrixf(
     m : ::Pointer(Float)
   ) : ::Void
 
-  fun load_transpose_matrixd = glLoadTransposeMatrixd(
+  fun load_transpose_matrix_d = glLoadTransposeMatrixd(
     m : ::Pointer(Double)
   ) : ::Void
 
-  fun mult_transpose_matrixf = glMultTransposeMatrixf(
+  fun mult_transpose_matrix_f = glMultTransposeMatrixf(
     m : ::Pointer(Float)
   ) : ::Void
 
-  fun mult_transpose_matrixd = glMultTransposeMatrixd(
+  fun mult_transpose_matrix_d = glMultTransposeMatrixd(
     m : ::Pointer(Double)
   ) : ::Void
 end
