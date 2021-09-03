@@ -70,14 +70,14 @@ lib LibGL
     equation : ::Pointer(Fixed)
   ) : ::Void
 
-  fun color_4ub = glColor4ub(
+  fun color4ub = glColor4ub(
     red : UByte,
     green : UByte,
     blue : UByte,
     alpha : UByte
   ) : ::Void
 
-  fun color_4x = glColor4x(
+  fun color4x = glColor4x(
     red : Fixed,
     green : Fixed,
     blue : Fixed,
@@ -116,7 +116,7 @@ lib LibGL
     yoffset : Int,
     width : SizeI,
     height : SizeI,
-    format : PixelFormat,
+    format : InternalFormat,
     imageSize : SizeI,
     data : ::Pointer(Void)
   ) : ::Void
@@ -382,7 +382,7 @@ lib LibGL
     m : ::Pointer(Fixed)
   ) : ::Void
 
-  fun multi_tex_coord_4x = glMultiTexCoord4x(
+  fun multi_tex_coord4x = glMultiTexCoord4x(
     texture : TextureUnit,
     s : Fixed,
     t : Fixed,
@@ -390,7 +390,7 @@ lib LibGL
     q : Fixed
   ) : ::Void
 
-  fun normal_3x = glNormal3x(
+  fun normal3x = glNormal3x(
     nx : Fixed,
     ny : Fixed,
     nz : Fixed
@@ -462,7 +462,7 @@ lib LibGL
   ) : ::Void
 
   fun sample_coveragex = glSampleCoveragex(
-    value : ClampX,
+    value : Clampx,
     invert : Boolean
   ) : ::Void
 
@@ -506,7 +506,7 @@ lib LibGL
     pointer : ::Pointer(Void)
   ) : ::Void
 
-  fun tex_env_i = glTexEnvi(
+  fun tex_envi = glTexEnvi(
     target : TextureEnvTarget,
     pname : TextureEnvParameter,
     param : Int
@@ -518,7 +518,7 @@ lib LibGL
     param : Fixed
   ) : ::Void
 
-  fun tex_env_iv = glTexEnviv(
+  fun tex_enviv = glTexEnviv(
     target : TextureEnvTarget,
     pname : TextureEnvParameter,
     params : ::Pointer(Int)

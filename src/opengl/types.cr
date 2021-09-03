@@ -35,5 +35,5 @@ lib LibGL
 
   alias Float = KhronosFloat
 
-  alias ClampX = KhronosInt32
+  alias Clampx = KhronosInt32
 end
