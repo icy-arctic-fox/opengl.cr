@@ -33,15 +33,15 @@ lib LibGL
 
     TextureWrapR = 0x8072
 
-    TextureMinLod = 0x813a
+    TextureMinLOD = 0x813a
 
-    TextureMaxLod = 0x813b
+    TextureMaxLOD = 0x813b
 
     TextureBaseLevel = 0x813c
 
     TextureMaxLevel = 0x813d
 
-    TextureLodBias = 0x8501
+    TextureLODBias = 0x8501
 
     TextureCompareMode = 0x884c
 

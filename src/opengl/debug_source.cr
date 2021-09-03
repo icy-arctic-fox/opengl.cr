@@ -9,7 +9,7 @@ lib LibGL
   enum DebugSource : ::UInt32
     DontCare = 0x1100
 
-    DebugSourceApi = 0x8246
+    DebugSourceAPI = 0x8246
 
     DebugSourceWindowSystem = 0x8247
 
