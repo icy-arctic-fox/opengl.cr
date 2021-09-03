@@ -9,11 +9,11 @@ lib LibGL
   enum SamplerParameterF : ::UInt32
     TextureBorderColor = 0x1004
 
-    TextureMinLod = 0x813a
+    TextureMinLOD = 0x813a
 
-    TextureMaxLod = 0x813b
+    TextureMaxLOD = 0x813b
 
-    TextureLodBias = 0x8501
+    TextureLODBias = 0x8501
 
     TextureMaxAnisotropy = 0x84fe
   end
