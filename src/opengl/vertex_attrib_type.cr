@@ -25,7 +25,7 @@ lib LibGL
 
     UnsignedInt2101010Rev = 0x8368
 
-    UnsignedInt10F11f11fRev = 0x8c3b
+    UnsignedInt10F11F11FRev = 0x8c3b
 
     HalfFloat = 0x140b
 
