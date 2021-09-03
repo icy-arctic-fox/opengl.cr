@@ -133,7 +133,7 @@ lib LibGL
     yoffset : Int,
     width : SizeI,
     height : SizeI,
-    format : PixelFormat,
+    format : InternalFormat,
     imageSize : SizeI,
     data : ::Pointer(Void)
   ) : ::Void
@@ -731,21 +731,21 @@ lib LibGL
     value : ::Pointer(Int)
   ) : ::Void
 
-  fun uniform_matrix_2fv = glUniformMatrix2fv(
+  fun uniform_matrix2_fv = glUniformMatrix2fv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
     value : ::Pointer(Float)
   ) : ::Void
 
-  fun uniform_matrix_3fv = glUniformMatrix3fv(
+  fun uniform_matrix3_fv = glUniformMatrix3fv(
     location : Int,
     count : SizeI,
     transpose : Boolean,
     value : ::Pointer(Float)
   ) : ::Void
 
-  fun uniform_matrix_4fv = glUniformMatrix4fv(
+  fun uniform_matrix4_fv = glUniformMatrix4fv(
     location : Int,
     count : SizeI,
     transpose : Boolean,

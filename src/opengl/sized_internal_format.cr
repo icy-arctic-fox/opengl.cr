@@ -11,6 +11,8 @@ lib LibGL
 
     RGB5A1 = 0x8057
 
+    RGB565 = 0x8d62
+
     DepthComponent16 = 0x81a5
 
     StencilIndex8 = 0x8d48
