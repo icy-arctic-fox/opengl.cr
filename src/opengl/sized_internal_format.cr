@@ -171,17 +171,17 @@ lib LibGL
 
     CompressedRGBBPTCUnsignedFloat = 0x8e8f
 
-    CompressedRGB8Etc2 = 0x9274
+    CompressedRGB8ETC2 = 0x9274
 
-    CompressedSRGB8Etc2 = 0x9275
+    CompressedSRGB8ETC2 = 0x9275
 
-    CompressedRGB8PunchthroughAlpha1Etc2 = 0x9276
+    CompressedRGB8PunchthroughAlpha1ETC2 = 0x9276
 
-    CompressedSRGB8PunchthroughAlpha1Etc2 = 0x9277
+    CompressedSRGB8PunchthroughAlpha1ETC2 = 0x9277
 
-    CompressedRGBA8Etc2EAC = 0x9278
+    CompressedRGBA8ETC2EAC = 0x9278
 
-    CompressedSRGB8Alpha8Etc2EAC = 0x9279
+    CompressedSRGB8Alpha8ETC2EAC = 0x9279
 
     CompressedR11EAC = 0x9270
 
