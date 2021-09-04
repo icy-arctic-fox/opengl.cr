@@ -103,10 +103,12 @@ LibGL.flush
 
 All binding files are in the `src/opengl/` directory.
 Contents are grouped logically into files based on their group or type.
-Some important files are `functions.cr` and `types.cr`.
+Some important files are `functions.cr`, `types.cr`, and `procs.cr`.
 The `functions.cr` file contains all of the function bindings.
 The `types.cr` file contains all of the non-enum types.
 They are mostly aliases to existing types.
+The `procs.cr` file contains methods that return `Proc` types for their corresponding method.
+This can be used for OpenGL function loaders.
 
 Contributing
 ------------
