@@ -6304,13 +6304,13 @@ module OpenGL
 
     # Proc type for the function glDebugMessageCallback
     @[AlwaysInline]
-    def debug_message_callback : ::Proc(LibGL::DebugProc, ::Pointer(Void), ::Void).class
-      ::Proc(LibGL::DebugProc, ::Pointer(Void), ::Void)
+    def debug_message_callback : ::Proc(::Pointer(::Void), ::Pointer(Void), ::Void).class
+      ::Proc(::Pointer(::Void), ::Pointer(Void), ::Void)
     end
 
     # Proc type for the function glDebugMessageCallback
     @[AlwaysInline]
-    def debug_message_callback(address) : ::Proc(LibGL::DebugProc, ::Pointer(Void), ::Void)
+    def debug_message_callback(address) : ::Proc(::Pointer(::Void), ::Pointer(Void), ::Void)
       self.debug_message_callback.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
     end
 
