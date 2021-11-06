@@ -43,6 +43,8 @@ lib LibGL
 
     SampleCoverage = 0x80a0
 
+    TextureCubeMap = 0x8513
+
     ClipDistance0 = 0x3000
 
     ClipPlane0 = 0x3000
@@ -74,6 +76,8 @@ lib LibGL
     RasterizerDiscard = 0x8c89
 
     FramebufferSRGB = 0x8db9
+
+    TextureRectangle = 0x84f5
 
     PrimitiveRestart = 0x8f9d
 
