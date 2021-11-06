@@ -147,6 +147,8 @@ lib LibGL
 
     SampleCoverage = 0x80a0
 
+    TextureCubeMap = 0x8513
+
     ClipDistance0 = 0x3000
 
     ClipDistance1 = 0x3001
