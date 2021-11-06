@@ -241,6 +241,8 @@ lib LibGL
 
     ReadFramebufferBinding = 0x8caa
 
+    MaxColorAttachments = 0x8cdf
+
     VertexArrayBinding = 0x85b5
 
     UniformBufferBinding = 0x8a28

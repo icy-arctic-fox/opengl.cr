@@ -27,6 +27,8 @@ lib LibGL
 
     SampleCoverage = 0x80a0
 
+    TextureCubeMap = 0x8513
+
     RasterizerDiscard = 0x8c89
 
     PrimitiveRestartFixedIndex = 0x8d69
