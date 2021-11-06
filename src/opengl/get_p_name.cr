@@ -285,6 +285,8 @@ lib LibGL
 
     ReadFramebufferBinding = 0x8caa
 
+    MaxColorAttachments = 0x8cdf
+
     VertexArrayBinding = 0x85b5
 
     MaxTextureBufferSize = 0x8c2b
