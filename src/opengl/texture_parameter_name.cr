@@ -58,5 +58,7 @@ lib LibGL
     TextureSwizzleRGBA = 0x8e46
 
     DepthStencilTextureMode = 0x90ea
+
+    TextureMaxAnisotropy = 0x84fe
   end
 end
