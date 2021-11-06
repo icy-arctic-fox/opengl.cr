@@ -26,5 +26,7 @@ lib LibGL
     SampleAlphaToCoverage = 0x809e
 
     SampleCoverage = 0x80a0
+
+    TextureCubeMap = 0x8513
   end
 end
