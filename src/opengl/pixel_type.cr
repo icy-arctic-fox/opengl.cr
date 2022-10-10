@@ -32,5 +32,29 @@ lib LibGL
     UnsignedInt8888 = 0x8035
 
     UnsignedInt1010102 = 0x8036
+
+    UnsignedByte233Rev = 0x8362
+
+    UnsignedShort565 = 0x8363
+
+    UnsignedShort565Rev = 0x8364
+
+    UnsignedShort4444Rev = 0x8365
+
+    UnsignedShort1555Rev = 0x8366
+
+    UnsignedInt8888Rev = 0x8367
+
+    UnsignedInt2101010Rev = 0x8368
+
+    UnsignedInt10F11F11FRev = 0x8c3b
+
+    UnsignedInt5999Rev = 0x8c3e
+
+    Float32UnsignedInt248Rev = 0x8dad
+
+    UnsignedInt248 = 0x84fa
+
+    HalfFloat = 0x140b
   end
 end

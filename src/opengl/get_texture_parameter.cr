@@ -42,5 +42,9 @@ lib LibGL
     TexturePriority = 0x8066
 
     TextureResident = 0x8067
+
+    NormalMap = 0x8511
+
+    ReflectionMap = 0x8512
   end
 end
