@@ -4,5 +4,9 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  TEXTURE_FILTER_CONTROL = 34048
+  enum FogCoordSrc : ::Int32
+    FogCoordinate = 0x8451
+
+    FragmentDepth = 0x8452
+  end
 end

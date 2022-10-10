@@ -4,5 +4,7 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  TEXTURE_FILTER_CONTROL = 34048
+  enum LightTextureModeEXT : ::Int32
+    FragmentDepth = 0x8452
+  end
 end
