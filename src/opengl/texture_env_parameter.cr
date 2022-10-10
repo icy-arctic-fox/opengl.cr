@@ -4,7 +4,9 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  enum PointParameterNameSGIS : ::Int32
-    PointFadeThresholdSize = 0x8128
+  enum TextureEnvParameter : ::Int32
+    Src1Alpha = 0x8589
+
+    Source1Alpha = 0x8589
   end
 end

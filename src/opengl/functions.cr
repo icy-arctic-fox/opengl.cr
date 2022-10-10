@@ -5,7 +5,7 @@
 {% end %}
 lib LibGL
   fun cull_face = glCullFace(
-    mode : CullFaceMode
+    mode : TriangleFace
   ) : ::Void
 
   fun front_face = glFrontFace(
@@ -26,7 +26,7 @@ lib LibGL
   ) : ::Void
 
   fun polygon_mode = glPolygonMode(
-    face : MaterialFace,
+    face : TriangleFace,
     mode : PolygonMode
   ) : ::Void
 
@@ -657,21 +657,21 @@ lib LibGL
   ) : ::Void
 
   fun stencil_op_separate = glStencilOpSeparate(
-    face : StencilFaceDirection,
+    face : TriangleFace,
     sfail : StencilOp,
     dpfail : StencilOp,
     dppass : StencilOp
   ) : ::Void
 
   fun stencil_func_separate = glStencilFuncSeparate(
-    face : StencilFaceDirection,
+    face : TriangleFace,
     func : StencilFunction,
     ref : Int,
     mask : UInt
   ) : ::Void
 
   fun stencil_mask_separate = glStencilMaskSeparate(
-    face : StencilFaceDirection,
+    face : TriangleFace,
     mask : UInt
   ) : ::Void
 
