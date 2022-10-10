@@ -24,5 +24,7 @@ lib LibGL
     UnsignedShort4444 = 0x8033
 
     UnsignedShort5551 = 0x8034
+
+    UnsignedShort565 = 0x8363
   end
 end

@@ -6,15 +6,11 @@
 lib LibGL
   # Mostly OpenGL 1.0/1.1 enum assignments. Unused ranges should generally remain unused.
 
-  enum PixelTexGenMode : ::Int32
-    RGB = 0x1907
+  enum TriangleFace : ::UInt32
+    Front = 0x404
 
-    RGBA = 0x1908
+    Back = 0x405
 
-    Luminance = 0x1909
-
-    LuminanceAlpha = 0x190a
-
-    None = 0x0
+    FrontAndBack = 0x408
   end
 end
