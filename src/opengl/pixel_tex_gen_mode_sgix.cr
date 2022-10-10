@@ -6,11 +6,13 @@
 lib LibGL
   # Mostly OpenGL 1.0/1.1 enum assignments. Unused ranges should generally remain unused.
 
-  enum ColorMaterialFace : ::Int32
-    Front = 0x404
+  enum PixelTexGenModeSGIX : ::Int32
+    Alpha = 0x1906
 
-    Back = 0x405
+    RGB = 0x1907
 
-    FrontAndBack = 0x408
+    RGBA = 0x1908
+
+    None = 0x0
   end
 end
