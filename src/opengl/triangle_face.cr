@@ -6,7 +6,7 @@
 lib LibGL
   # Mostly OpenGL 1.0/1.1 enum assignments. Unused ranges should generally remain unused.
 
-  enum CullFaceMode : ::UInt32
+  enum TriangleFace : ::UInt32
     Front = 0x404
 
     Back = 0x405
