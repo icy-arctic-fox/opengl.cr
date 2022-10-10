@@ -547,7 +547,15 @@ lib LibGL
 
     MaxTextureLODBias = 0x84fd
 
+    PointSizeMin = 0x8126
+
+    PointSizeMax = 0x8127
+
+    PointDistanceAttenuation = 0x8129
+
     BlendColor = 0x8005
+
+    BlendEquation = 0x8009
 
     ArrayBufferBinding = 0x8894
 
