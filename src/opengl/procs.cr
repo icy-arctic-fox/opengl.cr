@@ -4,13 +4,13 @@ module OpenGL
 
     # Proc type for the function glCullFace
     @[AlwaysInline]
-    def cull_face : ::Proc(LibGL::CullFaceMode, ::Void).class
-      ::Proc(LibGL::CullFaceMode, ::Void)
+    def cull_face : ::Proc(LibGL::TriangleFace, ::Void).class
+      ::Proc(LibGL::TriangleFace, ::Void)
     end
 
     # Proc type for the function glCullFace
     @[AlwaysInline]
-    def cull_face(address) : ::Proc(LibGL::CullFaceMode, ::Void)
+    def cull_face(address) : ::Proc(LibGL::TriangleFace, ::Void)
       self.cull_face.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
     end
 
@@ -64,13 +64,13 @@ module OpenGL
 
     # Proc type for the function glPolygonMode
     @[AlwaysInline]
-    def polygon_mode : ::Proc(LibGL::MaterialFace, LibGL::PolygonMode, ::Void).class
-      ::Proc(LibGL::MaterialFace, LibGL::PolygonMode, ::Void)
+    def polygon_mode : ::Proc(LibGL::TriangleFace, LibGL::PolygonMode, ::Void).class
+      ::Proc(LibGL::TriangleFace, LibGL::PolygonMode, ::Void)
     end
 
     # Proc type for the function glPolygonMode
     @[AlwaysInline]
-    def polygon_mode(address) : ::Proc(LibGL::MaterialFace, LibGL::PolygonMode, ::Void)
+    def polygon_mode(address) : ::Proc(LibGL::TriangleFace, LibGL::PolygonMode, ::Void)
       self.polygon_mode.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
     end
 
@@ -2392,13 +2392,13 @@ module OpenGL
 
     # Proc type for the function glColorMaterial
     @[AlwaysInline]
-    def color_material : ::Proc(LibGL::MaterialFace, LibGL::ColorMaterialParameter, ::Void).class
-      ::Proc(LibGL::MaterialFace, LibGL::ColorMaterialParameter, ::Void)
+    def color_material : ::Proc(LibGL::TriangleFace, LibGL::ColorMaterialParameter, ::Void).class
+      ::Proc(LibGL::TriangleFace, LibGL::ColorMaterialParameter, ::Void)
     end
 
     # Proc type for the function glColorMaterial
     @[AlwaysInline]
-    def color_material(address) : ::Proc(LibGL::MaterialFace, LibGL::ColorMaterialParameter, ::Void)
+    def color_material(address) : ::Proc(LibGL::TriangleFace, LibGL::ColorMaterialParameter, ::Void)
       self.color_material.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
     end
 
@@ -2560,49 +2560,49 @@ module OpenGL
 
     # Proc type for the function glMaterialf
     @[AlwaysInline]
-    def material_f : ::Proc(LibGL::MaterialFace, LibGL::MaterialParameter, LibGL::Float, ::Void).class
-      ::Proc(LibGL::MaterialFace, LibGL::MaterialParameter, LibGL::Float, ::Void)
+    def material_f : ::Proc(LibGL::TriangleFace, LibGL::MaterialParameter, LibGL::Float, ::Void).class
+      ::Proc(LibGL::TriangleFace, LibGL::MaterialParameter, LibGL::Float, ::Void)
     end
 
     # Proc type for the function glMaterialf
     @[AlwaysInline]
-    def material_f(address) : ::Proc(LibGL::MaterialFace, LibGL::MaterialParameter, LibGL::Float, ::Void)
+    def material_f(address) : ::Proc(LibGL::TriangleFace, LibGL::MaterialParameter, LibGL::Float, ::Void)
       self.material_f.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
     end
 
     # Proc type for the function glMaterialfv
     @[AlwaysInline]
-    def material_fv : ::Proc(LibGL::MaterialFace, LibGL::MaterialParameter, ::Pointer(LibGL::Float), ::Void).class
-      ::Proc(LibGL::MaterialFace, LibGL::MaterialParameter, ::Pointer(LibGL::Float), ::Void)
+    def material_fv : ::Proc(LibGL::TriangleFace, LibGL::MaterialParameter, ::Pointer(LibGL::Float), ::Void).class
+      ::Proc(LibGL::TriangleFace, LibGL::MaterialParameter, ::Pointer(LibGL::Float), ::Void)
     end
 
     # Proc type for the function glMaterialfv
     @[AlwaysInline]
-    def material_fv(address) : ::Proc(LibGL::MaterialFace, LibGL::MaterialParameter, ::Pointer(LibGL::Float), ::Void)
+    def material_fv(address) : ::Proc(LibGL::TriangleFace, LibGL::MaterialParameter, ::Pointer(LibGL::Float), ::Void)
       self.material_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
     end
 
     # Proc type for the function glMateriali
     @[AlwaysInline]
-    def material_i : ::Proc(LibGL::MaterialFace, LibGL::MaterialParameter, LibGL::Int, ::Void).class
-      ::Proc(LibGL::MaterialFace, LibGL::MaterialParameter, LibGL::Int, ::Void)
+    def material_i : ::Proc(LibGL::TriangleFace, LibGL::MaterialParameter, LibGL::Int, ::Void).class
+      ::Proc(LibGL::TriangleFace, LibGL::MaterialParameter, LibGL::Int, ::Void)
     end
 
     # Proc type for the function glMateriali
     @[AlwaysInline]
-    def material_i(address) : ::Proc(LibGL::MaterialFace, LibGL::MaterialParameter, LibGL::Int, ::Void)
+    def material_i(address) : ::Proc(LibGL::TriangleFace, LibGL::MaterialParameter, LibGL::Int, ::Void)
       self.material_i.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
     end
 
     # Proc type for the function glMaterialiv
     @[AlwaysInline]
-    def material_iv : ::Proc(LibGL::MaterialFace, LibGL::MaterialParameter, ::Pointer(LibGL::Int), ::Void).class
-      ::Proc(LibGL::MaterialFace, LibGL::MaterialParameter, ::Pointer(LibGL::Int), ::Void)
+    def material_iv : ::Proc(LibGL::TriangleFace, LibGL::MaterialParameter, ::Pointer(LibGL::Int), ::Void).class
+      ::Proc(LibGL::TriangleFace, LibGL::MaterialParameter, ::Pointer(LibGL::Int), ::Void)
     end
 
     # Proc type for the function glMaterialiv
     @[AlwaysInline]
-    def material_iv(address) : ::Proc(LibGL::MaterialFace, LibGL::MaterialParameter, ::Pointer(LibGL::Int), ::Void)
+    def material_iv(address) : ::Proc(LibGL::TriangleFace, LibGL::MaterialParameter, ::Pointer(LibGL::Int), ::Void)
       self.material_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
     end
 
@@ -3340,25 +3340,25 @@ module OpenGL
 
     # Proc type for the function glGetMaterialfv
     @[AlwaysInline]
-    def get_material_fv : ::Proc(LibGL::MaterialFace, LibGL::MaterialParameter, ::Pointer(LibGL::Float), ::Void).class
-      ::Proc(LibGL::MaterialFace, LibGL::MaterialParameter, ::Pointer(LibGL::Float), ::Void)
+    def get_material_fv : ::Proc(LibGL::TriangleFace, LibGL::MaterialParameter, ::Pointer(LibGL::Float), ::Void).class
+      ::Proc(LibGL::TriangleFace, LibGL::MaterialParameter, ::Pointer(LibGL::Float), ::Void)
     end
 
     # Proc type for the function glGetMaterialfv
     @[AlwaysInline]
-    def get_material_fv(address) : ::Proc(LibGL::MaterialFace, LibGL::MaterialParameter, ::Pointer(LibGL::Float), ::Void)
+    def get_material_fv(address) : ::Proc(LibGL::TriangleFace, LibGL::MaterialParameter, ::Pointer(LibGL::Float), ::Void)
       self.get_material_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
     end
 
     # Proc type for the function glGetMaterialiv
     @[AlwaysInline]
-    def get_material_iv : ::Proc(LibGL::MaterialFace, LibGL::MaterialParameter, ::Pointer(LibGL::Int), ::Void).class
-      ::Proc(LibGL::MaterialFace, LibGL::MaterialParameter, ::Pointer(LibGL::Int), ::Void)
+    def get_material_iv : ::Proc(LibGL::TriangleFace, LibGL::MaterialParameter, ::Pointer(LibGL::Int), ::Void).class
+      ::Proc(LibGL::TriangleFace, LibGL::MaterialParameter, ::Pointer(LibGL::Int), ::Void)
     end
 
     # Proc type for the function glGetMaterialiv
     @[AlwaysInline]
-    def get_material_iv(address) : ::Proc(LibGL::MaterialFace, LibGL::MaterialParameter, ::Pointer(LibGL::Int), ::Void)
+    def get_material_iv(address) : ::Proc(LibGL::TriangleFace, LibGL::MaterialParameter, ::Pointer(LibGL::Int), ::Void)
       self.get_material_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
     end
 
