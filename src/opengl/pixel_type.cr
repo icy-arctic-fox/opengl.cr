@@ -24,5 +24,19 @@ lib LibGL
     UnsignedShort4444 = 0x8033
 
     UnsignedShort5551 = 0x8034
+
+    UnsignedShort565 = 0x8363
+
+    UnsignedInt2101010Rev = 0x8368
+
+    UnsignedInt10F11F11FRev = 0x8c3b
+
+    UnsignedInt5999Rev = 0x8c3e
+
+    Float32UnsignedInt248Rev = 0x8dad
+
+    UnsignedInt248 = 0x84fa
+
+    HalfFloat = 0x140b
   end
 end

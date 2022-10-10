@@ -167,7 +167,7 @@ lib LibGL
   ) : UInt
 
   fun cull_face = glCullFace(
-    mode : CullFaceMode
+    mode : TriangleFace
   ) : ::Void
 
   fun delete_buffers = glDeleteBuffers(
@@ -555,7 +555,7 @@ lib LibGL
   ) : ::Void
 
   fun stencil_func_separate = glStencilFuncSeparate(
-    face : StencilFaceDirection,
+    face : TriangleFace,
     func : StencilFunction,
     ref : Int,
     mask : UInt
@@ -566,7 +566,7 @@ lib LibGL
   ) : ::Void
 
   fun stencil_mask_separate = glStencilMaskSeparate(
-    face : StencilFaceDirection,
+    face : TriangleFace,
     mask : UInt
   ) : ::Void
 
@@ -577,7 +577,7 @@ lib LibGL
   ) : ::Void
 
   fun stencil_op_separate = glStencilOpSeparate(
-    face : StencilFaceDirection,
+    face : TriangleFace,
     sfail : StencilOp,
     dpfail : StencilOp,
     dppass : StencilOp
