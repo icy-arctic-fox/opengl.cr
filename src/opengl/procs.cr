@@ -4,13 +4,13 @@ module OpenGL
 
     # Proc type for the function glCullFace
     @[AlwaysInline]
-    def cull_face : ::Proc(LibGL::CullFaceMode, ::Void).class
-      ::Proc(LibGL::CullFaceMode, ::Void)
+    def cull_face : ::Proc(LibGL::TriangleFace, ::Void).class
+      ::Proc(LibGL::TriangleFace, ::Void)
     end
 
     # Proc type for the function glCullFace
     @[AlwaysInline]
-    def cull_face(address) : ::Proc(LibGL::CullFaceMode, ::Void)
+    def cull_face(address) : ::Proc(LibGL::TriangleFace, ::Void)
       self.cull_face.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
     end
 
@@ -64,13 +64,13 @@ module OpenGL
 
     # Proc type for the function glPolygonMode
     @[AlwaysInline]
-    def polygon_mode : ::Proc(LibGL::MaterialFace, LibGL::PolygonMode, ::Void).class
-      ::Proc(LibGL::MaterialFace, LibGL::PolygonMode, ::Void)
+    def polygon_mode : ::Proc(LibGL::TriangleFace, LibGL::PolygonMode, ::Void).class
+      ::Proc(LibGL::TriangleFace, LibGL::PolygonMode, ::Void)
     end
 
     # Proc type for the function glPolygonMode
     @[AlwaysInline]
-    def polygon_mode(address) : ::Proc(LibGL::MaterialFace, LibGL::PolygonMode, ::Void)
+    def polygon_mode(address) : ::Proc(LibGL::TriangleFace, LibGL::PolygonMode, ::Void)
       self.polygon_mode.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
     end
 
@@ -1252,37 +1252,37 @@ module OpenGL
 
     # Proc type for the function glStencilOpSeparate
     @[AlwaysInline]
-    def stencil_op_separate : ::Proc(LibGL::StencilFaceDirection, LibGL::StencilOp, LibGL::StencilOp, LibGL::StencilOp, ::Void).class
-      ::Proc(LibGL::StencilFaceDirection, LibGL::StencilOp, LibGL::StencilOp, LibGL::StencilOp, ::Void)
+    def stencil_op_separate : ::Proc(LibGL::TriangleFace, LibGL::StencilOp, LibGL::StencilOp, LibGL::StencilOp, ::Void).class
+      ::Proc(LibGL::TriangleFace, LibGL::StencilOp, LibGL::StencilOp, LibGL::StencilOp, ::Void)
     end
 
     # Proc type for the function glStencilOpSeparate
     @[AlwaysInline]
-    def stencil_op_separate(address) : ::Proc(LibGL::StencilFaceDirection, LibGL::StencilOp, LibGL::StencilOp, LibGL::StencilOp, ::Void)
+    def stencil_op_separate(address) : ::Proc(LibGL::TriangleFace, LibGL::StencilOp, LibGL::StencilOp, LibGL::StencilOp, ::Void)
       self.stencil_op_separate.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
     end
 
     # Proc type for the function glStencilFuncSeparate
     @[AlwaysInline]
-    def stencil_func_separate : ::Proc(LibGL::StencilFaceDirection, LibGL::StencilFunction, LibGL::Int, LibGL::UInt, ::Void).class
-      ::Proc(LibGL::StencilFaceDirection, LibGL::StencilFunction, LibGL::Int, LibGL::UInt, ::Void)
+    def stencil_func_separate : ::Proc(LibGL::TriangleFace, LibGL::StencilFunction, LibGL::Int, LibGL::UInt, ::Void).class
+      ::Proc(LibGL::TriangleFace, LibGL::StencilFunction, LibGL::Int, LibGL::UInt, ::Void)
     end
 
     # Proc type for the function glStencilFuncSeparate
     @[AlwaysInline]
-    def stencil_func_separate(address) : ::Proc(LibGL::StencilFaceDirection, LibGL::StencilFunction, LibGL::Int, LibGL::UInt, ::Void)
+    def stencil_func_separate(address) : ::Proc(LibGL::TriangleFace, LibGL::StencilFunction, LibGL::Int, LibGL::UInt, ::Void)
       self.stencil_func_separate.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
     end
 
     # Proc type for the function glStencilMaskSeparate
     @[AlwaysInline]
-    def stencil_mask_separate : ::Proc(LibGL::StencilFaceDirection, LibGL::UInt, ::Void).class
-      ::Proc(LibGL::StencilFaceDirection, LibGL::UInt, ::Void)
+    def stencil_mask_separate : ::Proc(LibGL::TriangleFace, LibGL::UInt, ::Void).class
+      ::Proc(LibGL::TriangleFace, LibGL::UInt, ::Void)
     end
 
     # Proc type for the function glStencilMaskSeparate
     @[AlwaysInline]
-    def stencil_mask_separate(address) : ::Proc(LibGL::StencilFaceDirection, LibGL::UInt, ::Void)
+    def stencil_mask_separate(address) : ::Proc(LibGL::TriangleFace, LibGL::UInt, ::Void)
       self.stencil_mask_separate.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
     end
 
