@@ -4,8 +4,6 @@
   @[Link("gl")]
 {% end %}
 lib LibGL
-  BLEND_EQUATION = 32777
-
   CONTEXT_LOST = 1287
 
   TEXTURE_IMMUTABLE_FORMAT = 37167

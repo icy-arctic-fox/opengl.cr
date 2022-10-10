@@ -6,13 +6,9 @@
 lib LibGL
   # Mostly OpenGL 1.0/1.1 enum assignments. Unused ranges should generally remain unused.
 
-  enum GLSLTypeToken : ::Int32
-    Int = 0x1404
+  enum FragmentShaderValueRepATI : ::Int32
+    Red = 0x1903
 
-    UnsignedInt = 0x1405
-
-    Float = 0x1406
-
-    Sampler2D = 0x8b5e
+    None = 0x0
   end
 end
