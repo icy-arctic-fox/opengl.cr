@@ -144,7 +144,7 @@ lib LibGL
   ) : ::Void
 
   fun cull_face = glCullFace(
-    mode : CullFaceMode
+    mode : TriangleFace
   ) : ::Void
 
   fun delete_buffers = glDeleteBuffers(
@@ -271,7 +271,7 @@ lib LibGL
   ) : ::Void
 
   fun get_material_xv = glGetMaterialxv(
-    face : MaterialFace,
+    face : TriangleFace,
     pname : MaterialParameter,
     params : ::Pointer(Fixed)
   ) : ::Void
@@ -363,13 +363,13 @@ lib LibGL
   ) : ::Void
 
   fun material_x = glMaterialx(
-    face : MaterialFace,
+    face : TriangleFace,
     pname : MaterialParameter,
     param : Fixed
   ) : ::Void
 
   fun material_xv = glMaterialxv(
-    face : MaterialFace,
+    face : TriangleFace,
     pname : MaterialParameter,
     param : ::Pointer(Fixed)
   ) : ::Void

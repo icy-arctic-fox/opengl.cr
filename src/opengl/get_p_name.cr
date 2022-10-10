@@ -75,7 +75,13 @@ lib LibGL
 
     PointSize = 0xb11
 
+    PointSizeMin = 0x8126
+
+    PointSizeMax = 0x8127
+
     PointFadeThresholdSize = 0x8128
+
+    PointDistanceAttenuation = 0x8129
 
     SmoothPointSizeRange = 0xb12
 
