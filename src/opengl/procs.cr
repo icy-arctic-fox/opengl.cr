@@ -5752,13 +5752,13 @@ module OpenGL
 
     # Proc type for the function glDrawElementsInstancedBaseInstance
     @[AlwaysInline]
-    def draw_elements_instanced_base_instance : ::Proc(LibGL::PrimitiveType, LibGL::SizeI, LibGL::PrimitiveType, ::Pointer(Void), LibGL::SizeI, LibGL::UInt, ::Void).class
-      ::Proc(LibGL::PrimitiveType, LibGL::SizeI, LibGL::PrimitiveType, ::Pointer(Void), LibGL::SizeI, LibGL::UInt, ::Void)
+    def draw_elements_instanced_base_instance : ::Proc(LibGL::PrimitiveType, LibGL::SizeI, LibGL::DrawElementsType, ::Pointer(Void), LibGL::SizeI, LibGL::UInt, ::Void).class
+      ::Proc(LibGL::PrimitiveType, LibGL::SizeI, LibGL::DrawElementsType, ::Pointer(Void), LibGL::SizeI, LibGL::UInt, ::Void)
     end
 
     # Proc type for the function glDrawElementsInstancedBaseInstance
     @[AlwaysInline]
-    def draw_elements_instanced_base_instance(address) : ::Proc(LibGL::PrimitiveType, LibGL::SizeI, LibGL::PrimitiveType, ::Pointer(Void), LibGL::SizeI, LibGL::UInt, ::Void)
+    def draw_elements_instanced_base_instance(address) : ::Proc(LibGL::PrimitiveType, LibGL::SizeI, LibGL::DrawElementsType, ::Pointer(Void), LibGL::SizeI, LibGL::UInt, ::Void)
       self.draw_elements_instanced_base_instance.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
     end
 
