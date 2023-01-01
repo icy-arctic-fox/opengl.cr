@@ -41,6 +41,8 @@ lib LibGL
 
     Operand2Alpha = 0x859a
 
+    AlphaScale = 0xd1c
+
     Src0RGB = 0x8580
 
     Source0RGB = 0x8580
