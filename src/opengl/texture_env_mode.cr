@@ -8,5 +8,7 @@ lib LibGL
 
   enum TextureEnvMode : ::Int32
     Blend = 0xbe2
+
+    Replace = 0x1e01
   end
 end
