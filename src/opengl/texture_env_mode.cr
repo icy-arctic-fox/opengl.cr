@@ -9,10 +9,14 @@ lib LibGL
   enum TextureEnvMode : ::Int32
     Blend = 0xbe2
 
+    Replace = 0x1e01
+
     Add = 0x104
 
     Modulate = 0x2100
 
     Decal = 0x2101
+
+    Combine = 0x8570
   end
 end
