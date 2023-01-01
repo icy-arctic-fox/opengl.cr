@@ -4955,7 +4955,7 @@ lib LibGL
   fun draw_elements_instanced_base_instance = glDrawElementsInstancedBaseInstance(
     mode : PrimitiveType,
     count : SizeI,
-    type : PrimitiveType,
+    type : DrawElementsType,
     indices : ::Pointer(Void),
     instancecount : SizeI,
     baseinstance : UInt

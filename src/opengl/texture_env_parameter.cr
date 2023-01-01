@@ -7,6 +7,8 @@ lib LibGL
   # Mostly OpenGL 1.0/1.1 enum assignments. Unused ranges should generally remain unused.
 
   enum TextureEnvParameter : ::UInt32
+    AlphaScale = 0xd1c
+
     TextureEnvMode = 0x2200
 
     TextureEnvColor = 0x2201
@@ -53,6 +55,8 @@ lib LibGL
 
     Previous = 0x8578
 
+    TextureLODBias = 0x8501
+
     Src1Alpha = 0x8589
 
     Src0RGB = 0x8580
@@ -64,5 +68,7 @@ lib LibGL
     Src0Alpha = 0x8588
 
     Src2Alpha = 0x858a
+
+    CoordReplace = 0x8862
   end
 end
