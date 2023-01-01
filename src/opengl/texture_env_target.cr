@@ -8,5 +8,7 @@ lib LibGL
 
   enum TextureEnvTarget : ::UInt32
     TextureEnv = 0x2300
+
+    TextureFilterControl = 0x8500
   end
 end
