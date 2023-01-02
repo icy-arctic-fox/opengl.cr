@@ -30,7 +30,7 @@ lib LibGL
 
     AtomicCounterBarrier = 0x1000
 
-    AllBarrierBits = 0xffffffff
+    AllBarrierBits = -1
 
     ShaderStorageBarrier = 0x2000
   end
