@@ -19,6 +19,6 @@ lib LibGL
 
     NoError = 0x0
     # Tagged as uint
-    InvalidIndex = 0xffffffff
+    InvalidIndex = -1
   end
 end
