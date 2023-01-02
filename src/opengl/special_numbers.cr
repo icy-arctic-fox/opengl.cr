@@ -21,6 +21,6 @@ lib LibGL
     # Tagged as uint
     InvalidIndex = 0xffffffff
     # Tagged as uint64
-    TimeoutIgnored = 0xffffffffffffffff
+    TimeoutIgnored = 0xffffffffffffffff_u64
   end
 end
