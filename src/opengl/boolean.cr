@@ -6,7 +6,7 @@
 lib LibGL
   # Tokens whose numeric value is intrinsically meaningful
 
-  enum Boolean : ::Int32
+  enum Boolean : ::UInt8
     False = 0x0
 
     True = 0x1
