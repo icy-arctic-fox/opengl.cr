@@ -5,2668 +5,1301 @@ module OpenGL
   # Raised when an OpenGL isn't loaded or unavailable to call.
   class FunctionUnavailableError < Exception; end
 
-  # Loads OpenGL functions dynamically at runtime
-  # and provides an interface for calling and querying availability.
-  class Loader
-    # Sets up the procs without loading any addresses.
-    # No functions will be (safely) callable until they are loaded.
-    def initialize
-      @addr_active_texture = ::Pointer(::Void).null
-      @addr_alpha_funcx = ::Pointer(::Void).null
-      @addr_bind_buffer = ::Pointer(::Void).null
-      @addr_bind_texture = ::Pointer(::Void).null
-      @addr_blend_func = ::Pointer(::Void).null
-      @addr_buffer_data = ::Pointer(::Void).null
-      @addr_buffer_sub_data = ::Pointer(::Void).null
-      @addr_clear = ::Pointer(::Void).null
-      @addr_clear_colorx = ::Pointer(::Void).null
-      @addr_clear_depth_x = ::Pointer(::Void).null
-      @addr_clear_stencil = ::Pointer(::Void).null
-      @addr_client_active_texture = ::Pointer(::Void).null
-      @addr_clip_planex = ::Pointer(::Void).null
-      @addr_color_4ub = ::Pointer(::Void).null
-      @addr_color_4x = ::Pointer(::Void).null
-      @addr_color_mask = ::Pointer(::Void).null
-      @addr_color_pointer = ::Pointer(::Void).null
-      @addr_compressed_tex_image_2d = ::Pointer(::Void).null
-      @addr_compressed_tex_sub_image_2d = ::Pointer(::Void).null
-      @addr_copy_tex_image_2d = ::Pointer(::Void).null
-      @addr_copy_tex_sub_image_2d = ::Pointer(::Void).null
-      @addr_cull_face = ::Pointer(::Void).null
-      @addr_delete_buffers = ::Pointer(::Void).null
-      @addr_delete_textures = ::Pointer(::Void).null
-      @addr_depth_func = ::Pointer(::Void).null
-      @addr_depth_mask = ::Pointer(::Void).null
-      @addr_depth_rangex = ::Pointer(::Void).null
-      @addr_disable = ::Pointer(::Void).null
-      @addr_disable_client_state = ::Pointer(::Void).null
-      @addr_draw_arrays = ::Pointer(::Void).null
-      @addr_draw_elements = ::Pointer(::Void).null
-      @addr_enable = ::Pointer(::Void).null
-      @addr_enable_client_state = ::Pointer(::Void).null
-      @addr_finish = ::Pointer(::Void).null
-      @addr_flush = ::Pointer(::Void).null
-      @addr_fog_x = ::Pointer(::Void).null
-      @addr_fog_xv = ::Pointer(::Void).null
-      @addr_front_face = ::Pointer(::Void).null
-      @addr_frustumx = ::Pointer(::Void).null
-      @addr_get_boolean_v = ::Pointer(::Void).null
-      @addr_get_buffer_parameter_iv = ::Pointer(::Void).null
-      @addr_get_clip_plane_x = ::Pointer(::Void).null
-      @addr_gen_buffers = ::Pointer(::Void).null
-      @addr_gen_textures = ::Pointer(::Void).null
-      @addr_get_error = ::Pointer(::Void).null
-      @addr_get_fixedv = ::Pointer(::Void).null
-      @addr_get_integer_v = ::Pointer(::Void).null
-      @addr_get_light_xv = ::Pointer(::Void).null
-      @addr_get_material_xv = ::Pointer(::Void).null
-      @addr_get_pointer_v = ::Pointer(::Void).null
-      @addr_get_string = ::Pointer(::Void).null
-      @addr_get_tex_env_iv = ::Pointer(::Void).null
-      @addr_get_tex_env_xv = ::Pointer(::Void).null
-      @addr_get_tex_parameter_iv = ::Pointer(::Void).null
-      @addr_get_tex_parameter_xv = ::Pointer(::Void).null
-      @addr_hint = ::Pointer(::Void).null
-      @addr_is_buffer = ::Pointer(::Void).null
-      @addr_is_enabled = ::Pointer(::Void).null
-      @addr_is_texture = ::Pointer(::Void).null
-      @addr_light_model_x = ::Pointer(::Void).null
-      @addr_light_model_xv = ::Pointer(::Void).null
-      @addr_light_x = ::Pointer(::Void).null
-      @addr_light_xv = ::Pointer(::Void).null
-      @addr_line_widthx = ::Pointer(::Void).null
-      @addr_load_identity = ::Pointer(::Void).null
-      @addr_load_matrix_x = ::Pointer(::Void).null
-      @addr_logic_op = ::Pointer(::Void).null
-      @addr_material_x = ::Pointer(::Void).null
-      @addr_material_xv = ::Pointer(::Void).null
-      @addr_matrix_mode = ::Pointer(::Void).null
-      @addr_mult_matrix_x = ::Pointer(::Void).null
-      @addr_multi_tex_coord_4x = ::Pointer(::Void).null
-      @addr_normal_3x = ::Pointer(::Void).null
-      @addr_normal_pointer = ::Pointer(::Void).null
-      @addr_orthox = ::Pointer(::Void).null
-      @addr_pixel_store_i = ::Pointer(::Void).null
-      @addr_point_parameter_x = ::Pointer(::Void).null
-      @addr_point_parameter_xv = ::Pointer(::Void).null
-      @addr_point_sizex = ::Pointer(::Void).null
-      @addr_polygon_offsetx = ::Pointer(::Void).null
-      @addr_pop_matrix = ::Pointer(::Void).null
-      @addr_push_matrix = ::Pointer(::Void).null
-      @addr_read_pixels = ::Pointer(::Void).null
-      @addr_rotate_x = ::Pointer(::Void).null
-      @addr_sample_coverage = ::Pointer(::Void).null
-      @addr_sample_coveragex = ::Pointer(::Void).null
-      @addr_scale_x = ::Pointer(::Void).null
-      @addr_scissor = ::Pointer(::Void).null
-      @addr_shade_model = ::Pointer(::Void).null
-      @addr_stencil_func = ::Pointer(::Void).null
-      @addr_stencil_mask = ::Pointer(::Void).null
-      @addr_stencil_op = ::Pointer(::Void).null
-      @addr_tex_coord_pointer = ::Pointer(::Void).null
-      @addr_tex_env_i = ::Pointer(::Void).null
-      @addr_tex_env_x = ::Pointer(::Void).null
-      @addr_tex_env_iv = ::Pointer(::Void).null
-      @addr_tex_env_xv = ::Pointer(::Void).null
-      @addr_tex_image_2d = ::Pointer(::Void).null
-      @addr_tex_parameter_i = ::Pointer(::Void).null
-      @addr_tex_parameter_x = ::Pointer(::Void).null
-      @addr_tex_parameter_iv = ::Pointer(::Void).null
-      @addr_tex_parameter_xv = ::Pointer(::Void).null
-      @addr_tex_sub_image_2d = ::Pointer(::Void).null
-      @addr_translate_x = ::Pointer(::Void).null
-      @addr_vertex_pointer = ::Pointer(::Void).null
-      @addr_viewport = ::Pointer(::Void).null
-    end
-
-    # Loads all functions.
-    # The block takes an OpenGL function name and returns its address.
-    # The address should be null if the function is unavailable.
-    def load_all(& : String -> Void*)
-      @addr_active_texture = yield "glActiveTexture"
-      @addr_alpha_funcx = yield "glAlphaFuncx"
-      @addr_bind_buffer = yield "glBindBuffer"
-      @addr_bind_texture = yield "glBindTexture"
-      @addr_blend_func = yield "glBlendFunc"
-      @addr_buffer_data = yield "glBufferData"
-      @addr_buffer_sub_data = yield "glBufferSubData"
-      @addr_clear = yield "glClear"
-      @addr_clear_colorx = yield "glClearColorx"
-      @addr_clear_depth_x = yield "glClearDepthx"
-      @addr_clear_stencil = yield "glClearStencil"
-      @addr_client_active_texture = yield "glClientActiveTexture"
-      @addr_clip_planex = yield "glClipPlanex"
-      @addr_color_4ub = yield "glColor4ub"
-      @addr_color_4x = yield "glColor4x"
-      @addr_color_mask = yield "glColorMask"
-      @addr_color_pointer = yield "glColorPointer"
-      @addr_compressed_tex_image_2d = yield "glCompressedTexImage2D"
-      @addr_compressed_tex_sub_image_2d = yield "glCompressedTexSubImage2D"
-      @addr_copy_tex_image_2d = yield "glCopyTexImage2D"
-      @addr_copy_tex_sub_image_2d = yield "glCopyTexSubImage2D"
-      @addr_cull_face = yield "glCullFace"
-      @addr_delete_buffers = yield "glDeleteBuffers"
-      @addr_delete_textures = yield "glDeleteTextures"
-      @addr_depth_func = yield "glDepthFunc"
-      @addr_depth_mask = yield "glDepthMask"
-      @addr_depth_rangex = yield "glDepthRangex"
-      @addr_disable = yield "glDisable"
-      @addr_disable_client_state = yield "glDisableClientState"
-      @addr_draw_arrays = yield "glDrawArrays"
-      @addr_draw_elements = yield "glDrawElements"
-      @addr_enable = yield "glEnable"
-      @addr_enable_client_state = yield "glEnableClientState"
-      @addr_finish = yield "glFinish"
-      @addr_flush = yield "glFlush"
-      @addr_fog_x = yield "glFogx"
-      @addr_fog_xv = yield "glFogxv"
-      @addr_front_face = yield "glFrontFace"
-      @addr_frustumx = yield "glFrustumx"
-      @addr_get_boolean_v = yield "glGetBooleanv"
-      @addr_get_buffer_parameter_iv = yield "glGetBufferParameteriv"
-      @addr_get_clip_plane_x = yield "glGetClipPlanex"
-      @addr_gen_buffers = yield "glGenBuffers"
-      @addr_gen_textures = yield "glGenTextures"
-      @addr_get_error = yield "glGetError"
-      @addr_get_fixedv = yield "glGetFixedv"
-      @addr_get_integer_v = yield "glGetIntegerv"
-      @addr_get_light_xv = yield "glGetLightxv"
-      @addr_get_material_xv = yield "glGetMaterialxv"
-      @addr_get_pointer_v = yield "glGetPointerv"
-      @addr_get_string = yield "glGetString"
-      @addr_get_tex_env_iv = yield "glGetTexEnviv"
-      @addr_get_tex_env_xv = yield "glGetTexEnvxv"
-      @addr_get_tex_parameter_iv = yield "glGetTexParameteriv"
-      @addr_get_tex_parameter_xv = yield "glGetTexParameterxv"
-      @addr_hint = yield "glHint"
-      @addr_is_buffer = yield "glIsBuffer"
-      @addr_is_enabled = yield "glIsEnabled"
-      @addr_is_texture = yield "glIsTexture"
-      @addr_light_model_x = yield "glLightModelx"
-      @addr_light_model_xv = yield "glLightModelxv"
-      @addr_light_x = yield "glLightx"
-      @addr_light_xv = yield "glLightxv"
-      @addr_line_widthx = yield "glLineWidthx"
-      @addr_load_identity = yield "glLoadIdentity"
-      @addr_load_matrix_x = yield "glLoadMatrixx"
-      @addr_logic_op = yield "glLogicOp"
-      @addr_material_x = yield "glMaterialx"
-      @addr_material_xv = yield "glMaterialxv"
-      @addr_matrix_mode = yield "glMatrixMode"
-      @addr_mult_matrix_x = yield "glMultMatrixx"
-      @addr_multi_tex_coord_4x = yield "glMultiTexCoord4x"
-      @addr_normal_3x = yield "glNormal3x"
-      @addr_normal_pointer = yield "glNormalPointer"
-      @addr_orthox = yield "glOrthox"
-      @addr_pixel_store_i = yield "glPixelStorei"
-      @addr_point_parameter_x = yield "glPointParameterx"
-      @addr_point_parameter_xv = yield "glPointParameterxv"
-      @addr_point_sizex = yield "glPointSizex"
-      @addr_polygon_offsetx = yield "glPolygonOffsetx"
-      @addr_pop_matrix = yield "glPopMatrix"
-      @addr_push_matrix = yield "glPushMatrix"
-      @addr_read_pixels = yield "glReadPixels"
-      @addr_rotate_x = yield "glRotatex"
-      @addr_sample_coverage = yield "glSampleCoverage"
-      @addr_sample_coveragex = yield "glSampleCoveragex"
-      @addr_scale_x = yield "glScalex"
-      @addr_scissor = yield "glScissor"
-      @addr_shade_model = yield "glShadeModel"
-      @addr_stencil_func = yield "glStencilFunc"
-      @addr_stencil_mask = yield "glStencilMask"
-      @addr_stencil_op = yield "glStencilOp"
-      @addr_tex_coord_pointer = yield "glTexCoordPointer"
-      @addr_tex_env_i = yield "glTexEnvi"
-      @addr_tex_env_x = yield "glTexEnvx"
-      @addr_tex_env_iv = yield "glTexEnviv"
-      @addr_tex_env_xv = yield "glTexEnvxv"
-      @addr_tex_image_2d = yield "glTexImage2D"
-      @addr_tex_parameter_i = yield "glTexParameteri"
-      @addr_tex_parameter_x = yield "glTexParameterx"
-      @addr_tex_parameter_iv = yield "glTexParameteriv"
-      @addr_tex_parameter_xv = yield "glTexParameterxv"
-      @addr_tex_sub_image_2d = yield "glTexSubImage2D"
-      @addr_translate_x = yield "glTranslatex"
-      @addr_vertex_pointer = yield "glVertexPointer"
-      @addr_viewport = yield "glViewport"
-    end
-
-    # Invokes glActiveTexture.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def active_texture!(*args)
-      addr = @addr_active_texture
-      proc = Procs.active_texture(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glActiveTexture.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def active_texture(*args)
-      raise FunctionUnavailableError.new("glActiveTexture") unless active_texture?
-
-      active_texture!(*args)
-    end
-
-    # Checks if the function "glActiveTexture" is loaded.
-    @[AlwaysInline]
-    def active_texture? : Bool
-      !@addr_active_texture.null?
-    end
-
-    # Invokes glAlphaFuncx.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def alpha_funcx!(*args)
-      addr = @addr_alpha_funcx
-      proc = Procs.alpha_funcx(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glAlphaFuncx.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def alpha_funcx(*args)
-      raise FunctionUnavailableError.new("glAlphaFuncx") unless alpha_funcx?
-
-      alpha_funcx!(*args)
-    end
-
-    # Checks if the function "glAlphaFuncx" is loaded.
-    @[AlwaysInline]
-    def alpha_funcx? : Bool
-      !@addr_alpha_funcx.null?
-    end
-
-    # Invokes glBindBuffer.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def bind_buffer!(*args)
-      addr = @addr_bind_buffer
-      proc = Procs.bind_buffer(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glBindBuffer.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def bind_buffer(*args)
-      raise FunctionUnavailableError.new("glBindBuffer") unless bind_buffer?
-
-      bind_buffer!(*args)
-    end
-
-    # Checks if the function "glBindBuffer" is loaded.
-    @[AlwaysInline]
-    def bind_buffer? : Bool
-      !@addr_bind_buffer.null?
-    end
-
-    # Invokes glBindTexture.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def bind_texture!(*args)
-      addr = @addr_bind_texture
-      proc = Procs.bind_texture(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glBindTexture.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def bind_texture(*args)
-      raise FunctionUnavailableError.new("glBindTexture") unless bind_texture?
-
-      bind_texture!(*args)
-    end
-
-    # Checks if the function "glBindTexture" is loaded.
-    @[AlwaysInline]
-    def bind_texture? : Bool
-      !@addr_bind_texture.null?
-    end
-
-    # Invokes glBlendFunc.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def blend_func!(*args)
-      addr = @addr_blend_func
-      proc = Procs.blend_func(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glBlendFunc.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def blend_func(*args)
-      raise FunctionUnavailableError.new("glBlendFunc") unless blend_func?
-
-      blend_func!(*args)
-    end
-
-    # Checks if the function "glBlendFunc" is loaded.
-    @[AlwaysInline]
-    def blend_func? : Bool
-      !@addr_blend_func.null?
-    end
-
-    # Invokes glBufferData.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def buffer_data!(*args)
-      addr = @addr_buffer_data
-      proc = Procs.buffer_data(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glBufferData.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def buffer_data(*args)
-      raise FunctionUnavailableError.new("glBufferData") unless buffer_data?
-
-      buffer_data!(*args)
-    end
-
-    # Checks if the function "glBufferData" is loaded.
-    @[AlwaysInline]
-    def buffer_data? : Bool
-      !@addr_buffer_data.null?
-    end
-
-    # Invokes glBufferSubData.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def buffer_sub_data!(*args)
-      addr = @addr_buffer_sub_data
-      proc = Procs.buffer_sub_data(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glBufferSubData.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def buffer_sub_data(*args)
-      raise FunctionUnavailableError.new("glBufferSubData") unless buffer_sub_data?
-
-      buffer_sub_data!(*args)
-    end
-
-    # Checks if the function "glBufferSubData" is loaded.
-    @[AlwaysInline]
-    def buffer_sub_data? : Bool
-      !@addr_buffer_sub_data.null?
-    end
-
-    # Invokes glClear.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def clear!(*args)
-      addr = @addr_clear
-      proc = Procs.clear(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glClear.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def clear(*args)
-      raise FunctionUnavailableError.new("glClear") unless clear?
-
-      clear!(*args)
-    end
-
-    # Checks if the function "glClear" is loaded.
-    @[AlwaysInline]
-    def clear? : Bool
-      !@addr_clear.null?
-    end
-
-    # Invokes glClearColorx.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def clear_colorx!(*args)
-      addr = @addr_clear_colorx
-      proc = Procs.clear_colorx(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glClearColorx.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def clear_colorx(*args)
-      raise FunctionUnavailableError.new("glClearColorx") unless clear_colorx?
-
-      clear_colorx!(*args)
-    end
-
-    # Checks if the function "glClearColorx" is loaded.
-    @[AlwaysInline]
-    def clear_colorx? : Bool
-      !@addr_clear_colorx.null?
-    end
-
-    # Invokes glClearDepthx.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def clear_depth_x!(*args)
-      addr = @addr_clear_depth_x
-      proc = Procs.clear_depth_x(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glClearDepthx.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def clear_depth_x(*args)
-      raise FunctionUnavailableError.new("glClearDepthx") unless clear_depth_x?
-
-      clear_depth_x!(*args)
-    end
-
-    # Checks if the function "glClearDepthx" is loaded.
-    @[AlwaysInline]
-    def clear_depth_x? : Bool
-      !@addr_clear_depth_x.null?
-    end
-
-    # Invokes glClearStencil.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def clear_stencil!(*args)
-      addr = @addr_clear_stencil
-      proc = Procs.clear_stencil(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glClearStencil.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def clear_stencil(*args)
-      raise FunctionUnavailableError.new("glClearStencil") unless clear_stencil?
-
-      clear_stencil!(*args)
-    end
-
-    # Checks if the function "glClearStencil" is loaded.
-    @[AlwaysInline]
-    def clear_stencil? : Bool
-      !@addr_clear_stencil.null?
-    end
-
-    # Invokes glClientActiveTexture.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def client_active_texture!(*args)
-      addr = @addr_client_active_texture
-      proc = Procs.client_active_texture(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glClientActiveTexture.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def client_active_texture(*args)
-      raise FunctionUnavailableError.new("glClientActiveTexture") unless client_active_texture?
-
-      client_active_texture!(*args)
-    end
-
-    # Checks if the function "glClientActiveTexture" is loaded.
-    @[AlwaysInline]
-    def client_active_texture? : Bool
-      !@addr_client_active_texture.null?
-    end
-
-    # Invokes glClipPlanex.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def clip_planex!(*args)
-      addr = @addr_clip_planex
-      proc = Procs.clip_planex(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glClipPlanex.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def clip_planex(*args)
-      raise FunctionUnavailableError.new("glClipPlanex") unless clip_planex?
-
-      clip_planex!(*args)
-    end
-
-    # Checks if the function "glClipPlanex" is loaded.
-    @[AlwaysInline]
-    def clip_planex? : Bool
-      !@addr_clip_planex.null?
-    end
-
-    # Invokes glColor4ub.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def color_4ub!(*args)
-      addr = @addr_color_4ub
-      proc = Procs.color_4ub(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glColor4ub.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def color_4ub(*args)
-      raise FunctionUnavailableError.new("glColor4ub") unless color_4ub?
-
-      color_4ub!(*args)
-    end
-
-    # Checks if the function "glColor4ub" is loaded.
-    @[AlwaysInline]
-    def color_4ub? : Bool
-      !@addr_color_4ub.null?
-    end
-
-    # Invokes glColor4x.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def color_4x!(*args)
-      addr = @addr_color_4x
-      proc = Procs.color_4x(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glColor4x.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def color_4x(*args)
-      raise FunctionUnavailableError.new("glColor4x") unless color_4x?
-
-      color_4x!(*args)
-    end
-
-    # Checks if the function "glColor4x" is loaded.
-    @[AlwaysInline]
-    def color_4x? : Bool
-      !@addr_color_4x.null?
-    end
-
-    # Invokes glColorMask.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def color_mask!(*args)
-      addr = @addr_color_mask
-      proc = Procs.color_mask(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glColorMask.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def color_mask(*args)
-      raise FunctionUnavailableError.new("glColorMask") unless color_mask?
-
-      color_mask!(*args)
-    end
-
-    # Checks if the function "glColorMask" is loaded.
-    @[AlwaysInline]
-    def color_mask? : Bool
-      !@addr_color_mask.null?
-    end
-
-    # Invokes glColorPointer.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def color_pointer!(*args)
-      addr = @addr_color_pointer
-      proc = Procs.color_pointer(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glColorPointer.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def color_pointer(*args)
-      raise FunctionUnavailableError.new("glColorPointer") unless color_pointer?
-
-      color_pointer!(*args)
-    end
-
-    # Checks if the function "glColorPointer" is loaded.
-    @[AlwaysInline]
-    def color_pointer? : Bool
-      !@addr_color_pointer.null?
-    end
-
-    # Invokes glCompressedTexImage2D.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def compressed_tex_image_2d!(*args)
-      addr = @addr_compressed_tex_image_2d
-      proc = Procs.compressed_tex_image_2d(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glCompressedTexImage2D.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def compressed_tex_image_2d(*args)
-      raise FunctionUnavailableError.new("glCompressedTexImage2D") unless compressed_tex_image_2d?
-
-      compressed_tex_image_2d!(*args)
-    end
-
-    # Checks if the function "glCompressedTexImage2D" is loaded.
-    @[AlwaysInline]
-    def compressed_tex_image_2d? : Bool
-      !@addr_compressed_tex_image_2d.null?
-    end
-
-    # Invokes glCompressedTexSubImage2D.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def compressed_tex_sub_image_2d!(*args)
-      addr = @addr_compressed_tex_sub_image_2d
-      proc = Procs.compressed_tex_sub_image_2d(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glCompressedTexSubImage2D.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def compressed_tex_sub_image_2d(*args)
-      raise FunctionUnavailableError.new("glCompressedTexSubImage2D") unless compressed_tex_sub_image_2d?
-
-      compressed_tex_sub_image_2d!(*args)
-    end
-
-    # Checks if the function "glCompressedTexSubImage2D" is loaded.
-    @[AlwaysInline]
-    def compressed_tex_sub_image_2d? : Bool
-      !@addr_compressed_tex_sub_image_2d.null?
-    end
-
-    # Invokes glCopyTexImage2D.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def copy_tex_image_2d!(*args)
-      addr = @addr_copy_tex_image_2d
-      proc = Procs.copy_tex_image_2d(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glCopyTexImage2D.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def copy_tex_image_2d(*args)
-      raise FunctionUnavailableError.new("glCopyTexImage2D") unless copy_tex_image_2d?
-
-      copy_tex_image_2d!(*args)
-    end
-
-    # Checks if the function "glCopyTexImage2D" is loaded.
-    @[AlwaysInline]
-    def copy_tex_image_2d? : Bool
-      !@addr_copy_tex_image_2d.null?
-    end
-
-    # Invokes glCopyTexSubImage2D.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def copy_tex_sub_image_2d!(*args)
-      addr = @addr_copy_tex_sub_image_2d
-      proc = Procs.copy_tex_sub_image_2d(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glCopyTexSubImage2D.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def copy_tex_sub_image_2d(*args)
-      raise FunctionUnavailableError.new("glCopyTexSubImage2D") unless copy_tex_sub_image_2d?
-
-      copy_tex_sub_image_2d!(*args)
-    end
-
-    # Checks if the function "glCopyTexSubImage2D" is loaded.
-    @[AlwaysInline]
-    def copy_tex_sub_image_2d? : Bool
-      !@addr_copy_tex_sub_image_2d.null?
-    end
-
-    # Invokes glCullFace.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def cull_face!(*args)
-      addr = @addr_cull_face
-      proc = Procs.cull_face(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glCullFace.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def cull_face(*args)
-      raise FunctionUnavailableError.new("glCullFace") unless cull_face?
-
-      cull_face!(*args)
-    end
-
-    # Checks if the function "glCullFace" is loaded.
-    @[AlwaysInline]
-    def cull_face? : Bool
-      !@addr_cull_face.null?
-    end
-
-    # Invokes glDeleteBuffers.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def delete_buffers!(*args)
-      addr = @addr_delete_buffers
-      proc = Procs.delete_buffers(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glDeleteBuffers.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def delete_buffers(*args)
-      raise FunctionUnavailableError.new("glDeleteBuffers") unless delete_buffers?
-
-      delete_buffers!(*args)
-    end
-
-    # Checks if the function "glDeleteBuffers" is loaded.
-    @[AlwaysInline]
-    def delete_buffers? : Bool
-      !@addr_delete_buffers.null?
-    end
-
-    # Invokes glDeleteTextures.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def delete_textures!(*args)
-      addr = @addr_delete_textures
-      proc = Procs.delete_textures(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glDeleteTextures.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def delete_textures(*args)
-      raise FunctionUnavailableError.new("glDeleteTextures") unless delete_textures?
-
-      delete_textures!(*args)
-    end
-
-    # Checks if the function "glDeleteTextures" is loaded.
-    @[AlwaysInline]
-    def delete_textures? : Bool
-      !@addr_delete_textures.null?
-    end
-
-    # Invokes glDepthFunc.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def depth_func!(*args)
-      addr = @addr_depth_func
-      proc = Procs.depth_func(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glDepthFunc.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def depth_func(*args)
-      raise FunctionUnavailableError.new("glDepthFunc") unless depth_func?
-
-      depth_func!(*args)
-    end
-
-    # Checks if the function "glDepthFunc" is loaded.
-    @[AlwaysInline]
-    def depth_func? : Bool
-      !@addr_depth_func.null?
-    end
-
-    # Invokes glDepthMask.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def depth_mask!(*args)
-      addr = @addr_depth_mask
-      proc = Procs.depth_mask(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glDepthMask.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def depth_mask(*args)
-      raise FunctionUnavailableError.new("glDepthMask") unless depth_mask?
-
-      depth_mask!(*args)
-    end
-
-    # Checks if the function "glDepthMask" is loaded.
-    @[AlwaysInline]
-    def depth_mask? : Bool
-      !@addr_depth_mask.null?
-    end
-
-    # Invokes glDepthRangex.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def depth_rangex!(*args)
-      addr = @addr_depth_rangex
-      proc = Procs.depth_rangex(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glDepthRangex.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def depth_rangex(*args)
-      raise FunctionUnavailableError.new("glDepthRangex") unless depth_rangex?
-
-      depth_rangex!(*args)
-    end
-
-    # Checks if the function "glDepthRangex" is loaded.
-    @[AlwaysInline]
-    def depth_rangex? : Bool
-      !@addr_depth_rangex.null?
-    end
-
-    # Invokes glDisable.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def disable!(*args)
-      addr = @addr_disable
-      proc = Procs.disable(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glDisable.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def disable(*args)
-      raise FunctionUnavailableError.new("glDisable") unless disable?
-
-      disable!(*args)
-    end
-
-    # Checks if the function "glDisable" is loaded.
-    @[AlwaysInline]
-    def disable? : Bool
-      !@addr_disable.null?
-    end
-
-    # Invokes glDisableClientState.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def disable_client_state!(*args)
-      addr = @addr_disable_client_state
-      proc = Procs.disable_client_state(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glDisableClientState.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def disable_client_state(*args)
-      raise FunctionUnavailableError.new("glDisableClientState") unless disable_client_state?
-
-      disable_client_state!(*args)
-    end
-
-    # Checks if the function "glDisableClientState" is loaded.
-    @[AlwaysInline]
-    def disable_client_state? : Bool
-      !@addr_disable_client_state.null?
-    end
-
-    # Invokes glDrawArrays.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def draw_arrays!(*args)
-      addr = @addr_draw_arrays
-      proc = Procs.draw_arrays(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glDrawArrays.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def draw_arrays(*args)
-      raise FunctionUnavailableError.new("glDrawArrays") unless draw_arrays?
-
-      draw_arrays!(*args)
-    end
-
-    # Checks if the function "glDrawArrays" is loaded.
-    @[AlwaysInline]
-    def draw_arrays? : Bool
-      !@addr_draw_arrays.null?
-    end
-
-    # Invokes glDrawElements.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def draw_elements!(*args)
-      addr = @addr_draw_elements
-      proc = Procs.draw_elements(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glDrawElements.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def draw_elements(*args)
-      raise FunctionUnavailableError.new("glDrawElements") unless draw_elements?
-
-      draw_elements!(*args)
-    end
-
-    # Checks if the function "glDrawElements" is loaded.
-    @[AlwaysInline]
-    def draw_elements? : Bool
-      !@addr_draw_elements.null?
-    end
-
-    # Invokes glEnable.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def enable!(*args)
-      addr = @addr_enable
-      proc = Procs.enable(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glEnable.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def enable(*args)
-      raise FunctionUnavailableError.new("glEnable") unless enable?
-
-      enable!(*args)
-    end
-
-    # Checks if the function "glEnable" is loaded.
-    @[AlwaysInline]
-    def enable? : Bool
-      !@addr_enable.null?
-    end
-
-    # Invokes glEnableClientState.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def enable_client_state!(*args)
-      addr = @addr_enable_client_state
-      proc = Procs.enable_client_state(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glEnableClientState.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def enable_client_state(*args)
-      raise FunctionUnavailableError.new("glEnableClientState") unless enable_client_state?
-
-      enable_client_state!(*args)
-    end
-
-    # Checks if the function "glEnableClientState" is loaded.
-    @[AlwaysInline]
-    def enable_client_state? : Bool
-      !@addr_enable_client_state.null?
-    end
-
-    # Invokes glFinish.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def finish!(*args)
-      addr = @addr_finish
-      proc = Procs.finish(addr)
-      proc.call(*args)
-    end
-
-    # Invokes glFinish.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def finish(*args)
-      raise FunctionUnavailableError.new("glFinish") unless finish?
-
-      finish!(*args)
-    end
+  # Loads OpenGL functions dynamically at runtime and returns `Proc` instances to invoke them.
+  # The OpenGL functions are lazy-loaded.
+  struct Loader
+    FUNCTION_COUNT = 106
 
-    # Checks if the function "glFinish" is loaded.
-    @[AlwaysInline]
-    def finish? : Bool
-      !@addr_finish.null?
-    end
-
-    # Invokes glFlush.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def flush!(*args)
-      addr = @addr_flush
-      proc = Procs.flush(addr)
-      proc.call(*args)
+    # Creates the loader.
+    # The *get_proc_address* block is used to retrieve addresses of OpenGL functions.
+    # It is given a string that is the name of the OpenGL function to lookup.
+    # The block must return a pointer to the function corresponding to the name.
+    # If a function is unavailable, the block should return a null pointer.
+    def initialize(&@get_proc_address : ::String -> ::Void*)
+      @addresses = ::Pointer(::Void*).malloc(FUNCTION_COUNT)
     end
 
-    # Invokes glFlush.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def flush(*args)
-      raise FunctionUnavailableError.new("glFlush") unless flush?
-
-      flush!(*args)
-    end
-
-    # Checks if the function "glFlush" is loaded.
     @[AlwaysInline]
-    def flush? : Bool
-      !@addr_flush.null?
-    end
-
-    # Invokes glFogx.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def fog_x!(*args)
-      addr = @addr_fog_x
-      proc = Procs.fog_x(addr)
-      proc.call(*args)
+    private def get_proc(index, name, proc_type) : ::Proc
+      address = @addresses[index]
+      unless address
+        address = @get_proc_address.call(name)
+        raise FunctionUnavailableError.new(name) unless address
+        @addresses[index] = address
+      end
+      proc_type.new(address, ::Pointer(::Void).null)
     end
 
-    # Invokes glFogx.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def fog_x(*args)
-      raise FunctionUnavailableError.new("glFogx") unless fog_x?
-
-      fog_x!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glActiveTexture*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def active_texture : ::Proc
+      get_proc(0, Translations.active_texture, Procs.active_texture)
     end
 
-    # Checks if the function "glFogx" is loaded.
-    @[AlwaysInline]
-    def fog_x? : Bool
-      !@addr_fog_x.null?
+    # Checks if the OpenGL function *glActiveTexture* is loaded.
+    def active_texture?
+      !!@addresses[0]
     end
 
-    # Invokes glFogxv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def fog_xv!(*args)
-      addr = @addr_fog_xv
-      proc = Procs.fog_xv(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glAlphaFuncx*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def alpha_funcx : ::Proc
+      get_proc(1, Translations.alpha_funcx, Procs.alpha_funcx)
     end
 
-    # Invokes glFogxv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def fog_xv(*args)
-      raise FunctionUnavailableError.new("glFogxv") unless fog_xv?
-
-      fog_xv!(*args)
+    # Checks if the OpenGL function *glAlphaFuncx* is loaded.
+    def alpha_funcx?
+      !!@addresses[1]
     end
 
-    # Checks if the function "glFogxv" is loaded.
-    @[AlwaysInline]
-    def fog_xv? : Bool
-      !@addr_fog_xv.null?
+    # Retrieves a `Proc` for the OpenGL function *glBindBuffer*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def bind_buffer : ::Proc
+      get_proc(2, Translations.bind_buffer, Procs.bind_buffer)
     end
 
-    # Invokes glFrontFace.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def front_face!(*args)
-      addr = @addr_front_face
-      proc = Procs.front_face(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glBindBuffer* is loaded.
+    def bind_buffer?
+      !!@addresses[2]
     end
-
-    # Invokes glFrontFace.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def front_face(*args)
-      raise FunctionUnavailableError.new("glFrontFace") unless front_face?
 
-      front_face!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glBindTexture*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def bind_texture : ::Proc
+      get_proc(3, Translations.bind_texture, Procs.bind_texture)
     end
 
-    # Checks if the function "glFrontFace" is loaded.
-    @[AlwaysInline]
-    def front_face? : Bool
-      !@addr_front_face.null?
+    # Checks if the OpenGL function *glBindTexture* is loaded.
+    def bind_texture?
+      !!@addresses[3]
     end
 
-    # Invokes glFrustumx.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def frustumx!(*args)
-      addr = @addr_frustumx
-      proc = Procs.frustumx(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glBlendFunc*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def blend_func : ::Proc
+      get_proc(4, Translations.blend_func, Procs.blend_func)
     end
 
-    # Invokes glFrustumx.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def frustumx(*args)
-      raise FunctionUnavailableError.new("glFrustumx") unless frustumx?
-
-      frustumx!(*args)
+    # Checks if the OpenGL function *glBlendFunc* is loaded.
+    def blend_func?
+      !!@addresses[4]
     end
 
-    # Checks if the function "glFrustumx" is loaded.
-    @[AlwaysInline]
-    def frustumx? : Bool
-      !@addr_frustumx.null?
+    # Retrieves a `Proc` for the OpenGL function *glBufferData*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def buffer_data : ::Proc
+      get_proc(5, Translations.buffer_data, Procs.buffer_data)
     end
 
-    # Invokes glGetBooleanv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def get_boolean_v!(*args)
-      addr = @addr_get_boolean_v
-      proc = Procs.get_boolean_v(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glBufferData* is loaded.
+    def buffer_data?
+      !!@addresses[5]
     end
 
-    # Invokes glGetBooleanv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def get_boolean_v(*args)
-      raise FunctionUnavailableError.new("glGetBooleanv") unless get_boolean_v?
-
-      get_boolean_v!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glBufferSubData*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def buffer_sub_data : ::Proc
+      get_proc(6, Translations.buffer_sub_data, Procs.buffer_sub_data)
     end
 
-    # Checks if the function "glGetBooleanv" is loaded.
-    @[AlwaysInline]
-    def get_boolean_v? : Bool
-      !@addr_get_boolean_v.null?
+    # Checks if the OpenGL function *glBufferSubData* is loaded.
+    def buffer_sub_data?
+      !!@addresses[6]
     end
 
-    # Invokes glGetBufferParameteriv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def get_buffer_parameter_iv!(*args)
-      addr = @addr_get_buffer_parameter_iv
-      proc = Procs.get_buffer_parameter_iv(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glClear*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def clear : ::Proc
+      get_proc(7, Translations.clear, Procs.clear)
     end
 
-    # Invokes glGetBufferParameteriv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def get_buffer_parameter_iv(*args)
-      raise FunctionUnavailableError.new("glGetBufferParameteriv") unless get_buffer_parameter_iv?
-
-      get_buffer_parameter_iv!(*args)
+    # Checks if the OpenGL function *glClear* is loaded.
+    def clear?
+      !!@addresses[7]
     end
 
-    # Checks if the function "glGetBufferParameteriv" is loaded.
-    @[AlwaysInline]
-    def get_buffer_parameter_iv? : Bool
-      !@addr_get_buffer_parameter_iv.null?
+    # Retrieves a `Proc` for the OpenGL function *glClearColorx*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def clear_colorx : ::Proc
+      get_proc(8, Translations.clear_colorx, Procs.clear_colorx)
     end
 
-    # Invokes glGetClipPlanex.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def get_clip_plane_x!(*args)
-      addr = @addr_get_clip_plane_x
-      proc = Procs.get_clip_plane_x(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glClearColorx* is loaded.
+    def clear_colorx?
+      !!@addresses[8]
     end
 
-    # Invokes glGetClipPlanex.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def get_clip_plane_x(*args)
-      raise FunctionUnavailableError.new("glGetClipPlanex") unless get_clip_plane_x?
-
-      get_clip_plane_x!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glClearDepthx*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def clear_depth_x : ::Proc
+      get_proc(9, Translations.clear_depth_x, Procs.clear_depth_x)
     end
 
-    # Checks if the function "glGetClipPlanex" is loaded.
-    @[AlwaysInline]
-    def get_clip_plane_x? : Bool
-      !@addr_get_clip_plane_x.null?
+    # Checks if the OpenGL function *glClearDepthx* is loaded.
+    def clear_depth_x?
+      !!@addresses[9]
     end
 
-    # Invokes glGenBuffers.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def gen_buffers!(*args)
-      addr = @addr_gen_buffers
-      proc = Procs.gen_buffers(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glClearStencil*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def clear_stencil : ::Proc
+      get_proc(10, Translations.clear_stencil, Procs.clear_stencil)
     end
-
-    # Invokes glGenBuffers.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def gen_buffers(*args)
-      raise FunctionUnavailableError.new("glGenBuffers") unless gen_buffers?
 
-      gen_buffers!(*args)
+    # Checks if the OpenGL function *glClearStencil* is loaded.
+    def clear_stencil?
+      !!@addresses[10]
     end
 
-    # Checks if the function "glGenBuffers" is loaded.
-    @[AlwaysInline]
-    def gen_buffers? : Bool
-      !@addr_gen_buffers.null?
+    # Retrieves a `Proc` for the OpenGL function *glClientActiveTexture*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def client_active_texture : ::Proc
+      get_proc(11, Translations.client_active_texture, Procs.client_active_texture)
     end
 
-    # Invokes glGenTextures.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def gen_textures!(*args)
-      addr = @addr_gen_textures
-      proc = Procs.gen_textures(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glClientActiveTexture* is loaded.
+    def client_active_texture?
+      !!@addresses[11]
     end
 
-    # Invokes glGenTextures.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def gen_textures(*args)
-      raise FunctionUnavailableError.new("glGenTextures") unless gen_textures?
-
-      gen_textures!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glClipPlanex*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def clip_planex : ::Proc
+      get_proc(12, Translations.clip_planex, Procs.clip_planex)
     end
 
-    # Checks if the function "glGenTextures" is loaded.
-    @[AlwaysInline]
-    def gen_textures? : Bool
-      !@addr_gen_textures.null?
+    # Checks if the OpenGL function *glClipPlanex* is loaded.
+    def clip_planex?
+      !!@addresses[12]
     end
 
-    # Invokes glGetError.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def get_error!(*args)
-      addr = @addr_get_error
-      proc = Procs.get_error(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glColor4ub*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def color_4ub : ::Proc
+      get_proc(13, Translations.color_4ub, Procs.color_4ub)
     end
 
-    # Invokes glGetError.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def get_error(*args)
-      raise FunctionUnavailableError.new("glGetError") unless get_error?
-
-      get_error!(*args)
+    # Checks if the OpenGL function *glColor4ub* is loaded.
+    def color_4ub?
+      !!@addresses[13]
     end
 
-    # Checks if the function "glGetError" is loaded.
-    @[AlwaysInline]
-    def get_error? : Bool
-      !@addr_get_error.null?
+    # Retrieves a `Proc` for the OpenGL function *glColor4x*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def color_4x : ::Proc
+      get_proc(14, Translations.color_4x, Procs.color_4x)
     end
 
-    # Invokes glGetFixedv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def get_fixedv!(*args)
-      addr = @addr_get_fixedv
-      proc = Procs.get_fixedv(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glColor4x* is loaded.
+    def color_4x?
+      !!@addresses[14]
     end
-
-    # Invokes glGetFixedv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def get_fixedv(*args)
-      raise FunctionUnavailableError.new("glGetFixedv") unless get_fixedv?
 
-      get_fixedv!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glColorMask*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def color_mask : ::Proc
+      get_proc(15, Translations.color_mask, Procs.color_mask)
     end
 
-    # Checks if the function "glGetFixedv" is loaded.
-    @[AlwaysInline]
-    def get_fixedv? : Bool
-      !@addr_get_fixedv.null?
+    # Checks if the OpenGL function *glColorMask* is loaded.
+    def color_mask?
+      !!@addresses[15]
     end
 
-    # Invokes glGetIntegerv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def get_integer_v!(*args)
-      addr = @addr_get_integer_v
-      proc = Procs.get_integer_v(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glColorPointer*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def color_pointer : ::Proc
+      get_proc(16, Translations.color_pointer, Procs.color_pointer)
     end
-
-    # Invokes glGetIntegerv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def get_integer_v(*args)
-      raise FunctionUnavailableError.new("glGetIntegerv") unless get_integer_v?
 
-      get_integer_v!(*args)
+    # Checks if the OpenGL function *glColorPointer* is loaded.
+    def color_pointer?
+      !!@addresses[16]
     end
 
-    # Checks if the function "glGetIntegerv" is loaded.
-    @[AlwaysInline]
-    def get_integer_v? : Bool
-      !@addr_get_integer_v.null?
+    # Retrieves a `Proc` for the OpenGL function *glCompressedTexImage2D*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def compressed_tex_image_2d : ::Proc
+      get_proc(17, Translations.compressed_tex_image_2d, Procs.compressed_tex_image_2d)
     end
 
-    # Invokes glGetLightxv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def get_light_xv!(*args)
-      addr = @addr_get_light_xv
-      proc = Procs.get_light_xv(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glCompressedTexImage2D* is loaded.
+    def compressed_tex_image_2d?
+      !!@addresses[17]
     end
-
-    # Invokes glGetLightxv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def get_light_xv(*args)
-      raise FunctionUnavailableError.new("glGetLightxv") unless get_light_xv?
 
-      get_light_xv!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glCompressedTexSubImage2D*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def compressed_tex_sub_image_2d : ::Proc
+      get_proc(18, Translations.compressed_tex_sub_image_2d, Procs.compressed_tex_sub_image_2d)
     end
 
-    # Checks if the function "glGetLightxv" is loaded.
-    @[AlwaysInline]
-    def get_light_xv? : Bool
-      !@addr_get_light_xv.null?
+    # Checks if the OpenGL function *glCompressedTexSubImage2D* is loaded.
+    def compressed_tex_sub_image_2d?
+      !!@addresses[18]
     end
 
-    # Invokes glGetMaterialxv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def get_material_xv!(*args)
-      addr = @addr_get_material_xv
-      proc = Procs.get_material_xv(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glCopyTexImage2D*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def copy_tex_image_2d : ::Proc
+      get_proc(19, Translations.copy_tex_image_2d, Procs.copy_tex_image_2d)
     end
 
-    # Invokes glGetMaterialxv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def get_material_xv(*args)
-      raise FunctionUnavailableError.new("glGetMaterialxv") unless get_material_xv?
-
-      get_material_xv!(*args)
+    # Checks if the OpenGL function *glCopyTexImage2D* is loaded.
+    def copy_tex_image_2d?
+      !!@addresses[19]
     end
 
-    # Checks if the function "glGetMaterialxv" is loaded.
-    @[AlwaysInline]
-    def get_material_xv? : Bool
-      !@addr_get_material_xv.null?
+    # Retrieves a `Proc` for the OpenGL function *glCopyTexSubImage2D*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def copy_tex_sub_image_2d : ::Proc
+      get_proc(20, Translations.copy_tex_sub_image_2d, Procs.copy_tex_sub_image_2d)
     end
 
-    # Invokes glGetPointerv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def get_pointer_v!(*args)
-      addr = @addr_get_pointer_v
-      proc = Procs.get_pointer_v(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glCopyTexSubImage2D* is loaded.
+    def copy_tex_sub_image_2d?
+      !!@addresses[20]
     end
 
-    # Invokes glGetPointerv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def get_pointer_v(*args)
-      raise FunctionUnavailableError.new("glGetPointerv") unless get_pointer_v?
-
-      get_pointer_v!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glCullFace*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def cull_face : ::Proc
+      get_proc(21, Translations.cull_face, Procs.cull_face)
     end
 
-    # Checks if the function "glGetPointerv" is loaded.
-    @[AlwaysInline]
-    def get_pointer_v? : Bool
-      !@addr_get_pointer_v.null?
+    # Checks if the OpenGL function *glCullFace* is loaded.
+    def cull_face?
+      !!@addresses[21]
     end
 
-    # Invokes glGetString.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def get_string!(*args)
-      addr = @addr_get_string
-      proc = Procs.get_string(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glDeleteBuffers*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def delete_buffers : ::Proc
+      get_proc(22, Translations.delete_buffers, Procs.delete_buffers)
     end
-
-    # Invokes glGetString.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def get_string(*args)
-      raise FunctionUnavailableError.new("glGetString") unless get_string?
 
-      get_string!(*args)
+    # Checks if the OpenGL function *glDeleteBuffers* is loaded.
+    def delete_buffers?
+      !!@addresses[22]
     end
 
-    # Checks if the function "glGetString" is loaded.
-    @[AlwaysInline]
-    def get_string? : Bool
-      !@addr_get_string.null?
+    # Retrieves a `Proc` for the OpenGL function *glDeleteTextures*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def delete_textures : ::Proc
+      get_proc(23, Translations.delete_textures, Procs.delete_textures)
     end
 
-    # Invokes glGetTexEnviv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def get_tex_env_iv!(*args)
-      addr = @addr_get_tex_env_iv
-      proc = Procs.get_tex_env_iv(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glDeleteTextures* is loaded.
+    def delete_textures?
+      !!@addresses[23]
     end
 
-    # Invokes glGetTexEnviv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def get_tex_env_iv(*args)
-      raise FunctionUnavailableError.new("glGetTexEnviv") unless get_tex_env_iv?
-
-      get_tex_env_iv!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glDepthFunc*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def depth_func : ::Proc
+      get_proc(24, Translations.depth_func, Procs.depth_func)
     end
 
-    # Checks if the function "glGetTexEnviv" is loaded.
-    @[AlwaysInline]
-    def get_tex_env_iv? : Bool
-      !@addr_get_tex_env_iv.null?
+    # Checks if the OpenGL function *glDepthFunc* is loaded.
+    def depth_func?
+      !!@addresses[24]
     end
 
-    # Invokes glGetTexEnvxv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def get_tex_env_xv!(*args)
-      addr = @addr_get_tex_env_xv
-      proc = Procs.get_tex_env_xv(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glDepthMask*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def depth_mask : ::Proc
+      get_proc(25, Translations.depth_mask, Procs.depth_mask)
     end
 
-    # Invokes glGetTexEnvxv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def get_tex_env_xv(*args)
-      raise FunctionUnavailableError.new("glGetTexEnvxv") unless get_tex_env_xv?
-
-      get_tex_env_xv!(*args)
+    # Checks if the OpenGL function *glDepthMask* is loaded.
+    def depth_mask?
+      !!@addresses[25]
     end
 
-    # Checks if the function "glGetTexEnvxv" is loaded.
-    @[AlwaysInline]
-    def get_tex_env_xv? : Bool
-      !@addr_get_tex_env_xv.null?
+    # Retrieves a `Proc` for the OpenGL function *glDepthRangex*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def depth_rangex : ::Proc
+      get_proc(26, Translations.depth_rangex, Procs.depth_rangex)
     end
 
-    # Invokes glGetTexParameteriv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def get_tex_parameter_iv!(*args)
-      addr = @addr_get_tex_parameter_iv
-      proc = Procs.get_tex_parameter_iv(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glDepthRangex* is loaded.
+    def depth_rangex?
+      !!@addresses[26]
     end
 
-    # Invokes glGetTexParameteriv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def get_tex_parameter_iv(*args)
-      raise FunctionUnavailableError.new("glGetTexParameteriv") unless get_tex_parameter_iv?
-
-      get_tex_parameter_iv!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glDisable*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def disable : ::Proc
+      get_proc(27, Translations.disable, Procs.disable)
     end
 
-    # Checks if the function "glGetTexParameteriv" is loaded.
-    @[AlwaysInline]
-    def get_tex_parameter_iv? : Bool
-      !@addr_get_tex_parameter_iv.null?
+    # Checks if the OpenGL function *glDisable* is loaded.
+    def disable?
+      !!@addresses[27]
     end
 
-    # Invokes glGetTexParameterxv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def get_tex_parameter_xv!(*args)
-      addr = @addr_get_tex_parameter_xv
-      proc = Procs.get_tex_parameter_xv(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glDisableClientState*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def disable_client_state : ::Proc
+      get_proc(28, Translations.disable_client_state, Procs.disable_client_state)
     end
 
-    # Invokes glGetTexParameterxv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def get_tex_parameter_xv(*args)
-      raise FunctionUnavailableError.new("glGetTexParameterxv") unless get_tex_parameter_xv?
-
-      get_tex_parameter_xv!(*args)
+    # Checks if the OpenGL function *glDisableClientState* is loaded.
+    def disable_client_state?
+      !!@addresses[28]
     end
 
-    # Checks if the function "glGetTexParameterxv" is loaded.
-    @[AlwaysInline]
-    def get_tex_parameter_xv? : Bool
-      !@addr_get_tex_parameter_xv.null?
+    # Retrieves a `Proc` for the OpenGL function *glDrawArrays*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def draw_arrays : ::Proc
+      get_proc(29, Translations.draw_arrays, Procs.draw_arrays)
     end
 
-    # Invokes glHint.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def hint!(*args)
-      addr = @addr_hint
-      proc = Procs.hint(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glDrawArrays* is loaded.
+    def draw_arrays?
+      !!@addresses[29]
     end
-
-    # Invokes glHint.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def hint(*args)
-      raise FunctionUnavailableError.new("glHint") unless hint?
 
-      hint!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glDrawElements*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def draw_elements : ::Proc
+      get_proc(30, Translations.draw_elements, Procs.draw_elements)
     end
 
-    # Checks if the function "glHint" is loaded.
-    @[AlwaysInline]
-    def hint? : Bool
-      !@addr_hint.null?
+    # Checks if the OpenGL function *glDrawElements* is loaded.
+    def draw_elements?
+      !!@addresses[30]
     end
 
-    # Invokes glIsBuffer.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def is_buffer!(*args)
-      addr = @addr_is_buffer
-      proc = Procs.is_buffer(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glEnable*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def enable : ::Proc
+      get_proc(31, Translations.enable, Procs.enable)
     end
 
-    # Invokes glIsBuffer.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def is_buffer(*args)
-      raise FunctionUnavailableError.new("glIsBuffer") unless is_buffer?
-
-      is_buffer!(*args)
+    # Checks if the OpenGL function *glEnable* is loaded.
+    def enable?
+      !!@addresses[31]
     end
 
-    # Checks if the function "glIsBuffer" is loaded.
-    @[AlwaysInline]
-    def is_buffer? : Bool
-      !@addr_is_buffer.null?
+    # Retrieves a `Proc` for the OpenGL function *glEnableClientState*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def enable_client_state : ::Proc
+      get_proc(32, Translations.enable_client_state, Procs.enable_client_state)
     end
 
-    # Invokes glIsEnabled.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def is_enabled!(*args)
-      addr = @addr_is_enabled
-      proc = Procs.is_enabled(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glEnableClientState* is loaded.
+    def enable_client_state?
+      !!@addresses[32]
     end
 
-    # Invokes glIsEnabled.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def is_enabled(*args)
-      raise FunctionUnavailableError.new("glIsEnabled") unless is_enabled?
-
-      is_enabled!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glFinish*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def finish : ::Proc
+      get_proc(33, Translations.finish, Procs.finish)
     end
 
-    # Checks if the function "glIsEnabled" is loaded.
-    @[AlwaysInline]
-    def is_enabled? : Bool
-      !@addr_is_enabled.null?
+    # Checks if the OpenGL function *glFinish* is loaded.
+    def finish?
+      !!@addresses[33]
     end
 
-    # Invokes glIsTexture.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def is_texture!(*args)
-      addr = @addr_is_texture
-      proc = Procs.is_texture(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glFlush*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def flush : ::Proc
+      get_proc(34, Translations.flush, Procs.flush)
     end
-
-    # Invokes glIsTexture.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def is_texture(*args)
-      raise FunctionUnavailableError.new("glIsTexture") unless is_texture?
 
-      is_texture!(*args)
+    # Checks if the OpenGL function *glFlush* is loaded.
+    def flush?
+      !!@addresses[34]
     end
 
-    # Checks if the function "glIsTexture" is loaded.
-    @[AlwaysInline]
-    def is_texture? : Bool
-      !@addr_is_texture.null?
+    # Retrieves a `Proc` for the OpenGL function *glFogx*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def fog_x : ::Proc
+      get_proc(35, Translations.fog_x, Procs.fog_x)
     end
 
-    # Invokes glLightModelx.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def light_model_x!(*args)
-      addr = @addr_light_model_x
-      proc = Procs.light_model_x(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glFogx* is loaded.
+    def fog_x?
+      !!@addresses[35]
     end
-
-    # Invokes glLightModelx.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def light_model_x(*args)
-      raise FunctionUnavailableError.new("glLightModelx") unless light_model_x?
 
-      light_model_x!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glFogxv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def fog_xv : ::Proc
+      get_proc(36, Translations.fog_xv, Procs.fog_xv)
     end
 
-    # Checks if the function "glLightModelx" is loaded.
-    @[AlwaysInline]
-    def light_model_x? : Bool
-      !@addr_light_model_x.null?
+    # Checks if the OpenGL function *glFogxv* is loaded.
+    def fog_xv?
+      !!@addresses[36]
     end
 
-    # Invokes glLightModelxv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def light_model_xv!(*args)
-      addr = @addr_light_model_xv
-      proc = Procs.light_model_xv(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glFrontFace*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def front_face : ::Proc
+      get_proc(37, Translations.front_face, Procs.front_face)
     end
-
-    # Invokes glLightModelxv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def light_model_xv(*args)
-      raise FunctionUnavailableError.new("glLightModelxv") unless light_model_xv?
 
-      light_model_xv!(*args)
+    # Checks if the OpenGL function *glFrontFace* is loaded.
+    def front_face?
+      !!@addresses[37]
     end
 
-    # Checks if the function "glLightModelxv" is loaded.
-    @[AlwaysInline]
-    def light_model_xv? : Bool
-      !@addr_light_model_xv.null?
+    # Retrieves a `Proc` for the OpenGL function *glFrustumx*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def frustumx : ::Proc
+      get_proc(38, Translations.frustumx, Procs.frustumx)
     end
 
-    # Invokes glLightx.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def light_x!(*args)
-      addr = @addr_light_x
-      proc = Procs.light_x(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glFrustumx* is loaded.
+    def frustumx?
+      !!@addresses[38]
     end
 
-    # Invokes glLightx.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def light_x(*args)
-      raise FunctionUnavailableError.new("glLightx") unless light_x?
-
-      light_x!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glGetBooleanv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def get_boolean_v : ::Proc
+      get_proc(39, Translations.get_boolean_v, Procs.get_boolean_v)
     end
 
-    # Checks if the function "glLightx" is loaded.
-    @[AlwaysInline]
-    def light_x? : Bool
-      !@addr_light_x.null?
+    # Checks if the OpenGL function *glGetBooleanv* is loaded.
+    def get_boolean_v?
+      !!@addresses[39]
     end
 
-    # Invokes glLightxv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def light_xv!(*args)
-      addr = @addr_light_xv
-      proc = Procs.light_xv(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glGetBufferParameteriv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def get_buffer_parameter_iv : ::Proc
+      get_proc(40, Translations.get_buffer_parameter_iv, Procs.get_buffer_parameter_iv)
     end
 
-    # Invokes glLightxv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def light_xv(*args)
-      raise FunctionUnavailableError.new("glLightxv") unless light_xv?
-
-      light_xv!(*args)
+    # Checks if the OpenGL function *glGetBufferParameteriv* is loaded.
+    def get_buffer_parameter_iv?
+      !!@addresses[40]
     end
 
-    # Checks if the function "glLightxv" is loaded.
-    @[AlwaysInline]
-    def light_xv? : Bool
-      !@addr_light_xv.null?
+    # Retrieves a `Proc` for the OpenGL function *glGetClipPlanex*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def get_clip_plane_x : ::Proc
+      get_proc(41, Translations.get_clip_plane_x, Procs.get_clip_plane_x)
     end
 
-    # Invokes glLineWidthx.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def line_widthx!(*args)
-      addr = @addr_line_widthx
-      proc = Procs.line_widthx(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glGetClipPlanex* is loaded.
+    def get_clip_plane_x?
+      !!@addresses[41]
     end
-
-    # Invokes glLineWidthx.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def line_widthx(*args)
-      raise FunctionUnavailableError.new("glLineWidthx") unless line_widthx?
 
-      line_widthx!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glGenBuffers*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def gen_buffers : ::Proc
+      get_proc(42, Translations.gen_buffers, Procs.gen_buffers)
     end
 
-    # Checks if the function "glLineWidthx" is loaded.
-    @[AlwaysInline]
-    def line_widthx? : Bool
-      !@addr_line_widthx.null?
+    # Checks if the OpenGL function *glGenBuffers* is loaded.
+    def gen_buffers?
+      !!@addresses[42]
     end
 
-    # Invokes glLoadIdentity.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def load_identity!(*args)
-      addr = @addr_load_identity
-      proc = Procs.load_identity(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glGenTextures*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def gen_textures : ::Proc
+      get_proc(43, Translations.gen_textures, Procs.gen_textures)
     end
 
-    # Invokes glLoadIdentity.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def load_identity(*args)
-      raise FunctionUnavailableError.new("glLoadIdentity") unless load_identity?
-
-      load_identity!(*args)
+    # Checks if the OpenGL function *glGenTextures* is loaded.
+    def gen_textures?
+      !!@addresses[43]
     end
 
-    # Checks if the function "glLoadIdentity" is loaded.
-    @[AlwaysInline]
-    def load_identity? : Bool
-      !@addr_load_identity.null?
+    # Retrieves a `Proc` for the OpenGL function *glGetError*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def get_error : ::Proc
+      get_proc(44, Translations.get_error, Procs.get_error)
     end
 
-    # Invokes glLoadMatrixx.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def load_matrix_x!(*args)
-      addr = @addr_load_matrix_x
-      proc = Procs.load_matrix_x(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glGetError* is loaded.
+    def get_error?
+      !!@addresses[44]
     end
 
-    # Invokes glLoadMatrixx.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def load_matrix_x(*args)
-      raise FunctionUnavailableError.new("glLoadMatrixx") unless load_matrix_x?
-
-      load_matrix_x!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glGetFixedv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def get_fixedv : ::Proc
+      get_proc(45, Translations.get_fixedv, Procs.get_fixedv)
     end
 
-    # Checks if the function "glLoadMatrixx" is loaded.
-    @[AlwaysInline]
-    def load_matrix_x? : Bool
-      !@addr_load_matrix_x.null?
+    # Checks if the OpenGL function *glGetFixedv* is loaded.
+    def get_fixedv?
+      !!@addresses[45]
     end
 
-    # Invokes glLogicOp.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def logic_op!(*args)
-      addr = @addr_logic_op
-      proc = Procs.logic_op(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glGetIntegerv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def get_integer_v : ::Proc
+      get_proc(46, Translations.get_integer_v, Procs.get_integer_v)
     end
 
-    # Invokes glLogicOp.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def logic_op(*args)
-      raise FunctionUnavailableError.new("glLogicOp") unless logic_op?
-
-      logic_op!(*args)
+    # Checks if the OpenGL function *glGetIntegerv* is loaded.
+    def get_integer_v?
+      !!@addresses[46]
     end
 
-    # Checks if the function "glLogicOp" is loaded.
-    @[AlwaysInline]
-    def logic_op? : Bool
-      !@addr_logic_op.null?
+    # Retrieves a `Proc` for the OpenGL function *glGetLightxv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def get_light_xv : ::Proc
+      get_proc(47, Translations.get_light_xv, Procs.get_light_xv)
     end
 
-    # Invokes glMaterialx.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def material_x!(*args)
-      addr = @addr_material_x
-      proc = Procs.material_x(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glGetLightxv* is loaded.
+    def get_light_xv?
+      !!@addresses[47]
     end
 
-    # Invokes glMaterialx.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def material_x(*args)
-      raise FunctionUnavailableError.new("glMaterialx") unless material_x?
-
-      material_x!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glGetMaterialxv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def get_material_xv : ::Proc
+      get_proc(48, Translations.get_material_xv, Procs.get_material_xv)
     end
 
-    # Checks if the function "glMaterialx" is loaded.
-    @[AlwaysInline]
-    def material_x? : Bool
-      !@addr_material_x.null?
+    # Checks if the OpenGL function *glGetMaterialxv* is loaded.
+    def get_material_xv?
+      !!@addresses[48]
     end
 
-    # Invokes glMaterialxv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def material_xv!(*args)
-      addr = @addr_material_xv
-      proc = Procs.material_xv(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glGetPointerv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def get_pointer_v : ::Proc
+      get_proc(49, Translations.get_pointer_v, Procs.get_pointer_v)
     end
-
-    # Invokes glMaterialxv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def material_xv(*args)
-      raise FunctionUnavailableError.new("glMaterialxv") unless material_xv?
 
-      material_xv!(*args)
+    # Checks if the OpenGL function *glGetPointerv* is loaded.
+    def get_pointer_v?
+      !!@addresses[49]
     end
 
-    # Checks if the function "glMaterialxv" is loaded.
-    @[AlwaysInline]
-    def material_xv? : Bool
-      !@addr_material_xv.null?
+    # Retrieves a `Proc` for the OpenGL function *glGetString*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def get_string : ::Proc
+      get_proc(50, Translations.get_string, Procs.get_string)
     end
 
-    # Invokes glMatrixMode.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def matrix_mode!(*args)
-      addr = @addr_matrix_mode
-      proc = Procs.matrix_mode(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glGetString* is loaded.
+    def get_string?
+      !!@addresses[50]
     end
 
-    # Invokes glMatrixMode.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def matrix_mode(*args)
-      raise FunctionUnavailableError.new("glMatrixMode") unless matrix_mode?
-
-      matrix_mode!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glGetTexEnviv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def get_tex_env_iv : ::Proc
+      get_proc(51, Translations.get_tex_env_iv, Procs.get_tex_env_iv)
     end
 
-    # Checks if the function "glMatrixMode" is loaded.
-    @[AlwaysInline]
-    def matrix_mode? : Bool
-      !@addr_matrix_mode.null?
+    # Checks if the OpenGL function *glGetTexEnviv* is loaded.
+    def get_tex_env_iv?
+      !!@addresses[51]
     end
 
-    # Invokes glMultMatrixx.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def mult_matrix_x!(*args)
-      addr = @addr_mult_matrix_x
-      proc = Procs.mult_matrix_x(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glGetTexEnvxv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def get_tex_env_xv : ::Proc
+      get_proc(52, Translations.get_tex_env_xv, Procs.get_tex_env_xv)
     end
 
-    # Invokes glMultMatrixx.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def mult_matrix_x(*args)
-      raise FunctionUnavailableError.new("glMultMatrixx") unless mult_matrix_x?
-
-      mult_matrix_x!(*args)
+    # Checks if the OpenGL function *glGetTexEnvxv* is loaded.
+    def get_tex_env_xv?
+      !!@addresses[52]
     end
 
-    # Checks if the function "glMultMatrixx" is loaded.
-    @[AlwaysInline]
-    def mult_matrix_x? : Bool
-      !@addr_mult_matrix_x.null?
+    # Retrieves a `Proc` for the OpenGL function *glGetTexParameteriv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def get_tex_parameter_iv : ::Proc
+      get_proc(53, Translations.get_tex_parameter_iv, Procs.get_tex_parameter_iv)
     end
 
-    # Invokes glMultiTexCoord4x.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def multi_tex_coord_4x!(*args)
-      addr = @addr_multi_tex_coord_4x
-      proc = Procs.multi_tex_coord_4x(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glGetTexParameteriv* is loaded.
+    def get_tex_parameter_iv?
+      !!@addresses[53]
     end
-
-    # Invokes glMultiTexCoord4x.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def multi_tex_coord_4x(*args)
-      raise FunctionUnavailableError.new("glMultiTexCoord4x") unless multi_tex_coord_4x?
 
-      multi_tex_coord_4x!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glGetTexParameterxv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def get_tex_parameter_xv : ::Proc
+      get_proc(54, Translations.get_tex_parameter_xv, Procs.get_tex_parameter_xv)
     end
 
-    # Checks if the function "glMultiTexCoord4x" is loaded.
-    @[AlwaysInline]
-    def multi_tex_coord_4x? : Bool
-      !@addr_multi_tex_coord_4x.null?
+    # Checks if the OpenGL function *glGetTexParameterxv* is loaded.
+    def get_tex_parameter_xv?
+      !!@addresses[54]
     end
 
-    # Invokes glNormal3x.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def normal_3x!(*args)
-      addr = @addr_normal_3x
-      proc = Procs.normal_3x(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glHint*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def hint : ::Proc
+      get_proc(55, Translations.hint, Procs.hint)
     end
-
-    # Invokes glNormal3x.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def normal_3x(*args)
-      raise FunctionUnavailableError.new("glNormal3x") unless normal_3x?
 
-      normal_3x!(*args)
+    # Checks if the OpenGL function *glHint* is loaded.
+    def hint?
+      !!@addresses[55]
     end
 
-    # Checks if the function "glNormal3x" is loaded.
-    @[AlwaysInline]
-    def normal_3x? : Bool
-      !@addr_normal_3x.null?
+    # Retrieves a `Proc` for the OpenGL function *glIsBuffer*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def is_buffer : ::Proc
+      get_proc(56, Translations.is_buffer, Procs.is_buffer)
     end
 
-    # Invokes glNormalPointer.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def normal_pointer!(*args)
-      addr = @addr_normal_pointer
-      proc = Procs.normal_pointer(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glIsBuffer* is loaded.
+    def is_buffer?
+      !!@addresses[56]
     end
-
-    # Invokes glNormalPointer.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def normal_pointer(*args)
-      raise FunctionUnavailableError.new("glNormalPointer") unless normal_pointer?
 
-      normal_pointer!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glIsEnabled*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def is_enabled : ::Proc
+      get_proc(57, Translations.is_enabled, Procs.is_enabled)
     end
 
-    # Checks if the function "glNormalPointer" is loaded.
-    @[AlwaysInline]
-    def normal_pointer? : Bool
-      !@addr_normal_pointer.null?
+    # Checks if the OpenGL function *glIsEnabled* is loaded.
+    def is_enabled?
+      !!@addresses[57]
     end
 
-    # Invokes glOrthox.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def orthox!(*args)
-      addr = @addr_orthox
-      proc = Procs.orthox(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glIsTexture*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def is_texture : ::Proc
+      get_proc(58, Translations.is_texture, Procs.is_texture)
     end
 
-    # Invokes glOrthox.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def orthox(*args)
-      raise FunctionUnavailableError.new("glOrthox") unless orthox?
-
-      orthox!(*args)
+    # Checks if the OpenGL function *glIsTexture* is loaded.
+    def is_texture?
+      !!@addresses[58]
     end
 
-    # Checks if the function "glOrthox" is loaded.
-    @[AlwaysInline]
-    def orthox? : Bool
-      !@addr_orthox.null?
+    # Retrieves a `Proc` for the OpenGL function *glLightModelx*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def light_model_x : ::Proc
+      get_proc(59, Translations.light_model_x, Procs.light_model_x)
     end
 
-    # Invokes glPixelStorei.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def pixel_store_i!(*args)
-      addr = @addr_pixel_store_i
-      proc = Procs.pixel_store_i(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glLightModelx* is loaded.
+    def light_model_x?
+      !!@addresses[59]
     end
 
-    # Invokes glPixelStorei.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def pixel_store_i(*args)
-      raise FunctionUnavailableError.new("glPixelStorei") unless pixel_store_i?
-
-      pixel_store_i!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glLightModelxv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def light_model_xv : ::Proc
+      get_proc(60, Translations.light_model_xv, Procs.light_model_xv)
     end
 
-    # Checks if the function "glPixelStorei" is loaded.
-    @[AlwaysInline]
-    def pixel_store_i? : Bool
-      !@addr_pixel_store_i.null?
+    # Checks if the OpenGL function *glLightModelxv* is loaded.
+    def light_model_xv?
+      !!@addresses[60]
     end
 
-    # Invokes glPointParameterx.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def point_parameter_x!(*args)
-      addr = @addr_point_parameter_x
-      proc = Procs.point_parameter_x(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glLightx*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def light_x : ::Proc
+      get_proc(61, Translations.light_x, Procs.light_x)
     end
-
-    # Invokes glPointParameterx.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def point_parameter_x(*args)
-      raise FunctionUnavailableError.new("glPointParameterx") unless point_parameter_x?
 
-      point_parameter_x!(*args)
+    # Checks if the OpenGL function *glLightx* is loaded.
+    def light_x?
+      !!@addresses[61]
     end
 
-    # Checks if the function "glPointParameterx" is loaded.
-    @[AlwaysInline]
-    def point_parameter_x? : Bool
-      !@addr_point_parameter_x.null?
+    # Retrieves a `Proc` for the OpenGL function *glLightxv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def light_xv : ::Proc
+      get_proc(62, Translations.light_xv, Procs.light_xv)
     end
 
-    # Invokes glPointParameterxv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def point_parameter_xv!(*args)
-      addr = @addr_point_parameter_xv
-      proc = Procs.point_parameter_xv(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glLightxv* is loaded.
+    def light_xv?
+      !!@addresses[62]
     end
 
-    # Invokes glPointParameterxv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def point_parameter_xv(*args)
-      raise FunctionUnavailableError.new("glPointParameterxv") unless point_parameter_xv?
-
-      point_parameter_xv!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glLineWidthx*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def line_widthx : ::Proc
+      get_proc(63, Translations.line_widthx, Procs.line_widthx)
     end
 
-    # Checks if the function "glPointParameterxv" is loaded.
-    @[AlwaysInline]
-    def point_parameter_xv? : Bool
-      !@addr_point_parameter_xv.null?
+    # Checks if the OpenGL function *glLineWidthx* is loaded.
+    def line_widthx?
+      !!@addresses[63]
     end
 
-    # Invokes glPointSizex.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def point_sizex!(*args)
-      addr = @addr_point_sizex
-      proc = Procs.point_sizex(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glLoadIdentity*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def load_identity : ::Proc
+      get_proc(64, Translations.load_identity, Procs.load_identity)
     end
 
-    # Invokes glPointSizex.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def point_sizex(*args)
-      raise FunctionUnavailableError.new("glPointSizex") unless point_sizex?
-
-      point_sizex!(*args)
+    # Checks if the OpenGL function *glLoadIdentity* is loaded.
+    def load_identity?
+      !!@addresses[64]
     end
 
-    # Checks if the function "glPointSizex" is loaded.
-    @[AlwaysInline]
-    def point_sizex? : Bool
-      !@addr_point_sizex.null?
+    # Retrieves a `Proc` for the OpenGL function *glLoadMatrixx*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def load_matrix_x : ::Proc
+      get_proc(65, Translations.load_matrix_x, Procs.load_matrix_x)
     end
 
-    # Invokes glPolygonOffsetx.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def polygon_offsetx!(*args)
-      addr = @addr_polygon_offsetx
-      proc = Procs.polygon_offsetx(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glLoadMatrixx* is loaded.
+    def load_matrix_x?
+      !!@addresses[65]
     end
 
-    # Invokes glPolygonOffsetx.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def polygon_offsetx(*args)
-      raise FunctionUnavailableError.new("glPolygonOffsetx") unless polygon_offsetx?
-
-      polygon_offsetx!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glLogicOp*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def logic_op : ::Proc
+      get_proc(66, Translations.logic_op, Procs.logic_op)
     end
 
-    # Checks if the function "glPolygonOffsetx" is loaded.
-    @[AlwaysInline]
-    def polygon_offsetx? : Bool
-      !@addr_polygon_offsetx.null?
+    # Checks if the OpenGL function *glLogicOp* is loaded.
+    def logic_op?
+      !!@addresses[66]
     end
 
-    # Invokes glPopMatrix.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def pop_matrix!(*args)
-      addr = @addr_pop_matrix
-      proc = Procs.pop_matrix(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glMaterialx*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def material_x : ::Proc
+      get_proc(67, Translations.material_x, Procs.material_x)
     end
 
-    # Invokes glPopMatrix.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def pop_matrix(*args)
-      raise FunctionUnavailableError.new("glPopMatrix") unless pop_matrix?
-
-      pop_matrix!(*args)
+    # Checks if the OpenGL function *glMaterialx* is loaded.
+    def material_x?
+      !!@addresses[67]
     end
 
-    # Checks if the function "glPopMatrix" is loaded.
-    @[AlwaysInline]
-    def pop_matrix? : Bool
-      !@addr_pop_matrix.null?
+    # Retrieves a `Proc` for the OpenGL function *glMaterialxv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def material_xv : ::Proc
+      get_proc(68, Translations.material_xv, Procs.material_xv)
     end
 
-    # Invokes glPushMatrix.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def push_matrix!(*args)
-      addr = @addr_push_matrix
-      proc = Procs.push_matrix(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glMaterialxv* is loaded.
+    def material_xv?
+      !!@addresses[68]
     end
-
-    # Invokes glPushMatrix.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def push_matrix(*args)
-      raise FunctionUnavailableError.new("glPushMatrix") unless push_matrix?
 
-      push_matrix!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glMatrixMode*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def matrix_mode : ::Proc
+      get_proc(69, Translations.matrix_mode, Procs.matrix_mode)
     end
 
-    # Checks if the function "glPushMatrix" is loaded.
-    @[AlwaysInline]
-    def push_matrix? : Bool
-      !@addr_push_matrix.null?
+    # Checks if the OpenGL function *glMatrixMode* is loaded.
+    def matrix_mode?
+      !!@addresses[69]
     end
 
-    # Invokes glReadPixels.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def read_pixels!(*args)
-      addr = @addr_read_pixels
-      proc = Procs.read_pixels(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glMultMatrixx*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def mult_matrix_x : ::Proc
+      get_proc(70, Translations.mult_matrix_x, Procs.mult_matrix_x)
     end
 
-    # Invokes glReadPixels.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def read_pixels(*args)
-      raise FunctionUnavailableError.new("glReadPixels") unless read_pixels?
-
-      read_pixels!(*args)
+    # Checks if the OpenGL function *glMultMatrixx* is loaded.
+    def mult_matrix_x?
+      !!@addresses[70]
     end
 
-    # Checks if the function "glReadPixels" is loaded.
-    @[AlwaysInline]
-    def read_pixels? : Bool
-      !@addr_read_pixels.null?
+    # Retrieves a `Proc` for the OpenGL function *glMultiTexCoord4x*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def multi_tex_coord_4x : ::Proc
+      get_proc(71, Translations.multi_tex_coord_4x, Procs.multi_tex_coord_4x)
     end
 
-    # Invokes glRotatex.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def rotate_x!(*args)
-      addr = @addr_rotate_x
-      proc = Procs.rotate_x(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glMultiTexCoord4x* is loaded.
+    def multi_tex_coord_4x?
+      !!@addresses[71]
     end
 
-    # Invokes glRotatex.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def rotate_x(*args)
-      raise FunctionUnavailableError.new("glRotatex") unless rotate_x?
-
-      rotate_x!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glNormal3x*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def normal_3x : ::Proc
+      get_proc(72, Translations.normal_3x, Procs.normal_3x)
     end
 
-    # Checks if the function "glRotatex" is loaded.
-    @[AlwaysInline]
-    def rotate_x? : Bool
-      !@addr_rotate_x.null?
+    # Checks if the OpenGL function *glNormal3x* is loaded.
+    def normal_3x?
+      !!@addresses[72]
     end
 
-    # Invokes glSampleCoverage.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def sample_coverage!(*args)
-      addr = @addr_sample_coverage
-      proc = Procs.sample_coverage(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glNormalPointer*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def normal_pointer : ::Proc
+      get_proc(73, Translations.normal_pointer, Procs.normal_pointer)
     end
-
-    # Invokes glSampleCoverage.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def sample_coverage(*args)
-      raise FunctionUnavailableError.new("glSampleCoverage") unless sample_coverage?
 
-      sample_coverage!(*args)
+    # Checks if the OpenGL function *glNormalPointer* is loaded.
+    def normal_pointer?
+      !!@addresses[73]
     end
 
-    # Checks if the function "glSampleCoverage" is loaded.
-    @[AlwaysInline]
-    def sample_coverage? : Bool
-      !@addr_sample_coverage.null?
+    # Retrieves a `Proc` for the OpenGL function *glOrthox*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def orthox : ::Proc
+      get_proc(74, Translations.orthox, Procs.orthox)
     end
 
-    # Invokes glSampleCoveragex.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def sample_coveragex!(*args)
-      addr = @addr_sample_coveragex
-      proc = Procs.sample_coveragex(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glOrthox* is loaded.
+    def orthox?
+      !!@addresses[74]
     end
-
-    # Invokes glSampleCoveragex.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def sample_coveragex(*args)
-      raise FunctionUnavailableError.new("glSampleCoveragex") unless sample_coveragex?
 
-      sample_coveragex!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glPixelStorei*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def pixel_store_i : ::Proc
+      get_proc(75, Translations.pixel_store_i, Procs.pixel_store_i)
     end
 
-    # Checks if the function "glSampleCoveragex" is loaded.
-    @[AlwaysInline]
-    def sample_coveragex? : Bool
-      !@addr_sample_coveragex.null?
+    # Checks if the OpenGL function *glPixelStorei* is loaded.
+    def pixel_store_i?
+      !!@addresses[75]
     end
 
-    # Invokes glScalex.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def scale_x!(*args)
-      addr = @addr_scale_x
-      proc = Procs.scale_x(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glPointParameterx*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def point_parameter_x : ::Proc
+      get_proc(76, Translations.point_parameter_x, Procs.point_parameter_x)
     end
-
-    # Invokes glScalex.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def scale_x(*args)
-      raise FunctionUnavailableError.new("glScalex") unless scale_x?
 
-      scale_x!(*args)
+    # Checks if the OpenGL function *glPointParameterx* is loaded.
+    def point_parameter_x?
+      !!@addresses[76]
     end
 
-    # Checks if the function "glScalex" is loaded.
-    @[AlwaysInline]
-    def scale_x? : Bool
-      !@addr_scale_x.null?
+    # Retrieves a `Proc` for the OpenGL function *glPointParameterxv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def point_parameter_xv : ::Proc
+      get_proc(77, Translations.point_parameter_xv, Procs.point_parameter_xv)
     end
 
-    # Invokes glScissor.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def scissor!(*args)
-      addr = @addr_scissor
-      proc = Procs.scissor(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glPointParameterxv* is loaded.
+    def point_parameter_xv?
+      !!@addresses[77]
     end
 
-    # Invokes glScissor.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def scissor(*args)
-      raise FunctionUnavailableError.new("glScissor") unless scissor?
-
-      scissor!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glPointSizex*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def point_sizex : ::Proc
+      get_proc(78, Translations.point_sizex, Procs.point_sizex)
     end
 
-    # Checks if the function "glScissor" is loaded.
-    @[AlwaysInline]
-    def scissor? : Bool
-      !@addr_scissor.null?
+    # Checks if the OpenGL function *glPointSizex* is loaded.
+    def point_sizex?
+      !!@addresses[78]
     end
 
-    # Invokes glShadeModel.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def shade_model!(*args)
-      addr = @addr_shade_model
-      proc = Procs.shade_model(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glPolygonOffsetx*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def polygon_offsetx : ::Proc
+      get_proc(79, Translations.polygon_offsetx, Procs.polygon_offsetx)
     end
 
-    # Invokes glShadeModel.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def shade_model(*args)
-      raise FunctionUnavailableError.new("glShadeModel") unless shade_model?
-
-      shade_model!(*args)
+    # Checks if the OpenGL function *glPolygonOffsetx* is loaded.
+    def polygon_offsetx?
+      !!@addresses[79]
     end
 
-    # Checks if the function "glShadeModel" is loaded.
-    @[AlwaysInline]
-    def shade_model? : Bool
-      !@addr_shade_model.null?
+    # Retrieves a `Proc` for the OpenGL function *glPopMatrix*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def pop_matrix : ::Proc
+      get_proc(80, Translations.pop_matrix, Procs.pop_matrix)
     end
 
-    # Invokes glStencilFunc.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def stencil_func!(*args)
-      addr = @addr_stencil_func
-      proc = Procs.stencil_func(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glPopMatrix* is loaded.
+    def pop_matrix?
+      !!@addresses[80]
     end
-
-    # Invokes glStencilFunc.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def stencil_func(*args)
-      raise FunctionUnavailableError.new("glStencilFunc") unless stencil_func?
 
-      stencil_func!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glPushMatrix*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def push_matrix : ::Proc
+      get_proc(81, Translations.push_matrix, Procs.push_matrix)
     end
 
-    # Checks if the function "glStencilFunc" is loaded.
-    @[AlwaysInline]
-    def stencil_func? : Bool
-      !@addr_stencil_func.null?
+    # Checks if the OpenGL function *glPushMatrix* is loaded.
+    def push_matrix?
+      !!@addresses[81]
     end
 
-    # Invokes glStencilMask.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def stencil_mask!(*args)
-      addr = @addr_stencil_mask
-      proc = Procs.stencil_mask(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glReadPixels*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def read_pixels : ::Proc
+      get_proc(82, Translations.read_pixels, Procs.read_pixels)
     end
 
-    # Invokes glStencilMask.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def stencil_mask(*args)
-      raise FunctionUnavailableError.new("glStencilMask") unless stencil_mask?
-
-      stencil_mask!(*args)
+    # Checks if the OpenGL function *glReadPixels* is loaded.
+    def read_pixels?
+      !!@addresses[82]
     end
 
-    # Checks if the function "glStencilMask" is loaded.
-    @[AlwaysInline]
-    def stencil_mask? : Bool
-      !@addr_stencil_mask.null?
+    # Retrieves a `Proc` for the OpenGL function *glRotatex*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def rotate_x : ::Proc
+      get_proc(83, Translations.rotate_x, Procs.rotate_x)
     end
 
-    # Invokes glStencilOp.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def stencil_op!(*args)
-      addr = @addr_stencil_op
-      proc = Procs.stencil_op(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glRotatex* is loaded.
+    def rotate_x?
+      !!@addresses[83]
     end
 
-    # Invokes glStencilOp.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def stencil_op(*args)
-      raise FunctionUnavailableError.new("glStencilOp") unless stencil_op?
-
-      stencil_op!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glSampleCoverage*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def sample_coverage : ::Proc
+      get_proc(84, Translations.sample_coverage, Procs.sample_coverage)
     end
 
-    # Checks if the function "glStencilOp" is loaded.
-    @[AlwaysInline]
-    def stencil_op? : Bool
-      !@addr_stencil_op.null?
+    # Checks if the OpenGL function *glSampleCoverage* is loaded.
+    def sample_coverage?
+      !!@addresses[84]
     end
 
-    # Invokes glTexCoordPointer.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def tex_coord_pointer!(*args)
-      addr = @addr_tex_coord_pointer
-      proc = Procs.tex_coord_pointer(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glSampleCoveragex*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def sample_coveragex : ::Proc
+      get_proc(85, Translations.sample_coveragex, Procs.sample_coveragex)
     end
 
-    # Invokes glTexCoordPointer.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def tex_coord_pointer(*args)
-      raise FunctionUnavailableError.new("glTexCoordPointer") unless tex_coord_pointer?
-
-      tex_coord_pointer!(*args)
+    # Checks if the OpenGL function *glSampleCoveragex* is loaded.
+    def sample_coveragex?
+      !!@addresses[85]
     end
 
-    # Checks if the function "glTexCoordPointer" is loaded.
-    @[AlwaysInline]
-    def tex_coord_pointer? : Bool
-      !@addr_tex_coord_pointer.null?
+    # Retrieves a `Proc` for the OpenGL function *glScalex*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def scale_x : ::Proc
+      get_proc(86, Translations.scale_x, Procs.scale_x)
     end
 
-    # Invokes glTexEnvi.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def tex_env_i!(*args)
-      addr = @addr_tex_env_i
-      proc = Procs.tex_env_i(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glScalex* is loaded.
+    def scale_x?
+      !!@addresses[86]
     end
 
-    # Invokes glTexEnvi.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def tex_env_i(*args)
-      raise FunctionUnavailableError.new("glTexEnvi") unless tex_env_i?
-
-      tex_env_i!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glScissor*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def scissor : ::Proc
+      get_proc(87, Translations.scissor, Procs.scissor)
     end
 
-    # Checks if the function "glTexEnvi" is loaded.
-    @[AlwaysInline]
-    def tex_env_i? : Bool
-      !@addr_tex_env_i.null?
+    # Checks if the OpenGL function *glScissor* is loaded.
+    def scissor?
+      !!@addresses[87]
     end
 
-    # Invokes glTexEnvx.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def tex_env_x!(*args)
-      addr = @addr_tex_env_x
-      proc = Procs.tex_env_x(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glShadeModel*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def shade_model : ::Proc
+      get_proc(88, Translations.shade_model, Procs.shade_model)
     end
-
-    # Invokes glTexEnvx.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def tex_env_x(*args)
-      raise FunctionUnavailableError.new("glTexEnvx") unless tex_env_x?
 
-      tex_env_x!(*args)
+    # Checks if the OpenGL function *glShadeModel* is loaded.
+    def shade_model?
+      !!@addresses[88]
     end
 
-    # Checks if the function "glTexEnvx" is loaded.
-    @[AlwaysInline]
-    def tex_env_x? : Bool
-      !@addr_tex_env_x.null?
+    # Retrieves a `Proc` for the OpenGL function *glStencilFunc*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def stencil_func : ::Proc
+      get_proc(89, Translations.stencil_func, Procs.stencil_func)
     end
 
-    # Invokes glTexEnviv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def tex_env_iv!(*args)
-      addr = @addr_tex_env_iv
-      proc = Procs.tex_env_iv(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glStencilFunc* is loaded.
+    def stencil_func?
+      !!@addresses[89]
     end
 
-    # Invokes glTexEnviv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def tex_env_iv(*args)
-      raise FunctionUnavailableError.new("glTexEnviv") unless tex_env_iv?
-
-      tex_env_iv!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glStencilMask*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def stencil_mask : ::Proc
+      get_proc(90, Translations.stencil_mask, Procs.stencil_mask)
     end
 
-    # Checks if the function "glTexEnviv" is loaded.
-    @[AlwaysInline]
-    def tex_env_iv? : Bool
-      !@addr_tex_env_iv.null?
+    # Checks if the OpenGL function *glStencilMask* is loaded.
+    def stencil_mask?
+      !!@addresses[90]
     end
 
-    # Invokes glTexEnvxv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def tex_env_xv!(*args)
-      addr = @addr_tex_env_xv
-      proc = Procs.tex_env_xv(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glStencilOp*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def stencil_op : ::Proc
+      get_proc(91, Translations.stencil_op, Procs.stencil_op)
     end
 
-    # Invokes glTexEnvxv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def tex_env_xv(*args)
-      raise FunctionUnavailableError.new("glTexEnvxv") unless tex_env_xv?
-
-      tex_env_xv!(*args)
+    # Checks if the OpenGL function *glStencilOp* is loaded.
+    def stencil_op?
+      !!@addresses[91]
     end
 
-    # Checks if the function "glTexEnvxv" is loaded.
-    @[AlwaysInline]
-    def tex_env_xv? : Bool
-      !@addr_tex_env_xv.null?
+    # Retrieves a `Proc` for the OpenGL function *glTexCoordPointer*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def tex_coord_pointer : ::Proc
+      get_proc(92, Translations.tex_coord_pointer, Procs.tex_coord_pointer)
     end
 
-    # Invokes glTexImage2D.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def tex_image_2d!(*args)
-      addr = @addr_tex_image_2d
-      proc = Procs.tex_image_2d(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glTexCoordPointer* is loaded.
+    def tex_coord_pointer?
+      !!@addresses[92]
     end
-
-    # Invokes glTexImage2D.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def tex_image_2d(*args)
-      raise FunctionUnavailableError.new("glTexImage2D") unless tex_image_2d?
 
-      tex_image_2d!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glTexEnvi*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def tex_env_i : ::Proc
+      get_proc(93, Translations.tex_env_i, Procs.tex_env_i)
     end
 
-    # Checks if the function "glTexImage2D" is loaded.
-    @[AlwaysInline]
-    def tex_image_2d? : Bool
-      !@addr_tex_image_2d.null?
+    # Checks if the OpenGL function *glTexEnvi* is loaded.
+    def tex_env_i?
+      !!@addresses[93]
     end
 
-    # Invokes glTexParameteri.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def tex_parameter_i!(*args)
-      addr = @addr_tex_parameter_i
-      proc = Procs.tex_parameter_i(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glTexEnvx*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def tex_env_x : ::Proc
+      get_proc(94, Translations.tex_env_x, Procs.tex_env_x)
     end
-
-    # Invokes glTexParameteri.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def tex_parameter_i(*args)
-      raise FunctionUnavailableError.new("glTexParameteri") unless tex_parameter_i?
 
-      tex_parameter_i!(*args)
+    # Checks if the OpenGL function *glTexEnvx* is loaded.
+    def tex_env_x?
+      !!@addresses[94]
     end
 
-    # Checks if the function "glTexParameteri" is loaded.
-    @[AlwaysInline]
-    def tex_parameter_i? : Bool
-      !@addr_tex_parameter_i.null?
+    # Retrieves a `Proc` for the OpenGL function *glTexEnviv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def tex_env_iv : ::Proc
+      get_proc(95, Translations.tex_env_iv, Procs.tex_env_iv)
     end
 
-    # Invokes glTexParameterx.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def tex_parameter_x!(*args)
-      addr = @addr_tex_parameter_x
-      proc = Procs.tex_parameter_x(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glTexEnviv* is loaded.
+    def tex_env_iv?
+      !!@addresses[95]
     end
-
-    # Invokes glTexParameterx.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def tex_parameter_x(*args)
-      raise FunctionUnavailableError.new("glTexParameterx") unless tex_parameter_x?
 
-      tex_parameter_x!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glTexEnvxv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def tex_env_xv : ::Proc
+      get_proc(96, Translations.tex_env_xv, Procs.tex_env_xv)
     end
 
-    # Checks if the function "glTexParameterx" is loaded.
-    @[AlwaysInline]
-    def tex_parameter_x? : Bool
-      !@addr_tex_parameter_x.null?
+    # Checks if the OpenGL function *glTexEnvxv* is loaded.
+    def tex_env_xv?
+      !!@addresses[96]
     end
 
-    # Invokes glTexParameteriv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def tex_parameter_iv!(*args)
-      addr = @addr_tex_parameter_iv
-      proc = Procs.tex_parameter_iv(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glTexImage2D*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def tex_image_2d : ::Proc
+      get_proc(97, Translations.tex_image_2d, Procs.tex_image_2d)
     end
 
-    # Invokes glTexParameteriv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def tex_parameter_iv(*args)
-      raise FunctionUnavailableError.new("glTexParameteriv") unless tex_parameter_iv?
-
-      tex_parameter_iv!(*args)
+    # Checks if the OpenGL function *glTexImage2D* is loaded.
+    def tex_image_2d?
+      !!@addresses[97]
     end
 
-    # Checks if the function "glTexParameteriv" is loaded.
-    @[AlwaysInline]
-    def tex_parameter_iv? : Bool
-      !@addr_tex_parameter_iv.null?
+    # Retrieves a `Proc` for the OpenGL function *glTexParameteri*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def tex_parameter_i : ::Proc
+      get_proc(98, Translations.tex_parameter_i, Procs.tex_parameter_i)
     end
 
-    # Invokes glTexParameterxv.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def tex_parameter_xv!(*args)
-      addr = @addr_tex_parameter_xv
-      proc = Procs.tex_parameter_xv(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glTexParameteri* is loaded.
+    def tex_parameter_i?
+      !!@addresses[98]
     end
 
-    # Invokes glTexParameterxv.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def tex_parameter_xv(*args)
-      raise FunctionUnavailableError.new("glTexParameterxv") unless tex_parameter_xv?
-
-      tex_parameter_xv!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glTexParameterx*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def tex_parameter_x : ::Proc
+      get_proc(99, Translations.tex_parameter_x, Procs.tex_parameter_x)
     end
 
-    # Checks if the function "glTexParameterxv" is loaded.
-    @[AlwaysInline]
-    def tex_parameter_xv? : Bool
-      !@addr_tex_parameter_xv.null?
+    # Checks if the OpenGL function *glTexParameterx* is loaded.
+    def tex_parameter_x?
+      !!@addresses[99]
     end
 
-    # Invokes glTexSubImage2D.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def tex_sub_image_2d!(*args)
-      addr = @addr_tex_sub_image_2d
-      proc = Procs.tex_sub_image_2d(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glTexParameteriv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def tex_parameter_iv : ::Proc
+      get_proc(100, Translations.tex_parameter_iv, Procs.tex_parameter_iv)
     end
-
-    # Invokes glTexSubImage2D.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def tex_sub_image_2d(*args)
-      raise FunctionUnavailableError.new("glTexSubImage2D") unless tex_sub_image_2d?
 
-      tex_sub_image_2d!(*args)
+    # Checks if the OpenGL function *glTexParameteriv* is loaded.
+    def tex_parameter_iv?
+      !!@addresses[100]
     end
 
-    # Checks if the function "glTexSubImage2D" is loaded.
-    @[AlwaysInline]
-    def tex_sub_image_2d? : Bool
-      !@addr_tex_sub_image_2d.null?
+    # Retrieves a `Proc` for the OpenGL function *glTexParameterxv*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def tex_parameter_xv : ::Proc
+      get_proc(101, Translations.tex_parameter_xv, Procs.tex_parameter_xv)
     end
 
-    # Invokes glTranslatex.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def translate_x!(*args)
-      addr = @addr_translate_x
-      proc = Procs.translate_x(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glTexParameterxv* is loaded.
+    def tex_parameter_xv?
+      !!@addresses[101]
     end
 
-    # Invokes glTranslatex.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def translate_x(*args)
-      raise FunctionUnavailableError.new("glTranslatex") unless translate_x?
-
-      translate_x!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glTexSubImage2D*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def tex_sub_image_2d : ::Proc
+      get_proc(102, Translations.tex_sub_image_2d, Procs.tex_sub_image_2d)
     end
 
-    # Checks if the function "glTranslatex" is loaded.
-    @[AlwaysInline]
-    def translate_x? : Bool
-      !@addr_translate_x.null?
+    # Checks if the OpenGL function *glTexSubImage2D* is loaded.
+    def tex_sub_image_2d?
+      !!@addresses[102]
     end
 
-    # Invokes glVertexPointer.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def vertex_pointer!(*args)
-      addr = @addr_vertex_pointer
-      proc = Procs.vertex_pointer(addr)
-      proc.call(*args)
+    # Retrieves a `Proc` for the OpenGL function *glTranslatex*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def translate_x : ::Proc
+      get_proc(103, Translations.translate_x, Procs.translate_x)
     end
 
-    # Invokes glVertexPointer.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def vertex_pointer(*args)
-      raise FunctionUnavailableError.new("glVertexPointer") unless vertex_pointer?
-
-      vertex_pointer!(*args)
+    # Checks if the OpenGL function *glTranslatex* is loaded.
+    def translate_x?
+      !!@addresses[103]
     end
 
-    # Checks if the function "glVertexPointer" is loaded.
-    @[AlwaysInline]
-    def vertex_pointer? : Bool
-      !@addr_vertex_pointer.null?
+    # Retrieves a `Proc` for the OpenGL function *glVertexPointer*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def vertex_pointer : ::Proc
+      get_proc(104, Translations.vertex_pointer, Procs.vertex_pointer)
     end
 
-    # Invokes glViewport.
-    # This method is unsafe and will crash the program if the function isn't loaded.
-    def viewport!(*args)
-      addr = @addr_viewport
-      proc = Procs.viewport(addr)
-      proc.call(*args)
+    # Checks if the OpenGL function *glVertexPointer* is loaded.
+    def vertex_pointer?
+      !!@addresses[104]
     end
 
-    # Invokes glViewport.
-    # This method checks if the function is loaded before attempting to call it.
-    # `FunctionUnavailableError` is raised if the function isn't loaded.
-    def viewport(*args)
-      raise FunctionUnavailableError.new("glViewport") unless viewport?
-
-      viewport!(*args)
+    # Retrieves a `Proc` for the OpenGL function *glViewport*.
+    # Attempts to retrieve (load) the address of the function if it hasn't already been retrieved.
+    # Raises `FunctionUnavailableError` if the function isn't found.
+    def viewport : ::Proc
+      get_proc(105, Translations.viewport, Procs.viewport)
     end
 
-    # Checks if the function "glViewport" is loaded.
-    @[AlwaysInline]
-    def viewport? : Bool
-      !@addr_viewport.null?
+    # Checks if the OpenGL function *glViewport* is loaded.
+    def viewport?
+      !!@addresses[105]
     end
   end
 end
