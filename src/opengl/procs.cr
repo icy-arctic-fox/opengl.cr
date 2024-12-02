@@ -2,3772 +2,1888 @@ module OpenGL
   module Procs
     extend self
 
-    # Proc type for the function glActiveTexture
+    # `Proc` type for the OpenGL function *glActiveTexture*.
     @[AlwaysInline]
-    def active_texture : ::Proc(LibGL::TextureUnit, ::Void).class
+    def active_texture : ::Proc.class
       ::Proc(LibGL::TextureUnit, ::Void)
     end
 
-    # Proc type for the function glActiveTexture
+    # `Proc` type for the OpenGL function *glAttachShader*.
     @[AlwaysInline]
-    def active_texture(address) : ::Proc(LibGL::TextureUnit, ::Void)
-      self.active_texture.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glAttachShader
-    @[AlwaysInline]
-    def attach_shader : ::Proc(LibGL::UInt, LibGL::UInt, ::Void).class
+    def attach_shader : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glAttachShader
+    # `Proc` type for the OpenGL function *glBindAttribLocation*.
     @[AlwaysInline]
-    def attach_shader(address) : ::Proc(LibGL::UInt, LibGL::UInt, ::Void)
-      self.attach_shader.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBindAttribLocation
-    @[AlwaysInline]
-    def bind_attrib_location : ::Proc(LibGL::UInt, LibGL::UInt, ::Pointer(LibGL::Char), ::Void).class
+    def bind_attrib_location : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UInt, ::Pointer(LibGL::Char), ::Void)
     end
 
-    # Proc type for the function glBindAttribLocation
+    # `Proc` type for the OpenGL function *glBindBuffer*.
     @[AlwaysInline]
-    def bind_attrib_location(address) : ::Proc(LibGL::UInt, LibGL::UInt, ::Pointer(LibGL::Char), ::Void)
-      self.bind_attrib_location.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBindBuffer
-    @[AlwaysInline]
-    def bind_buffer : ::Proc(LibGL::BufferTargetARB, LibGL::UInt, ::Void).class
+    def bind_buffer : ::Proc.class
       ::Proc(LibGL::BufferTargetARB, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glBindBuffer
+    # `Proc` type for the OpenGL function *glBindFramebuffer*.
     @[AlwaysInline]
-    def bind_buffer(address) : ::Proc(LibGL::BufferTargetARB, LibGL::UInt, ::Void)
-      self.bind_buffer.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBindFramebuffer
-    @[AlwaysInline]
-    def bind_framebuffer : ::Proc(LibGL::FramebufferTarget, LibGL::UInt, ::Void).class
+    def bind_framebuffer : ::Proc.class
       ::Proc(LibGL::FramebufferTarget, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glBindFramebuffer
+    # `Proc` type for the OpenGL function *glBindRenderbuffer*.
     @[AlwaysInline]
-    def bind_framebuffer(address) : ::Proc(LibGL::FramebufferTarget, LibGL::UInt, ::Void)
-      self.bind_framebuffer.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBindRenderbuffer
-    @[AlwaysInline]
-    def bind_renderbuffer : ::Proc(LibGL::RenderbufferTarget, LibGL::UInt, ::Void).class
+    def bind_renderbuffer : ::Proc.class
       ::Proc(LibGL::RenderbufferTarget, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glBindRenderbuffer
+    # `Proc` type for the OpenGL function *glBindTexture*.
     @[AlwaysInline]
-    def bind_renderbuffer(address) : ::Proc(LibGL::RenderbufferTarget, LibGL::UInt, ::Void)
-      self.bind_renderbuffer.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBindTexture
-    @[AlwaysInline]
-    def bind_texture : ::Proc(LibGL::TextureTarget, LibGL::UInt, ::Void).class
+    def bind_texture : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glBindTexture
+    # `Proc` type for the OpenGL function *glBlendColor*.
     @[AlwaysInline]
-    def bind_texture(address) : ::Proc(LibGL::TextureTarget, LibGL::UInt, ::Void)
-      self.bind_texture.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBlendColor
-    @[AlwaysInline]
-    def blend_color : ::Proc(LibGL::Float, LibGL::Float, LibGL::Float, LibGL::Float, ::Void).class
+    def blend_color : ::Proc.class
       ::Proc(LibGL::Float, LibGL::Float, LibGL::Float, LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glBlendColor
+    # `Proc` type for the OpenGL function *glBlendEquation*.
     @[AlwaysInline]
-    def blend_color(address) : ::Proc(LibGL::Float, LibGL::Float, LibGL::Float, LibGL::Float, ::Void)
-      self.blend_color.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBlendEquation
-    @[AlwaysInline]
-    def blend_equation : ::Proc(LibGL::BlendEquationModeEXT, ::Void).class
+    def blend_equation : ::Proc.class
       ::Proc(LibGL::BlendEquationModeEXT, ::Void)
     end
 
-    # Proc type for the function glBlendEquation
+    # `Proc` type for the OpenGL function *glBlendEquationSeparate*.
     @[AlwaysInline]
-    def blend_equation(address) : ::Proc(LibGL::BlendEquationModeEXT, ::Void)
-      self.blend_equation.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBlendEquationSeparate
-    @[AlwaysInline]
-    def blend_equation_separate : ::Proc(LibGL::BlendEquationModeEXT, LibGL::BlendEquationModeEXT, ::Void).class
+    def blend_equation_separate : ::Proc.class
       ::Proc(LibGL::BlendEquationModeEXT, LibGL::BlendEquationModeEXT, ::Void)
     end
 
-    # Proc type for the function glBlendEquationSeparate
+    # `Proc` type for the OpenGL function *glBlendFunc*.
     @[AlwaysInline]
-    def blend_equation_separate(address) : ::Proc(LibGL::BlendEquationModeEXT, LibGL::BlendEquationModeEXT, ::Void)
-      self.blend_equation_separate.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBlendFunc
-    @[AlwaysInline]
-    def blend_func : ::Proc(LibGL::BlendingFactor, LibGL::BlendingFactor, ::Void).class
+    def blend_func : ::Proc.class
       ::Proc(LibGL::BlendingFactor, LibGL::BlendingFactor, ::Void)
     end
 
-    # Proc type for the function glBlendFunc
+    # `Proc` type for the OpenGL function *glBlendFuncSeparate*.
     @[AlwaysInline]
-    def blend_func(address) : ::Proc(LibGL::BlendingFactor, LibGL::BlendingFactor, ::Void)
-      self.blend_func.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBlendFuncSeparate
-    @[AlwaysInline]
-    def blend_func_separate : ::Proc(LibGL::BlendingFactor, LibGL::BlendingFactor, LibGL::BlendingFactor, LibGL::BlendingFactor, ::Void).class
+    def blend_func_separate : ::Proc.class
       ::Proc(LibGL::BlendingFactor, LibGL::BlendingFactor, LibGL::BlendingFactor, LibGL::BlendingFactor, ::Void)
     end
 
-    # Proc type for the function glBlendFuncSeparate
+    # `Proc` type for the OpenGL function *glBufferData*.
     @[AlwaysInline]
-    def blend_func_separate(address) : ::Proc(LibGL::BlendingFactor, LibGL::BlendingFactor, LibGL::BlendingFactor, LibGL::BlendingFactor, ::Void)
-      self.blend_func_separate.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBufferData
-    @[AlwaysInline]
-    def buffer_data : ::Proc(LibGL::BufferTargetARB, LibGL::SizeIPtr, ::Pointer(Void), LibGL::BufferUsageARB, ::Void).class
+    def buffer_data : ::Proc.class
       ::Proc(LibGL::BufferTargetARB, LibGL::SizeIPtr, ::Pointer(Void), LibGL::BufferUsageARB, ::Void)
     end
 
-    # Proc type for the function glBufferData
+    # `Proc` type for the OpenGL function *glBufferSubData*.
     @[AlwaysInline]
-    def buffer_data(address) : ::Proc(LibGL::BufferTargetARB, LibGL::SizeIPtr, ::Pointer(Void), LibGL::BufferUsageARB, ::Void)
-      self.buffer_data.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBufferSubData
-    @[AlwaysInline]
-    def buffer_sub_data : ::Proc(LibGL::BufferTargetARB, LibGL::IntPtr, LibGL::SizeIPtr, ::Pointer(Void), ::Void).class
+    def buffer_sub_data : ::Proc.class
       ::Proc(LibGL::BufferTargetARB, LibGL::IntPtr, LibGL::SizeIPtr, ::Pointer(Void), ::Void)
     end
 
-    # Proc type for the function glBufferSubData
+    # `Proc` type for the OpenGL function *glCheckFramebufferStatus*.
     @[AlwaysInline]
-    def buffer_sub_data(address) : ::Proc(LibGL::BufferTargetARB, LibGL::IntPtr, LibGL::SizeIPtr, ::Pointer(Void), ::Void)
-      self.buffer_sub_data.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glCheckFramebufferStatus
-    @[AlwaysInline]
-    def check_framebuffer_status : ::Proc(LibGL::FramebufferTarget, LibGL::Enum).class
+    def check_framebuffer_status : ::Proc.class
       ::Proc(LibGL::FramebufferTarget, LibGL::Enum)
     end
 
-    # Proc type for the function glCheckFramebufferStatus
+    # `Proc` type for the OpenGL function *glClear*.
     @[AlwaysInline]
-    def check_framebuffer_status(address) : ::Proc(LibGL::FramebufferTarget, LibGL::Enum)
-      self.check_framebuffer_status.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glClear
-    @[AlwaysInline]
-    def clear : ::Proc(LibGL::ClearBufferMask, ::Void).class
+    def clear : ::Proc.class
       ::Proc(LibGL::ClearBufferMask, ::Void)
     end
 
-    # Proc type for the function glClear
+    # `Proc` type for the OpenGL function *glClearColor*.
     @[AlwaysInline]
-    def clear(address) : ::Proc(LibGL::ClearBufferMask, ::Void)
-      self.clear.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glClearColor
-    @[AlwaysInline]
-    def clear_color : ::Proc(LibGL::Float, LibGL::Float, LibGL::Float, LibGL::Float, ::Void).class
+    def clear_color : ::Proc.class
       ::Proc(LibGL::Float, LibGL::Float, LibGL::Float, LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glClearColor
+    # `Proc` type for the OpenGL function *glClearDepthf*.
     @[AlwaysInline]
-    def clear_color(address) : ::Proc(LibGL::Float, LibGL::Float, LibGL::Float, LibGL::Float, ::Void)
-      self.clear_color.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glClearDepthf
-    @[AlwaysInline]
-    def clear_depth_f : ::Proc(LibGL::Float, ::Void).class
+    def clear_depth_f : ::Proc.class
       ::Proc(LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glClearDepthf
+    # `Proc` type for the OpenGL function *glClearStencil*.
     @[AlwaysInline]
-    def clear_depth_f(address) : ::Proc(LibGL::Float, ::Void)
-      self.clear_depth_f.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glClearStencil
-    @[AlwaysInline]
-    def clear_stencil : ::Proc(LibGL::Int, ::Void).class
+    def clear_stencil : ::Proc.class
       ::Proc(LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glClearStencil
+    # `Proc` type for the OpenGL function *glColorMask*.
     @[AlwaysInline]
-    def clear_stencil(address) : ::Proc(LibGL::Int, ::Void)
-      self.clear_stencil.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glColorMask
-    @[AlwaysInline]
-    def color_mask : ::Proc(LibGL::Boolean, LibGL::Boolean, LibGL::Boolean, LibGL::Boolean, ::Void).class
+    def color_mask : ::Proc.class
       ::Proc(LibGL::Boolean, LibGL::Boolean, LibGL::Boolean, LibGL::Boolean, ::Void)
     end
 
-    # Proc type for the function glColorMask
+    # `Proc` type for the OpenGL function *glCompileShader*.
     @[AlwaysInline]
-    def color_mask(address) : ::Proc(LibGL::Boolean, LibGL::Boolean, LibGL::Boolean, LibGL::Boolean, ::Void)
-      self.color_mask.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glCompileShader
-    @[AlwaysInline]
-    def compile_shader : ::Proc(LibGL::UInt, ::Void).class
+    def compile_shader : ::Proc.class
       ::Proc(LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glCompileShader
+    # `Proc` type for the OpenGL function *glCompressedTexImage2D*.
     @[AlwaysInline]
-    def compile_shader(address) : ::Proc(LibGL::UInt, ::Void)
-      self.compile_shader.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glCompressedTexImage2D
-    @[AlwaysInline]
-    def compressed_tex_image_2d : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::InternalFormat, LibGL::SizeI, LibGL::SizeI, LibGL::Int, LibGL::SizeI, ::Pointer(Void), ::Void).class
+    def compressed_tex_image_2d : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::InternalFormat, LibGL::SizeI, LibGL::SizeI, LibGL::Int, LibGL::SizeI, ::Pointer(Void), ::Void)
     end
 
-    # Proc type for the function glCompressedTexImage2D
+    # `Proc` type for the OpenGL function *glCompressedTexSubImage2D*.
     @[AlwaysInline]
-    def compressed_tex_image_2d(address) : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::InternalFormat, LibGL::SizeI, LibGL::SizeI, LibGL::Int, LibGL::SizeI, ::Pointer(Void), ::Void)
-      self.compressed_tex_image_2d.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glCompressedTexSubImage2D
-    @[AlwaysInline]
-    def compressed_tex_sub_image_2d : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, LibGL::InternalFormat, LibGL::SizeI, ::Pointer(Void), ::Void).class
+    def compressed_tex_sub_image_2d : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, LibGL::InternalFormat, LibGL::SizeI, ::Pointer(Void), ::Void)
     end
 
-    # Proc type for the function glCompressedTexSubImage2D
+    # `Proc` type for the OpenGL function *glCopyTexImage2D*.
     @[AlwaysInline]
-    def compressed_tex_sub_image_2d(address) : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, LibGL::InternalFormat, LibGL::SizeI, ::Pointer(Void), ::Void)
-      self.compressed_tex_sub_image_2d.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glCopyTexImage2D
-    @[AlwaysInline]
-    def copy_tex_image_2d : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::InternalFormat, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, LibGL::Int, ::Void).class
+    def copy_tex_image_2d : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::InternalFormat, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glCopyTexImage2D
+    # `Proc` type for the OpenGL function *glCopyTexSubImage2D*.
     @[AlwaysInline]
-    def copy_tex_image_2d(address) : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::InternalFormat, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, LibGL::Int, ::Void)
-      self.copy_tex_image_2d.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glCopyTexSubImage2D
-    @[AlwaysInline]
-    def copy_tex_sub_image_2d : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, ::Void).class
+    def copy_tex_sub_image_2d : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, ::Void)
     end
 
-    # Proc type for the function glCopyTexSubImage2D
+    # `Proc` type for the OpenGL function *glCreateProgram*.
     @[AlwaysInline]
-    def copy_tex_sub_image_2d(address) : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, ::Void)
-      self.copy_tex_sub_image_2d.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glCreateProgram
-    @[AlwaysInline]
-    def create_program : ::Proc(LibGL::UInt).class
+    def create_program : ::Proc.class
       ::Proc(LibGL::UInt)
     end
 
-    # Proc type for the function glCreateProgram
+    # `Proc` type for the OpenGL function *glCreateShader*.
     @[AlwaysInline]
-    def create_program(address) : ::Proc(LibGL::UInt)
-      self.create_program.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glCreateShader
-    @[AlwaysInline]
-    def create_shader : ::Proc(LibGL::ShaderType, LibGL::UInt).class
+    def create_shader : ::Proc.class
       ::Proc(LibGL::ShaderType, LibGL::UInt)
     end
 
-    # Proc type for the function glCreateShader
+    # `Proc` type for the OpenGL function *glCullFace*.
     @[AlwaysInline]
-    def create_shader(address) : ::Proc(LibGL::ShaderType, LibGL::UInt)
-      self.create_shader.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glCullFace
-    @[AlwaysInline]
-    def cull_face : ::Proc(LibGL::TriangleFace, ::Void).class
+    def cull_face : ::Proc.class
       ::Proc(LibGL::TriangleFace, ::Void)
     end
 
-    # Proc type for the function glCullFace
+    # `Proc` type for the OpenGL function *glDeleteBuffers*.
     @[AlwaysInline]
-    def cull_face(address) : ::Proc(LibGL::TriangleFace, ::Void)
-      self.cull_face.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDeleteBuffers
-    @[AlwaysInline]
-    def delete_buffers : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def delete_buffers : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glDeleteBuffers
+    # `Proc` type for the OpenGL function *glDeleteFramebuffers*.
     @[AlwaysInline]
-    def delete_buffers(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.delete_buffers.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDeleteFramebuffers
-    @[AlwaysInline]
-    def delete_framebuffers : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def delete_framebuffers : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glDeleteFramebuffers
+    # `Proc` type for the OpenGL function *glDeleteProgram*.
     @[AlwaysInline]
-    def delete_framebuffers(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.delete_framebuffers.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDeleteProgram
-    @[AlwaysInline]
-    def delete_program : ::Proc(LibGL::UInt, ::Void).class
+    def delete_program : ::Proc.class
       ::Proc(LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glDeleteProgram
+    # `Proc` type for the OpenGL function *glDeleteRenderbuffers*.
     @[AlwaysInline]
-    def delete_program(address) : ::Proc(LibGL::UInt, ::Void)
-      self.delete_program.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDeleteRenderbuffers
-    @[AlwaysInline]
-    def delete_renderbuffers : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def delete_renderbuffers : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glDeleteRenderbuffers
+    # `Proc` type for the OpenGL function *glDeleteShader*.
     @[AlwaysInline]
-    def delete_renderbuffers(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.delete_renderbuffers.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDeleteShader
-    @[AlwaysInline]
-    def delete_shader : ::Proc(LibGL::UInt, ::Void).class
+    def delete_shader : ::Proc.class
       ::Proc(LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glDeleteShader
+    # `Proc` type for the OpenGL function *glDeleteTextures*.
     @[AlwaysInline]
-    def delete_shader(address) : ::Proc(LibGL::UInt, ::Void)
-      self.delete_shader.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDeleteTextures
-    @[AlwaysInline]
-    def delete_textures : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def delete_textures : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glDeleteTextures
+    # `Proc` type for the OpenGL function *glDepthFunc*.
     @[AlwaysInline]
-    def delete_textures(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.delete_textures.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDepthFunc
-    @[AlwaysInline]
-    def depth_func : ::Proc(LibGL::DepthFunction, ::Void).class
+    def depth_func : ::Proc.class
       ::Proc(LibGL::DepthFunction, ::Void)
     end
 
-    # Proc type for the function glDepthFunc
+    # `Proc` type for the OpenGL function *glDepthMask*.
     @[AlwaysInline]
-    def depth_func(address) : ::Proc(LibGL::DepthFunction, ::Void)
-      self.depth_func.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDepthMask
-    @[AlwaysInline]
-    def depth_mask : ::Proc(LibGL::Boolean, ::Void).class
+    def depth_mask : ::Proc.class
       ::Proc(LibGL::Boolean, ::Void)
     end
 
-    # Proc type for the function glDepthMask
+    # `Proc` type for the OpenGL function *glDepthRangef*.
     @[AlwaysInline]
-    def depth_mask(address) : ::Proc(LibGL::Boolean, ::Void)
-      self.depth_mask.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDepthRangef
-    @[AlwaysInline]
-    def depth_range_f : ::Proc(LibGL::Float, LibGL::Float, ::Void).class
+    def depth_range_f : ::Proc.class
       ::Proc(LibGL::Float, LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glDepthRangef
+    # `Proc` type for the OpenGL function *glDetachShader*.
     @[AlwaysInline]
-    def depth_range_f(address) : ::Proc(LibGL::Float, LibGL::Float, ::Void)
-      self.depth_range_f.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDetachShader
-    @[AlwaysInline]
-    def detach_shader : ::Proc(LibGL::UInt, LibGL::UInt, ::Void).class
+    def detach_shader : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glDetachShader
+    # `Proc` type for the OpenGL function *glDisable*.
     @[AlwaysInline]
-    def detach_shader(address) : ::Proc(LibGL::UInt, LibGL::UInt, ::Void)
-      self.detach_shader.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDisable
-    @[AlwaysInline]
-    def disable : ::Proc(LibGL::EnableCap, ::Void).class
+    def disable : ::Proc.class
       ::Proc(LibGL::EnableCap, ::Void)
     end
 
-    # Proc type for the function glDisable
+    # `Proc` type for the OpenGL function *glDisableVertexAttribArray*.
     @[AlwaysInline]
-    def disable(address) : ::Proc(LibGL::EnableCap, ::Void)
-      self.disable.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDisableVertexAttribArray
-    @[AlwaysInline]
-    def disable_vertex_attrib_array : ::Proc(LibGL::UInt, ::Void).class
+    def disable_vertex_attrib_array : ::Proc.class
       ::Proc(LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glDisableVertexAttribArray
+    # `Proc` type for the OpenGL function *glDrawArrays*.
     @[AlwaysInline]
-    def disable_vertex_attrib_array(address) : ::Proc(LibGL::UInt, ::Void)
-      self.disable_vertex_attrib_array.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDrawArrays
-    @[AlwaysInline]
-    def draw_arrays : ::Proc(LibGL::PrimitiveType, LibGL::Int, LibGL::SizeI, ::Void).class
+    def draw_arrays : ::Proc.class
       ::Proc(LibGL::PrimitiveType, LibGL::Int, LibGL::SizeI, ::Void)
     end
 
-    # Proc type for the function glDrawArrays
+    # `Proc` type for the OpenGL function *glDrawElements*.
     @[AlwaysInline]
-    def draw_arrays(address) : ::Proc(LibGL::PrimitiveType, LibGL::Int, LibGL::SizeI, ::Void)
-      self.draw_arrays.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDrawElements
-    @[AlwaysInline]
-    def draw_elements : ::Proc(LibGL::PrimitiveType, LibGL::SizeI, LibGL::DrawElementsType, ::Pointer(Void), ::Void).class
+    def draw_elements : ::Proc.class
       ::Proc(LibGL::PrimitiveType, LibGL::SizeI, LibGL::DrawElementsType, ::Pointer(Void), ::Void)
     end
 
-    # Proc type for the function glDrawElements
+    # `Proc` type for the OpenGL function *glEnable*.
     @[AlwaysInline]
-    def draw_elements(address) : ::Proc(LibGL::PrimitiveType, LibGL::SizeI, LibGL::DrawElementsType, ::Pointer(Void), ::Void)
-      self.draw_elements.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glEnable
-    @[AlwaysInline]
-    def enable : ::Proc(LibGL::EnableCap, ::Void).class
+    def enable : ::Proc.class
       ::Proc(LibGL::EnableCap, ::Void)
     end
 
-    # Proc type for the function glEnable
+    # `Proc` type for the OpenGL function *glEnableVertexAttribArray*.
     @[AlwaysInline]
-    def enable(address) : ::Proc(LibGL::EnableCap, ::Void)
-      self.enable.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glEnableVertexAttribArray
-    @[AlwaysInline]
-    def enable_vertex_attrib_array : ::Proc(LibGL::UInt, ::Void).class
+    def enable_vertex_attrib_array : ::Proc.class
       ::Proc(LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glEnableVertexAttribArray
+    # `Proc` type for the OpenGL function *glFinish*.
     @[AlwaysInline]
-    def enable_vertex_attrib_array(address) : ::Proc(LibGL::UInt, ::Void)
-      self.enable_vertex_attrib_array.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glFinish
-    @[AlwaysInline]
-    def finish : ::Proc(::Void).class
+    def finish : ::Proc.class
       ::Proc(::Void)
     end
 
-    # Proc type for the function glFinish
+    # `Proc` type for the OpenGL function *glFlush*.
     @[AlwaysInline]
-    def finish(address) : ::Proc(::Void)
-      self.finish.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glFlush
-    @[AlwaysInline]
-    def flush : ::Proc(::Void).class
+    def flush : ::Proc.class
       ::Proc(::Void)
     end
 
-    # Proc type for the function glFlush
+    # `Proc` type for the OpenGL function *glFramebufferRenderbuffer*.
     @[AlwaysInline]
-    def flush(address) : ::Proc(::Void)
-      self.flush.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glFramebufferRenderbuffer
-    @[AlwaysInline]
-    def framebuffer_renderbuffer : ::Proc(LibGL::FramebufferTarget, LibGL::FramebufferAttachment, LibGL::RenderbufferTarget, LibGL::UInt, ::Void).class
+    def framebuffer_renderbuffer : ::Proc.class
       ::Proc(LibGL::FramebufferTarget, LibGL::FramebufferAttachment, LibGL::RenderbufferTarget, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glFramebufferRenderbuffer
+    # `Proc` type for the OpenGL function *glFramebufferTexture2D*.
     @[AlwaysInline]
-    def framebuffer_renderbuffer(address) : ::Proc(LibGL::FramebufferTarget, LibGL::FramebufferAttachment, LibGL::RenderbufferTarget, LibGL::UInt, ::Void)
-      self.framebuffer_renderbuffer.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glFramebufferTexture2D
-    @[AlwaysInline]
-    def framebuffer_texture_2d : ::Proc(LibGL::FramebufferTarget, LibGL::FramebufferAttachment, LibGL::TextureTarget, LibGL::UInt, LibGL::Int, ::Void).class
+    def framebuffer_texture_2d : ::Proc.class
       ::Proc(LibGL::FramebufferTarget, LibGL::FramebufferAttachment, LibGL::TextureTarget, LibGL::UInt, LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glFramebufferTexture2D
+    # `Proc` type for the OpenGL function *glFrontFace*.
     @[AlwaysInline]
-    def framebuffer_texture_2d(address) : ::Proc(LibGL::FramebufferTarget, LibGL::FramebufferAttachment, LibGL::TextureTarget, LibGL::UInt, LibGL::Int, ::Void)
-      self.framebuffer_texture_2d.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glFrontFace
-    @[AlwaysInline]
-    def front_face : ::Proc(LibGL::FrontFaceDirection, ::Void).class
+    def front_face : ::Proc.class
       ::Proc(LibGL::FrontFaceDirection, ::Void)
     end
 
-    # Proc type for the function glFrontFace
+    # `Proc` type for the OpenGL function *glGenBuffers*.
     @[AlwaysInline]
-    def front_face(address) : ::Proc(LibGL::FrontFaceDirection, ::Void)
-      self.front_face.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGenBuffers
-    @[AlwaysInline]
-    def gen_buffers : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def gen_buffers : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glGenBuffers
+    # `Proc` type for the OpenGL function *glGenerateMipmap*.
     @[AlwaysInline]
-    def gen_buffers(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.gen_buffers.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGenerateMipmap
-    @[AlwaysInline]
-    def generate_mipmap : ::Proc(LibGL::TextureTarget, ::Void).class
+    def generate_mipmap : ::Proc.class
       ::Proc(LibGL::TextureTarget, ::Void)
     end
 
-    # Proc type for the function glGenerateMipmap
+    # `Proc` type for the OpenGL function *glGenFramebuffers*.
     @[AlwaysInline]
-    def generate_mipmap(address) : ::Proc(LibGL::TextureTarget, ::Void)
-      self.generate_mipmap.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGenFramebuffers
-    @[AlwaysInline]
-    def gen_framebuffers : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def gen_framebuffers : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glGenFramebuffers
+    # `Proc` type for the OpenGL function *glGenRenderbuffers*.
     @[AlwaysInline]
-    def gen_framebuffers(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.gen_framebuffers.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGenRenderbuffers
-    @[AlwaysInline]
-    def gen_renderbuffers : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def gen_renderbuffers : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glGenRenderbuffers
+    # `Proc` type for the OpenGL function *glGenTextures*.
     @[AlwaysInline]
-    def gen_renderbuffers(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.gen_renderbuffers.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGenTextures
-    @[AlwaysInline]
-    def gen_textures : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def gen_textures : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glGenTextures
+    # `Proc` type for the OpenGL function *glGetActiveAttrib*.
     @[AlwaysInline]
-    def gen_textures(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.gen_textures.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetActiveAttrib
-    @[AlwaysInline]
-    def get_active_attrib : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Int), ::Pointer(LibGL::AttributeType), ::Pointer(LibGL::Char), ::Void).class
+    def get_active_attrib : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Int), ::Pointer(LibGL::AttributeType), ::Pointer(LibGL::Char), ::Void)
     end
 
-    # Proc type for the function glGetActiveAttrib
+    # `Proc` type for the OpenGL function *glGetActiveUniform*.
     @[AlwaysInline]
-    def get_active_attrib(address) : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Int), ::Pointer(LibGL::AttributeType), ::Pointer(LibGL::Char), ::Void)
-      self.get_active_attrib.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetActiveUniform
-    @[AlwaysInline]
-    def get_active_uniform : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Int), ::Pointer(LibGL::UniformType), ::Pointer(LibGL::Char), ::Void).class
+    def get_active_uniform : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Int), ::Pointer(LibGL::UniformType), ::Pointer(LibGL::Char), ::Void)
     end
 
-    # Proc type for the function glGetActiveUniform
+    # `Proc` type for the OpenGL function *glGetAttachedShaders*.
     @[AlwaysInline]
-    def get_active_uniform(address) : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Int), ::Pointer(LibGL::UniformType), ::Pointer(LibGL::Char), ::Void)
-      self.get_active_uniform.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetAttachedShaders
-    @[AlwaysInline]
-    def get_attached_shaders : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::UInt), ::Void).class
+    def get_attached_shaders : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glGetAttachedShaders
+    # `Proc` type for the OpenGL function *glGetAttribLocation*.
     @[AlwaysInline]
-    def get_attached_shaders(address) : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::UInt), ::Void)
-      self.get_attached_shaders.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetAttribLocation
-    @[AlwaysInline]
-    def get_attrib_location : ::Proc(LibGL::UInt, ::Pointer(LibGL::Char), LibGL::Int).class
+    def get_attrib_location : ::Proc.class
       ::Proc(LibGL::UInt, ::Pointer(LibGL::Char), LibGL::Int)
     end
 
-    # Proc type for the function glGetAttribLocation
+    # `Proc` type for the OpenGL function *glGetBooleanv*.
     @[AlwaysInline]
-    def get_attrib_location(address) : ::Proc(LibGL::UInt, ::Pointer(LibGL::Char), LibGL::Int)
-      self.get_attrib_location.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetBooleanv
-    @[AlwaysInline]
-    def get_boolean_v : ::Proc(LibGL::GetPName, ::Pointer(LibGL::Boolean), ::Void).class
+    def get_boolean_v : ::Proc.class
       ::Proc(LibGL::GetPName, ::Pointer(LibGL::Boolean), ::Void)
     end
 
-    # Proc type for the function glGetBooleanv
+    # `Proc` type for the OpenGL function *glGetBufferParameteriv*.
     @[AlwaysInline]
-    def get_boolean_v(address) : ::Proc(LibGL::GetPName, ::Pointer(LibGL::Boolean), ::Void)
-      self.get_boolean_v.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetBufferParameteriv
-    @[AlwaysInline]
-    def get_buffer_parameter_iv : ::Proc(LibGL::BufferTargetARB, LibGL::BufferPNameARB, ::Pointer(LibGL::Int), ::Void).class
+    def get_buffer_parameter_iv : ::Proc.class
       ::Proc(LibGL::BufferTargetARB, LibGL::BufferPNameARB, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetBufferParameteriv
+    # `Proc` type for the OpenGL function *glGetError*.
     @[AlwaysInline]
-    def get_buffer_parameter_iv(address) : ::Proc(LibGL::BufferTargetARB, LibGL::BufferPNameARB, ::Pointer(LibGL::Int), ::Void)
-      self.get_buffer_parameter_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetError
-    @[AlwaysInline]
-    def get_error : ::Proc(LibGL::Enum).class
+    def get_error : ::Proc.class
       ::Proc(LibGL::Enum)
     end
 
-    # Proc type for the function glGetError
+    # `Proc` type for the OpenGL function *glGetFloatv*.
     @[AlwaysInline]
-    def get_error(address) : ::Proc(LibGL::Enum)
-      self.get_error.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetFloatv
-    @[AlwaysInline]
-    def get_float_v : ::Proc(LibGL::GetPName, ::Pointer(LibGL::Float), ::Void).class
+    def get_float_v : ::Proc.class
       ::Proc(LibGL::GetPName, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glGetFloatv
+    # `Proc` type for the OpenGL function *glGetFramebufferAttachmentParameteriv*.
     @[AlwaysInline]
-    def get_float_v(address) : ::Proc(LibGL::GetPName, ::Pointer(LibGL::Float), ::Void)
-      self.get_float_v.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetFramebufferAttachmentParameteriv
-    @[AlwaysInline]
-    def get_framebuffer_attachment_parameter_iv : ::Proc(LibGL::FramebufferTarget, LibGL::FramebufferAttachment, LibGL::FramebufferAttachmentParameterName, ::Pointer(LibGL::Int), ::Void).class
+    def get_framebuffer_attachment_parameter_iv : ::Proc.class
       ::Proc(LibGL::FramebufferTarget, LibGL::FramebufferAttachment, LibGL::FramebufferAttachmentParameterName, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetFramebufferAttachmentParameteriv
+    # `Proc` type for the OpenGL function *glGetIntegerv*.
     @[AlwaysInline]
-    def get_framebuffer_attachment_parameter_iv(address) : ::Proc(LibGL::FramebufferTarget, LibGL::FramebufferAttachment, LibGL::FramebufferAttachmentParameterName, ::Pointer(LibGL::Int), ::Void)
-      self.get_framebuffer_attachment_parameter_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetIntegerv
-    @[AlwaysInline]
-    def get_integer_v : ::Proc(LibGL::GetPName, ::Pointer(LibGL::Int), ::Void).class
+    def get_integer_v : ::Proc.class
       ::Proc(LibGL::GetPName, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetIntegerv
+    # `Proc` type for the OpenGL function *glGetProgramiv*.
     @[AlwaysInline]
-    def get_integer_v(address) : ::Proc(LibGL::GetPName, ::Pointer(LibGL::Int), ::Void)
-      self.get_integer_v.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetProgramiv
-    @[AlwaysInline]
-    def get_program_iv : ::Proc(LibGL::UInt, LibGL::ProgramPropertyARB, ::Pointer(LibGL::Int), ::Void).class
+    def get_program_iv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::ProgramPropertyARB, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetProgramiv
+    # `Proc` type for the OpenGL function *glGetProgramInfoLog*.
     @[AlwaysInline]
-    def get_program_iv(address) : ::Proc(LibGL::UInt, LibGL::ProgramPropertyARB, ::Pointer(LibGL::Int), ::Void)
-      self.get_program_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetProgramInfoLog
-    @[AlwaysInline]
-    def get_program_info_log : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Char), ::Void).class
+    def get_program_info_log : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Char), ::Void)
     end
 
-    # Proc type for the function glGetProgramInfoLog
+    # `Proc` type for the OpenGL function *glGetRenderbufferParameteriv*.
     @[AlwaysInline]
-    def get_program_info_log(address) : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Char), ::Void)
-      self.get_program_info_log.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetRenderbufferParameteriv
-    @[AlwaysInline]
-    def get_renderbuffer_parameter_iv : ::Proc(LibGL::RenderbufferTarget, LibGL::RenderbufferParameterName, ::Pointer(LibGL::Int), ::Void).class
+    def get_renderbuffer_parameter_iv : ::Proc.class
       ::Proc(LibGL::RenderbufferTarget, LibGL::RenderbufferParameterName, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetRenderbufferParameteriv
+    # `Proc` type for the OpenGL function *glGetShaderiv*.
     @[AlwaysInline]
-    def get_renderbuffer_parameter_iv(address) : ::Proc(LibGL::RenderbufferTarget, LibGL::RenderbufferParameterName, ::Pointer(LibGL::Int), ::Void)
-      self.get_renderbuffer_parameter_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetShaderiv
-    @[AlwaysInline]
-    def get_shader_iv : ::Proc(LibGL::UInt, LibGL::ShaderParameterName, ::Pointer(LibGL::Int), ::Void).class
+    def get_shader_iv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::ShaderParameterName, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetShaderiv
+    # `Proc` type for the OpenGL function *glGetShaderInfoLog*.
     @[AlwaysInline]
-    def get_shader_iv(address) : ::Proc(LibGL::UInt, LibGL::ShaderParameterName, ::Pointer(LibGL::Int), ::Void)
-      self.get_shader_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetShaderInfoLog
-    @[AlwaysInline]
-    def get_shader_info_log : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Char), ::Void).class
+    def get_shader_info_log : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Char), ::Void)
     end
 
-    # Proc type for the function glGetShaderInfoLog
+    # `Proc` type for the OpenGL function *glGetShaderPrecisionFormat*.
     @[AlwaysInline]
-    def get_shader_info_log(address) : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Char), ::Void)
-      self.get_shader_info_log.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetShaderPrecisionFormat
-    @[AlwaysInline]
-    def get_shader_precision_format : ::Proc(LibGL::ShaderType, LibGL::PrecisionType, ::Pointer(LibGL::Int), ::Pointer(LibGL::Int), ::Void).class
+    def get_shader_precision_format : ::Proc.class
       ::Proc(LibGL::ShaderType, LibGL::PrecisionType, ::Pointer(LibGL::Int), ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetShaderPrecisionFormat
+    # `Proc` type for the OpenGL function *glGetShaderSource*.
     @[AlwaysInline]
-    def get_shader_precision_format(address) : ::Proc(LibGL::ShaderType, LibGL::PrecisionType, ::Pointer(LibGL::Int), ::Pointer(LibGL::Int), ::Void)
-      self.get_shader_precision_format.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetShaderSource
-    @[AlwaysInline]
-    def get_shader_source : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Char), ::Void).class
+    def get_shader_source : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Char), ::Void)
     end
 
-    # Proc type for the function glGetShaderSource
+    # `Proc` type for the OpenGL function *glGetString*.
     @[AlwaysInline]
-    def get_shader_source(address) : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Char), ::Void)
-      self.get_shader_source.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetString
-    @[AlwaysInline]
-    def get_string : ::Proc(LibGL::StringName, ::Pointer(LibGL::UByte)).class
+    def get_string : ::Proc.class
       ::Proc(LibGL::StringName, ::Pointer(LibGL::UByte))
     end
 
-    # Proc type for the function glGetString
+    # `Proc` type for the OpenGL function *glGetTexParameterfv*.
     @[AlwaysInline]
-    def get_string(address) : ::Proc(LibGL::StringName, ::Pointer(LibGL::UByte))
-      self.get_string.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetTexParameterfv
-    @[AlwaysInline]
-    def get_tex_parameter_fv : ::Proc(LibGL::TextureTarget, LibGL::GetTextureParameter, ::Pointer(LibGL::Float), ::Void).class
+    def get_tex_parameter_fv : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::GetTextureParameter, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glGetTexParameterfv
+    # `Proc` type for the OpenGL function *glGetTexParameteriv*.
     @[AlwaysInline]
-    def get_tex_parameter_fv(address) : ::Proc(LibGL::TextureTarget, LibGL::GetTextureParameter, ::Pointer(LibGL::Float), ::Void)
-      self.get_tex_parameter_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetTexParameteriv
-    @[AlwaysInline]
-    def get_tex_parameter_iv : ::Proc(LibGL::TextureTarget, LibGL::GetTextureParameter, ::Pointer(LibGL::Int), ::Void).class
+    def get_tex_parameter_iv : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::GetTextureParameter, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetTexParameteriv
+    # `Proc` type for the OpenGL function *glGetUniformfv*.
     @[AlwaysInline]
-    def get_tex_parameter_iv(address) : ::Proc(LibGL::TextureTarget, LibGL::GetTextureParameter, ::Pointer(LibGL::Int), ::Void)
-      self.get_tex_parameter_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetUniformfv
-    @[AlwaysInline]
-    def get_uniform_fv : ::Proc(LibGL::UInt, LibGL::Int, ::Pointer(LibGL::Float), ::Void).class
+    def get_uniform_fv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glGetUniformfv
+    # `Proc` type for the OpenGL function *glGetUniformiv*.
     @[AlwaysInline]
-    def get_uniform_fv(address) : ::Proc(LibGL::UInt, LibGL::Int, ::Pointer(LibGL::Float), ::Void)
-      self.get_uniform_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetUniformiv
-    @[AlwaysInline]
-    def get_uniform_iv : ::Proc(LibGL::UInt, LibGL::Int, ::Pointer(LibGL::Int), ::Void).class
+    def get_uniform_iv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetUniformiv
+    # `Proc` type for the OpenGL function *glGetUniformLocation*.
     @[AlwaysInline]
-    def get_uniform_iv(address) : ::Proc(LibGL::UInt, LibGL::Int, ::Pointer(LibGL::Int), ::Void)
-      self.get_uniform_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetUniformLocation
-    @[AlwaysInline]
-    def get_uniform_location : ::Proc(LibGL::UInt, ::Pointer(LibGL::Char), LibGL::Int).class
+    def get_uniform_location : ::Proc.class
       ::Proc(LibGL::UInt, ::Pointer(LibGL::Char), LibGL::Int)
     end
 
-    # Proc type for the function glGetUniformLocation
+    # `Proc` type for the OpenGL function *glGetVertexAttribfv*.
     @[AlwaysInline]
-    def get_uniform_location(address) : ::Proc(LibGL::UInt, ::Pointer(LibGL::Char), LibGL::Int)
-      self.get_uniform_location.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetVertexAttribfv
-    @[AlwaysInline]
-    def get_vertex_attrib_fv : ::Proc(LibGL::UInt, LibGL::VertexAttribPropertyARB, ::Pointer(LibGL::Float), ::Void).class
+    def get_vertex_attrib_fv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::VertexAttribPropertyARB, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glGetVertexAttribfv
+    # `Proc` type for the OpenGL function *glGetVertexAttribiv*.
     @[AlwaysInline]
-    def get_vertex_attrib_fv(address) : ::Proc(LibGL::UInt, LibGL::VertexAttribPropertyARB, ::Pointer(LibGL::Float), ::Void)
-      self.get_vertex_attrib_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetVertexAttribiv
-    @[AlwaysInline]
-    def get_vertex_attrib_iv : ::Proc(LibGL::UInt, LibGL::VertexAttribPropertyARB, ::Pointer(LibGL::Int), ::Void).class
+    def get_vertex_attrib_iv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::VertexAttribPropertyARB, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetVertexAttribiv
+    # `Proc` type for the OpenGL function *glGetVertexAttribPointerv*.
     @[AlwaysInline]
-    def get_vertex_attrib_iv(address) : ::Proc(LibGL::UInt, LibGL::VertexAttribPropertyARB, ::Pointer(LibGL::Int), ::Void)
-      self.get_vertex_attrib_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetVertexAttribPointerv
-    @[AlwaysInline]
-    def get_vertex_attrib_pointer_v : ::Proc(LibGL::UInt, LibGL::VertexAttribPointerPropertyARB, ::Pointer(Pointer(Void)), ::Void).class
+    def get_vertex_attrib_pointer_v : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::VertexAttribPointerPropertyARB, ::Pointer(Pointer(Void)), ::Void)
     end
 
-    # Proc type for the function glGetVertexAttribPointerv
+    # `Proc` type for the OpenGL function *glHint*.
     @[AlwaysInline]
-    def get_vertex_attrib_pointer_v(address) : ::Proc(LibGL::UInt, LibGL::VertexAttribPointerPropertyARB, ::Pointer(Pointer(Void)), ::Void)
-      self.get_vertex_attrib_pointer_v.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glHint
-    @[AlwaysInline]
-    def hint : ::Proc(LibGL::HintTarget, LibGL::HintMode, ::Void).class
+    def hint : ::Proc.class
       ::Proc(LibGL::HintTarget, LibGL::HintMode, ::Void)
     end
 
-    # Proc type for the function glHint
+    # `Proc` type for the OpenGL function *glIsBuffer*.
     @[AlwaysInline]
-    def hint(address) : ::Proc(LibGL::HintTarget, LibGL::HintMode, ::Void)
-      self.hint.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glIsBuffer
-    @[AlwaysInline]
-    def is_buffer : ::Proc(LibGL::UInt, LibGL::Boolean).class
+    def is_buffer : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Boolean)
     end
 
-    # Proc type for the function glIsBuffer
+    # `Proc` type for the OpenGL function *glIsEnabled*.
     @[AlwaysInline]
-    def is_buffer(address) : ::Proc(LibGL::UInt, LibGL::Boolean)
-      self.is_buffer.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glIsEnabled
-    @[AlwaysInline]
-    def is_enabled : ::Proc(LibGL::EnableCap, LibGL::Boolean).class
+    def is_enabled : ::Proc.class
       ::Proc(LibGL::EnableCap, LibGL::Boolean)
     end
 
-    # Proc type for the function glIsEnabled
+    # `Proc` type for the OpenGL function *glIsFramebuffer*.
     @[AlwaysInline]
-    def is_enabled(address) : ::Proc(LibGL::EnableCap, LibGL::Boolean)
-      self.is_enabled.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glIsFramebuffer
-    @[AlwaysInline]
-    def is_framebuffer : ::Proc(LibGL::UInt, LibGL::Boolean).class
+    def is_framebuffer : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Boolean)
     end
 
-    # Proc type for the function glIsFramebuffer
+    # `Proc` type for the OpenGL function *glIsProgram*.
     @[AlwaysInline]
-    def is_framebuffer(address) : ::Proc(LibGL::UInt, LibGL::Boolean)
-      self.is_framebuffer.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glIsProgram
-    @[AlwaysInline]
-    def is_program : ::Proc(LibGL::UInt, LibGL::Boolean).class
+    def is_program : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Boolean)
     end
 
-    # Proc type for the function glIsProgram
+    # `Proc` type for the OpenGL function *glIsRenderbuffer*.
     @[AlwaysInline]
-    def is_program(address) : ::Proc(LibGL::UInt, LibGL::Boolean)
-      self.is_program.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glIsRenderbuffer
-    @[AlwaysInline]
-    def is_renderbuffer : ::Proc(LibGL::UInt, LibGL::Boolean).class
+    def is_renderbuffer : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Boolean)
     end
 
-    # Proc type for the function glIsRenderbuffer
+    # `Proc` type for the OpenGL function *glIsShader*.
     @[AlwaysInline]
-    def is_renderbuffer(address) : ::Proc(LibGL::UInt, LibGL::Boolean)
-      self.is_renderbuffer.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glIsShader
-    @[AlwaysInline]
-    def is_shader : ::Proc(LibGL::UInt, LibGL::Boolean).class
+    def is_shader : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Boolean)
     end
 
-    # Proc type for the function glIsShader
+    # `Proc` type for the OpenGL function *glIsTexture*.
     @[AlwaysInline]
-    def is_shader(address) : ::Proc(LibGL::UInt, LibGL::Boolean)
-      self.is_shader.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glIsTexture
-    @[AlwaysInline]
-    def is_texture : ::Proc(LibGL::UInt, LibGL::Boolean).class
+    def is_texture : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Boolean)
     end
 
-    # Proc type for the function glIsTexture
+    # `Proc` type for the OpenGL function *glLineWidth*.
     @[AlwaysInline]
-    def is_texture(address) : ::Proc(LibGL::UInt, LibGL::Boolean)
-      self.is_texture.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glLineWidth
-    @[AlwaysInline]
-    def line_width : ::Proc(LibGL::Float, ::Void).class
+    def line_width : ::Proc.class
       ::Proc(LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glLineWidth
+    # `Proc` type for the OpenGL function *glLinkProgram*.
     @[AlwaysInline]
-    def line_width(address) : ::Proc(LibGL::Float, ::Void)
-      self.line_width.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glLinkProgram
-    @[AlwaysInline]
-    def link_program : ::Proc(LibGL::UInt, ::Void).class
+    def link_program : ::Proc.class
       ::Proc(LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glLinkProgram
+    # `Proc` type for the OpenGL function *glPixelStorei*.
     @[AlwaysInline]
-    def link_program(address) : ::Proc(LibGL::UInt, ::Void)
-      self.link_program.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glPixelStorei
-    @[AlwaysInline]
-    def pixel_store_i : ::Proc(LibGL::PixelStoreParameter, LibGL::Int, ::Void).class
+    def pixel_store_i : ::Proc.class
       ::Proc(LibGL::PixelStoreParameter, LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glPixelStorei
+    # `Proc` type for the OpenGL function *glPolygonOffset*.
     @[AlwaysInline]
-    def pixel_store_i(address) : ::Proc(LibGL::PixelStoreParameter, LibGL::Int, ::Void)
-      self.pixel_store_i.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glPolygonOffset
-    @[AlwaysInline]
-    def polygon_offset : ::Proc(LibGL::Float, LibGL::Float, ::Void).class
+    def polygon_offset : ::Proc.class
       ::Proc(LibGL::Float, LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glPolygonOffset
+    # `Proc` type for the OpenGL function *glReadPixels*.
     @[AlwaysInline]
-    def polygon_offset(address) : ::Proc(LibGL::Float, LibGL::Float, ::Void)
-      self.polygon_offset.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glReadPixels
-    @[AlwaysInline]
-    def read_pixels : ::Proc(LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, LibGL::PixelFormat, LibGL::PixelType, ::Pointer(Void), ::Void).class
+    def read_pixels : ::Proc.class
       ::Proc(LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, LibGL::PixelFormat, LibGL::PixelType, ::Pointer(Void), ::Void)
     end
 
-    # Proc type for the function glReadPixels
+    # `Proc` type for the OpenGL function *glReleaseShaderCompiler*.
     @[AlwaysInline]
-    def read_pixels(address) : ::Proc(LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, LibGL::PixelFormat, LibGL::PixelType, ::Pointer(Void), ::Void)
-      self.read_pixels.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glReleaseShaderCompiler
-    @[AlwaysInline]
-    def release_shader_compiler : ::Proc(::Void).class
+    def release_shader_compiler : ::Proc.class
       ::Proc(::Void)
     end
 
-    # Proc type for the function glReleaseShaderCompiler
+    # `Proc` type for the OpenGL function *glRenderbufferStorage*.
     @[AlwaysInline]
-    def release_shader_compiler(address) : ::Proc(::Void)
-      self.release_shader_compiler.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glRenderbufferStorage
-    @[AlwaysInline]
-    def renderbuffer_storage : ::Proc(LibGL::RenderbufferTarget, LibGL::InternalFormat, LibGL::SizeI, LibGL::SizeI, ::Void).class
+    def renderbuffer_storage : ::Proc.class
       ::Proc(LibGL::RenderbufferTarget, LibGL::InternalFormat, LibGL::SizeI, LibGL::SizeI, ::Void)
     end
 
-    # Proc type for the function glRenderbufferStorage
+    # `Proc` type for the OpenGL function *glSampleCoverage*.
     @[AlwaysInline]
-    def renderbuffer_storage(address) : ::Proc(LibGL::RenderbufferTarget, LibGL::InternalFormat, LibGL::SizeI, LibGL::SizeI, ::Void)
-      self.renderbuffer_storage.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glSampleCoverage
-    @[AlwaysInline]
-    def sample_coverage : ::Proc(LibGL::Float, LibGL::Boolean, ::Void).class
+    def sample_coverage : ::Proc.class
       ::Proc(LibGL::Float, LibGL::Boolean, ::Void)
     end
 
-    # Proc type for the function glSampleCoverage
+    # `Proc` type for the OpenGL function *glScissor*.
     @[AlwaysInline]
-    def sample_coverage(address) : ::Proc(LibGL::Float, LibGL::Boolean, ::Void)
-      self.sample_coverage.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glScissor
-    @[AlwaysInline]
-    def scissor : ::Proc(LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, ::Void).class
+    def scissor : ::Proc.class
       ::Proc(LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, ::Void)
     end
 
-    # Proc type for the function glScissor
+    # `Proc` type for the OpenGL function *glShaderBinary*.
     @[AlwaysInline]
-    def scissor(address) : ::Proc(LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, ::Void)
-      self.scissor.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glShaderBinary
-    @[AlwaysInline]
-    def shader_binary : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), LibGL::Enum, ::Pointer(Void), LibGL::SizeI, ::Void).class
+    def shader_binary : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), LibGL::Enum, ::Pointer(Void), LibGL::SizeI, ::Void)
     end
 
-    # Proc type for the function glShaderBinary
+    # `Proc` type for the OpenGL function *glShaderSource*.
     @[AlwaysInline]
-    def shader_binary(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), LibGL::Enum, ::Pointer(Void), LibGL::SizeI, ::Void)
-      self.shader_binary.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glShaderSource
-    @[AlwaysInline]
-    def shader_source : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(::Pointer(LibGL::Char)), ::Pointer(LibGL::Int), ::Void).class
+    def shader_source : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(::Pointer(LibGL::Char)), ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glShaderSource
+    # `Proc` type for the OpenGL function *glStencilFunc*.
     @[AlwaysInline]
-    def shader_source(address) : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(::Pointer(LibGL::Char)), ::Pointer(LibGL::Int), ::Void)
-      self.shader_source.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glStencilFunc
-    @[AlwaysInline]
-    def stencil_func : ::Proc(LibGL::StencilFunction, LibGL::Int, LibGL::UInt, ::Void).class
+    def stencil_func : ::Proc.class
       ::Proc(LibGL::StencilFunction, LibGL::Int, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glStencilFunc
+    # `Proc` type for the OpenGL function *glStencilFuncSeparate*.
     @[AlwaysInline]
-    def stencil_func(address) : ::Proc(LibGL::StencilFunction, LibGL::Int, LibGL::UInt, ::Void)
-      self.stencil_func.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glStencilFuncSeparate
-    @[AlwaysInline]
-    def stencil_func_separate : ::Proc(LibGL::TriangleFace, LibGL::StencilFunction, LibGL::Int, LibGL::UInt, ::Void).class
+    def stencil_func_separate : ::Proc.class
       ::Proc(LibGL::TriangleFace, LibGL::StencilFunction, LibGL::Int, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glStencilFuncSeparate
+    # `Proc` type for the OpenGL function *glStencilMask*.
     @[AlwaysInline]
-    def stencil_func_separate(address) : ::Proc(LibGL::TriangleFace, LibGL::StencilFunction, LibGL::Int, LibGL::UInt, ::Void)
-      self.stencil_func_separate.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glStencilMask
-    @[AlwaysInline]
-    def stencil_mask : ::Proc(LibGL::UInt, ::Void).class
+    def stencil_mask : ::Proc.class
       ::Proc(LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glStencilMask
+    # `Proc` type for the OpenGL function *glStencilMaskSeparate*.
     @[AlwaysInline]
-    def stencil_mask(address) : ::Proc(LibGL::UInt, ::Void)
-      self.stencil_mask.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glStencilMaskSeparate
-    @[AlwaysInline]
-    def stencil_mask_separate : ::Proc(LibGL::TriangleFace, LibGL::UInt, ::Void).class
+    def stencil_mask_separate : ::Proc.class
       ::Proc(LibGL::TriangleFace, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glStencilMaskSeparate
+    # `Proc` type for the OpenGL function *glStencilOp*.
     @[AlwaysInline]
-    def stencil_mask_separate(address) : ::Proc(LibGL::TriangleFace, LibGL::UInt, ::Void)
-      self.stencil_mask_separate.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glStencilOp
-    @[AlwaysInline]
-    def stencil_op : ::Proc(LibGL::StencilOp, LibGL::StencilOp, LibGL::StencilOp, ::Void).class
+    def stencil_op : ::Proc.class
       ::Proc(LibGL::StencilOp, LibGL::StencilOp, LibGL::StencilOp, ::Void)
     end
 
-    # Proc type for the function glStencilOp
+    # `Proc` type for the OpenGL function *glStencilOpSeparate*.
     @[AlwaysInline]
-    def stencil_op(address) : ::Proc(LibGL::StencilOp, LibGL::StencilOp, LibGL::StencilOp, ::Void)
-      self.stencil_op.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glStencilOpSeparate
-    @[AlwaysInline]
-    def stencil_op_separate : ::Proc(LibGL::TriangleFace, LibGL::StencilOp, LibGL::StencilOp, LibGL::StencilOp, ::Void).class
+    def stencil_op_separate : ::Proc.class
       ::Proc(LibGL::TriangleFace, LibGL::StencilOp, LibGL::StencilOp, LibGL::StencilOp, ::Void)
     end
 
-    # Proc type for the function glStencilOpSeparate
+    # `Proc` type for the OpenGL function *glTexImage2D*.
     @[AlwaysInline]
-    def stencil_op_separate(address) : ::Proc(LibGL::TriangleFace, LibGL::StencilOp, LibGL::StencilOp, LibGL::StencilOp, ::Void)
-      self.stencil_op_separate.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glTexImage2D
-    @[AlwaysInline]
-    def tex_image_2d : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::InternalFormat, LibGL::SizeI, LibGL::SizeI, LibGL::Int, LibGL::PixelFormat, LibGL::PixelType, ::Pointer(Void), ::Void).class
+    def tex_image_2d : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::InternalFormat, LibGL::SizeI, LibGL::SizeI, LibGL::Int, LibGL::PixelFormat, LibGL::PixelType, ::Pointer(Void), ::Void)
     end
 
-    # Proc type for the function glTexImage2D
+    # `Proc` type for the OpenGL function *glTexParameterf*.
     @[AlwaysInline]
-    def tex_image_2d(address) : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::InternalFormat, LibGL::SizeI, LibGL::SizeI, LibGL::Int, LibGL::PixelFormat, LibGL::PixelType, ::Pointer(Void), ::Void)
-      self.tex_image_2d.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glTexParameterf
-    @[AlwaysInline]
-    def tex_parameter_f : ::Proc(LibGL::TextureTarget, LibGL::TextureParameterName, LibGL::Float, ::Void).class
+    def tex_parameter_f : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::TextureParameterName, LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glTexParameterf
+    # `Proc` type for the OpenGL function *glTexParameterfv*.
     @[AlwaysInline]
-    def tex_parameter_f(address) : ::Proc(LibGL::TextureTarget, LibGL::TextureParameterName, LibGL::Float, ::Void)
-      self.tex_parameter_f.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glTexParameterfv
-    @[AlwaysInline]
-    def tex_parameter_fv : ::Proc(LibGL::TextureTarget, LibGL::TextureParameterName, ::Pointer(LibGL::Float), ::Void).class
+    def tex_parameter_fv : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::TextureParameterName, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glTexParameterfv
+    # `Proc` type for the OpenGL function *glTexParameteri*.
     @[AlwaysInline]
-    def tex_parameter_fv(address) : ::Proc(LibGL::TextureTarget, LibGL::TextureParameterName, ::Pointer(LibGL::Float), ::Void)
-      self.tex_parameter_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glTexParameteri
-    @[AlwaysInline]
-    def tex_parameter_i : ::Proc(LibGL::TextureTarget, LibGL::TextureParameterName, LibGL::Int, ::Void).class
+    def tex_parameter_i : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::TextureParameterName, LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glTexParameteri
+    # `Proc` type for the OpenGL function *glTexParameteriv*.
     @[AlwaysInline]
-    def tex_parameter_i(address) : ::Proc(LibGL::TextureTarget, LibGL::TextureParameterName, LibGL::Int, ::Void)
-      self.tex_parameter_i.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glTexParameteriv
-    @[AlwaysInline]
-    def tex_parameter_iv : ::Proc(LibGL::TextureTarget, LibGL::TextureParameterName, ::Pointer(LibGL::Int), ::Void).class
+    def tex_parameter_iv : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::TextureParameterName, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glTexParameteriv
+    # `Proc` type for the OpenGL function *glTexSubImage2D*.
     @[AlwaysInline]
-    def tex_parameter_iv(address) : ::Proc(LibGL::TextureTarget, LibGL::TextureParameterName, ::Pointer(LibGL::Int), ::Void)
-      self.tex_parameter_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glTexSubImage2D
-    @[AlwaysInline]
-    def tex_sub_image_2d : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, LibGL::PixelFormat, LibGL::PixelType, ::Pointer(Void), ::Void).class
+    def tex_sub_image_2d : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, LibGL::PixelFormat, LibGL::PixelType, ::Pointer(Void), ::Void)
     end
 
-    # Proc type for the function glTexSubImage2D
+    # `Proc` type for the OpenGL function *glUniform1f*.
     @[AlwaysInline]
-    def tex_sub_image_2d(address) : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, LibGL::PixelFormat, LibGL::PixelType, ::Pointer(Void), ::Void)
-      self.tex_sub_image_2d.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform1f
-    @[AlwaysInline]
-    def uniform_1f : ::Proc(LibGL::Int, LibGL::Float, ::Void).class
+    def uniform_1f : ::Proc.class
       ::Proc(LibGL::Int, LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glUniform1f
+    # `Proc` type for the OpenGL function *glUniform1fv*.
     @[AlwaysInline]
-    def uniform_1f(address) : ::Proc(LibGL::Int, LibGL::Float, ::Void)
-      self.uniform_1f.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform1fv
-    @[AlwaysInline]
-    def uniform_1fv : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void).class
+    def uniform_1fv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glUniform1fv
+    # `Proc` type for the OpenGL function *glUniform1i*.
     @[AlwaysInline]
-    def uniform_1fv(address) : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void)
-      self.uniform_1fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform1i
-    @[AlwaysInline]
-    def uniform_1i : ::Proc(LibGL::Int, LibGL::Int, ::Void).class
+    def uniform_1i : ::Proc.class
       ::Proc(LibGL::Int, LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glUniform1i
+    # `Proc` type for the OpenGL function *glUniform1iv*.
     @[AlwaysInline]
-    def uniform_1i(address) : ::Proc(LibGL::Int, LibGL::Int, ::Void)
-      self.uniform_1i.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform1iv
-    @[AlwaysInline]
-    def uniform_1iv : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void).class
+    def uniform_1iv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glUniform1iv
+    # `Proc` type for the OpenGL function *glUniform2f*.
     @[AlwaysInline]
-    def uniform_1iv(address) : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void)
-      self.uniform_1iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform2f
-    @[AlwaysInline]
-    def uniform_2f : ::Proc(LibGL::Int, LibGL::Float, LibGL::Float, ::Void).class
+    def uniform_2f : ::Proc.class
       ::Proc(LibGL::Int, LibGL::Float, LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glUniform2f
+    # `Proc` type for the OpenGL function *glUniform2fv*.
     @[AlwaysInline]
-    def uniform_2f(address) : ::Proc(LibGL::Int, LibGL::Float, LibGL::Float, ::Void)
-      self.uniform_2f.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform2fv
-    @[AlwaysInline]
-    def uniform_2fv : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void).class
+    def uniform_2fv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glUniform2fv
+    # `Proc` type for the OpenGL function *glUniform2i*.
     @[AlwaysInline]
-    def uniform_2fv(address) : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void)
-      self.uniform_2fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform2i
-    @[AlwaysInline]
-    def uniform_2i : ::Proc(LibGL::Int, LibGL::Int, LibGL::Int, ::Void).class
+    def uniform_2i : ::Proc.class
       ::Proc(LibGL::Int, LibGL::Int, LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glUniform2i
+    # `Proc` type for the OpenGL function *glUniform2iv*.
     @[AlwaysInline]
-    def uniform_2i(address) : ::Proc(LibGL::Int, LibGL::Int, LibGL::Int, ::Void)
-      self.uniform_2i.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform2iv
-    @[AlwaysInline]
-    def uniform_2iv : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void).class
+    def uniform_2iv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glUniform2iv
+    # `Proc` type for the OpenGL function *glUniform3f*.
     @[AlwaysInline]
-    def uniform_2iv(address) : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void)
-      self.uniform_2iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform3f
-    @[AlwaysInline]
-    def uniform_3f : ::Proc(LibGL::Int, LibGL::Float, LibGL::Float, LibGL::Float, ::Void).class
+    def uniform_3f : ::Proc.class
       ::Proc(LibGL::Int, LibGL::Float, LibGL::Float, LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glUniform3f
+    # `Proc` type for the OpenGL function *glUniform3fv*.
     @[AlwaysInline]
-    def uniform_3f(address) : ::Proc(LibGL::Int, LibGL::Float, LibGL::Float, LibGL::Float, ::Void)
-      self.uniform_3f.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform3fv
-    @[AlwaysInline]
-    def uniform_3fv : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void).class
+    def uniform_3fv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glUniform3fv
+    # `Proc` type for the OpenGL function *glUniform3i*.
     @[AlwaysInline]
-    def uniform_3fv(address) : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void)
-      self.uniform_3fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform3i
-    @[AlwaysInline]
-    def uniform_3i : ::Proc(LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, ::Void).class
+    def uniform_3i : ::Proc.class
       ::Proc(LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glUniform3i
+    # `Proc` type for the OpenGL function *glUniform3iv*.
     @[AlwaysInline]
-    def uniform_3i(address) : ::Proc(LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, ::Void)
-      self.uniform_3i.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform3iv
-    @[AlwaysInline]
-    def uniform_3iv : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void).class
+    def uniform_3iv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glUniform3iv
+    # `Proc` type for the OpenGL function *glUniform4f*.
     @[AlwaysInline]
-    def uniform_3iv(address) : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void)
-      self.uniform_3iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform4f
-    @[AlwaysInline]
-    def uniform_4f : ::Proc(LibGL::Int, LibGL::Float, LibGL::Float, LibGL::Float, LibGL::Float, ::Void).class
+    def uniform_4f : ::Proc.class
       ::Proc(LibGL::Int, LibGL::Float, LibGL::Float, LibGL::Float, LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glUniform4f
+    # `Proc` type for the OpenGL function *glUniform4fv*.
     @[AlwaysInline]
-    def uniform_4f(address) : ::Proc(LibGL::Int, LibGL::Float, LibGL::Float, LibGL::Float, LibGL::Float, ::Void)
-      self.uniform_4f.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform4fv
-    @[AlwaysInline]
-    def uniform_4fv : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void).class
+    def uniform_4fv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glUniform4fv
+    # `Proc` type for the OpenGL function *glUniform4i*.
     @[AlwaysInline]
-    def uniform_4fv(address) : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void)
-      self.uniform_4fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform4i
-    @[AlwaysInline]
-    def uniform_4i : ::Proc(LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, ::Void).class
+    def uniform_4i : ::Proc.class
       ::Proc(LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glUniform4i
+    # `Proc` type for the OpenGL function *glUniform4iv*.
     @[AlwaysInline]
-    def uniform_4i(address) : ::Proc(LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, ::Void)
-      self.uniform_4i.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform4iv
-    @[AlwaysInline]
-    def uniform_4iv : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void).class
+    def uniform_4iv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glUniform4iv
+    # `Proc` type for the OpenGL function *glUniformMatrix2fv*.
     @[AlwaysInline]
-    def uniform_4iv(address) : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void)
-      self.uniform_4iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniformMatrix2fv
-    @[AlwaysInline]
-    def uniform_matrix2_fv : ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void).class
+    def uniform_matrix2_fv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glUniformMatrix2fv
+    # `Proc` type for the OpenGL function *glUniformMatrix3fv*.
     @[AlwaysInline]
-    def uniform_matrix2_fv(address) : ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
-      self.uniform_matrix2_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniformMatrix3fv
-    @[AlwaysInline]
-    def uniform_matrix3_fv : ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void).class
+    def uniform_matrix3_fv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glUniformMatrix3fv
+    # `Proc` type for the OpenGL function *glUniformMatrix4fv*.
     @[AlwaysInline]
-    def uniform_matrix3_fv(address) : ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
-      self.uniform_matrix3_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniformMatrix4fv
-    @[AlwaysInline]
-    def uniform_matrix4_fv : ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void).class
+    def uniform_matrix4_fv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glUniformMatrix4fv
+    # `Proc` type for the OpenGL function *glUseProgram*.
     @[AlwaysInline]
-    def uniform_matrix4_fv(address) : ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
-      self.uniform_matrix4_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUseProgram
-    @[AlwaysInline]
-    def use_program : ::Proc(LibGL::UInt, ::Void).class
+    def use_program : ::Proc.class
       ::Proc(LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glUseProgram
+    # `Proc` type for the OpenGL function *glValidateProgram*.
     @[AlwaysInline]
-    def use_program(address) : ::Proc(LibGL::UInt, ::Void)
-      self.use_program.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glValidateProgram
-    @[AlwaysInline]
-    def validate_program : ::Proc(LibGL::UInt, ::Void).class
+    def validate_program : ::Proc.class
       ::Proc(LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glValidateProgram
+    # `Proc` type for the OpenGL function *glVertexAttrib1f*.
     @[AlwaysInline]
-    def validate_program(address) : ::Proc(LibGL::UInt, ::Void)
-      self.validate_program.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexAttrib1f
-    @[AlwaysInline]
-    def vertex_attrib_1f : ::Proc(LibGL::UInt, LibGL::Float, ::Void).class
+    def vertex_attrib_1f : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glVertexAttrib1f
+    # `Proc` type for the OpenGL function *glVertexAttrib1fv*.
     @[AlwaysInline]
-    def vertex_attrib_1f(address) : ::Proc(LibGL::UInt, LibGL::Float, ::Void)
-      self.vertex_attrib_1f.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexAttrib1fv
-    @[AlwaysInline]
-    def vertex_attrib_1fv : ::Proc(LibGL::UInt, ::Pointer(LibGL::Float), ::Void).class
+    def vertex_attrib_1fv : ::Proc.class
       ::Proc(LibGL::UInt, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glVertexAttrib1fv
+    # `Proc` type for the OpenGL function *glVertexAttrib2f*.
     @[AlwaysInline]
-    def vertex_attrib_1fv(address) : ::Proc(LibGL::UInt, ::Pointer(LibGL::Float), ::Void)
-      self.vertex_attrib_1fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexAttrib2f
-    @[AlwaysInline]
-    def vertex_attrib_2f : ::Proc(LibGL::UInt, LibGL::Float, LibGL::Float, ::Void).class
+    def vertex_attrib_2f : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Float, LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glVertexAttrib2f
+    # `Proc` type for the OpenGL function *glVertexAttrib2fv*.
     @[AlwaysInline]
-    def vertex_attrib_2f(address) : ::Proc(LibGL::UInt, LibGL::Float, LibGL::Float, ::Void)
-      self.vertex_attrib_2f.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexAttrib2fv
-    @[AlwaysInline]
-    def vertex_attrib_2fv : ::Proc(LibGL::UInt, ::Pointer(LibGL::Float), ::Void).class
+    def vertex_attrib_2fv : ::Proc.class
       ::Proc(LibGL::UInt, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glVertexAttrib2fv
+    # `Proc` type for the OpenGL function *glVertexAttrib3f*.
     @[AlwaysInline]
-    def vertex_attrib_2fv(address) : ::Proc(LibGL::UInt, ::Pointer(LibGL::Float), ::Void)
-      self.vertex_attrib_2fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexAttrib3f
-    @[AlwaysInline]
-    def vertex_attrib_3f : ::Proc(LibGL::UInt, LibGL::Float, LibGL::Float, LibGL::Float, ::Void).class
+    def vertex_attrib_3f : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Float, LibGL::Float, LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glVertexAttrib3f
+    # `Proc` type for the OpenGL function *glVertexAttrib3fv*.
     @[AlwaysInline]
-    def vertex_attrib_3f(address) : ::Proc(LibGL::UInt, LibGL::Float, LibGL::Float, LibGL::Float, ::Void)
-      self.vertex_attrib_3f.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexAttrib3fv
-    @[AlwaysInline]
-    def vertex_attrib_3fv : ::Proc(LibGL::UInt, ::Pointer(LibGL::Float), ::Void).class
+    def vertex_attrib_3fv : ::Proc.class
       ::Proc(LibGL::UInt, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glVertexAttrib3fv
+    # `Proc` type for the OpenGL function *glVertexAttrib4f*.
     @[AlwaysInline]
-    def vertex_attrib_3fv(address) : ::Proc(LibGL::UInt, ::Pointer(LibGL::Float), ::Void)
-      self.vertex_attrib_3fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexAttrib4f
-    @[AlwaysInline]
-    def vertex_attrib_4f : ::Proc(LibGL::UInt, LibGL::Float, LibGL::Float, LibGL::Float, LibGL::Float, ::Void).class
+    def vertex_attrib_4f : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Float, LibGL::Float, LibGL::Float, LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glVertexAttrib4f
+    # `Proc` type for the OpenGL function *glVertexAttrib4fv*.
     @[AlwaysInline]
-    def vertex_attrib_4f(address) : ::Proc(LibGL::UInt, LibGL::Float, LibGL::Float, LibGL::Float, LibGL::Float, ::Void)
-      self.vertex_attrib_4f.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexAttrib4fv
-    @[AlwaysInline]
-    def vertex_attrib_4fv : ::Proc(LibGL::UInt, ::Pointer(LibGL::Float), ::Void).class
+    def vertex_attrib_4fv : ::Proc.class
       ::Proc(LibGL::UInt, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glVertexAttrib4fv
+    # `Proc` type for the OpenGL function *glVertexAttribPointer*.
     @[AlwaysInline]
-    def vertex_attrib_4fv(address) : ::Proc(LibGL::UInt, ::Pointer(LibGL::Float), ::Void)
-      self.vertex_attrib_4fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexAttribPointer
-    @[AlwaysInline]
-    def vertex_attrib_pointer : ::Proc(LibGL::UInt, LibGL::Int, LibGL::VertexAttribPointerType, LibGL::Boolean, LibGL::SizeI, ::Pointer(Void), ::Void).class
+    def vertex_attrib_pointer : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::VertexAttribPointerType, LibGL::Boolean, LibGL::SizeI, ::Pointer(Void), ::Void)
     end
 
-    # Proc type for the function glVertexAttribPointer
+    # `Proc` type for the OpenGL function *glViewport*.
     @[AlwaysInline]
-    def vertex_attrib_pointer(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::VertexAttribPointerType, LibGL::Boolean, LibGL::SizeI, ::Pointer(Void), ::Void)
-      self.vertex_attrib_pointer.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glViewport
-    @[AlwaysInline]
-    def viewport : ::Proc(LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, ::Void).class
+    def viewport : ::Proc.class
       ::Proc(LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, ::Void)
     end
 
-    # Proc type for the function glViewport
+    # `Proc` type for the OpenGL function *glReadBuffer*.
     @[AlwaysInline]
-    def viewport(address) : ::Proc(LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, ::Void)
-      self.viewport.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glReadBuffer
-    @[AlwaysInline]
-    def read_buffer : ::Proc(LibGL::ReadBufferMode, ::Void).class
+    def read_buffer : ::Proc.class
       ::Proc(LibGL::ReadBufferMode, ::Void)
     end
 
-    # Proc type for the function glReadBuffer
+    # `Proc` type for the OpenGL function *glDrawRangeElements*.
     @[AlwaysInline]
-    def read_buffer(address) : ::Proc(LibGL::ReadBufferMode, ::Void)
-      self.read_buffer.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDrawRangeElements
-    @[AlwaysInline]
-    def draw_range_elements : ::Proc(LibGL::PrimitiveType, LibGL::UInt, LibGL::UInt, LibGL::SizeI, LibGL::DrawElementsType, ::Pointer(Void), ::Void).class
+    def draw_range_elements : ::Proc.class
       ::Proc(LibGL::PrimitiveType, LibGL::UInt, LibGL::UInt, LibGL::SizeI, LibGL::DrawElementsType, ::Pointer(Void), ::Void)
     end
 
-    # Proc type for the function glDrawRangeElements
+    # `Proc` type for the OpenGL function *glTexImage3D*.
     @[AlwaysInline]
-    def draw_range_elements(address) : ::Proc(LibGL::PrimitiveType, LibGL::UInt, LibGL::UInt, LibGL::SizeI, LibGL::DrawElementsType, ::Pointer(Void), ::Void)
-      self.draw_range_elements.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glTexImage3D
-    @[AlwaysInline]
-    def tex_image_3d : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::InternalFormat, LibGL::SizeI, LibGL::SizeI, LibGL::SizeI, LibGL::Int, LibGL::PixelFormat, LibGL::PixelType, ::Pointer(Void), ::Void).class
+    def tex_image_3d : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::InternalFormat, LibGL::SizeI, LibGL::SizeI, LibGL::SizeI, LibGL::Int, LibGL::PixelFormat, LibGL::PixelType, ::Pointer(Void), ::Void)
     end
 
-    # Proc type for the function glTexImage3D
+    # `Proc` type for the OpenGL function *glTexSubImage3D*.
     @[AlwaysInline]
-    def tex_image_3d(address) : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::InternalFormat, LibGL::SizeI, LibGL::SizeI, LibGL::SizeI, LibGL::Int, LibGL::PixelFormat, LibGL::PixelType, ::Pointer(Void), ::Void)
-      self.tex_image_3d.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glTexSubImage3D
-    @[AlwaysInline]
-    def tex_sub_image_3d : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, LibGL::SizeI, LibGL::PixelFormat, LibGL::PixelType, ::Pointer(Void), ::Void).class
+    def tex_sub_image_3d : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, LibGL::SizeI, LibGL::PixelFormat, LibGL::PixelType, ::Pointer(Void), ::Void)
     end
 
-    # Proc type for the function glTexSubImage3D
+    # `Proc` type for the OpenGL function *glCopyTexSubImage3D*.
     @[AlwaysInline]
-    def tex_sub_image_3d(address) : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, LibGL::SizeI, LibGL::PixelFormat, LibGL::PixelType, ::Pointer(Void), ::Void)
-      self.tex_sub_image_3d.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glCopyTexSubImage3D
-    @[AlwaysInline]
-    def copy_tex_sub_image_3d : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, ::Void).class
+    def copy_tex_sub_image_3d : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, ::Void)
     end
 
-    # Proc type for the function glCopyTexSubImage3D
+    # `Proc` type for the OpenGL function *glCompressedTexImage3D*.
     @[AlwaysInline]
-    def copy_tex_sub_image_3d(address) : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, ::Void)
-      self.copy_tex_sub_image_3d.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glCompressedTexImage3D
-    @[AlwaysInline]
-    def compressed_tex_image_3d : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::InternalFormat, LibGL::SizeI, LibGL::SizeI, LibGL::SizeI, LibGL::Int, LibGL::SizeI, ::Pointer(Void), ::Void).class
+    def compressed_tex_image_3d : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::InternalFormat, LibGL::SizeI, LibGL::SizeI, LibGL::SizeI, LibGL::Int, LibGL::SizeI, ::Pointer(Void), ::Void)
     end
 
-    # Proc type for the function glCompressedTexImage3D
+    # `Proc` type for the OpenGL function *glCompressedTexSubImage3D*.
     @[AlwaysInline]
-    def compressed_tex_image_3d(address) : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::InternalFormat, LibGL::SizeI, LibGL::SizeI, LibGL::SizeI, LibGL::Int, LibGL::SizeI, ::Pointer(Void), ::Void)
-      self.compressed_tex_image_3d.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glCompressedTexSubImage3D
-    @[AlwaysInline]
-    def compressed_tex_sub_image_3d : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, LibGL::SizeI, LibGL::InternalFormat, LibGL::SizeI, ::Pointer(Void), ::Void).class
+    def compressed_tex_sub_image_3d : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, LibGL::SizeI, LibGL::InternalFormat, LibGL::SizeI, ::Pointer(Void), ::Void)
     end
 
-    # Proc type for the function glCompressedTexSubImage3D
+    # `Proc` type for the OpenGL function *glGenQueries*.
     @[AlwaysInline]
-    def compressed_tex_sub_image_3d(address) : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, LibGL::SizeI, LibGL::InternalFormat, LibGL::SizeI, ::Pointer(Void), ::Void)
-      self.compressed_tex_sub_image_3d.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGenQueries
-    @[AlwaysInline]
-    def gen_queries : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def gen_queries : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glGenQueries
+    # `Proc` type for the OpenGL function *glDeleteQueries*.
     @[AlwaysInline]
-    def gen_queries(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.gen_queries.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDeleteQueries
-    @[AlwaysInline]
-    def delete_queries : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def delete_queries : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glDeleteQueries
+    # `Proc` type for the OpenGL function *glIsQuery*.
     @[AlwaysInline]
-    def delete_queries(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.delete_queries.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glIsQuery
-    @[AlwaysInline]
-    def is_query : ::Proc(LibGL::UInt, LibGL::Boolean).class
+    def is_query : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Boolean)
     end
 
-    # Proc type for the function glIsQuery
+    # `Proc` type for the OpenGL function *glBeginQuery*.
     @[AlwaysInline]
-    def is_query(address) : ::Proc(LibGL::UInt, LibGL::Boolean)
-      self.is_query.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBeginQuery
-    @[AlwaysInline]
-    def begin_query : ::Proc(LibGL::QueryTarget, LibGL::UInt, ::Void).class
+    def begin_query : ::Proc.class
       ::Proc(LibGL::QueryTarget, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glBeginQuery
+    # `Proc` type for the OpenGL function *glEndQuery*.
     @[AlwaysInline]
-    def begin_query(address) : ::Proc(LibGL::QueryTarget, LibGL::UInt, ::Void)
-      self.begin_query.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glEndQuery
-    @[AlwaysInline]
-    def end_query : ::Proc(LibGL::QueryTarget, ::Void).class
+    def end_query : ::Proc.class
       ::Proc(LibGL::QueryTarget, ::Void)
     end
 
-    # Proc type for the function glEndQuery
+    # `Proc` type for the OpenGL function *glGetQueryiv*.
     @[AlwaysInline]
-    def end_query(address) : ::Proc(LibGL::QueryTarget, ::Void)
-      self.end_query.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetQueryiv
-    @[AlwaysInline]
-    def get_query_iv : ::Proc(LibGL::QueryTarget, LibGL::QueryParameterName, ::Pointer(LibGL::Int), ::Void).class
+    def get_query_iv : ::Proc.class
       ::Proc(LibGL::QueryTarget, LibGL::QueryParameterName, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetQueryiv
+    # `Proc` type for the OpenGL function *glGetQueryObjectuiv*.
     @[AlwaysInline]
-    def get_query_iv(address) : ::Proc(LibGL::QueryTarget, LibGL::QueryParameterName, ::Pointer(LibGL::Int), ::Void)
-      self.get_query_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetQueryObjectuiv
-    @[AlwaysInline]
-    def get_query_object_uiv : ::Proc(LibGL::UInt, LibGL::QueryObjectParameterName, ::Pointer(LibGL::UInt), ::Void).class
+    def get_query_object_uiv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::QueryObjectParameterName, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glGetQueryObjectuiv
+    # `Proc` type for the OpenGL function *glUnmapBuffer*.
     @[AlwaysInline]
-    def get_query_object_uiv(address) : ::Proc(LibGL::UInt, LibGL::QueryObjectParameterName, ::Pointer(LibGL::UInt), ::Void)
-      self.get_query_object_uiv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUnmapBuffer
-    @[AlwaysInline]
-    def unmap_buffer : ::Proc(LibGL::BufferTargetARB, LibGL::Boolean).class
+    def unmap_buffer : ::Proc.class
       ::Proc(LibGL::BufferTargetARB, LibGL::Boolean)
     end
 
-    # Proc type for the function glUnmapBuffer
+    # `Proc` type for the OpenGL function *glGetBufferPointerv*.
     @[AlwaysInline]
-    def unmap_buffer(address) : ::Proc(LibGL::BufferTargetARB, LibGL::Boolean)
-      self.unmap_buffer.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetBufferPointerv
-    @[AlwaysInline]
-    def get_buffer_pointer_v : ::Proc(LibGL::BufferTargetARB, LibGL::BufferPointerNameARB, ::Pointer(Pointer(Void)), ::Void).class
+    def get_buffer_pointer_v : ::Proc.class
       ::Proc(LibGL::BufferTargetARB, LibGL::BufferPointerNameARB, ::Pointer(Pointer(Void)), ::Void)
     end
 
-    # Proc type for the function glGetBufferPointerv
+    # `Proc` type for the OpenGL function *glDrawBuffers*.
     @[AlwaysInline]
-    def get_buffer_pointer_v(address) : ::Proc(LibGL::BufferTargetARB, LibGL::BufferPointerNameARB, ::Pointer(Pointer(Void)), ::Void)
-      self.get_buffer_pointer_v.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDrawBuffers
-    @[AlwaysInline]
-    def draw_buffers : ::Proc(LibGL::SizeI, ::Pointer(LibGL::DrawBufferMode), ::Void).class
+    def draw_buffers : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::DrawBufferMode), ::Void)
     end
 
-    # Proc type for the function glDrawBuffers
+    # `Proc` type for the OpenGL function *glUniformMatrix2x3fv*.
     @[AlwaysInline]
-    def draw_buffers(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::DrawBufferMode), ::Void)
-      self.draw_buffers.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniformMatrix2x3fv
-    @[AlwaysInline]
-    def uniform_matrix2x3_fv : ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void).class
+    def uniform_matrix2x3_fv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glUniformMatrix2x3fv
+    # `Proc` type for the OpenGL function *glUniformMatrix3x2fv*.
     @[AlwaysInline]
-    def uniform_matrix2x3_fv(address) : ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
-      self.uniform_matrix2x3_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniformMatrix3x2fv
-    @[AlwaysInline]
-    def uniform_matrix3x2_fv : ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void).class
+    def uniform_matrix3x2_fv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glUniformMatrix3x2fv
+    # `Proc` type for the OpenGL function *glUniformMatrix2x4fv*.
     @[AlwaysInline]
-    def uniform_matrix3x2_fv(address) : ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
-      self.uniform_matrix3x2_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniformMatrix2x4fv
-    @[AlwaysInline]
-    def uniform_matrix2x4_fv : ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void).class
+    def uniform_matrix2x4_fv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glUniformMatrix2x4fv
+    # `Proc` type for the OpenGL function *glUniformMatrix4x2fv*.
     @[AlwaysInline]
-    def uniform_matrix2x4_fv(address) : ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
-      self.uniform_matrix2x4_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniformMatrix4x2fv
-    @[AlwaysInline]
-    def uniform_matrix4x2_fv : ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void).class
+    def uniform_matrix4x2_fv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glUniformMatrix4x2fv
+    # `Proc` type for the OpenGL function *glUniformMatrix3x4fv*.
     @[AlwaysInline]
-    def uniform_matrix4x2_fv(address) : ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
-      self.uniform_matrix4x2_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniformMatrix3x4fv
-    @[AlwaysInline]
-    def uniform_matrix3x4_fv : ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void).class
+    def uniform_matrix3x4_fv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glUniformMatrix3x4fv
+    # `Proc` type for the OpenGL function *glUniformMatrix4x3fv*.
     @[AlwaysInline]
-    def uniform_matrix3x4_fv(address) : ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
-      self.uniform_matrix3x4_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniformMatrix4x3fv
-    @[AlwaysInline]
-    def uniform_matrix4x3_fv : ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void).class
+    def uniform_matrix4x3_fv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glUniformMatrix4x3fv
+    # `Proc` type for the OpenGL function *glBlitFramebuffer*.
     @[AlwaysInline]
-    def uniform_matrix4x3_fv(address) : ::Proc(LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
-      self.uniform_matrix4x3_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBlitFramebuffer
-    @[AlwaysInline]
-    def blit_framebuffer : ::Proc(LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::ClearBufferMask, LibGL::BlitFramebufferFilter, ::Void).class
+    def blit_framebuffer : ::Proc.class
       ::Proc(LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::ClearBufferMask, LibGL::BlitFramebufferFilter, ::Void)
     end
 
-    # Proc type for the function glBlitFramebuffer
+    # `Proc` type for the OpenGL function *glRenderbufferStorageMultisample*.
     @[AlwaysInline]
-    def blit_framebuffer(address) : ::Proc(LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::ClearBufferMask, LibGL::BlitFramebufferFilter, ::Void)
-      self.blit_framebuffer.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glRenderbufferStorageMultisample
-    @[AlwaysInline]
-    def renderbuffer_storage_multisample : ::Proc(LibGL::RenderbufferTarget, LibGL::SizeI, LibGL::InternalFormat, LibGL::SizeI, LibGL::SizeI, ::Void).class
+    def renderbuffer_storage_multisample : ::Proc.class
       ::Proc(LibGL::RenderbufferTarget, LibGL::SizeI, LibGL::InternalFormat, LibGL::SizeI, LibGL::SizeI, ::Void)
     end
 
-    # Proc type for the function glRenderbufferStorageMultisample
+    # `Proc` type for the OpenGL function *glFramebufferTextureLayer*.
     @[AlwaysInline]
-    def renderbuffer_storage_multisample(address) : ::Proc(LibGL::RenderbufferTarget, LibGL::SizeI, LibGL::InternalFormat, LibGL::SizeI, LibGL::SizeI, ::Void)
-      self.renderbuffer_storage_multisample.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glFramebufferTextureLayer
-    @[AlwaysInline]
-    def framebuffer_texture_layer : ::Proc(LibGL::FramebufferTarget, LibGL::FramebufferAttachment, LibGL::UInt, LibGL::Int, LibGL::Int, ::Void).class
+    def framebuffer_texture_layer : ::Proc.class
       ::Proc(LibGL::FramebufferTarget, LibGL::FramebufferAttachment, LibGL::UInt, LibGL::Int, LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glFramebufferTextureLayer
+    # `Proc` type for the OpenGL function *glMapBufferRange*.
     @[AlwaysInline]
-    def framebuffer_texture_layer(address) : ::Proc(LibGL::FramebufferTarget, LibGL::FramebufferAttachment, LibGL::UInt, LibGL::Int, LibGL::Int, ::Void)
-      self.framebuffer_texture_layer.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glMapBufferRange
-    @[AlwaysInline]
-    def map_buffer_range : ::Proc(LibGL::BufferTargetARB, LibGL::IntPtr, LibGL::SizeIPtr, LibGL::MapBufferAccessMask, ::Pointer(Void)).class
+    def map_buffer_range : ::Proc.class
       ::Proc(LibGL::BufferTargetARB, LibGL::IntPtr, LibGL::SizeIPtr, LibGL::MapBufferAccessMask, ::Pointer(Void))
     end
 
-    # Proc type for the function glMapBufferRange
+    # `Proc` type for the OpenGL function *glFlushMappedBufferRange*.
     @[AlwaysInline]
-    def map_buffer_range(address) : ::Proc(LibGL::BufferTargetARB, LibGL::IntPtr, LibGL::SizeIPtr, LibGL::MapBufferAccessMask, ::Pointer(Void))
-      self.map_buffer_range.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glFlushMappedBufferRange
-    @[AlwaysInline]
-    def flush_mapped_buffer_range : ::Proc(LibGL::BufferTargetARB, LibGL::IntPtr, LibGL::SizeIPtr, ::Void).class
+    def flush_mapped_buffer_range : ::Proc.class
       ::Proc(LibGL::BufferTargetARB, LibGL::IntPtr, LibGL::SizeIPtr, ::Void)
     end
 
-    # Proc type for the function glFlushMappedBufferRange
+    # `Proc` type for the OpenGL function *glBindVertexArray*.
     @[AlwaysInline]
-    def flush_mapped_buffer_range(address) : ::Proc(LibGL::BufferTargetARB, LibGL::IntPtr, LibGL::SizeIPtr, ::Void)
-      self.flush_mapped_buffer_range.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBindVertexArray
-    @[AlwaysInline]
-    def bind_vertex_array : ::Proc(LibGL::UInt, ::Void).class
+    def bind_vertex_array : ::Proc.class
       ::Proc(LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glBindVertexArray
+    # `Proc` type for the OpenGL function *glDeleteVertexArrays*.
     @[AlwaysInline]
-    def bind_vertex_array(address) : ::Proc(LibGL::UInt, ::Void)
-      self.bind_vertex_array.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDeleteVertexArrays
-    @[AlwaysInline]
-    def delete_vertex_arrays : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def delete_vertex_arrays : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glDeleteVertexArrays
+    # `Proc` type for the OpenGL function *glGenVertexArrays*.
     @[AlwaysInline]
-    def delete_vertex_arrays(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.delete_vertex_arrays.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGenVertexArrays
-    @[AlwaysInline]
-    def gen_vertex_arrays : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def gen_vertex_arrays : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glGenVertexArrays
+    # `Proc` type for the OpenGL function *glIsVertexArray*.
     @[AlwaysInline]
-    def gen_vertex_arrays(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.gen_vertex_arrays.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glIsVertexArray
-    @[AlwaysInline]
-    def is_vertex_array : ::Proc(LibGL::UInt, LibGL::Boolean).class
+    def is_vertex_array : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Boolean)
     end
 
-    # Proc type for the function glIsVertexArray
+    # `Proc` type for the OpenGL function *glGetIntegeri_v*.
     @[AlwaysInline]
-    def is_vertex_array(address) : ::Proc(LibGL::UInt, LibGL::Boolean)
-      self.is_vertex_array.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetIntegeri_v
-    @[AlwaysInline]
-    def get_integer_i_v : ::Proc(LibGL::GetPName, LibGL::UInt, ::Pointer(LibGL::Int), ::Void).class
+    def get_integer_i_v : ::Proc.class
       ::Proc(LibGL::GetPName, LibGL::UInt, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetIntegeri_v
+    # `Proc` type for the OpenGL function *glBeginTransformFeedback*.
     @[AlwaysInline]
-    def get_integer_i_v(address) : ::Proc(LibGL::GetPName, LibGL::UInt, ::Pointer(LibGL::Int), ::Void)
-      self.get_integer_i_v.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBeginTransformFeedback
-    @[AlwaysInline]
-    def begin_transform_feedback : ::Proc(LibGL::PrimitiveType, ::Void).class
+    def begin_transform_feedback : ::Proc.class
       ::Proc(LibGL::PrimitiveType, ::Void)
     end
 
-    # Proc type for the function glBeginTransformFeedback
+    # `Proc` type for the OpenGL function *glEndTransformFeedback*.
     @[AlwaysInline]
-    def begin_transform_feedback(address) : ::Proc(LibGL::PrimitiveType, ::Void)
-      self.begin_transform_feedback.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glEndTransformFeedback
-    @[AlwaysInline]
-    def end_transform_feedback : ::Proc(::Void).class
+    def end_transform_feedback : ::Proc.class
       ::Proc(::Void)
     end
 
-    # Proc type for the function glEndTransformFeedback
+    # `Proc` type for the OpenGL function *glBindBufferRange*.
     @[AlwaysInline]
-    def end_transform_feedback(address) : ::Proc(::Void)
-      self.end_transform_feedback.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBindBufferRange
-    @[AlwaysInline]
-    def bind_buffer_range : ::Proc(LibGL::BufferTargetARB, LibGL::UInt, LibGL::UInt, LibGL::IntPtr, LibGL::SizeIPtr, ::Void).class
+    def bind_buffer_range : ::Proc.class
       ::Proc(LibGL::BufferTargetARB, LibGL::UInt, LibGL::UInt, LibGL::IntPtr, LibGL::SizeIPtr, ::Void)
     end
 
-    # Proc type for the function glBindBufferRange
+    # `Proc` type for the OpenGL function *glBindBufferBase*.
     @[AlwaysInline]
-    def bind_buffer_range(address) : ::Proc(LibGL::BufferTargetARB, LibGL::UInt, LibGL::UInt, LibGL::IntPtr, LibGL::SizeIPtr, ::Void)
-      self.bind_buffer_range.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBindBufferBase
-    @[AlwaysInline]
-    def bind_buffer_base : ::Proc(LibGL::BufferTargetARB, LibGL::UInt, LibGL::UInt, ::Void).class
+    def bind_buffer_base : ::Proc.class
       ::Proc(LibGL::BufferTargetARB, LibGL::UInt, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glBindBufferBase
+    # `Proc` type for the OpenGL function *glTransformFeedbackVaryings*.
     @[AlwaysInline]
-    def bind_buffer_base(address) : ::Proc(LibGL::BufferTargetARB, LibGL::UInt, LibGL::UInt, ::Void)
-      self.bind_buffer_base.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glTransformFeedbackVaryings
-    @[AlwaysInline]
-    def transform_feedback_varyings : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(::Pointer(LibGL::Char)), LibGL::TransformFeedbackBufferMode, ::Void).class
+    def transform_feedback_varyings : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(::Pointer(LibGL::Char)), LibGL::TransformFeedbackBufferMode, ::Void)
     end
 
-    # Proc type for the function glTransformFeedbackVaryings
+    # `Proc` type for the OpenGL function *glGetTransformFeedbackVarying*.
     @[AlwaysInline]
-    def transform_feedback_varyings(address) : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(::Pointer(LibGL::Char)), LibGL::TransformFeedbackBufferMode, ::Void)
-      self.transform_feedback_varyings.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetTransformFeedbackVarying
-    @[AlwaysInline]
-    def get_transform_feedback_varying : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::SizeI), ::Pointer(LibGL::AttributeType), ::Pointer(LibGL::Char), ::Void).class
+    def get_transform_feedback_varying : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::SizeI), ::Pointer(LibGL::AttributeType), ::Pointer(LibGL::Char), ::Void)
     end
 
-    # Proc type for the function glGetTransformFeedbackVarying
+    # `Proc` type for the OpenGL function *glVertexAttribIPointer*.
     @[AlwaysInline]
-    def get_transform_feedback_varying(address) : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::SizeI), ::Pointer(LibGL::AttributeType), ::Pointer(LibGL::Char), ::Void)
-      self.get_transform_feedback_varying.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexAttribIPointer
-    @[AlwaysInline]
-    def vertex_attrib_i_pointer : ::Proc(LibGL::UInt, LibGL::Int, LibGL::VertexAttribIType, LibGL::SizeI, ::Pointer(Void), ::Void).class
+    def vertex_attrib_i_pointer : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::VertexAttribIType, LibGL::SizeI, ::Pointer(Void), ::Void)
     end
 
-    # Proc type for the function glVertexAttribIPointer
+    # `Proc` type for the OpenGL function *glGetVertexAttribIiv*.
     @[AlwaysInline]
-    def vertex_attrib_i_pointer(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::VertexAttribIType, LibGL::SizeI, ::Pointer(Void), ::Void)
-      self.vertex_attrib_i_pointer.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetVertexAttribIiv
-    @[AlwaysInline]
-    def get_vertex_attrib_i_iv : ::Proc(LibGL::UInt, LibGL::VertexAttribEnum, ::Pointer(LibGL::Int), ::Void).class
+    def get_vertex_attrib_i_iv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::VertexAttribEnum, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetVertexAttribIiv
+    # `Proc` type for the OpenGL function *glGetVertexAttribIuiv*.
     @[AlwaysInline]
-    def get_vertex_attrib_i_iv(address) : ::Proc(LibGL::UInt, LibGL::VertexAttribEnum, ::Pointer(LibGL::Int), ::Void)
-      self.get_vertex_attrib_i_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetVertexAttribIuiv
-    @[AlwaysInline]
-    def get_vertex_attrib_i_uiv : ::Proc(LibGL::UInt, LibGL::VertexAttribEnum, ::Pointer(LibGL::UInt), ::Void).class
+    def get_vertex_attrib_i_uiv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::VertexAttribEnum, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glGetVertexAttribIuiv
+    # `Proc` type for the OpenGL function *glVertexAttribI4i*.
     @[AlwaysInline]
-    def get_vertex_attrib_i_uiv(address) : ::Proc(LibGL::UInt, LibGL::VertexAttribEnum, ::Pointer(LibGL::UInt), ::Void)
-      self.get_vertex_attrib_i_uiv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexAttribI4i
-    @[AlwaysInline]
-    def vertex_attrib_i_4i : ::Proc(LibGL::UInt, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, ::Void).class
+    def vertex_attrib_i_4i : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glVertexAttribI4i
+    # `Proc` type for the OpenGL function *glVertexAttribI4ui*.
     @[AlwaysInline]
-    def vertex_attrib_i_4i(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, ::Void)
-      self.vertex_attrib_i_4i.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexAttribI4ui
-    @[AlwaysInline]
-    def vertex_attrib_i_4ui : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void).class
+    def vertex_attrib_i_4ui : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UInt, LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glVertexAttribI4ui
+    # `Proc` type for the OpenGL function *glVertexAttribI4iv*.
     @[AlwaysInline]
-    def vertex_attrib_i_4ui(address) : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void)
-      self.vertex_attrib_i_4ui.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexAttribI4iv
-    @[AlwaysInline]
-    def vertex_attrib_i_4iv : ::Proc(LibGL::UInt, ::Pointer(LibGL::Int), ::Void).class
+    def vertex_attrib_i_4iv : ::Proc.class
       ::Proc(LibGL::UInt, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glVertexAttribI4iv
+    # `Proc` type for the OpenGL function *glVertexAttribI4uiv*.
     @[AlwaysInline]
-    def vertex_attrib_i_4iv(address) : ::Proc(LibGL::UInt, ::Pointer(LibGL::Int), ::Void)
-      self.vertex_attrib_i_4iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexAttribI4uiv
-    @[AlwaysInline]
-    def vertex_attrib_i_4uiv : ::Proc(LibGL::UInt, ::Pointer(LibGL::UInt), ::Void).class
+    def vertex_attrib_i_4uiv : ::Proc.class
       ::Proc(LibGL::UInt, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glVertexAttribI4uiv
+    # `Proc` type for the OpenGL function *glGetUniformuiv*.
     @[AlwaysInline]
-    def vertex_attrib_i_4uiv(address) : ::Proc(LibGL::UInt, ::Pointer(LibGL::UInt), ::Void)
-      self.vertex_attrib_i_4uiv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetUniformuiv
-    @[AlwaysInline]
-    def get_uniform_uiv : ::Proc(LibGL::UInt, LibGL::Int, ::Pointer(LibGL::UInt), ::Void).class
+    def get_uniform_uiv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glGetUniformuiv
+    # `Proc` type for the OpenGL function *glGetFragDataLocation*.
     @[AlwaysInline]
-    def get_uniform_uiv(address) : ::Proc(LibGL::UInt, LibGL::Int, ::Pointer(LibGL::UInt), ::Void)
-      self.get_uniform_uiv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetFragDataLocation
-    @[AlwaysInline]
-    def get_frag_data_location : ::Proc(LibGL::UInt, ::Pointer(LibGL::Char), LibGL::Int).class
+    def get_frag_data_location : ::Proc.class
       ::Proc(LibGL::UInt, ::Pointer(LibGL::Char), LibGL::Int)
     end
 
-    # Proc type for the function glGetFragDataLocation
+    # `Proc` type for the OpenGL function *glUniform1ui*.
     @[AlwaysInline]
-    def get_frag_data_location(address) : ::Proc(LibGL::UInt, ::Pointer(LibGL::Char), LibGL::Int)
-      self.get_frag_data_location.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform1ui
-    @[AlwaysInline]
-    def uniform_1ui : ::Proc(LibGL::Int, LibGL::UInt, ::Void).class
+    def uniform_1ui : ::Proc.class
       ::Proc(LibGL::Int, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glUniform1ui
+    # `Proc` type for the OpenGL function *glUniform2ui*.
     @[AlwaysInline]
-    def uniform_1ui(address) : ::Proc(LibGL::Int, LibGL::UInt, ::Void)
-      self.uniform_1ui.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform2ui
-    @[AlwaysInline]
-    def uniform_2ui : ::Proc(LibGL::Int, LibGL::UInt, LibGL::UInt, ::Void).class
+    def uniform_2ui : ::Proc.class
       ::Proc(LibGL::Int, LibGL::UInt, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glUniform2ui
+    # `Proc` type for the OpenGL function *glUniform3ui*.
     @[AlwaysInline]
-    def uniform_2ui(address) : ::Proc(LibGL::Int, LibGL::UInt, LibGL::UInt, ::Void)
-      self.uniform_2ui.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform3ui
-    @[AlwaysInline]
-    def uniform_3ui : ::Proc(LibGL::Int, LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void).class
+    def uniform_3ui : ::Proc.class
       ::Proc(LibGL::Int, LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glUniform3ui
+    # `Proc` type for the OpenGL function *glUniform4ui*.
     @[AlwaysInline]
-    def uniform_3ui(address) : ::Proc(LibGL::Int, LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void)
-      self.uniform_3ui.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform4ui
-    @[AlwaysInline]
-    def uniform_4ui : ::Proc(LibGL::Int, LibGL::UInt, LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void).class
+    def uniform_4ui : ::Proc.class
       ::Proc(LibGL::Int, LibGL::UInt, LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glUniform4ui
+    # `Proc` type for the OpenGL function *glUniform1uiv*.
     @[AlwaysInline]
-    def uniform_4ui(address) : ::Proc(LibGL::Int, LibGL::UInt, LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void)
-      self.uniform_4ui.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform1uiv
-    @[AlwaysInline]
-    def uniform_1uiv : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def uniform_1uiv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glUniform1uiv
+    # `Proc` type for the OpenGL function *glUniform2uiv*.
     @[AlwaysInline]
-    def uniform_1uiv(address) : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.uniform_1uiv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform2uiv
-    @[AlwaysInline]
-    def uniform_2uiv : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def uniform_2uiv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glUniform2uiv
+    # `Proc` type for the OpenGL function *glUniform3uiv*.
     @[AlwaysInline]
-    def uniform_2uiv(address) : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.uniform_2uiv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform3uiv
-    @[AlwaysInline]
-    def uniform_3uiv : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def uniform_3uiv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glUniform3uiv
+    # `Proc` type for the OpenGL function *glUniform4uiv*.
     @[AlwaysInline]
-    def uniform_3uiv(address) : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.uniform_3uiv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniform4uiv
-    @[AlwaysInline]
-    def uniform_4uiv : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def uniform_4uiv : ::Proc.class
       ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glUniform4uiv
+    # `Proc` type for the OpenGL function *glClearBufferiv*.
     @[AlwaysInline]
-    def uniform_4uiv(address) : ::Proc(LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.uniform_4uiv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glClearBufferiv
-    @[AlwaysInline]
-    def clear_buffer_iv : ::Proc(LibGL::Buffer, LibGL::Int, ::Pointer(LibGL::Int), ::Void).class
+    def clear_buffer_iv : ::Proc.class
       ::Proc(LibGL::Buffer, LibGL::Int, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glClearBufferiv
+    # `Proc` type for the OpenGL function *glClearBufferuiv*.
     @[AlwaysInline]
-    def clear_buffer_iv(address) : ::Proc(LibGL::Buffer, LibGL::Int, ::Pointer(LibGL::Int), ::Void)
-      self.clear_buffer_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glClearBufferuiv
-    @[AlwaysInline]
-    def clear_buffer_uiv : ::Proc(LibGL::Buffer, LibGL::Int, ::Pointer(LibGL::UInt), ::Void).class
+    def clear_buffer_uiv : ::Proc.class
       ::Proc(LibGL::Buffer, LibGL::Int, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glClearBufferuiv
+    # `Proc` type for the OpenGL function *glClearBufferfv*.
     @[AlwaysInline]
-    def clear_buffer_uiv(address) : ::Proc(LibGL::Buffer, LibGL::Int, ::Pointer(LibGL::UInt), ::Void)
-      self.clear_buffer_uiv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glClearBufferfv
-    @[AlwaysInline]
-    def clear_buffer_fv : ::Proc(LibGL::Buffer, LibGL::Int, ::Pointer(LibGL::Float), ::Void).class
+    def clear_buffer_fv : ::Proc.class
       ::Proc(LibGL::Buffer, LibGL::Int, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glClearBufferfv
+    # `Proc` type for the OpenGL function *glClearBufferfi*.
     @[AlwaysInline]
-    def clear_buffer_fv(address) : ::Proc(LibGL::Buffer, LibGL::Int, ::Pointer(LibGL::Float), ::Void)
-      self.clear_buffer_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glClearBufferfi
-    @[AlwaysInline]
-    def clear_buffer_fi : ::Proc(LibGL::Buffer, LibGL::Int, LibGL::Float, LibGL::Int, ::Void).class
+    def clear_buffer_fi : ::Proc.class
       ::Proc(LibGL::Buffer, LibGL::Int, LibGL::Float, LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glClearBufferfi
+    # `Proc` type for the OpenGL function *glGetStringi*.
     @[AlwaysInline]
-    def clear_buffer_fi(address) : ::Proc(LibGL::Buffer, LibGL::Int, LibGL::Float, LibGL::Int, ::Void)
-      self.clear_buffer_fi.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetStringi
-    @[AlwaysInline]
-    def get_string_i : ::Proc(LibGL::StringName, LibGL::UInt, ::Pointer(LibGL::UByte)).class
+    def get_string_i : ::Proc.class
       ::Proc(LibGL::StringName, LibGL::UInt, ::Pointer(LibGL::UByte))
     end
 
-    # Proc type for the function glGetStringi
+    # `Proc` type for the OpenGL function *glCopyBufferSubData*.
     @[AlwaysInline]
-    def get_string_i(address) : ::Proc(LibGL::StringName, LibGL::UInt, ::Pointer(LibGL::UByte))
-      self.get_string_i.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glCopyBufferSubData
-    @[AlwaysInline]
-    def copy_buffer_sub_data : ::Proc(LibGL::CopyBufferSubDataTarget, LibGL::CopyBufferSubDataTarget, LibGL::IntPtr, LibGL::IntPtr, LibGL::SizeIPtr, ::Void).class
+    def copy_buffer_sub_data : ::Proc.class
       ::Proc(LibGL::CopyBufferSubDataTarget, LibGL::CopyBufferSubDataTarget, LibGL::IntPtr, LibGL::IntPtr, LibGL::SizeIPtr, ::Void)
     end
 
-    # Proc type for the function glCopyBufferSubData
+    # `Proc` type for the OpenGL function *glGetUniformIndices*.
     @[AlwaysInline]
-    def copy_buffer_sub_data(address) : ::Proc(LibGL::CopyBufferSubDataTarget, LibGL::CopyBufferSubDataTarget, LibGL::IntPtr, LibGL::IntPtr, LibGL::SizeIPtr, ::Void)
-      self.copy_buffer_sub_data.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetUniformIndices
-    @[AlwaysInline]
-    def get_uniform_indices : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(::Pointer(LibGL::Char)), ::Pointer(LibGL::UInt), ::Void).class
+    def get_uniform_indices : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(::Pointer(LibGL::Char)), ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glGetUniformIndices
+    # `Proc` type for the OpenGL function *glGetActiveUniformsiv*.
     @[AlwaysInline]
-    def get_uniform_indices(address) : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(::Pointer(LibGL::Char)), ::Pointer(LibGL::UInt), ::Void)
-      self.get_uniform_indices.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetActiveUniformsiv
-    @[AlwaysInline]
-    def get_active_uniforms_iv : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::UInt), LibGL::UniformPName, ::Pointer(LibGL::Int), ::Void).class
+    def get_active_uniforms_iv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::UInt), LibGL::UniformPName, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetActiveUniformsiv
+    # `Proc` type for the OpenGL function *glGetUniformBlockIndex*.
     @[AlwaysInline]
-    def get_active_uniforms_iv(address) : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::UInt), LibGL::UniformPName, ::Pointer(LibGL::Int), ::Void)
-      self.get_active_uniforms_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetUniformBlockIndex
-    @[AlwaysInline]
-    def get_uniform_block_index : ::Proc(LibGL::UInt, ::Pointer(LibGL::Char), LibGL::UInt).class
+    def get_uniform_block_index : ::Proc.class
       ::Proc(LibGL::UInt, ::Pointer(LibGL::Char), LibGL::UInt)
     end
 
-    # Proc type for the function glGetUniformBlockIndex
+    # `Proc` type for the OpenGL function *glGetActiveUniformBlockiv*.
     @[AlwaysInline]
-    def get_uniform_block_index(address) : ::Proc(LibGL::UInt, ::Pointer(LibGL::Char), LibGL::UInt)
-      self.get_uniform_block_index.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetActiveUniformBlockiv
-    @[AlwaysInline]
-    def get_active_uniform_block_iv : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::UniformBlockPName, ::Pointer(LibGL::Int), ::Void).class
+    def get_active_uniform_block_iv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UInt, LibGL::UniformBlockPName, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetActiveUniformBlockiv
+    # `Proc` type for the OpenGL function *glGetActiveUniformBlockName*.
     @[AlwaysInline]
-    def get_active_uniform_block_iv(address) : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::UniformBlockPName, ::Pointer(LibGL::Int), ::Void)
-      self.get_active_uniform_block_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetActiveUniformBlockName
-    @[AlwaysInline]
-    def get_active_uniform_block_name : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Char), ::Void).class
+    def get_active_uniform_block_name : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Char), ::Void)
     end
 
-    # Proc type for the function glGetActiveUniformBlockName
+    # `Proc` type for the OpenGL function *glUniformBlockBinding*.
     @[AlwaysInline]
-    def get_active_uniform_block_name(address) : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Char), ::Void)
-      self.get_active_uniform_block_name.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUniformBlockBinding
-    @[AlwaysInline]
-    def uniform_block_binding : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void).class
+    def uniform_block_binding : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glUniformBlockBinding
+    # `Proc` type for the OpenGL function *glDrawArraysInstanced*.
     @[AlwaysInline]
-    def uniform_block_binding(address) : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void)
-      self.uniform_block_binding.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDrawArraysInstanced
-    @[AlwaysInline]
-    def draw_arrays_instanced : ::Proc(LibGL::PrimitiveType, LibGL::Int, LibGL::SizeI, LibGL::SizeI, ::Void).class
+    def draw_arrays_instanced : ::Proc.class
       ::Proc(LibGL::PrimitiveType, LibGL::Int, LibGL::SizeI, LibGL::SizeI, ::Void)
     end
 
-    # Proc type for the function glDrawArraysInstanced
+    # `Proc` type for the OpenGL function *glDrawElementsInstanced*.
     @[AlwaysInline]
-    def draw_arrays_instanced(address) : ::Proc(LibGL::PrimitiveType, LibGL::Int, LibGL::SizeI, LibGL::SizeI, ::Void)
-      self.draw_arrays_instanced.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDrawElementsInstanced
-    @[AlwaysInline]
-    def draw_elements_instanced : ::Proc(LibGL::PrimitiveType, LibGL::SizeI, LibGL::DrawElementsType, ::Pointer(Void), LibGL::SizeI, ::Void).class
+    def draw_elements_instanced : ::Proc.class
       ::Proc(LibGL::PrimitiveType, LibGL::SizeI, LibGL::DrawElementsType, ::Pointer(Void), LibGL::SizeI, ::Void)
     end
 
-    # Proc type for the function glDrawElementsInstanced
+    # `Proc` type for the OpenGL function *glFenceSync*.
     @[AlwaysInline]
-    def draw_elements_instanced(address) : ::Proc(LibGL::PrimitiveType, LibGL::SizeI, LibGL::DrawElementsType, ::Pointer(Void), LibGL::SizeI, ::Void)
-      self.draw_elements_instanced.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glFenceSync
-    @[AlwaysInline]
-    def fence_sync : ::Proc(LibGL::SyncCondition, LibGL::SyncBehaviorFlags, LibGL::Sync).class
+    def fence_sync : ::Proc.class
       ::Proc(LibGL::SyncCondition, LibGL::SyncBehaviorFlags, LibGL::Sync)
     end
 
-    # Proc type for the function glFenceSync
+    # `Proc` type for the OpenGL function *glIsSync*.
     @[AlwaysInline]
-    def fence_sync(address) : ::Proc(LibGL::SyncCondition, LibGL::SyncBehaviorFlags, LibGL::Sync)
-      self.fence_sync.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glIsSync
-    @[AlwaysInline]
-    def is_sync : ::Proc(LibGL::Sync, LibGL::Boolean).class
+    def is_sync : ::Proc.class
       ::Proc(LibGL::Sync, LibGL::Boolean)
     end
 
-    # Proc type for the function glIsSync
+    # `Proc` type for the OpenGL function *glDeleteSync*.
     @[AlwaysInline]
-    def is_sync(address) : ::Proc(LibGL::Sync, LibGL::Boolean)
-      self.is_sync.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDeleteSync
-    @[AlwaysInline]
-    def delete_sync : ::Proc(LibGL::Sync, ::Void).class
+    def delete_sync : ::Proc.class
       ::Proc(LibGL::Sync, ::Void)
     end
 
-    # Proc type for the function glDeleteSync
+    # `Proc` type for the OpenGL function *glClientWaitSync*.
     @[AlwaysInline]
-    def delete_sync(address) : ::Proc(LibGL::Sync, ::Void)
-      self.delete_sync.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glClientWaitSync
-    @[AlwaysInline]
-    def client_wait_sync : ::Proc(LibGL::Sync, LibGL::SyncObjectMask, LibGL::UInt64, LibGL::Enum).class
+    def client_wait_sync : ::Proc.class
       ::Proc(LibGL::Sync, LibGL::SyncObjectMask, LibGL::UInt64, LibGL::Enum)
     end
 
-    # Proc type for the function glClientWaitSync
+    # `Proc` type for the OpenGL function *glWaitSync*.
     @[AlwaysInline]
-    def client_wait_sync(address) : ::Proc(LibGL::Sync, LibGL::SyncObjectMask, LibGL::UInt64, LibGL::Enum)
-      self.client_wait_sync.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glWaitSync
-    @[AlwaysInline]
-    def wait_sync : ::Proc(LibGL::Sync, LibGL::SyncBehaviorFlags, LibGL::UInt64, ::Void).class
+    def wait_sync : ::Proc.class
       ::Proc(LibGL::Sync, LibGL::SyncBehaviorFlags, LibGL::UInt64, ::Void)
     end
 
-    # Proc type for the function glWaitSync
+    # `Proc` type for the OpenGL function *glGetInteger64v*.
     @[AlwaysInline]
-    def wait_sync(address) : ::Proc(LibGL::Sync, LibGL::SyncBehaviorFlags, LibGL::UInt64, ::Void)
-      self.wait_sync.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetInteger64v
-    @[AlwaysInline]
-    def get_integer_64v : ::Proc(LibGL::GetPName, ::Pointer(LibGL::Int64), ::Void).class
+    def get_integer_64v : ::Proc.class
       ::Proc(LibGL::GetPName, ::Pointer(LibGL::Int64), ::Void)
     end
 
-    # Proc type for the function glGetInteger64v
+    # `Proc` type for the OpenGL function *glGetSynciv*.
     @[AlwaysInline]
-    def get_integer_64v(address) : ::Proc(LibGL::GetPName, ::Pointer(LibGL::Int64), ::Void)
-      self.get_integer_64v.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetSynciv
-    @[AlwaysInline]
-    def get_sync_iv : ::Proc(LibGL::Sync, LibGL::SyncParameterName, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Int), ::Void).class
+    def get_sync_iv : ::Proc.class
       ::Proc(LibGL::Sync, LibGL::SyncParameterName, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetSynciv
+    # `Proc` type for the OpenGL function *glGetInteger64i_v*.
     @[AlwaysInline]
-    def get_sync_iv(address) : ::Proc(LibGL::Sync, LibGL::SyncParameterName, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Int), ::Void)
-      self.get_sync_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetInteger64i_v
-    @[AlwaysInline]
-    def get_integer_64i_v : ::Proc(LibGL::GetPName, LibGL::UInt, ::Pointer(LibGL::Int64), ::Void).class
+    def get_integer_64i_v : ::Proc.class
       ::Proc(LibGL::GetPName, LibGL::UInt, ::Pointer(LibGL::Int64), ::Void)
     end
 
-    # Proc type for the function glGetInteger64i_v
+    # `Proc` type for the OpenGL function *glGetBufferParameteri64v*.
     @[AlwaysInline]
-    def get_integer_64i_v(address) : ::Proc(LibGL::GetPName, LibGL::UInt, ::Pointer(LibGL::Int64), ::Void)
-      self.get_integer_64i_v.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetBufferParameteri64v
-    @[AlwaysInline]
-    def get_buffer_parameter_i64v : ::Proc(LibGL::BufferTargetARB, LibGL::BufferPNameARB, ::Pointer(LibGL::Int64), ::Void).class
+    def get_buffer_parameter_i64v : ::Proc.class
       ::Proc(LibGL::BufferTargetARB, LibGL::BufferPNameARB, ::Pointer(LibGL::Int64), ::Void)
     end
 
-    # Proc type for the function glGetBufferParameteri64v
+    # `Proc` type for the OpenGL function *glGenSamplers*.
     @[AlwaysInline]
-    def get_buffer_parameter_i64v(address) : ::Proc(LibGL::BufferTargetARB, LibGL::BufferPNameARB, ::Pointer(LibGL::Int64), ::Void)
-      self.get_buffer_parameter_i64v.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGenSamplers
-    @[AlwaysInline]
-    def gen_samplers : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def gen_samplers : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glGenSamplers
+    # `Proc` type for the OpenGL function *glDeleteSamplers*.
     @[AlwaysInline]
-    def gen_samplers(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.gen_samplers.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDeleteSamplers
-    @[AlwaysInline]
-    def delete_samplers : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def delete_samplers : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glDeleteSamplers
+    # `Proc` type for the OpenGL function *glIsSampler*.
     @[AlwaysInline]
-    def delete_samplers(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.delete_samplers.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glIsSampler
-    @[AlwaysInline]
-    def is_sampler : ::Proc(LibGL::UInt, LibGL::Boolean).class
+    def is_sampler : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Boolean)
     end
 
-    # Proc type for the function glIsSampler
+    # `Proc` type for the OpenGL function *glBindSampler*.
     @[AlwaysInline]
-    def is_sampler(address) : ::Proc(LibGL::UInt, LibGL::Boolean)
-      self.is_sampler.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBindSampler
-    @[AlwaysInline]
-    def bind_sampler : ::Proc(LibGL::UInt, LibGL::UInt, ::Void).class
+    def bind_sampler : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glBindSampler
+    # `Proc` type for the OpenGL function *glSamplerParameteri*.
     @[AlwaysInline]
-    def bind_sampler(address) : ::Proc(LibGL::UInt, LibGL::UInt, ::Void)
-      self.bind_sampler.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glSamplerParameteri
-    @[AlwaysInline]
-    def sampler_parameter_i : ::Proc(LibGL::UInt, LibGL::SamplerParameterI, LibGL::Int, ::Void).class
+    def sampler_parameter_i : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::SamplerParameterI, LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glSamplerParameteri
+    # `Proc` type for the OpenGL function *glSamplerParameteriv*.
     @[AlwaysInline]
-    def sampler_parameter_i(address) : ::Proc(LibGL::UInt, LibGL::SamplerParameterI, LibGL::Int, ::Void)
-      self.sampler_parameter_i.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glSamplerParameteriv
-    @[AlwaysInline]
-    def sampler_parameter_iv : ::Proc(LibGL::UInt, LibGL::SamplerParameterI, ::Pointer(LibGL::Int), ::Void).class
+    def sampler_parameter_iv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::SamplerParameterI, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glSamplerParameteriv
+    # `Proc` type for the OpenGL function *glSamplerParameterf*.
     @[AlwaysInline]
-    def sampler_parameter_iv(address) : ::Proc(LibGL::UInt, LibGL::SamplerParameterI, ::Pointer(LibGL::Int), ::Void)
-      self.sampler_parameter_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glSamplerParameterf
-    @[AlwaysInline]
-    def sampler_parameter_f : ::Proc(LibGL::UInt, LibGL::SamplerParameterF, LibGL::Float, ::Void).class
+    def sampler_parameter_f : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::SamplerParameterF, LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glSamplerParameterf
+    # `Proc` type for the OpenGL function *glSamplerParameterfv*.
     @[AlwaysInline]
-    def sampler_parameter_f(address) : ::Proc(LibGL::UInt, LibGL::SamplerParameterF, LibGL::Float, ::Void)
-      self.sampler_parameter_f.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glSamplerParameterfv
-    @[AlwaysInline]
-    def sampler_parameter_fv : ::Proc(LibGL::UInt, LibGL::SamplerParameterF, ::Pointer(LibGL::Float), ::Void).class
+    def sampler_parameter_fv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::SamplerParameterF, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glSamplerParameterfv
+    # `Proc` type for the OpenGL function *glGetSamplerParameteriv*.
     @[AlwaysInline]
-    def sampler_parameter_fv(address) : ::Proc(LibGL::UInt, LibGL::SamplerParameterF, ::Pointer(LibGL::Float), ::Void)
-      self.sampler_parameter_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetSamplerParameteriv
-    @[AlwaysInline]
-    def get_sampler_parameter_iv : ::Proc(LibGL::UInt, LibGL::SamplerParameterI, ::Pointer(LibGL::Int), ::Void).class
+    def get_sampler_parameter_iv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::SamplerParameterI, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetSamplerParameteriv
+    # `Proc` type for the OpenGL function *glGetSamplerParameterfv*.
     @[AlwaysInline]
-    def get_sampler_parameter_iv(address) : ::Proc(LibGL::UInt, LibGL::SamplerParameterI, ::Pointer(LibGL::Int), ::Void)
-      self.get_sampler_parameter_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetSamplerParameterfv
-    @[AlwaysInline]
-    def get_sampler_parameter_fv : ::Proc(LibGL::UInt, LibGL::SamplerParameterF, ::Pointer(LibGL::Float), ::Void).class
+    def get_sampler_parameter_fv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::SamplerParameterF, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glGetSamplerParameterfv
+    # `Proc` type for the OpenGL function *glVertexAttribDivisor*.
     @[AlwaysInline]
-    def get_sampler_parameter_fv(address) : ::Proc(LibGL::UInt, LibGL::SamplerParameterF, ::Pointer(LibGL::Float), ::Void)
-      self.get_sampler_parameter_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexAttribDivisor
-    @[AlwaysInline]
-    def vertex_attrib_divisor : ::Proc(LibGL::UInt, LibGL::UInt, ::Void).class
+    def vertex_attrib_divisor : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glVertexAttribDivisor
+    # `Proc` type for the OpenGL function *glBindTransformFeedback*.
     @[AlwaysInline]
-    def vertex_attrib_divisor(address) : ::Proc(LibGL::UInt, LibGL::UInt, ::Void)
-      self.vertex_attrib_divisor.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBindTransformFeedback
-    @[AlwaysInline]
-    def bind_transform_feedback : ::Proc(LibGL::BindTransformFeedbackTarget, LibGL::UInt, ::Void).class
+    def bind_transform_feedback : ::Proc.class
       ::Proc(LibGL::BindTransformFeedbackTarget, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glBindTransformFeedback
+    # `Proc` type for the OpenGL function *glDeleteTransformFeedbacks*.
     @[AlwaysInline]
-    def bind_transform_feedback(address) : ::Proc(LibGL::BindTransformFeedbackTarget, LibGL::UInt, ::Void)
-      self.bind_transform_feedback.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDeleteTransformFeedbacks
-    @[AlwaysInline]
-    def delete_transform_feedbacks : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def delete_transform_feedbacks : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glDeleteTransformFeedbacks
+    # `Proc` type for the OpenGL function *glGenTransformFeedbacks*.
     @[AlwaysInline]
-    def delete_transform_feedbacks(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.delete_transform_feedbacks.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGenTransformFeedbacks
-    @[AlwaysInline]
-    def gen_transform_feedbacks : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def gen_transform_feedbacks : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glGenTransformFeedbacks
+    # `Proc` type for the OpenGL function *glIsTransformFeedback*.
     @[AlwaysInline]
-    def gen_transform_feedbacks(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.gen_transform_feedbacks.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glIsTransformFeedback
-    @[AlwaysInline]
-    def is_transform_feedback : ::Proc(LibGL::UInt, LibGL::Boolean).class
+    def is_transform_feedback : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Boolean)
     end
 
-    # Proc type for the function glIsTransformFeedback
+    # `Proc` type for the OpenGL function *glPauseTransformFeedback*.
     @[AlwaysInline]
-    def is_transform_feedback(address) : ::Proc(LibGL::UInt, LibGL::Boolean)
-      self.is_transform_feedback.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glPauseTransformFeedback
-    @[AlwaysInline]
-    def pause_transform_feedback : ::Proc(::Void).class
+    def pause_transform_feedback : ::Proc.class
       ::Proc(::Void)
     end
 
-    # Proc type for the function glPauseTransformFeedback
+    # `Proc` type for the OpenGL function *glResumeTransformFeedback*.
     @[AlwaysInline]
-    def pause_transform_feedback(address) : ::Proc(::Void)
-      self.pause_transform_feedback.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glResumeTransformFeedback
-    @[AlwaysInline]
-    def resume_transform_feedback : ::Proc(::Void).class
+    def resume_transform_feedback : ::Proc.class
       ::Proc(::Void)
     end
 
-    # Proc type for the function glResumeTransformFeedback
+    # `Proc` type for the OpenGL function *glGetProgramBinary*.
     @[AlwaysInline]
-    def resume_transform_feedback(address) : ::Proc(::Void)
-      self.resume_transform_feedback.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetProgramBinary
-    @[AlwaysInline]
-    def get_program_binary : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Enum), ::Pointer(Void), ::Void).class
+    def get_program_binary : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Enum), ::Pointer(Void), ::Void)
     end
 
-    # Proc type for the function glGetProgramBinary
+    # `Proc` type for the OpenGL function *glProgramBinary*.
     @[AlwaysInline]
-    def get_program_binary(address) : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Enum), ::Pointer(Void), ::Void)
-      self.get_program_binary.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramBinary
-    @[AlwaysInline]
-    def program_binary : ::Proc(LibGL::UInt, LibGL::Enum, ::Pointer(Void), LibGL::SizeI, ::Void).class
+    def program_binary : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Enum, ::Pointer(Void), LibGL::SizeI, ::Void)
     end
 
-    # Proc type for the function glProgramBinary
+    # `Proc` type for the OpenGL function *glProgramParameteri*.
     @[AlwaysInline]
-    def program_binary(address) : ::Proc(LibGL::UInt, LibGL::Enum, ::Pointer(Void), LibGL::SizeI, ::Void)
-      self.program_binary.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramParameteri
-    @[AlwaysInline]
-    def program_parameter_i : ::Proc(LibGL::UInt, LibGL::ProgramParameterPName, LibGL::Int, ::Void).class
+    def program_parameter_i : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::ProgramParameterPName, LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glProgramParameteri
+    # `Proc` type for the OpenGL function *glInvalidateFramebuffer*.
     @[AlwaysInline]
-    def program_parameter_i(address) : ::Proc(LibGL::UInt, LibGL::ProgramParameterPName, LibGL::Int, ::Void)
-      self.program_parameter_i.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glInvalidateFramebuffer
-    @[AlwaysInline]
-    def invalidate_framebuffer : ::Proc(LibGL::FramebufferTarget, LibGL::SizeI, ::Pointer(LibGL::InvalidateFramebufferAttachment), ::Void).class
+    def invalidate_framebuffer : ::Proc.class
       ::Proc(LibGL::FramebufferTarget, LibGL::SizeI, ::Pointer(LibGL::InvalidateFramebufferAttachment), ::Void)
     end
 
-    # Proc type for the function glInvalidateFramebuffer
+    # `Proc` type for the OpenGL function *glInvalidateSubFramebuffer*.
     @[AlwaysInline]
-    def invalidate_framebuffer(address) : ::Proc(LibGL::FramebufferTarget, LibGL::SizeI, ::Pointer(LibGL::InvalidateFramebufferAttachment), ::Void)
-      self.invalidate_framebuffer.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glInvalidateSubFramebuffer
-    @[AlwaysInline]
-    def invalidate_sub_framebuffer : ::Proc(LibGL::FramebufferTarget, LibGL::SizeI, ::Pointer(LibGL::InvalidateFramebufferAttachment), LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, ::Void).class
+    def invalidate_sub_framebuffer : ::Proc.class
       ::Proc(LibGL::FramebufferTarget, LibGL::SizeI, ::Pointer(LibGL::InvalidateFramebufferAttachment), LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, ::Void)
     end
 
-    # Proc type for the function glInvalidateSubFramebuffer
+    # `Proc` type for the OpenGL function *glTexStorage2D*.
     @[AlwaysInline]
-    def invalidate_sub_framebuffer(address) : ::Proc(LibGL::FramebufferTarget, LibGL::SizeI, ::Pointer(LibGL::InvalidateFramebufferAttachment), LibGL::Int, LibGL::Int, LibGL::SizeI, LibGL::SizeI, ::Void)
-      self.invalidate_sub_framebuffer.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glTexStorage2D
-    @[AlwaysInline]
-    def tex_storage_2d : ::Proc(LibGL::TextureTarget, LibGL::SizeI, LibGL::SizedInternalFormat, LibGL::SizeI, LibGL::SizeI, ::Void).class
+    def tex_storage_2d : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::SizeI, LibGL::SizedInternalFormat, LibGL::SizeI, LibGL::SizeI, ::Void)
     end
 
-    # Proc type for the function glTexStorage2D
+    # `Proc` type for the OpenGL function *glTexStorage3D*.
     @[AlwaysInline]
-    def tex_storage_2d(address) : ::Proc(LibGL::TextureTarget, LibGL::SizeI, LibGL::SizedInternalFormat, LibGL::SizeI, LibGL::SizeI, ::Void)
-      self.tex_storage_2d.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glTexStorage3D
-    @[AlwaysInline]
-    def tex_storage_3d : ::Proc(LibGL::TextureTarget, LibGL::SizeI, LibGL::SizedInternalFormat, LibGL::SizeI, LibGL::SizeI, LibGL::SizeI, ::Void).class
+    def tex_storage_3d : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::SizeI, LibGL::SizedInternalFormat, LibGL::SizeI, LibGL::SizeI, LibGL::SizeI, ::Void)
     end
 
-    # Proc type for the function glTexStorage3D
+    # `Proc` type for the OpenGL function *glGetInternalformativ*.
     @[AlwaysInline]
-    def tex_storage_3d(address) : ::Proc(LibGL::TextureTarget, LibGL::SizeI, LibGL::SizedInternalFormat, LibGL::SizeI, LibGL::SizeI, LibGL::SizeI, ::Void)
-      self.tex_storage_3d.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetInternalformativ
-    @[AlwaysInline]
-    def get_internalformat_iv : ::Proc(LibGL::TextureTarget, LibGL::InternalFormat, LibGL::InternalFormatPName, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void).class
+    def get_internalformat_iv : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::InternalFormat, LibGL::InternalFormatPName, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetInternalformativ
+    # `Proc` type for the OpenGL function *glDispatchCompute*.
     @[AlwaysInline]
-    def get_internalformat_iv(address) : ::Proc(LibGL::TextureTarget, LibGL::InternalFormat, LibGL::InternalFormatPName, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void)
-      self.get_internalformat_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDispatchCompute
-    @[AlwaysInline]
-    def dispatch_compute : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void).class
+    def dispatch_compute : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glDispatchCompute
+    # `Proc` type for the OpenGL function *glDispatchComputeIndirect*.
     @[AlwaysInline]
-    def dispatch_compute(address) : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void)
-      self.dispatch_compute.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDispatchComputeIndirect
-    @[AlwaysInline]
-    def dispatch_compute_indirect : ::Proc(LibGL::IntPtr, ::Void).class
+    def dispatch_compute_indirect : ::Proc.class
       ::Proc(LibGL::IntPtr, ::Void)
     end
 
-    # Proc type for the function glDispatchComputeIndirect
+    # `Proc` type for the OpenGL function *glDrawArraysIndirect*.
     @[AlwaysInline]
-    def dispatch_compute_indirect(address) : ::Proc(LibGL::IntPtr, ::Void)
-      self.dispatch_compute_indirect.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDrawArraysIndirect
-    @[AlwaysInline]
-    def draw_arrays_indirect : ::Proc(LibGL::PrimitiveType, ::Pointer(Void), ::Void).class
+    def draw_arrays_indirect : ::Proc.class
       ::Proc(LibGL::PrimitiveType, ::Pointer(Void), ::Void)
     end
 
-    # Proc type for the function glDrawArraysIndirect
+    # `Proc` type for the OpenGL function *glDrawElementsIndirect*.
     @[AlwaysInline]
-    def draw_arrays_indirect(address) : ::Proc(LibGL::PrimitiveType, ::Pointer(Void), ::Void)
-      self.draw_arrays_indirect.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDrawElementsIndirect
-    @[AlwaysInline]
-    def draw_elements_indirect : ::Proc(LibGL::PrimitiveType, LibGL::DrawElementsType, ::Pointer(Void), ::Void).class
+    def draw_elements_indirect : ::Proc.class
       ::Proc(LibGL::PrimitiveType, LibGL::DrawElementsType, ::Pointer(Void), ::Void)
     end
 
-    # Proc type for the function glDrawElementsIndirect
+    # `Proc` type for the OpenGL function *glFramebufferParameteri*.
     @[AlwaysInline]
-    def draw_elements_indirect(address) : ::Proc(LibGL::PrimitiveType, LibGL::DrawElementsType, ::Pointer(Void), ::Void)
-      self.draw_elements_indirect.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glFramebufferParameteri
-    @[AlwaysInline]
-    def framebuffer_parameter_i : ::Proc(LibGL::FramebufferTarget, LibGL::Enum, LibGL::Int, ::Void).class
+    def framebuffer_parameter_i : ::Proc.class
       ::Proc(LibGL::FramebufferTarget, LibGL::Enum, LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glFramebufferParameteri
+    # `Proc` type for the OpenGL function *glGetFramebufferParameteriv*.
     @[AlwaysInline]
-    def framebuffer_parameter_i(address) : ::Proc(LibGL::FramebufferTarget, LibGL::Enum, LibGL::Int, ::Void)
-      self.framebuffer_parameter_i.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetFramebufferParameteriv
-    @[AlwaysInline]
-    def get_framebuffer_parameter_iv : ::Proc(LibGL::FramebufferTarget, LibGL::FramebufferAttachmentParameterName, ::Pointer(LibGL::Int), ::Void).class
+    def get_framebuffer_parameter_iv : ::Proc.class
       ::Proc(LibGL::FramebufferTarget, LibGL::FramebufferAttachmentParameterName, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetFramebufferParameteriv
+    # `Proc` type for the OpenGL function *glGetProgramInterfaceiv*.
     @[AlwaysInline]
-    def get_framebuffer_parameter_iv(address) : ::Proc(LibGL::FramebufferTarget, LibGL::FramebufferAttachmentParameterName, ::Pointer(LibGL::Int), ::Void)
-      self.get_framebuffer_parameter_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetProgramInterfaceiv
-    @[AlwaysInline]
-    def get_program_interface_iv : ::Proc(LibGL::UInt, LibGL::ProgramInterface, LibGL::Enum, ::Pointer(LibGL::Int), ::Void).class
+    def get_program_interface_iv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::ProgramInterface, LibGL::Enum, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetProgramInterfaceiv
+    # `Proc` type for the OpenGL function *glGetProgramResourceIndex*.
     @[AlwaysInline]
-    def get_program_interface_iv(address) : ::Proc(LibGL::UInt, LibGL::ProgramInterface, LibGL::Enum, ::Pointer(LibGL::Int), ::Void)
-      self.get_program_interface_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetProgramResourceIndex
-    @[AlwaysInline]
-    def get_program_resource_index : ::Proc(LibGL::UInt, LibGL::ProgramInterface, ::Pointer(LibGL::Char), LibGL::UInt).class
+    def get_program_resource_index : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::ProgramInterface, ::Pointer(LibGL::Char), LibGL::UInt)
     end
 
-    # Proc type for the function glGetProgramResourceIndex
+    # `Proc` type for the OpenGL function *glGetProgramResourceName*.
     @[AlwaysInline]
-    def get_program_resource_index(address) : ::Proc(LibGL::UInt, LibGL::ProgramInterface, ::Pointer(LibGL::Char), LibGL::UInt)
-      self.get_program_resource_index.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetProgramResourceName
-    @[AlwaysInline]
-    def get_program_resource_name : ::Proc(LibGL::UInt, LibGL::ProgramInterface, LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Char), ::Void).class
+    def get_program_resource_name : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::ProgramInterface, LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Char), ::Void)
     end
 
-    # Proc type for the function glGetProgramResourceName
+    # `Proc` type for the OpenGL function *glGetProgramResourceiv*.
     @[AlwaysInline]
-    def get_program_resource_name(address) : ::Proc(LibGL::UInt, LibGL::ProgramInterface, LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Char), ::Void)
-      self.get_program_resource_name.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetProgramResourceiv
-    @[AlwaysInline]
-    def get_program_resource_iv : ::Proc(LibGL::UInt, LibGL::ProgramInterface, LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::Enum), LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Int), ::Void).class
+    def get_program_resource_iv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::ProgramInterface, LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::Enum), LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetProgramResourceiv
+    # `Proc` type for the OpenGL function *glGetProgramResourceLocation*.
     @[AlwaysInline]
-    def get_program_resource_iv(address) : ::Proc(LibGL::UInt, LibGL::ProgramInterface, LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::Enum), LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Int), ::Void)
-      self.get_program_resource_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetProgramResourceLocation
-    @[AlwaysInline]
-    def get_program_resource_location : ::Proc(LibGL::UInt, LibGL::ProgramInterface, ::Pointer(LibGL::Char), LibGL::Int).class
+    def get_program_resource_location : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::ProgramInterface, ::Pointer(LibGL::Char), LibGL::Int)
     end
 
-    # Proc type for the function glGetProgramResourceLocation
+    # `Proc` type for the OpenGL function *glUseProgramStages*.
     @[AlwaysInline]
-    def get_program_resource_location(address) : ::Proc(LibGL::UInt, LibGL::ProgramInterface, ::Pointer(LibGL::Char), LibGL::Int)
-      self.get_program_resource_location.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glUseProgramStages
-    @[AlwaysInline]
-    def use_program_stages : ::Proc(LibGL::UInt, LibGL::UseProgramStageMask, LibGL::UInt, ::Void).class
+    def use_program_stages : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UseProgramStageMask, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glUseProgramStages
+    # `Proc` type for the OpenGL function *glActiveShaderProgram*.
     @[AlwaysInline]
-    def use_program_stages(address) : ::Proc(LibGL::UInt, LibGL::UseProgramStageMask, LibGL::UInt, ::Void)
-      self.use_program_stages.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glActiveShaderProgram
-    @[AlwaysInline]
-    def active_shader_program : ::Proc(LibGL::UInt, LibGL::UInt, ::Void).class
+    def active_shader_program : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glActiveShaderProgram
+    # `Proc` type for the OpenGL function *glCreateShaderProgramv*.
     @[AlwaysInline]
-    def active_shader_program(address) : ::Proc(LibGL::UInt, LibGL::UInt, ::Void)
-      self.active_shader_program.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glCreateShaderProgramv
-    @[AlwaysInline]
-    def create_shader_program_v : ::Proc(LibGL::ShaderType, LibGL::SizeI, ::Pointer(::Pointer(LibGL::Char)), LibGL::UInt).class
+    def create_shader_program_v : ::Proc.class
       ::Proc(LibGL::ShaderType, LibGL::SizeI, ::Pointer(::Pointer(LibGL::Char)), LibGL::UInt)
     end
 
-    # Proc type for the function glCreateShaderProgramv
+    # `Proc` type for the OpenGL function *glBindProgramPipeline*.
     @[AlwaysInline]
-    def create_shader_program_v(address) : ::Proc(LibGL::ShaderType, LibGL::SizeI, ::Pointer(::Pointer(LibGL::Char)), LibGL::UInt)
-      self.create_shader_program_v.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBindProgramPipeline
-    @[AlwaysInline]
-    def bind_program_pipeline : ::Proc(LibGL::UInt, ::Void).class
+    def bind_program_pipeline : ::Proc.class
       ::Proc(LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glBindProgramPipeline
+    # `Proc` type for the OpenGL function *glDeleteProgramPipelines*.
     @[AlwaysInline]
-    def bind_program_pipeline(address) : ::Proc(LibGL::UInt, ::Void)
-      self.bind_program_pipeline.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glDeleteProgramPipelines
-    @[AlwaysInline]
-    def delete_program_pipelines : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def delete_program_pipelines : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glDeleteProgramPipelines
+    # `Proc` type for the OpenGL function *glGenProgramPipelines*.
     @[AlwaysInline]
-    def delete_program_pipelines(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.delete_program_pipelines.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGenProgramPipelines
-    @[AlwaysInline]
-    def gen_program_pipelines : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def gen_program_pipelines : ::Proc.class
       ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glGenProgramPipelines
+    # `Proc` type for the OpenGL function *glIsProgramPipeline*.
     @[AlwaysInline]
-    def gen_program_pipelines(address) : ::Proc(LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.gen_program_pipelines.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glIsProgramPipeline
-    @[AlwaysInline]
-    def is_program_pipeline : ::Proc(LibGL::UInt, LibGL::Boolean).class
+    def is_program_pipeline : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Boolean)
     end
 
-    # Proc type for the function glIsProgramPipeline
+    # `Proc` type for the OpenGL function *glGetProgramPipelineiv*.
     @[AlwaysInline]
-    def is_program_pipeline(address) : ::Proc(LibGL::UInt, LibGL::Boolean)
-      self.is_program_pipeline.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetProgramPipelineiv
-    @[AlwaysInline]
-    def get_program_pipeline_iv : ::Proc(LibGL::UInt, LibGL::PipelineParameterName, ::Pointer(LibGL::Int), ::Void).class
+    def get_program_pipeline_iv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::PipelineParameterName, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetProgramPipelineiv
+    # `Proc` type for the OpenGL function *glProgramUniform1i*.
     @[AlwaysInline]
-    def get_program_pipeline_iv(address) : ::Proc(LibGL::UInt, LibGL::PipelineParameterName, ::Pointer(LibGL::Int), ::Void)
-      self.get_program_pipeline_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform1i
-    @[AlwaysInline]
-    def program_uniform_1i : ::Proc(LibGL::UInt, LibGL::Int, LibGL::Int, ::Void).class
+    def program_uniform_1i : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glProgramUniform1i
+    # `Proc` type for the OpenGL function *glProgramUniform2i*.
     @[AlwaysInline]
-    def program_uniform_1i(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::Int, ::Void)
-      self.program_uniform_1i.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform2i
-    @[AlwaysInline]
-    def program_uniform_2i : ::Proc(LibGL::UInt, LibGL::Int, LibGL::Int, LibGL::Int, ::Void).class
+    def program_uniform_2i : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::Int, LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glProgramUniform2i
+    # `Proc` type for the OpenGL function *glProgramUniform3i*.
     @[AlwaysInline]
-    def program_uniform_2i(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::Int, LibGL::Int, ::Void)
-      self.program_uniform_2i.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform3i
-    @[AlwaysInline]
-    def program_uniform_3i : ::Proc(LibGL::UInt, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, ::Void).class
+    def program_uniform_3i : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glProgramUniform3i
+    # `Proc` type for the OpenGL function *glProgramUniform4i*.
     @[AlwaysInline]
-    def program_uniform_3i(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, ::Void)
-      self.program_uniform_3i.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform4i
-    @[AlwaysInline]
-    def program_uniform_4i : ::Proc(LibGL::UInt, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, ::Void).class
+    def program_uniform_4i : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, ::Void)
     end
 
-    # Proc type for the function glProgramUniform4i
+    # `Proc` type for the OpenGL function *glProgramUniform1ui*.
     @[AlwaysInline]
-    def program_uniform_4i(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, LibGL::Int, ::Void)
-      self.program_uniform_4i.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform1ui
-    @[AlwaysInline]
-    def program_uniform_1ui : ::Proc(LibGL::UInt, LibGL::Int, LibGL::UInt, ::Void).class
+    def program_uniform_1ui : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glProgramUniform1ui
+    # `Proc` type for the OpenGL function *glProgramUniform2ui*.
     @[AlwaysInline]
-    def program_uniform_1ui(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::UInt, ::Void)
-      self.program_uniform_1ui.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform2ui
-    @[AlwaysInline]
-    def program_uniform_2ui : ::Proc(LibGL::UInt, LibGL::Int, LibGL::UInt, LibGL::UInt, ::Void).class
+    def program_uniform_2ui : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::UInt, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glProgramUniform2ui
+    # `Proc` type for the OpenGL function *glProgramUniform3ui*.
     @[AlwaysInline]
-    def program_uniform_2ui(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::UInt, LibGL::UInt, ::Void)
-      self.program_uniform_2ui.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform3ui
-    @[AlwaysInline]
-    def program_uniform_3ui : ::Proc(LibGL::UInt, LibGL::Int, LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void).class
+    def program_uniform_3ui : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glProgramUniform3ui
+    # `Proc` type for the OpenGL function *glProgramUniform4ui*.
     @[AlwaysInline]
-    def program_uniform_3ui(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void)
-      self.program_uniform_3ui.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform4ui
-    @[AlwaysInline]
-    def program_uniform_4ui : ::Proc(LibGL::UInt, LibGL::Int, LibGL::UInt, LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void).class
+    def program_uniform_4ui : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::UInt, LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glProgramUniform4ui
+    # `Proc` type for the OpenGL function *glProgramUniform1f*.
     @[AlwaysInline]
-    def program_uniform_4ui(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::UInt, LibGL::UInt, LibGL::UInt, LibGL::UInt, ::Void)
-      self.program_uniform_4ui.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform1f
-    @[AlwaysInline]
-    def program_uniform_1f : ::Proc(LibGL::UInt, LibGL::Int, LibGL::Float, ::Void).class
+    def program_uniform_1f : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glProgramUniform1f
+    # `Proc` type for the OpenGL function *glProgramUniform2f*.
     @[AlwaysInline]
-    def program_uniform_1f(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::Float, ::Void)
-      self.program_uniform_1f.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform2f
-    @[AlwaysInline]
-    def program_uniform_2f : ::Proc(LibGL::UInt, LibGL::Int, LibGL::Float, LibGL::Float, ::Void).class
+    def program_uniform_2f : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::Float, LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glProgramUniform2f
+    # `Proc` type for the OpenGL function *glProgramUniform3f*.
     @[AlwaysInline]
-    def program_uniform_2f(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::Float, LibGL::Float, ::Void)
-      self.program_uniform_2f.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform3f
-    @[AlwaysInline]
-    def program_uniform_3f : ::Proc(LibGL::UInt, LibGL::Int, LibGL::Float, LibGL::Float, LibGL::Float, ::Void).class
+    def program_uniform_3f : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::Float, LibGL::Float, LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glProgramUniform3f
+    # `Proc` type for the OpenGL function *glProgramUniform4f*.
     @[AlwaysInline]
-    def program_uniform_3f(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::Float, LibGL::Float, LibGL::Float, ::Void)
-      self.program_uniform_3f.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform4f
-    @[AlwaysInline]
-    def program_uniform_4f : ::Proc(LibGL::UInt, LibGL::Int, LibGL::Float, LibGL::Float, LibGL::Float, LibGL::Float, ::Void).class
+    def program_uniform_4f : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::Float, LibGL::Float, LibGL::Float, LibGL::Float, ::Void)
     end
 
-    # Proc type for the function glProgramUniform4f
+    # `Proc` type for the OpenGL function *glProgramUniform1iv*.
     @[AlwaysInline]
-    def program_uniform_4f(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::Float, LibGL::Float, LibGL::Float, LibGL::Float, ::Void)
-      self.program_uniform_4f.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform1iv
-    @[AlwaysInline]
-    def program_uniform_1iv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void).class
+    def program_uniform_1iv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glProgramUniform1iv
+    # `Proc` type for the OpenGL function *glProgramUniform2iv*.
     @[AlwaysInline]
-    def program_uniform_1iv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void)
-      self.program_uniform_1iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform2iv
-    @[AlwaysInline]
-    def program_uniform_2iv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void).class
+    def program_uniform_2iv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glProgramUniform2iv
+    # `Proc` type for the OpenGL function *glProgramUniform3iv*.
     @[AlwaysInline]
-    def program_uniform_2iv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void)
-      self.program_uniform_2iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform3iv
-    @[AlwaysInline]
-    def program_uniform_3iv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void).class
+    def program_uniform_3iv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glProgramUniform3iv
+    # `Proc` type for the OpenGL function *glProgramUniform4iv*.
     @[AlwaysInline]
-    def program_uniform_3iv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void)
-      self.program_uniform_3iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform4iv
-    @[AlwaysInline]
-    def program_uniform_4iv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void).class
+    def program_uniform_4iv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glProgramUniform4iv
+    # `Proc` type for the OpenGL function *glProgramUniform1uiv*.
     @[AlwaysInline]
-    def program_uniform_4iv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Int), ::Void)
-      self.program_uniform_4iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform1uiv
-    @[AlwaysInline]
-    def program_uniform_1uiv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def program_uniform_1uiv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glProgramUniform1uiv
+    # `Proc` type for the OpenGL function *glProgramUniform2uiv*.
     @[AlwaysInline]
-    def program_uniform_1uiv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.program_uniform_1uiv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform2uiv
-    @[AlwaysInline]
-    def program_uniform_2uiv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def program_uniform_2uiv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glProgramUniform2uiv
+    # `Proc` type for the OpenGL function *glProgramUniform3uiv*.
     @[AlwaysInline]
-    def program_uniform_2uiv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.program_uniform_2uiv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform3uiv
-    @[AlwaysInline]
-    def program_uniform_3uiv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def program_uniform_3uiv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glProgramUniform3uiv
+    # `Proc` type for the OpenGL function *glProgramUniform4uiv*.
     @[AlwaysInline]
-    def program_uniform_3uiv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.program_uniform_3uiv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform4uiv
-    @[AlwaysInline]
-    def program_uniform_4uiv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void).class
+    def program_uniform_4uiv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
     end
 
-    # Proc type for the function glProgramUniform4uiv
+    # `Proc` type for the OpenGL function *glProgramUniform1fv*.
     @[AlwaysInline]
-    def program_uniform_4uiv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::UInt), ::Void)
-      self.program_uniform_4uiv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform1fv
-    @[AlwaysInline]
-    def program_uniform_1fv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void).class
+    def program_uniform_1fv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glProgramUniform1fv
+    # `Proc` type for the OpenGL function *glProgramUniform2fv*.
     @[AlwaysInline]
-    def program_uniform_1fv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void)
-      self.program_uniform_1fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform2fv
-    @[AlwaysInline]
-    def program_uniform_2fv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void).class
+    def program_uniform_2fv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glProgramUniform2fv
+    # `Proc` type for the OpenGL function *glProgramUniform3fv*.
     @[AlwaysInline]
-    def program_uniform_2fv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void)
-      self.program_uniform_2fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform3fv
-    @[AlwaysInline]
-    def program_uniform_3fv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void).class
+    def program_uniform_3fv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glProgramUniform3fv
+    # `Proc` type for the OpenGL function *glProgramUniform4fv*.
     @[AlwaysInline]
-    def program_uniform_3fv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void)
-      self.program_uniform_3fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniform4fv
-    @[AlwaysInline]
-    def program_uniform_4fv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void).class
+    def program_uniform_4fv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glProgramUniform4fv
+    # `Proc` type for the OpenGL function *glProgramUniformMatrix2fv*.
     @[AlwaysInline]
-    def program_uniform_4fv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, ::Pointer(LibGL::Float), ::Void)
-      self.program_uniform_4fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniformMatrix2fv
-    @[AlwaysInline]
-    def program_uniform_matrix2_fv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void).class
+    def program_uniform_matrix2_fv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glProgramUniformMatrix2fv
+    # `Proc` type for the OpenGL function *glProgramUniformMatrix3fv*.
     @[AlwaysInline]
-    def program_uniform_matrix2_fv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
-      self.program_uniform_matrix2_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniformMatrix3fv
-    @[AlwaysInline]
-    def program_uniform_matrix3_fv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void).class
+    def program_uniform_matrix3_fv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glProgramUniformMatrix3fv
+    # `Proc` type for the OpenGL function *glProgramUniformMatrix4fv*.
     @[AlwaysInline]
-    def program_uniform_matrix3_fv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
-      self.program_uniform_matrix3_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniformMatrix4fv
-    @[AlwaysInline]
-    def program_uniform_matrix4_fv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void).class
+    def program_uniform_matrix4_fv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glProgramUniformMatrix4fv
+    # `Proc` type for the OpenGL function *glProgramUniformMatrix2x3fv*.
     @[AlwaysInline]
-    def program_uniform_matrix4_fv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
-      self.program_uniform_matrix4_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniformMatrix2x3fv
-    @[AlwaysInline]
-    def program_uniform_matrix2x3_fv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void).class
+    def program_uniform_matrix2x3_fv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glProgramUniformMatrix2x3fv
+    # `Proc` type for the OpenGL function *glProgramUniformMatrix3x2fv*.
     @[AlwaysInline]
-    def program_uniform_matrix2x3_fv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
-      self.program_uniform_matrix2x3_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniformMatrix3x2fv
-    @[AlwaysInline]
-    def program_uniform_matrix3x2_fv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void).class
+    def program_uniform_matrix3x2_fv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glProgramUniformMatrix3x2fv
+    # `Proc` type for the OpenGL function *glProgramUniformMatrix2x4fv*.
     @[AlwaysInline]
-    def program_uniform_matrix3x2_fv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
-      self.program_uniform_matrix3x2_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniformMatrix2x4fv
-    @[AlwaysInline]
-    def program_uniform_matrix2x4_fv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void).class
+    def program_uniform_matrix2x4_fv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glProgramUniformMatrix2x4fv
+    # `Proc` type for the OpenGL function *glProgramUniformMatrix4x2fv*.
     @[AlwaysInline]
-    def program_uniform_matrix2x4_fv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
-      self.program_uniform_matrix2x4_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniformMatrix4x2fv
-    @[AlwaysInline]
-    def program_uniform_matrix4x2_fv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void).class
+    def program_uniform_matrix4x2_fv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glProgramUniformMatrix4x2fv
+    # `Proc` type for the OpenGL function *glProgramUniformMatrix3x4fv*.
     @[AlwaysInline]
-    def program_uniform_matrix4x2_fv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
-      self.program_uniform_matrix4x2_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniformMatrix3x4fv
-    @[AlwaysInline]
-    def program_uniform_matrix3x4_fv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void).class
+    def program_uniform_matrix3x4_fv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glProgramUniformMatrix3x4fv
+    # `Proc` type for the OpenGL function *glProgramUniformMatrix4x3fv*.
     @[AlwaysInline]
-    def program_uniform_matrix3x4_fv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
-      self.program_uniform_matrix3x4_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glProgramUniformMatrix4x3fv
-    @[AlwaysInline]
-    def program_uniform_matrix4x3_fv : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void).class
+    def program_uniform_matrix4x3_fv : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glProgramUniformMatrix4x3fv
+    # `Proc` type for the OpenGL function *glValidateProgramPipeline*.
     @[AlwaysInline]
-    def program_uniform_matrix4x3_fv(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::SizeI, LibGL::Boolean, ::Pointer(LibGL::Float), ::Void)
-      self.program_uniform_matrix4x3_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glValidateProgramPipeline
-    @[AlwaysInline]
-    def validate_program_pipeline : ::Proc(LibGL::UInt, ::Void).class
+    def validate_program_pipeline : ::Proc.class
       ::Proc(LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glValidateProgramPipeline
+    # `Proc` type for the OpenGL function *glGetProgramPipelineInfoLog*.
     @[AlwaysInline]
-    def validate_program_pipeline(address) : ::Proc(LibGL::UInt, ::Void)
-      self.validate_program_pipeline.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetProgramPipelineInfoLog
-    @[AlwaysInline]
-    def get_program_pipeline_info_log : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Char), ::Void).class
+    def get_program_pipeline_info_log : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Char), ::Void)
     end
 
-    # Proc type for the function glGetProgramPipelineInfoLog
+    # `Proc` type for the OpenGL function *glBindImageTexture*.
     @[AlwaysInline]
-    def get_program_pipeline_info_log(address) : ::Proc(LibGL::UInt, LibGL::SizeI, ::Pointer(LibGL::SizeI), ::Pointer(LibGL::Char), ::Void)
-      self.get_program_pipeline_info_log.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBindImageTexture
-    @[AlwaysInline]
-    def bind_image_texture : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::Int, LibGL::Boolean, LibGL::Int, LibGL::Enum, LibGL::InternalFormat, ::Void).class
+    def bind_image_texture : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UInt, LibGL::Int, LibGL::Boolean, LibGL::Int, LibGL::Enum, LibGL::InternalFormat, ::Void)
     end
 
-    # Proc type for the function glBindImageTexture
+    # `Proc` type for the OpenGL function *glGetBooleani_v*.
     @[AlwaysInline]
-    def bind_image_texture(address) : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::Int, LibGL::Boolean, LibGL::Int, LibGL::Enum, LibGL::InternalFormat, ::Void)
-      self.bind_image_texture.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetBooleani_v
-    @[AlwaysInline]
-    def get_boolean_i_v : ::Proc(LibGL::BufferTargetARB, LibGL::UInt, ::Pointer(LibGL::Boolean), ::Void).class
+    def get_boolean_i_v : ::Proc.class
       ::Proc(LibGL::BufferTargetARB, LibGL::UInt, ::Pointer(LibGL::Boolean), ::Void)
     end
 
-    # Proc type for the function glGetBooleani_v
+    # `Proc` type for the OpenGL function *glMemoryBarrier*.
     @[AlwaysInline]
-    def get_boolean_i_v(address) : ::Proc(LibGL::BufferTargetARB, LibGL::UInt, ::Pointer(LibGL::Boolean), ::Void)
-      self.get_boolean_i_v.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glMemoryBarrier
-    @[AlwaysInline]
-    def memory_barrier : ::Proc(LibGL::Bitfield, ::Void).class
+    def memory_barrier : ::Proc.class
       ::Proc(LibGL::Bitfield, ::Void)
     end
 
-    # Proc type for the function glMemoryBarrier
+    # `Proc` type for the OpenGL function *glMemoryBarrierByRegion*.
     @[AlwaysInline]
-    def memory_barrier(address) : ::Proc(LibGL::Bitfield, ::Void)
-      self.memory_barrier.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glMemoryBarrierByRegion
-    @[AlwaysInline]
-    def memory_barrier_by_region : ::Proc(LibGL::Bitfield, ::Void).class
+    def memory_barrier_by_region : ::Proc.class
       ::Proc(LibGL::Bitfield, ::Void)
     end
 
-    # Proc type for the function glMemoryBarrierByRegion
+    # `Proc` type for the OpenGL function *glTexStorage2DMultisample*.
     @[AlwaysInline]
-    def memory_barrier_by_region(address) : ::Proc(LibGL::Bitfield, ::Void)
-      self.memory_barrier_by_region.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glTexStorage2DMultisample
-    @[AlwaysInline]
-    def tex_storage_2d_multisample : ::Proc(LibGL::TextureTarget, LibGL::SizeI, LibGL::SizedInternalFormat, LibGL::SizeI, LibGL::SizeI, LibGL::Boolean, ::Void).class
+    def tex_storage_2d_multisample : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::SizeI, LibGL::SizedInternalFormat, LibGL::SizeI, LibGL::SizeI, LibGL::Boolean, ::Void)
     end
 
-    # Proc type for the function glTexStorage2DMultisample
+    # `Proc` type for the OpenGL function *glGetMultisamplefv*.
     @[AlwaysInline]
-    def tex_storage_2d_multisample(address) : ::Proc(LibGL::TextureTarget, LibGL::SizeI, LibGL::SizedInternalFormat, LibGL::SizeI, LibGL::SizeI, LibGL::Boolean, ::Void)
-      self.tex_storage_2d_multisample.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetMultisamplefv
-    @[AlwaysInline]
-    def get_multisample_fv : ::Proc(LibGL::Enum, LibGL::UInt, ::Pointer(LibGL::Float), ::Void).class
+    def get_multisample_fv : ::Proc.class
       ::Proc(LibGL::Enum, LibGL::UInt, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glGetMultisamplefv
+    # `Proc` type for the OpenGL function *glSampleMaski*.
     @[AlwaysInline]
-    def get_multisample_fv(address) : ::Proc(LibGL::Enum, LibGL::UInt, ::Pointer(LibGL::Float), ::Void)
-      self.get_multisample_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glSampleMaski
-    @[AlwaysInline]
-    def sample_mask_i : ::Proc(LibGL::UInt, LibGL::Bitfield, ::Void).class
+    def sample_mask_i : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Bitfield, ::Void)
     end
 
-    # Proc type for the function glSampleMaski
+    # `Proc` type for the OpenGL function *glGetTexLevelParameteriv*.
     @[AlwaysInline]
-    def sample_mask_i(address) : ::Proc(LibGL::UInt, LibGL::Bitfield, ::Void)
-      self.sample_mask_i.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetTexLevelParameteriv
-    @[AlwaysInline]
-    def get_tex_level_parameter_iv : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::GetTextureParameter, ::Pointer(LibGL::Int), ::Void).class
+    def get_tex_level_parameter_iv : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::GetTextureParameter, ::Pointer(LibGL::Int), ::Void)
     end
 
-    # Proc type for the function glGetTexLevelParameteriv
+    # `Proc` type for the OpenGL function *glGetTexLevelParameterfv*.
     @[AlwaysInline]
-    def get_tex_level_parameter_iv(address) : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::GetTextureParameter, ::Pointer(LibGL::Int), ::Void)
-      self.get_tex_level_parameter_iv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glGetTexLevelParameterfv
-    @[AlwaysInline]
-    def get_tex_level_parameter_fv : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::GetTextureParameter, ::Pointer(LibGL::Float), ::Void).class
+    def get_tex_level_parameter_fv : ::Proc.class
       ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::GetTextureParameter, ::Pointer(LibGL::Float), ::Void)
     end
 
-    # Proc type for the function glGetTexLevelParameterfv
+    # `Proc` type for the OpenGL function *glBindVertexBuffer*.
     @[AlwaysInline]
-    def get_tex_level_parameter_fv(address) : ::Proc(LibGL::TextureTarget, LibGL::Int, LibGL::GetTextureParameter, ::Pointer(LibGL::Float), ::Void)
-      self.get_tex_level_parameter_fv.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glBindVertexBuffer
-    @[AlwaysInline]
-    def bind_vertex_buffer : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::IntPtr, LibGL::SizeI, ::Void).class
+    def bind_vertex_buffer : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UInt, LibGL::IntPtr, LibGL::SizeI, ::Void)
     end
 
-    # Proc type for the function glBindVertexBuffer
+    # `Proc` type for the OpenGL function *glVertexAttribFormat*.
     @[AlwaysInline]
-    def bind_vertex_buffer(address) : ::Proc(LibGL::UInt, LibGL::UInt, LibGL::IntPtr, LibGL::SizeI, ::Void)
-      self.bind_vertex_buffer.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexAttribFormat
-    @[AlwaysInline]
-    def vertex_attrib_format : ::Proc(LibGL::UInt, LibGL::Int, LibGL::VertexAttribType, LibGL::Boolean, LibGL::UInt, ::Void).class
+    def vertex_attrib_format : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::VertexAttribType, LibGL::Boolean, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glVertexAttribFormat
+    # `Proc` type for the OpenGL function *glVertexAttribIFormat*.
     @[AlwaysInline]
-    def vertex_attrib_format(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::VertexAttribType, LibGL::Boolean, LibGL::UInt, ::Void)
-      self.vertex_attrib_format.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexAttribIFormat
-    @[AlwaysInline]
-    def vertex_attrib_i_format : ::Proc(LibGL::UInt, LibGL::Int, LibGL::VertexAttribIType, LibGL::UInt, ::Void).class
+    def vertex_attrib_i_format : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::Int, LibGL::VertexAttribIType, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glVertexAttribIFormat
+    # `Proc` type for the OpenGL function *glVertexAttribBinding*.
     @[AlwaysInline]
-    def vertex_attrib_i_format(address) : ::Proc(LibGL::UInt, LibGL::Int, LibGL::VertexAttribIType, LibGL::UInt, ::Void)
-      self.vertex_attrib_i_format.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexAttribBinding
-    @[AlwaysInline]
-    def vertex_attrib_binding : ::Proc(LibGL::UInt, LibGL::UInt, ::Void).class
+    def vertex_attrib_binding : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UInt, ::Void)
     end
 
-    # Proc type for the function glVertexAttribBinding
+    # `Proc` type for the OpenGL function *glVertexBindingDivisor*.
     @[AlwaysInline]
-    def vertex_attrib_binding(address) : ::Proc(LibGL::UInt, LibGL::UInt, ::Void)
-      self.vertex_attrib_binding.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
-    end
-
-    # Proc type for the function glVertexBindingDivisor
-    @[AlwaysInline]
-    def vertex_binding_divisor : ::Proc(LibGL::UInt, LibGL::UInt, ::Void).class
+    def vertex_binding_divisor : ::Proc.class
       ::Proc(LibGL::UInt, LibGL::UInt, ::Void)
-    end
-
-    # Proc type for the function glVertexBindingDivisor
-    @[AlwaysInline]
-    def vertex_binding_divisor(address) : ::Proc(LibGL::UInt, LibGL::UInt, ::Void)
-      self.vertex_binding_divisor.new(address.as(::Pointer(::Void)), ::Pointer(::Void).null)
     end
   end
 end
